@@ -1,0 +1,5 @@
+run_id,macro_f1,is_collapse,pred_supported_pct,pred_partially_supported_pct,pred_contradicted_pct,pred_unverifiable_pct
+D1_M04_ELECTRA_LORA16_S46,0.1,True,0,0,0,100.0
+D1_M04_ELECTRA_LORA16_S45,0.9071,False,24.7,24.7,24.7,25.9
+D1_M04_ELECTRA_FREEZE50_S46,0.8768,False,24.2,30.1,22.0,23.8
+H2_DROP0_S46,0.9083,False,23.5,28.9,22.9,24.7

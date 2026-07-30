@@ -1,0 +1,4 @@
+comparison,common_seeds,n_common,test_type,mean_paired_difference_pp,paired_t_stat,paired_t_p,wilcoxon_stat,wilcoxon_p
+ELECTRA_LoRA_r16 vs ELECTRA_Freeze50,S42/S43/S44/S45,4,paired_by_seed,3.2149999999999985,11.327282738143897,0.001475844367258,0.0,0.125
+ELECTRA_LoRA_r16 vs BERTurk_FullFT,S42/S43/S44/S45,4,paired_by_seed,8.495,4.974496684952623,0.015609627956713,0.0,0.125
+ELECTRA_Freeze50 vs BERTurk_FullFT,S42/S43/S44/S45/S46,5,paired_by_seed,5.548000000000002,4.369162245902602,0.011975923806649,0.0,0.0625

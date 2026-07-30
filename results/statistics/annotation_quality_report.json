@@ -1,0 +1,165 @@
+{
+  "annotation_format": "candidate_train_labels_plus_single_annotator_preview_evaluation",
+  "iaa_kappa": null,
+  "iaa_status": "stable-release IAA pending — DEV960 annotator 1 960/960; Dev600 annotator 1 600/600; Dev600 annotator 2 80/600",
+  "limitation": "Both evaluation sets have a complete first blind-human pass and are released as single-annotator provisional preview files. Formal human-human Cohen's kappa is reserved for the later stable release after paired blind files are complete and before adjudication.",
+  "annotation_progress": {
+    "last_updated": "2026-07-30",
+    "note": "Progress is derived from repository artifacts. One complete blind-human pass on both evaluation sets is sufficient for v0.1.0-preview; IAA requires paired blind files and is deferred to the stable release.",
+    "dev_stress": {
+      "total": 600,
+      "candidate_label_review": {
+        "completed": 600,
+        "total": 600,
+        "status": "completed"
+      },
+      "annotator_1": {
+        "role": "blind_human",
+        "completed": 600,
+        "total": 600,
+        "status": "completed"
+      },
+      "annotator_2": {
+        "role": "blind_human",
+        "completed": 80,
+        "total": 600,
+        "status": "in_progress"
+      },
+      "iaa_adjudication": "not_started"
+    },
+    "dev_general": {
+      "total": 960,
+      "candidate_label_review": {
+        "completed": 0,
+        "total": 960,
+        "status": "not_started"
+      },
+      "annotator_1": {
+        "role": "blind_human",
+        "completed": 960,
+        "total": 960,
+        "status": "completed"
+      },
+      "annotator_2": {
+        "role": "blind_human",
+        "completed": 0,
+        "total": 960,
+        "status": "not_started"
+      },
+      "iaa_adjudication": "not_started"
+    },
+    "train": {
+      "total": 4800,
+      "llm_preannotation": "completed",
+      "candidate_label_review": {
+        "completed": 24,
+        "total": 4800,
+        "status": "in_progress"
+      }
+    },
+    "train_audit_600": {
+      "sample_file_present": true,
+      "annotator_1": {
+        "role": "blind_human",
+        "completed": 0,
+        "total": 600,
+        "status": "not_started"
+      },
+      "annotator_2": {
+        "role": "blind_human",
+        "completed": 0,
+        "total": 600,
+        "status": "not_started"
+      },
+      "iaa_adjudication": "not_started"
+    }
+  },
+  "available_quality_evidence": {
+    "annotation_status_complete_pct": 0.2,
+    "examples_with_notes": 20,
+    "note_revision_rate_pct": 0.4,
+    "construction_balanced_label_distribution": true,
+    "preview_label_distribution_near_balanced": true,
+    "label_dist_train": {
+      "supported": 1200,
+      "partially_supported": 1200,
+      "contradicted": 1200,
+      "unverifiable": 1200
+    },
+    "label_dist_dev960": {
+      "supported": 240,
+      "partially_supported": 240,
+      "contradicted": 242,
+      "unverifiable": 238
+    },
+    "legacy_subtype_coverage_pct": 24.8
+  },
+  "label_distribution": {
+    "train": {
+      "supported": {
+        "n": 1200,
+        "pct": 25.0
+      },
+      "partially_supported": {
+        "n": 1200,
+        "pct": 25.0
+      },
+      "contradicted": {
+        "n": 1200,
+        "pct": 25.0
+      },
+      "unverifiable": {
+        "n": 1200,
+        "pct": 25.0
+      }
+    },
+    "dev960": {
+      "supported": {
+        "n": 240,
+        "pct": 25.0
+      },
+      "partially_supported": {
+        "n": 240,
+        "pct": 25.0
+      },
+      "contradicted": {
+        "n": 242,
+        "pct": 25.2
+      },
+      "unverifiable": {
+        "n": 238,
+        "pct": 24.8
+      }
+    },
+    "dev600": {
+      "supported": {
+        "n": 150,
+        "pct": 25.0
+      },
+      "partially_supported": {
+        "n": 152,
+        "pct": 25.3
+      },
+      "contradicted": {
+        "n": 151,
+        "pct": 25.2
+      },
+      "unverifiable": {
+        "n": 147,
+        "pct": 24.5
+      }
+    }
+  },
+  "note_types": {
+    "language_fix": 12,
+    "other": 8
+  },
+  "annotation_status_dist": {
+    "annotated": 9,
+    "pending": 4791
+  },
+  "legacy_subtype_dist": {
+    "insufficient_information": 596,
+    "unsupported": 596
+  }
+}

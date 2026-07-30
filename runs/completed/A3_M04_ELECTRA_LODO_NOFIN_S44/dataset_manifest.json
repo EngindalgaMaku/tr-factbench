@@ -1,0 +1,27 @@
+{
+  "train_file": "data/derived/leave_one_domain_out/train_3200_lodo_no_finance.jsonl",
+  "train_sha256": "fc80c446915bc79251ab685e9736e4729e9aaad84483c66bb160dd6623a7f864",
+  "train_num_records": 3200,
+  "train_label_dist": {
+    "contradicted": 800,
+    "supported": 800,
+    "unverifiable": 800,
+    "partially_supported": 800
+  },
+  "dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_finance.jsonl",
+  "dev960_sha256": "6d263339f3e13c2928aea1e253953ccf2c787bb23207f1643bd0dd7e5e03dedd",
+  "dev960_num_records": 320,
+  "dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_finance.jsonl",
+  "dev600_sha256": "4908a90d481ebcb5ff3cc178c5fb3e1b56650b83f584850ff7d257f09313f9b8",
+  "dev600_num_records": 200,
+  "path_relocation": {
+    "layout_version": "v0.1.0-preview-evaluation-layout",
+    "reason": "Evaluation files were separated from training data without changing file contents or SHA-256 hashes.",
+    "original_recorded_dev960_file": "q1_pipeline\\data\\derived\\dev_domain\\dev960_general_finance.jsonl",
+    "original_recorded_dev600_file": "q1_pipeline\\data\\derived\\dev_domain\\dev600_stress_finance.jsonl",
+    "current_archive_dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_finance.jsonl",
+    "current_archive_dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_finance.jsonl",
+    "original_recorded_train_file": "q1_pipeline\\data\\derived\\leave_one_domain_out\\train_3200_lodo_no_finance.jsonl",
+    "current_archive_train_file": "data/derived/leave_one_domain_out/train_3200_lodo_no_finance.jsonl"
+  }
+}

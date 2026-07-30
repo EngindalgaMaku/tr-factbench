@@ -1,0 +1,27 @@
+{
+  "train_file": "data/derived/leave_one_domain_out/train_3200_lodo_no_legal.jsonl",
+  "train_sha256": "d4fc83ef723e232bec2b5a778d3c2ae25b289d150e579e6fe7e25d9edca44ad8",
+  "train_num_records": 3200,
+  "train_label_dist": {
+    "contradicted": 800,
+    "supported": 800,
+    "unverifiable": 800,
+    "partially_supported": 800
+  },
+  "dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_legal.jsonl",
+  "dev960_sha256": "2225832d13429936505002cfb692ea53c30f213d6ad8375b4f25b5b96187573c",
+  "dev960_num_records": 320,
+  "dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_legal.jsonl",
+  "dev600_sha256": "9383e032fa377933c06bfca742b73d51f1445208e093eb452347be8691884f2b",
+  "dev600_num_records": 200,
+  "path_relocation": {
+    "layout_version": "v0.1.0-preview-evaluation-layout",
+    "reason": "Evaluation files were separated from training data without changing file contents or SHA-256 hashes.",
+    "original_recorded_dev960_file": "q1_pipeline\\data\\derived\\dev_domain\\dev960_general_legal.jsonl",
+    "original_recorded_dev600_file": "q1_pipeline\\data\\derived\\dev_domain\\dev600_stress_legal.jsonl",
+    "current_archive_dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_legal.jsonl",
+    "current_archive_dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_legal.jsonl",
+    "original_recorded_train_file": "q1_pipeline\\data\\derived\\leave_one_domain_out\\train_3200_lodo_no_legal.jsonl",
+    "current_archive_train_file": "data/derived/leave_one_domain_out/train_3200_lodo_no_legal.jsonl"
+  }
+}

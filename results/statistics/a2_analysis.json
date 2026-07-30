@@ -1,0 +1,97 @@
+{
+  "comparison_1_diversity": {
+    "description": "Alan çeşitliliği etkisi: TMIX-1600 vs tek-alan-1600 ortalaması",
+    "mean_single_domain_d960": 0.7642,
+    "tmix_d960": 0.7896,
+    "delta_pp": 2.54,
+    "interpretation": "Pozitif ise karma veri çeşitlilik avantajı sağlıyor"
+  },
+  "comparison_2_scale": {
+    "description": "Veri ölçeği etkisi: TALL-4800 vs TMIX-1600",
+    "tmix_d960": 0.7896,
+    "tall_d960": 0.904,
+    "delta_pp": 11.44,
+    "interpretation": "Veri 3x artışının performansa katkısı"
+  },
+  "comparison_3_upper_bound": {
+    "description": "Çok-alan üst sınırı: TALL vs en iyi tek-alan",
+    "best_single_domain": "TFIN",
+    "best_single_d960": 0.789,
+    "tall_d960": 0.904,
+    "delta_pp": 11.49,
+    "interpretation": "Çok-alan eğitiminin tek-alan üst sınırına göre avantajı"
+  },
+  "per_config": {
+    "TMED": {
+      "config": "TMED",
+      "planned_seeds": 3,
+      "successful_seeds": 2,
+      "success_rate": "2/3",
+      "extra_seeds": 1,
+      "extra_successful": 1,
+      "train_size": 1600,
+      "dev960_conditional_mean": 0.7615,
+      "dev960_conditional_std": 0.0262,
+      "dev600_conditional_mean": 0.7787,
+      "dev600_conditional_std": 0.0355
+    },
+    "TFIN": {
+      "config": "TFIN",
+      "planned_seeds": 3,
+      "successful_seeds": 3,
+      "success_rate": "3/3",
+      "extra_seeds": 0,
+      "extra_successful": 0,
+      "train_size": 1600,
+      "dev960_conditional_mean": 0.789,
+      "dev960_conditional_std": 0.0107,
+      "dev600_conditional_mean": 0.735,
+      "dev600_conditional_std": 0.0197
+    },
+    "TLEG": {
+      "config": "TLEG",
+      "planned_seeds": 3,
+      "successful_seeds": 3,
+      "success_rate": "3/3",
+      "extra_seeds": 0,
+      "extra_successful": 0,
+      "train_size": 1600,
+      "dev960_conditional_mean": 0.7419,
+      "dev960_conditional_std": 0.0495,
+      "dev600_conditional_mean": 0.6079,
+      "dev600_conditional_std": 0.1437
+    },
+    "TMIX": {
+      "config": "TMIX",
+      "planned_seeds": 3,
+      "successful_seeds": 3,
+      "success_rate": "3/3",
+      "extra_seeds": 0,
+      "extra_successful": 0,
+      "train_size": 1600,
+      "dev960_conditional_mean": 0.7896,
+      "dev960_conditional_std": 0.0205,
+      "dev600_conditional_mean": 0.7305,
+      "dev600_conditional_std": 0.0317
+    },
+    "TALL": {
+      "config": "TALL",
+      "planned_seeds": 3,
+      "successful_seeds": 3,
+      "success_rate": "3/3",
+      "extra_seeds": 0,
+      "extra_successful": 0,
+      "train_size": 4800,
+      "dev960_conditional_mean": 0.904,
+      "dev960_conditional_std": 0.004,
+      "dev600_conditional_mean": 0.8726,
+      "dev600_conditional_std": 0.0205
+    }
+  },
+  "best_single_domain": "TFIN",
+  "best_single_domain_f1": 0.789,
+  "note_tmix": "TMIX mixed-domain control, not single-domain; excluded from single-domain comparison",
+  "domain_diversity_gain_vs_avg": 0.0255,
+  "domain_diversity_gain_vs_best": 0.0006,
+  "scale_gain_tall_vs_tmix": 0.1144
+}

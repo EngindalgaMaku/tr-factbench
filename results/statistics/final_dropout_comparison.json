@@ -1,0 +1,148 @@
+{
+  "H1_DROP10": {
+    "dropout": 0.1,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "selected": true,
+    "dev960": {
+      "values": [
+        0.898,
+        0.8842,
+        0.894,
+        0.9014,
+        0.8876
+      ],
+      "mean": 0.89304,
+      "sd": 0.007126570002462628,
+      "min": 0.8842,
+      "max": 0.9014,
+      "worst_seed": 43,
+      "best_seed": 45
+    },
+    "dev600": {
+      "values": [
+        0.8696,
+        0.8714,
+        0.8487,
+        0.8675,
+        0.8363
+      ],
+      "mean": 0.8587,
+      "sd": 0.015486284254139195,
+      "min": 0.8363,
+      "max": 0.8714,
+      "worst_seed": 46,
+      "best_seed": 43
+    },
+    "two_set_mean": 0.8758699999999999,
+    "per_seed": {
+      "42": {
+        "dev960_macro_f1": 0.898,
+        "dev600_macro_f1": 0.8696,
+        "two_set_average": 0.8838
+      },
+      "43": {
+        "dev960_macro_f1": 0.8842,
+        "dev600_macro_f1": 0.8714,
+        "two_set_average": 0.8777999999999999
+      },
+      "44": {
+        "dev960_macro_f1": 0.894,
+        "dev600_macro_f1": 0.8487,
+        "two_set_average": 0.8713500000000001
+      },
+      "45": {
+        "dev960_macro_f1": 0.9014,
+        "dev600_macro_f1": 0.8675,
+        "two_set_average": 0.88445
+      },
+      "46": {
+        "dev960_macro_f1": 0.8876,
+        "dev600_macro_f1": 0.8363,
+        "two_set_average": 0.86195
+      }
+    }
+  },
+  "H2_DROP0": {
+    "dropout": 0.0,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "selected": false,
+    "dev960": {
+      "values": [
+        0.9055,
+        0.8901,
+        0.9108,
+        0.9058,
+        0.9083
+      ],
+      "mean": 0.9041,
+      "sd": 0.008114493206602626,
+      "min": 0.8901,
+      "max": 0.9108,
+      "worst_seed": 43,
+      "best_seed": 44
+    },
+    "dev600": {
+      "values": [
+        0.8254,
+        0.8085,
+        0.8441,
+        0.8803,
+        0.8583
+      ],
+      "mean": 0.84332,
+      "sd": 0.027955714979230974,
+      "min": 0.8085,
+      "max": 0.8803,
+      "worst_seed": 43,
+      "best_seed": 45
+    },
+    "two_set_mean": 0.87371,
+    "per_seed": {
+      "42": {
+        "dev960_macro_f1": 0.9055,
+        "dev600_macro_f1": 0.8254,
+        "two_set_average": 0.86545
+      },
+      "43": {
+        "dev960_macro_f1": 0.8901,
+        "dev600_macro_f1": 0.8085,
+        "two_set_average": 0.8492999999999999
+      },
+      "44": {
+        "dev960_macro_f1": 0.9108,
+        "dev600_macro_f1": 0.8441,
+        "two_set_average": 0.8774500000000001
+      },
+      "45": {
+        "dev960_macro_f1": 0.9058,
+        "dev600_macro_f1": 0.8803,
+        "two_set_average": 0.89305
+      },
+      "46": {
+        "dev960_macro_f1": 0.9083,
+        "dev600_macro_f1": 0.8583,
+        "two_set_average": 0.8833
+      }
+    }
+  },
+  "selection": {
+    "selected_series": "H1_DROP10",
+    "selected_checkpoint": "H1_DROP10_S45",
+    "rationale": "H2/dropout=0.00 has the higher DEV960 mean, while H1/dropout=0.10 has the higher DEV600 stress mean, lower DEV600 standard deviation, and a slightly higher two-set mean. Selection is based on configuration-level five-seed behavior rather than the best single seed.",
+    "dev960_mean_difference_h1_minus_h2": -0.01106000000000007,
+    "dev600_mean_difference_h1_minus_h2": 0.01538000000000006,
+    "two_set_mean_difference_h1_minus_h2": 0.0021599999999999397
+  }
+}

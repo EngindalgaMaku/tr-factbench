@@ -1,0 +1,194 @@
+{
+  "TMED": {
+    "planned_seeds": 3,
+    "successful_seeds": 2,
+    "dev960_gen_mean": 0.7615,
+    "dev600_str_mean": 0.7787,
+    "generalization_gap": -0.0171,
+    "per_seed": {
+      "A1_M04_ELECTRA_TMED_LORA16_S42": {
+        "dev960": 0.7801,
+        "dev600": 0.8038,
+        "gap": -0.0237
+      },
+      "A1_M04_ELECTRA_TMED_LORA16_S43": {
+        "dev960": 0.1,
+        "dev600": 0.1,
+        "gap": 0.0
+      },
+      "A1_M04_ELECTRA_TMED_LORA16_S44": {
+        "dev960": 0.743,
+        "dev600": 0.7536,
+        "gap": -0.0106
+      }
+    }
+  },
+  "TFIN": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.789,
+    "dev600_str_mean": 0.735,
+    "generalization_gap": 0.054,
+    "per_seed": {
+      "A1_M04_ELECTRA_TFIN_LORA16_S42": {
+        "dev960": 0.7969,
+        "dev600": 0.7495,
+        "gap": 0.0474
+      },
+      "A1_M04_ELECTRA_TFIN_LORA16_S43": {
+        "dev960": 0.7768,
+        "dev600": 0.7126,
+        "gap": 0.0642
+      },
+      "A1_M04_ELECTRA_TFIN_LORA16_S44": {
+        "dev960": 0.7934,
+        "dev600": 0.743,
+        "gap": 0.0504
+      }
+    }
+  },
+  "TLEG": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.7419,
+    "dev600_str_mean": 0.6079,
+    "generalization_gap": 0.134,
+    "per_seed": {
+      "A1_M04_ELECTRA_TLEG_LORA16_S42": {
+        "dev960": 0.7087,
+        "dev600": 0.4519,
+        "gap": 0.2568
+      },
+      "A1_M04_ELECTRA_TLEG_LORA16_S43": {
+        "dev960": 0.7182,
+        "dev600": 0.637,
+        "gap": 0.0812
+      },
+      "A1_M04_ELECTRA_TLEG_LORA16_S44": {
+        "dev960": 0.7988,
+        "dev600": 0.7348,
+        "gap": 0.064
+      }
+    }
+  },
+  "TMIX": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.7896,
+    "dev600_str_mean": 0.7305,
+    "generalization_gap": 0.0591,
+    "per_seed": {
+      "A1_M04_ELECTRA_TMIX_LORA16_S42": {
+        "dev960": 0.7661,
+        "dev600": 0.7002,
+        "gap": 0.0659
+      },
+      "A1_M04_ELECTRA_TMIX_LORA16_S43": {
+        "dev960": 0.8037,
+        "dev600": 0.7634,
+        "gap": 0.0403
+      },
+      "A1_M04_ELECTRA_TMIX_LORA16_S44": {
+        "dev960": 0.799,
+        "dev600": 0.7279,
+        "gap": 0.0711
+      }
+    }
+  },
+  "TALL": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.904,
+    "dev600_str_mean": 0.8726,
+    "generalization_gap": 0.0314,
+    "per_seed": {
+      "B1_M04_ELECTRA_ALLLINEAR_LORA16_S42": {
+        "dev960": 0.9086,
+        "dev600": 0.8545,
+        "gap": 0.0541
+      },
+      "B2_M04_ELECTRA_ALLLINEAR_LORA16_S43": {
+        "dev960": 0.9012,
+        "dev600": 0.8949,
+        "gap": 0.0063
+      },
+      "B2_M04_ELECTRA_ALLLINEAR_LORA16_S44": {
+        "dev960": 0.9021,
+        "dev600": 0.8684,
+        "gap": 0.0337
+      }
+    }
+  },
+  "LODO-NoFin": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.8572,
+    "dev600_str_mean": 0.8446,
+    "generalization_gap": 0.0126,
+    "per_seed": {
+      "A3_M04_ELECTRA_LODO_NOFIN_S42": {
+        "dev960": 0.8442,
+        "dev600": 0.8326,
+        "gap": 0.0116
+      },
+      "A3_M04_ELECTRA_LODO_NOFIN_S43": {
+        "dev960": 0.8664,
+        "dev600": 0.8624,
+        "gap": 0.004
+      },
+      "A3_M04_ELECTRA_LODO_NOFIN_S44": {
+        "dev960": 0.8609,
+        "dev600": 0.8388,
+        "gap": 0.0221
+      }
+    }
+  },
+  "LODO-NoLeg": {
+    "planned_seeds": 3,
+    "successful_seeds": 2,
+    "dev960_gen_mean": 0.8746,
+    "dev600_str_mean": 0.8535,
+    "generalization_gap": 0.0211,
+    "per_seed": {
+      "A3_M04_ELECTRA_LODO_NOLEG_S42": {
+        "dev960": 0.1,
+        "dev600": 0.1,
+        "gap": 0.0
+      },
+      "A3_M04_ELECTRA_LODO_NOLEG_S43": {
+        "dev960": 0.8734,
+        "dev600": 0.8485,
+        "gap": 0.0249
+      },
+      "A3_M04_ELECTRA_LODO_NOLEG_S44": {
+        "dev960": 0.8759,
+        "dev600": 0.8585,
+        "gap": 0.0174
+      }
+    }
+  },
+  "LODO-NoMed": {
+    "planned_seeds": 3,
+    "successful_seeds": 3,
+    "dev960_gen_mean": 0.82,
+    "dev600_str_mean": 0.6943,
+    "generalization_gap": 0.1257,
+    "per_seed": {
+      "A3_M04_ELECTRA_LODO_NOMED_S42": {
+        "dev960": 0.8068,
+        "dev600": 0.6593,
+        "gap": 0.1475
+      },
+      "A3_M04_ELECTRA_LODO_NOMED_S43": {
+        "dev960": 0.793,
+        "dev600": 0.6502,
+        "gap": 0.1428
+      },
+      "A3_M04_ELECTRA_LODO_NOMED_S44": {
+        "dev960": 0.8603,
+        "dev600": 0.7735,
+        "gap": 0.0868
+      }
+    }
+  }
+}

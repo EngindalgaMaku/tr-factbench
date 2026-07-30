@@ -1,0 +1,13 @@
+{
+  "run_id": "C8_M04_ELECTRA_ALLATTN_LORA16_S42",
+  "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_target_modules": "query,key,value,attention.output.dense",
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

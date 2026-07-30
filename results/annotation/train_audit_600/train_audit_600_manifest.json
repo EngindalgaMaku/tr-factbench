@@ -1,0 +1,955 @@
+{
+  "generated_at_utc": "2026-07-26T18:58:41+00:00",
+  "sampling_version": "train_audit_context_grouped_v1",
+  "source_file": "data/primary/train.jsonl",
+  "source_sha256": "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17",
+  "seed": 42,
+  "sampling_unit": "context_group",
+  "contexts_per_domain": 50,
+  "length_strata_per_domain": 5,
+  "selected_contexts": 150,
+  "selected_examples": 600,
+  "domain_context_counts": {
+    "finance": 50,
+    "medical": 50,
+    "legal": 50
+  },
+  "candidate_label_counts": {
+    "contradicted": 150,
+    "supported": 150,
+    "partially_supported": 150,
+    "unverifiable": 150
+  },
+  "stratum_counts": {
+    "finance:length_q1": 10,
+    "finance:length_q2": 10,
+    "finance:length_q3": 10,
+    "finance:length_q4": 10,
+    "finance:length_q5": 10,
+    "legal:length_q1": 10,
+    "legal:length_q2": 10,
+    "legal:length_q3": 10,
+    "legal:length_q4": 10,
+    "legal:length_q5": 10,
+    "medical:length_q1": 10,
+    "medical:length_q2": 10,
+    "medical:length_q3": 10,
+    "medical:length_q4": 10,
+    "medical:length_q5": 10
+  },
+  "blind_input_file": "results/annotation/train_audit_600/train_audit_600_blind_input.jsonl",
+  "blind_input_sha256": "381546ac359383dca88b2bf6fdfa99a037f6eb46ce18ec37e237c94efdead80d",
+  "candidate_reference_file": "results/annotation/train_audit_600/train_audit_600_candidate_reference.jsonl",
+  "candidate_reference_sha256": "4ff5bd8f54de73547d9214277e54df96e78b778881a1b56bcf831ecc03e363fd",
+  "opaque_ids": true,
+  "candidate_labels_present_in_blind_input": false,
+  "independent_blind_annotators_required": 2,
+  "adjudication_required_after_iaa": true,
+  "legacy_files_archived": [
+    "results/annotation/deprecated/legacy_iaa_sample_500/iaa_sample_500.jsonl",
+    "results/annotation/deprecated/legacy_iaa_sample_500/iaa_sample_500_annotator2.jsonl",
+    "results/annotation/deprecated/legacy_iaa_sample_500/iaa_sample_manifest.json"
+  ],
+  "context_map": [
+    {
+      "opaque_context_id": "train_audit_c001",
+      "source_context_id": "finance_886899f94c89cb9e",
+      "domain": "finance",
+      "context_length_chars": 1042
+    },
+    {
+      "opaque_context_id": "train_audit_c002",
+      "source_context_id": "medical_6f8fdad5ef93f5ed",
+      "domain": "medical",
+      "context_length_chars": 680
+    },
+    {
+      "opaque_context_id": "train_audit_c003",
+      "source_context_id": "finance_context_0084",
+      "domain": "finance",
+      "context_length_chars": 541
+    },
+    {
+      "opaque_context_id": "train_audit_c004",
+      "source_context_id": "legal_693e0bf02cc7ba77",
+      "domain": "legal",
+      "context_length_chars": 1222
+    },
+    {
+      "opaque_context_id": "train_audit_c005",
+      "source_context_id": "finance_context_0176",
+      "domain": "finance",
+      "context_length_chars": 552
+    },
+    {
+      "opaque_context_id": "train_audit_c006",
+      "source_context_id": "legal_agent_context_0150",
+      "domain": "legal",
+      "context_length_chars": 854
+    },
+    {
+      "opaque_context_id": "train_audit_c007",
+      "source_context_id": "medical_agent_context_0225",
+      "domain": "medical",
+      "context_length_chars": 1105
+    },
+    {
+      "opaque_context_id": "train_audit_c008",
+      "source_context_id": "legal_agent_context_0054",
+      "domain": "legal",
+      "context_length_chars": 758
+    },
+    {
+      "opaque_context_id": "train_audit_c009",
+      "source_context_id": "legal_agent_context_0126",
+      "domain": "legal",
+      "context_length_chars": 695
+    },
+    {
+      "opaque_context_id": "train_audit_c010",
+      "source_context_id": "medical_cfdb6e26ab2332ba",
+      "domain": "medical",
+      "context_length_chars": 1251
+    },
+    {
+      "opaque_context_id": "train_audit_c011",
+      "source_context_id": "train7p_medical_0002",
+      "domain": "medical",
+      "context_length_chars": 308
+    },
+    {
+      "opaque_context_id": "train_audit_c012",
+      "source_context_id": "medical_agent_context_0322",
+      "domain": "medical",
+      "context_length_chars": 1092
+    },
+    {
+      "opaque_context_id": "train_audit_c013",
+      "source_context_id": "medical_88a225f01f6298cb",
+      "domain": "medical",
+      "context_length_chars": 875
+    },
+    {
+      "opaque_context_id": "train_audit_c014",
+      "source_context_id": "legal_agent_context_0059",
+      "domain": "legal",
+      "context_length_chars": 768
+    },
+    {
+      "opaque_context_id": "train_audit_c015",
+      "source_context_id": "finance_c2d84342d41ce2cd",
+      "domain": "finance",
+      "context_length_chars": 1721
+    },
+    {
+      "opaque_context_id": "train_audit_c016",
+      "source_context_id": "finance_context_0039",
+      "domain": "finance",
+      "context_length_chars": 498
+    },
+    {
+      "opaque_context_id": "train_audit_c017",
+      "source_context_id": "legal_domainfix_iys_004",
+      "domain": "legal",
+      "context_length_chars": 805
+    },
+    {
+      "opaque_context_id": "train_audit_c018",
+      "source_context_id": "medical_agent_context_0256",
+      "domain": "medical",
+      "context_length_chars": 1015
+    },
+    {
+      "opaque_context_id": "train_audit_c019",
+      "source_context_id": "medical_88665421e2195dce",
+      "domain": "medical",
+      "context_length_chars": 2017
+    },
+    {
+      "opaque_context_id": "train_audit_c020",
+      "source_context_id": "finance_98bada14b61cdeee",
+      "domain": "finance",
+      "context_length_chars": 534
+    },
+    {
+      "opaque_context_id": "train_audit_c021",
+      "source_context_id": "medical_4056eec49fd8143c",
+      "domain": "medical",
+      "context_length_chars": 688
+    },
+    {
+      "opaque_context_id": "train_audit_c022",
+      "source_context_id": "train7b2_finance_0034",
+      "domain": "finance",
+      "context_length_chars": 303
+    },
+    {
+      "opaque_context_id": "train_audit_c023",
+      "source_context_id": "train7p_finance_0008",
+      "domain": "finance",
+      "context_length_chars": 306
+    },
+    {
+      "opaque_context_id": "train_audit_c024",
+      "source_context_id": "finance_context_0060",
+      "domain": "finance",
+      "context_length_chars": 559
+    },
+    {
+      "opaque_context_id": "train_audit_c025",
+      "source_context_id": "train7b2_finance_0036",
+      "domain": "finance",
+      "context_length_chars": 257
+    },
+    {
+      "opaque_context_id": "train_audit_c026",
+      "source_context_id": "finance_df7f870cc7cee747",
+      "domain": "finance",
+      "context_length_chars": 1011
+    },
+    {
+      "opaque_context_id": "train_audit_c027",
+      "source_context_id": "legal_agent_context_0106",
+      "domain": "legal",
+      "context_length_chars": 577
+    },
+    {
+      "opaque_context_id": "train_audit_c028",
+      "source_context_id": "finance_context_0143",
+      "domain": "finance",
+      "context_length_chars": 411
+    },
+    {
+      "opaque_context_id": "train_audit_c029",
+      "source_context_id": "medical_agent_context_0229",
+      "domain": "medical",
+      "context_length_chars": 885
+    },
+    {
+      "opaque_context_id": "train_audit_c030",
+      "source_context_id": "finance_context_0066",
+      "domain": "finance",
+      "context_length_chars": 457
+    },
+    {
+      "opaque_context_id": "train_audit_c031",
+      "source_context_id": "train7b2_medical_0021",
+      "domain": "medical",
+      "context_length_chars": 249
+    },
+    {
+      "opaque_context_id": "train_audit_c032",
+      "source_context_id": "medical_0fa5e60b47e67ce5",
+      "domain": "medical",
+      "context_length_chars": 786
+    },
+    {
+      "opaque_context_id": "train_audit_c033",
+      "source_context_id": "medical_agent_context_0234",
+      "domain": "medical",
+      "context_length_chars": 1165
+    },
+    {
+      "opaque_context_id": "train_audit_c034",
+      "source_context_id": "train7p_legal_0009",
+      "domain": "legal",
+      "context_length_chars": 276
+    },
+    {
+      "opaque_context_id": "train_audit_c035",
+      "source_context_id": "medical_agent_context_0315",
+      "domain": "medical",
+      "context_length_chars": 1091
+    },
+    {
+      "opaque_context_id": "train_audit_c036",
+      "source_context_id": "train7b2_finance_0038",
+      "domain": "finance",
+      "context_length_chars": 267
+    },
+    {
+      "opaque_context_id": "train_audit_c037",
+      "source_context_id": "legal_b09fe5892366c45a",
+      "domain": "legal",
+      "context_length_chars": 737
+    },
+    {
+      "opaque_context_id": "train_audit_c038",
+      "source_context_id": "legal_5aef25a20d32e355",
+      "domain": "legal",
+      "context_length_chars": 1916
+    },
+    {
+      "opaque_context_id": "train_audit_c039",
+      "source_context_id": "legal_domainfix_cografi_002",
+      "domain": "legal",
+      "context_length_chars": 832
+    },
+    {
+      "opaque_context_id": "train_audit_c040",
+      "source_context_id": "medical_0aa026895d69e3e7",
+      "domain": "medical",
+      "context_length_chars": 1553
+    },
+    {
+      "opaque_context_id": "train_audit_c041",
+      "source_context_id": "medical_agent_context_0247",
+      "domain": "medical",
+      "context_length_chars": 722
+    },
+    {
+      "opaque_context_id": "train_audit_c042",
+      "source_context_id": "finance_0ca424ab79908052",
+      "domain": "finance",
+      "context_length_chars": 1446
+    },
+    {
+      "opaque_context_id": "train_audit_c043",
+      "source_context_id": "medical_agent_context_0284",
+      "domain": "medical",
+      "context_length_chars": 1065
+    },
+    {
+      "opaque_context_id": "train_audit_c044",
+      "source_context_id": "finance_context_0147",
+      "domain": "finance",
+      "context_length_chars": 440
+    },
+    {
+      "opaque_context_id": "train_audit_c045",
+      "source_context_id": "medical_1ba931b568e2b133",
+      "domain": "medical",
+      "context_length_chars": 1307
+    },
+    {
+      "opaque_context_id": "train_audit_c046",
+      "source_context_id": "legal_agent_context_0039",
+      "domain": "legal",
+      "context_length_chars": 618
+    },
+    {
+      "opaque_context_id": "train_audit_c047",
+      "source_context_id": "legal_8296878188449e66",
+      "domain": "legal",
+      "context_length_chars": 1894
+    },
+    {
+      "opaque_context_id": "train_audit_c048",
+      "source_context_id": "legal_f9b2090303b3b6f4",
+      "domain": "legal",
+      "context_length_chars": 1547
+    },
+    {
+      "opaque_context_id": "train_audit_c049",
+      "source_context_id": "medical_agent_context_0343",
+      "domain": "medical",
+      "context_length_chars": 812
+    },
+    {
+      "opaque_context_id": "train_audit_c050",
+      "source_context_id": "medical_82bf14775f88cb35",
+      "domain": "medical",
+      "context_length_chars": 1343
+    },
+    {
+      "opaque_context_id": "train_audit_c051",
+      "source_context_id": "medical_agent_context_0372",
+      "domain": "medical",
+      "context_length_chars": 1161
+    },
+    {
+      "opaque_context_id": "train_audit_c052",
+      "source_context_id": "legal_agent_context_0082",
+      "domain": "legal",
+      "context_length_chars": 720
+    },
+    {
+      "opaque_context_id": "train_audit_c053",
+      "source_context_id": "finance_context_0173",
+      "domain": "finance",
+      "context_length_chars": 592
+    },
+    {
+      "opaque_context_id": "train_audit_c054",
+      "source_context_id": "finance_e29f7c2c0d5e067b",
+      "domain": "finance",
+      "context_length_chars": 1773
+    },
+    {
+      "opaque_context_id": "train_audit_c055",
+      "source_context_id": "legal_agent_context_0202",
+      "domain": "legal",
+      "context_length_chars": 664
+    },
+    {
+      "opaque_context_id": "train_audit_c056",
+      "source_context_id": "finance_context_0115",
+      "domain": "finance",
+      "context_length_chars": 629
+    },
+    {
+      "opaque_context_id": "train_audit_c057",
+      "source_context_id": "legal_domainfix_arabuluculuk_003",
+      "domain": "legal",
+      "context_length_chars": 628
+    },
+    {
+      "opaque_context_id": "train_audit_c058",
+      "source_context_id": "medical_00a9a2010c71cb8b",
+      "domain": "medical",
+      "context_length_chars": 785
+    },
+    {
+      "opaque_context_id": "train_audit_c059",
+      "source_context_id": "legal_dffabb9d5389dbfd",
+      "domain": "legal",
+      "context_length_chars": 818
+    },
+    {
+      "opaque_context_id": "train_audit_c060",
+      "source_context_id": "medical_3be6f29f399e6424",
+      "domain": "medical",
+      "context_length_chars": 651
+    },
+    {
+      "opaque_context_id": "train_audit_c061",
+      "source_context_id": "medical_agent_context_0227",
+      "domain": "medical",
+      "context_length_chars": 952
+    },
+    {
+      "opaque_context_id": "train_audit_c062",
+      "source_context_id": "medical_agent_context_0266",
+      "domain": "medical",
+      "context_length_chars": 1102
+    },
+    {
+      "opaque_context_id": "train_audit_c063",
+      "source_context_id": "finance_a5cdf3dd1026f551",
+      "domain": "finance",
+      "context_length_chars": 1222
+    },
+    {
+      "opaque_context_id": "train_audit_c064",
+      "source_context_id": "legal_9f8b25d8605ce0b7",
+      "domain": "legal",
+      "context_length_chars": 770
+    },
+    {
+      "opaque_context_id": "train_audit_c065",
+      "source_context_id": "legal_89402116c35fcfaa",
+      "domain": "legal",
+      "context_length_chars": 503
+    },
+    {
+      "opaque_context_id": "train_audit_c066",
+      "source_context_id": "legal_agent_context_0056",
+      "domain": "legal",
+      "context_length_chars": 752
+    },
+    {
+      "opaque_context_id": "train_audit_c067",
+      "source_context_id": "train7b2_medical_0031",
+      "domain": "medical",
+      "context_length_chars": 187
+    },
+    {
+      "opaque_context_id": "train_audit_c068",
+      "source_context_id": "medical_agent_context_0267",
+      "domain": "medical",
+      "context_length_chars": 1074
+    },
+    {
+      "opaque_context_id": "train_audit_c069",
+      "source_context_id": "medical_55a4da4a073867af",
+      "domain": "medical",
+      "context_length_chars": 1525
+    },
+    {
+      "opaque_context_id": "train_audit_c070",
+      "source_context_id": "medical_agent_context_0333",
+      "domain": "medical",
+      "context_length_chars": 891
+    },
+    {
+      "opaque_context_id": "train_audit_c071",
+      "source_context_id": "finance_9716546a00cb482c",
+      "domain": "finance",
+      "context_length_chars": 1116
+    },
+    {
+      "opaque_context_id": "train_audit_c072",
+      "source_context_id": "finance_context_0006",
+      "domain": "finance",
+      "context_length_chars": 529
+    },
+    {
+      "opaque_context_id": "train_audit_c073",
+      "source_context_id": "finance_context_0141",
+      "domain": "finance",
+      "context_length_chars": 430
+    },
+    {
+      "opaque_context_id": "train_audit_c074",
+      "source_context_id": "finance_d770081cb80de73c",
+      "domain": "finance",
+      "context_length_chars": 710
+    },
+    {
+      "opaque_context_id": "train_audit_c075",
+      "source_context_id": "legal_69c23be959627b17",
+      "domain": "legal",
+      "context_length_chars": 1157
+    },
+    {
+      "opaque_context_id": "train_audit_c076",
+      "source_context_id": "finance_433cda754c5983b4",
+      "domain": "finance",
+      "context_length_chars": 977
+    },
+    {
+      "opaque_context_id": "train_audit_c077",
+      "source_context_id": "train7final_finance_0398",
+      "domain": "finance",
+      "context_length_chars": 388
+    },
+    {
+      "opaque_context_id": "train_audit_c078",
+      "source_context_id": "finance_3c04b98fb280ee13",
+      "domain": "finance",
+      "context_length_chars": 679
+    },
+    {
+      "opaque_context_id": "train_audit_c079",
+      "source_context_id": "legal_agent_context_0125",
+      "domain": "legal",
+      "context_length_chars": 753
+    },
+    {
+      "opaque_context_id": "train_audit_c080",
+      "source_context_id": "medical_628271568e47a57c",
+      "domain": "medical",
+      "context_length_chars": 1238
+    },
+    {
+      "opaque_context_id": "train_audit_c081",
+      "source_context_id": "legal_c82cc8e8915c05eb",
+      "domain": "legal",
+      "context_length_chars": 717
+    },
+    {
+      "opaque_context_id": "train_audit_c082",
+      "source_context_id": "legal_agent_context_0153",
+      "domain": "legal",
+      "context_length_chars": 939
+    },
+    {
+      "opaque_context_id": "train_audit_c083",
+      "source_context_id": "legal_52444a0bc79f6484",
+      "domain": "legal",
+      "context_length_chars": 888
+    },
+    {
+      "opaque_context_id": "train_audit_c084",
+      "source_context_id": "train7p_finance_0002",
+      "domain": "finance",
+      "context_length_chars": 279
+    },
+    {
+      "opaque_context_id": "train_audit_c085",
+      "source_context_id": "finance_6f8565d7aa2203d4",
+      "domain": "finance",
+      "context_length_chars": 731
+    },
+    {
+      "opaque_context_id": "train_audit_c086",
+      "source_context_id": "legal_agent_context_0016",
+      "domain": "legal",
+      "context_length_chars": 621
+    },
+    {
+      "opaque_context_id": "train_audit_c087",
+      "source_context_id": "medical_bef6b8f628eed389",
+      "domain": "medical",
+      "context_length_chars": 1031
+    },
+    {
+      "opaque_context_id": "train_audit_c088",
+      "source_context_id": "finance_context_0135",
+      "domain": "finance",
+      "context_length_chars": 567
+    },
+    {
+      "opaque_context_id": "train_audit_c089",
+      "source_context_id": "finance_context_0110",
+      "domain": "finance",
+      "context_length_chars": 559
+    },
+    {
+      "opaque_context_id": "train_audit_c090",
+      "source_context_id": "legal_2061b753f98dcd1a",
+      "domain": "legal",
+      "context_length_chars": 704
+    },
+    {
+      "opaque_context_id": "train_audit_c091",
+      "source_context_id": "legal_86daa159d595a461",
+      "domain": "legal",
+      "context_length_chars": 478
+    },
+    {
+      "opaque_context_id": "train_audit_c092",
+      "source_context_id": "finance_context_0002",
+      "domain": "finance",
+      "context_length_chars": 617
+    },
+    {
+      "opaque_context_id": "train_audit_c093",
+      "source_context_id": "medical_c22aeb18751bc88b",
+      "domain": "medical",
+      "context_length_chars": 1749
+    },
+    {
+      "opaque_context_id": "train_audit_c094",
+      "source_context_id": "medical_agent_context_0275",
+      "domain": "medical",
+      "context_length_chars": 1064
+    },
+    {
+      "opaque_context_id": "train_audit_c095",
+      "source_context_id": "train7p_finance_0003",
+      "domain": "finance",
+      "context_length_chars": 268
+    },
+    {
+      "opaque_context_id": "train_audit_c096",
+      "source_context_id": "legal_b06b7b26b570db24",
+      "domain": "legal",
+      "context_length_chars": 928
+    },
+    {
+      "opaque_context_id": "train_audit_c097",
+      "source_context_id": "train7b2_medical_0039",
+      "domain": "medical",
+      "context_length_chars": 250
+    },
+    {
+      "opaque_context_id": "train_audit_c098",
+      "source_context_id": "legal_agent_context_0189",
+      "domain": "legal",
+      "context_length_chars": 782
+    },
+    {
+      "opaque_context_id": "train_audit_c099",
+      "source_context_id": "train7p_legal_0013",
+      "domain": "legal",
+      "context_length_chars": 315
+    },
+    {
+      "opaque_context_id": "train_audit_c100",
+      "source_context_id": "medical_agent_context_0265",
+      "domain": "medical",
+      "context_length_chars": 1173
+    },
+    {
+      "opaque_context_id": "train_audit_c101",
+      "source_context_id": "medical_603401d3b038191d",
+      "domain": "medical",
+      "context_length_chars": 1597
+    },
+    {
+      "opaque_context_id": "train_audit_c102",
+      "source_context_id": "train7b2_legal_0022",
+      "domain": "legal",
+      "context_length_chars": 313
+    },
+    {
+      "opaque_context_id": "train_audit_c103",
+      "source_context_id": "legal_agent_context_0063",
+      "domain": "legal",
+      "context_length_chars": 713
+    },
+    {
+      "opaque_context_id": "train_audit_c104",
+      "source_context_id": "finance_context_0116",
+      "domain": "finance",
+      "context_length_chars": 594
+    },
+    {
+      "opaque_context_id": "train_audit_c105",
+      "source_context_id": "legal_4a6414ffd8d68372",
+      "domain": "legal",
+      "context_length_chars": 536
+    },
+    {
+      "opaque_context_id": "train_audit_c106",
+      "source_context_id": "legal_agent_context_0070",
+      "domain": "legal",
+      "context_length_chars": 597
+    },
+    {
+      "opaque_context_id": "train_audit_c107",
+      "source_context_id": "medical_agent_context_0272",
+      "domain": "medical",
+      "context_length_chars": 754
+    },
+    {
+      "opaque_context_id": "train_audit_c108",
+      "source_context_id": "legal_d6732d00fbaced7e",
+      "domain": "legal",
+      "context_length_chars": 1142
+    },
+    {
+      "opaque_context_id": "train_audit_c109",
+      "source_context_id": "medical_842eedbfd127646d",
+      "domain": "medical",
+      "context_length_chars": 671
+    },
+    {
+      "opaque_context_id": "train_audit_c110",
+      "source_context_id": "finance_context_0183",
+      "domain": "finance",
+      "context_length_chars": 430
+    },
+    {
+      "opaque_context_id": "train_audit_c111",
+      "source_context_id": "medical_ddc8567ebe51402d",
+      "domain": "medical",
+      "context_length_chars": 799
+    },
+    {
+      "opaque_context_id": "train_audit_c112",
+      "source_context_id": "finance_b1fce2b6265c783d",
+      "domain": "finance",
+      "context_length_chars": 1442
+    },
+    {
+      "opaque_context_id": "train_audit_c113",
+      "source_context_id": "medical_agent_context_0211",
+      "domain": "medical",
+      "context_length_chars": 1078
+    },
+    {
+      "opaque_context_id": "train_audit_c114",
+      "source_context_id": "finance_context_0072",
+      "domain": "finance",
+      "context_length_chars": 502
+    },
+    {
+      "opaque_context_id": "train_audit_c115",
+      "source_context_id": "medical_agent_context_0339",
+      "domain": "medical",
+      "context_length_chars": 926
+    },
+    {
+      "opaque_context_id": "train_audit_c116",
+      "source_context_id": "finance_context_0156",
+      "domain": "finance",
+      "context_length_chars": 452
+    },
+    {
+      "opaque_context_id": "train_audit_c117",
+      "source_context_id": "train7b2_finance_0026",
+      "domain": "finance",
+      "context_length_chars": 232
+    },
+    {
+      "opaque_context_id": "train_audit_c118",
+      "source_context_id": "medical_e674425f75580c70",
+      "domain": "medical",
+      "context_length_chars": 1151
+    },
+    {
+      "opaque_context_id": "train_audit_c119",
+      "source_context_id": "legal_agent_context_0124",
+      "domain": "legal",
+      "context_length_chars": 668
+    },
+    {
+      "opaque_context_id": "train_audit_c120",
+      "source_context_id": "finance_1a6a1782ec92a741",
+      "domain": "finance",
+      "context_length_chars": 705
+    },
+    {
+      "opaque_context_id": "train_audit_c121",
+      "source_context_id": "legal_agent_context_0053",
+      "domain": "legal",
+      "context_length_chars": 694
+    },
+    {
+      "opaque_context_id": "train_audit_c122",
+      "source_context_id": "finance_context_0108",
+      "domain": "finance",
+      "context_length_chars": 654
+    },
+    {
+      "opaque_context_id": "train_audit_c123",
+      "source_context_id": "finance_8760c54eb9abb916",
+      "domain": "finance",
+      "context_length_chars": 614
+    },
+    {
+      "opaque_context_id": "train_audit_c124",
+      "source_context_id": "legal_eb5bc9aa92a603ad",
+      "domain": "legal",
+      "context_length_chars": 1073
+    },
+    {
+      "opaque_context_id": "train_audit_c125",
+      "source_context_id": "train7p_legal_0012",
+      "domain": "legal",
+      "context_length_chars": 283
+    },
+    {
+      "opaque_context_id": "train_audit_c126",
+      "source_context_id": "legal_agent_context_0144",
+      "domain": "legal",
+      "context_length_chars": 787
+    },
+    {
+      "opaque_context_id": "train_audit_c127",
+      "source_context_id": "finance_context_0011",
+      "domain": "finance",
+      "context_length_chars": 492
+    },
+    {
+      "opaque_context_id": "train_audit_c128",
+      "source_context_id": "finance_context_0009",
+      "domain": "finance",
+      "context_length_chars": 508
+    },
+    {
+      "opaque_context_id": "train_audit_c129",
+      "source_context_id": "medical_d25d3f7b371af0c0",
+      "domain": "medical",
+      "context_length_chars": 1154
+    },
+    {
+      "opaque_context_id": "train_audit_c130",
+      "source_context_id": "medical_agent_context_0380",
+      "domain": "medical",
+      "context_length_chars": 960
+    },
+    {
+      "opaque_context_id": "train_audit_c131",
+      "source_context_id": "legal_agent_context_0130",
+      "domain": "legal",
+      "context_length_chars": 761
+    },
+    {
+      "opaque_context_id": "train_audit_c132",
+      "source_context_id": "finance_context_0070",
+      "domain": "finance",
+      "context_length_chars": 456
+    },
+    {
+      "opaque_context_id": "train_audit_c133",
+      "source_context_id": "medical_agent_context_0319",
+      "domain": "medical",
+      "context_length_chars": 1164
+    },
+    {
+      "opaque_context_id": "train_audit_c134",
+      "source_context_id": "legal_81fa888068ff343b",
+      "domain": "legal",
+      "context_length_chars": 643
+    },
+    {
+      "opaque_context_id": "train_audit_c135",
+      "source_context_id": "legal_9d5e6d762e055968",
+      "domain": "legal",
+      "context_length_chars": 1285
+    },
+    {
+      "opaque_context_id": "train_audit_c136",
+      "source_context_id": "medical_3c52bbfb46c9a481",
+      "domain": "medical",
+      "context_length_chars": 714
+    },
+    {
+      "opaque_context_id": "train_audit_c137",
+      "source_context_id": "legal_0c08b940f9a09c4c",
+      "domain": "legal",
+      "context_length_chars": 1692
+    },
+    {
+      "opaque_context_id": "train_audit_c138",
+      "source_context_id": "legal_54ed7106d60482e5",
+      "domain": "legal",
+      "context_length_chars": 589
+    },
+    {
+      "opaque_context_id": "train_audit_c139",
+      "source_context_id": "legal_agent_context_0119",
+      "domain": "legal",
+      "context_length_chars": 750
+    },
+    {
+      "opaque_context_id": "train_audit_c140",
+      "source_context_id": "medical_91e7d32d15676d62",
+      "domain": "medical",
+      "context_length_chars": 1010
+    },
+    {
+      "opaque_context_id": "train_audit_c141",
+      "source_context_id": "train7b2_medical_0022",
+      "domain": "medical",
+      "context_length_chars": 248
+    },
+    {
+      "opaque_context_id": "train_audit_c142",
+      "source_context_id": "finance_abd2eac36cd350b0",
+      "domain": "finance",
+      "context_length_chars": 709
+    },
+    {
+      "opaque_context_id": "train_audit_c143",
+      "source_context_id": "finance_5b774bfd6dd18c82",
+      "domain": "finance",
+      "context_length_chars": 1567
+    },
+    {
+      "opaque_context_id": "train_audit_c144",
+      "source_context_id": "legal_agent_context_0137",
+      "domain": "legal",
+      "context_length_chars": 896
+    },
+    {
+      "opaque_context_id": "train_audit_c145",
+      "source_context_id": "finance_context_0059",
+      "domain": "finance",
+      "context_length_chars": 495
+    },
+    {
+      "opaque_context_id": "train_audit_c146",
+      "source_context_id": "medical_493b7b2ef323e19c",
+      "domain": "medical",
+      "context_length_chars": 1250
+    },
+    {
+      "opaque_context_id": "train_audit_c147",
+      "source_context_id": "legal_agent_context_0103",
+      "domain": "legal",
+      "context_length_chars": 630
+    },
+    {
+      "opaque_context_id": "train_audit_c148",
+      "source_context_id": "train7p_medical_0019",
+      "domain": "medical",
+      "context_length_chars": 306
+    },
+    {
+      "opaque_context_id": "train_audit_c149",
+      "source_context_id": "finance_context_0107",
+      "domain": "finance",
+      "context_length_chars": 616
+    },
+    {
+      "opaque_context_id": "train_audit_c150",
+      "source_context_id": "train7p_finance_0017",
+      "domain": "finance",
+      "context_length_chars": 312
+    }
+  ]
+}

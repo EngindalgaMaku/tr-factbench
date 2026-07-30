@@ -1,0 +1,71 @@
+{
+  "last_updated": "2026-07-30",
+  "note": "Progress is derived from repository artifacts. One complete blind-human pass on both evaluation sets is sufficient for v0.1.0-preview; IAA requires paired blind files and is deferred to the stable release.",
+  "dev_stress": {
+    "total": 600,
+    "candidate_label_review": {
+      "completed": 600,
+      "total": 600,
+      "status": "completed"
+    },
+    "annotator_1": {
+      "role": "blind_human",
+      "completed": 600,
+      "total": 600,
+      "status": "completed"
+    },
+    "annotator_2": {
+      "role": "blind_human",
+      "completed": 80,
+      "total": 600,
+      "status": "in_progress"
+    },
+    "iaa_adjudication": "not_started"
+  },
+  "dev_general": {
+    "total": 960,
+    "candidate_label_review": {
+      "completed": 0,
+      "total": 960,
+      "status": "not_started"
+    },
+    "annotator_1": {
+      "role": "blind_human",
+      "completed": 960,
+      "total": 960,
+      "status": "completed"
+    },
+    "annotator_2": {
+      "role": "blind_human",
+      "completed": 0,
+      "total": 960,
+      "status": "not_started"
+    },
+    "iaa_adjudication": "not_started"
+  },
+  "train": {
+    "total": 4800,
+    "llm_preannotation": "completed",
+    "candidate_label_review": {
+      "completed": 24,
+      "total": 4800,
+      "status": "in_progress"
+    }
+  },
+  "train_audit_600": {
+    "sample_file_present": true,
+    "annotator_1": {
+      "role": "blind_human",
+      "completed": 0,
+      "total": 600,
+      "status": "not_started"
+    },
+    "annotator_2": {
+      "role": "blind_human",
+      "completed": 0,
+      "total": 600,
+      "status": "not_started"
+    },
+    "iaa_adjudication": "not_started"
+  }
+}

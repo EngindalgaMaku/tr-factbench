@@ -1,0 +1,15 @@
+{
+  "run_id": "B1_M02_BERT128K_TALL_LORA8_S42",
+  "base_model": "dbmdz/bert-base-turkish-128k-cased",
+  "model_revision_sha": "fea322505a69df97c8bd7a01863159eb4b45900f",
+  "python_version": "3.14.3",
+  "torch_version": "2.11.0+cu126",
+  "cuda_version": "12.6",
+  "transformers_version": "5.12.1",
+  "peft_version": "0.19.1",
+  "sklearn_version": "1.8.0",
+  "git_commit": "b991850dcab043603345efea83863cfc40187cb9",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "note": "Retroactively generated — reflects current env, not necessarily the env used for training."
+}

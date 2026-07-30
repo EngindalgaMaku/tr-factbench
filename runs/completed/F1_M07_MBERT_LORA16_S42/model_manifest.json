@@ -1,0 +1,15 @@
+{
+  "run_id": "F1_M07_MBERT_LORA16_S42",
+  "base_model": "google-bert/bert-base-multilingual-cased",
+  "model_revision_sha": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "python_version": "3.14.3",
+  "torch_version": "2.11.0+cu126",
+  "cuda_version": "12.6",
+  "transformers_version": "5.12.1",
+  "peft_version": "0.19.1",
+  "sklearn_version": "1.8.0",
+  "git_commit": "b991850dcab043603345efea83863cfc40187cb9",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "note": "Retroactively generated — reflects current env, not necessarily the env used for training."
+}

@@ -1,0 +1,39 @@
+{
+  "created_at_utc": "2026-07-30T20:29:06+00:00",
+  "dataset_version": "TR-FactBench v0.1.0-preview",
+  "release_status": "research_preview_single_annotator_reviewed",
+  "recommended_evaluation_files": {
+    "dev_general": "data/evaluation/preview_v0.1/dev_general.jsonl",
+    "dev_stress": "data/evaluation/preview_v0.1/dev_stress.jsonl"
+  },
+  "archived_experiment_files": {
+    "dev_general": "data/evaluation/legacy_experiment_version/dev_general.jsonl",
+    "dev_stress": "data/evaluation/legacy_experiment_version/dev_stress.jsonl"
+  },
+  "annotation_summary": {
+    "dev_general": {
+      "annotator_1": "960/960 completed",
+      "annotator_2": "not started",
+      "label_changes": 2,
+      "label_distribution": {
+        "contradicted": 242,
+        "partially_supported": 240,
+        "supported": 240,
+        "unverifiable": 238
+      }
+    },
+    "dev_stress": {
+      "annotator_1": "600/600 completed",
+      "annotator_2": "80/600 completed",
+      "label_changes": 3,
+      "claim_fixes": 1,
+      "label_distribution": {
+        "contradicted": 151,
+        "partially_supported": 152,
+        "supported": 150,
+        "unverifiable": 147
+      }
+    }
+  },
+  "usage_note": "Use the provisional files for new preview evaluations. Archived benchmark scores remain tied to the original experimental files and are retained for reproducibility. The second blind pass and adjudication are planned for a later stable release and are not blockers for v0.1.0-preview."
+}

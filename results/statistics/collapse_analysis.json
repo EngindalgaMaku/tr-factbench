@@ -1,0 +1,244 @@
+{
+  "analysis": "S46 class collapse investigation",
+  "collapse_run": "D1_M04_ELECTRA_LORA16_S46",
+  "healthy_runs": [
+    "D1_M04_ELECTRA_LORA16_S42",
+    "D1_M04_ELECTRA_LORA16_S43",
+    "D1_M04_ELECTRA_LORA16_S44",
+    "D1_M04_ELECTRA_LORA16_S45"
+  ],
+  "freeze50_s46": "D1_M04_ELECTRA_FREEZE50_S46",
+  "per_run": {
+    "D1_M04_ELECTRA_LORA16_S46": {
+      "n": 960,
+      "accuracy": 0.25,
+      "macro_f1": 0.1,
+      "pred_class_dist": {
+        "unverifiable": 960
+      },
+      "gold_class_dist": {
+        "supported": 240,
+        "partially_supported": 240,
+        "contradicted": 240,
+        "unverifiable": 240
+      },
+      "pred_class_pct": {
+        "unverifiable": 100.0
+      },
+      "per_class_f1": {
+        "supported": 0.0,
+        "partially_supported": 0.0,
+        "contradicted": 0.0,
+        "unverifiable": 0.4
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          240
+        ],
+        [
+          0,
+          0,
+          0,
+          240
+        ],
+        [
+          0,
+          0,
+          0,
+          240
+        ],
+        [
+          0,
+          0,
+          0,
+          240
+        ]
+      ],
+      "is_collapse": true,
+      "dominant_class": "unverifiable",
+      "dominant_class_pct": 100.0
+    },
+    "D1_M04_ELECTRA_LORA16_S45": {
+      "n": 960,
+      "accuracy": 0.9073,
+      "macro_f1": 0.9071,
+      "pred_class_dist": {
+        "supported": 237,
+        "partially_supported": 237,
+        "contradicted": 237,
+        "unverifiable": 249
+      },
+      "gold_class_dist": {
+        "supported": 240,
+        "partially_supported": 240,
+        "contradicted": 240,
+        "unverifiable": 240
+      },
+      "pred_class_pct": {
+        "supported": 24.7,
+        "partially_supported": 24.7,
+        "contradicted": 24.7,
+        "unverifiable": 25.9
+      },
+      "per_class_f1": {
+        "supported": 0.9099,
+        "partially_supported": 0.8931,
+        "contradicted": 0.8931,
+        "unverifiable": 0.9325
+      },
+      "confusion_matrix": [
+        [
+          217,
+          16,
+          6,
+          1
+        ],
+        [
+          13,
+          213,
+          6,
+          8
+        ],
+        [
+          7,
+          8,
+          213,
+          12
+        ],
+        [
+          0,
+          0,
+          12,
+          228
+        ]
+      ]
+    },
+    "D1_M04_ELECTRA_FREEZE50_S46": {
+      "n": 960,
+      "accuracy": 0.876,
+      "macro_f1": 0.8768,
+      "pred_class_dist": {
+        "supported": 232,
+        "partially_supported": 289,
+        "contradicted": 211,
+        "unverifiable": 228
+      },
+      "gold_class_dist": {
+        "supported": 240,
+        "partially_supported": 240,
+        "contradicted": 240,
+        "unverifiable": 240
+      },
+      "pred_class_pct": {
+        "supported": 24.2,
+        "partially_supported": 30.1,
+        "contradicted": 22.0,
+        "unverifiable": 23.8
+      },
+      "per_class_f1": {
+        "supported": 0.8729,
+        "partially_supported": 0.8469,
+        "contradicted": 0.8514,
+        "unverifiable": 0.9359
+      },
+      "confusion_matrix": [
+        [
+          206,
+          32,
+          2,
+          0
+        ],
+        [
+          12,
+          224,
+          3,
+          1
+        ],
+        [
+          11,
+          29,
+          192,
+          8
+        ],
+        [
+          3,
+          4,
+          14,
+          219
+        ]
+      ]
+    },
+    "H2_DROP0_S46": {
+      "n": 960,
+      "accuracy": 0.9083,
+      "macro_f1": 0.9083,
+      "pred_class_dist": {
+        "supported": 226,
+        "partially_supported": 277,
+        "contradicted": 220,
+        "unverifiable": 237
+      },
+      "gold_class_dist": {
+        "supported": 240,
+        "partially_supported": 240,
+        "contradicted": 240,
+        "unverifiable": 240
+      },
+      "pred_class_pct": {
+        "supported": 23.5,
+        "partially_supported": 28.9,
+        "contradicted": 22.9,
+        "unverifiable": 24.7
+      },
+      "per_class_f1": {
+        "supported": 0.9056,
+        "partially_supported": 0.8975,
+        "contradicted": 0.8783,
+        "unverifiable": 0.9518
+      },
+      "confusion_matrix": [
+        [
+          211,
+          26,
+          3,
+          0
+        ],
+        [
+          4,
+          232,
+          3,
+          1
+        ],
+        [
+          10,
+          19,
+          202,
+          9
+        ],
+        [
+          1,
+          0,
+          12,
+          227
+        ]
+      ]
+    }
+  },
+  "training_curves": {},
+  "hypotheses": [
+    "ELECTRA LoRA S46 collapsed to 'unverifiable' (100.0% of predictions)",
+    "Freeze50 S46 did NOT collapse → seed=46 alone is not sufficient to cause failure",
+    "The exact cause of the historical LoRA collapse cannot be determined from the archived training state",
+    "trainer_state.json unavailable — cannot confirm gradient vanishing hypothesis from loss curve"
+  ],
+  "summary": {
+    "collapse_confirmed": true,
+    "collapse_dominant_class": "unverifiable",
+    "collapse_dominant_pct": 100.0,
+    "freeze50_s46_healthy": true,
+    "interpretation": "A genuine class collapse occurred in the historical D1 LoRA run. Healthy Freeze-50 and seed-fixed H2 S46 results show that seed 46 alone is not a sufficient explanation. The exact cause remains undetermined because the original training state is incomplete."
+  }
+}

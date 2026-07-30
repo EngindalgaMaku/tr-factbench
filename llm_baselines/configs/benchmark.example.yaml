@@ -1,0 +1,20 @@
+datasets:
+  - name: dev_general
+    path: data/evaluation/legacy_experiment_version/dev_general.jsonl
+  - name: dev_stress
+    path: data/evaluation/legacy_experiment_version/dev_stress.jsonl
+
+prompt_modes:
+  - zero_shot
+  - few_shot_8
+
+output_root: results/llm_baselines
+zdr: false
+
+generation:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 1000
+  timeout: 240
+  max_retries: 5
+  sleep_between_requests: 0.25

@@ -1,0 +1,4 @@
+split,total,supported,partially_supported,contradicted,unverifiable,supported_pct,partially_supported_pct,contradicted_pct,unverifiable_pct
+train,4800,1200,1200,1200,1200,25.0,25.0,25.0,25.0
+dev960,960,240,240,242,238,25.0,25.0,25.2,24.8
+dev600,600,150,152,151,147,25.0,25.3,25.2,24.5

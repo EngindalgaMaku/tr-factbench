@@ -1,0 +1,48 @@
+{
+  "created_at_utc": "2026-07-26T18:58:01+00:00",
+  "rule_version": "atomic_relation_rule_v1",
+  "source_file": "results/annotation/dev960/llm_preannotations.jsonl",
+  "source_kind": "legacy_alias_already_normalized_or_raw_unknown",
+  "raw_artifact_available": false,
+  "source_sha256": "63879a4c95618656d8a44cce763b812e9c30a985e39de1db5bf425640098bb97",
+  "normalized_file": "results/annotation/dev960/llm_preannotations_normalized.jsonl",
+  "normalized_sha256": "63879a4c95618656d8a44cce763b812e9c30a985e39de1db5bf425640098bb97",
+  "legacy_compatibility_alias": "results/annotation/dev960/llm_preannotations.jsonl",
+  "records": 960,
+  "labels_changed_by_rule": 58,
+  "change_pairs": [
+    {
+      "from": "contradicted",
+      "to": "partially_supported",
+      "count": 47
+    },
+    {
+      "from": "contradicted",
+      "to": "unverifiable",
+      "count": 2
+    },
+    {
+      "from": "partially_supported",
+      "to": "contradicted",
+      "count": 1
+    },
+    {
+      "from": "partially_supported",
+      "to": "supported",
+      "count": 5
+    },
+    {
+      "from": "supported",
+      "to": "partially_supported",
+      "count": 1
+    },
+    {
+      "from": "unverifiable",
+      "to": "partially_supported",
+      "count": 2
+    }
+  ],
+  "candidate_label_matches_after_normalization": 935,
+  "candidate_label_match_rate": 0.9739583333333334,
+  "note": "The original raw artifact was unavailable in this snapshot; the legacy file was used as the source. Its embedded llm_label_raw fields were preserved when available."
+}

@@ -1,0 +1,38 @@
+# ─── Python cache ─────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# ─── IDE / system ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── BÜYÜK DOSYALAR — runs/completed altındaki tüm model dosyaları ─
+# ckpt/ dizininin tamamını dışarıda bırak (adapter ağırlıkları dahil)
+runs/completed/**/ckpt/
+
+# Zip / archive
+*.zip
+*.tar.gz
+
+# ─── results/tables csv kopyaları (MD yeterli) ───────────────
+# (isteğe bağlı — şimdilik dahil edilsin)
+
+# ─── NOT: aşağıdaki dosyalar COMMIT EDİLİR ──────────────────
+# runs/completed/<run_id>/metrics.json
+# runs/completed/<run_id>/config.json
+# runs/completed/<run_id>/trainable_parameters.json
+# runs/completed/<run_id>/predictions_DEV960-GEN.jsonl
+# runs/completed/<run_id>/predictions_DEV600-STR.jsonl
+# runs/completed/<run_id>/dataset_manifest.json
+# runs/completed/<run_id>/validation_report.json
+# data/primary/*.jsonl
+# results/csv/metrics_long_canonical.csv
+# results/tables/
+# results/statistics/
+# scripts/.env 
+.yapilacaklar.md 
+.env  

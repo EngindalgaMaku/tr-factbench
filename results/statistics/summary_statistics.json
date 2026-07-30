@@ -1,0 +1,64 @@
+{
+  "total_runs": 144,
+  "successful_runs": 126,
+  "degenerate_runs": 18,
+  "status_breakdown": {
+    "success": 126,
+    "degenerate_class_collapse": 17,
+    "degenerate_skewed": 1
+  },
+  "best_model_d960": {
+    "run_id": "F1_M04_ELECTRA_LORA16_S44",
+    "macro_f1": 0.9127
+  },
+  "best_model_d600": {
+    "run_id": "F1_M04_ELECTRA_LORA16_S44",
+    "macro_f1": 0.8978
+  },
+  "d960_f1_range": {
+    "min": 0.5497,
+    "max": 0.9127,
+    "mean": 0.8488
+  },
+  "d600_f1_range": {
+    "min": 0.2855,
+    "max": 0.8978,
+    "mean": 0.7828
+  },
+  "generalization_gap": {
+    "electra_lora16": 0.0541,
+    "convbert_lora16": 0.1131,
+    "bert_lora32": 0.0927,
+    "bert_full_ft": 0.1469,
+    "bert_lora16": 0.0545
+  },
+  "rank_scaling_analysis": {
+    "bert_r8_d960": 0.6847,
+    "bert_r16_d960": 0.7938,
+    "bert_r32_d960": 0.8212,
+    "electra_r4_d960": 0.8825,
+    "electra_r8_d960": 0.9031,
+    "electra_r16_d960": 0.9086,
+    "electra_r32_d960": 0.8866,
+    "electra_r4_to_r8_gain": 0.0206,
+    "electra_r8_to_r16_gain": 0.0055,
+    "electra_r16_to_r32_gain": -0.022,
+    "electra_optimal_rank": 16,
+    "r8_d960": 0.6847,
+    "r16_d960": 0.7938,
+    "r32_d960": 0.8212,
+    "r8_to_r16_gain": 0.1091,
+    "r16_to_r32_gain": 0.0274
+  },
+  "target_module_ablation": {
+    "scope": "ELECTRA-TR, LoRA r=16, seed=42; single-seed exploratory ablation",
+    "qv_d960": 0.8833,
+    "qv_d600": 0.8622,
+    "all_attention_d960": 0.893,
+    "all_attention_d600": 0.8462,
+    "all_linear_d960": 0.9086,
+    "all_linear_d600": 0.8727,
+    "all_linear_minus_all_attention_d960": 0.0156,
+    "interpretation": "All-linear is higher on DEV960 in this single-seed comparison, but uses more trainable parameters and the runs are not a parameter-matched multi-seed isolation of FFN effects."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "D2_M01_BERT32K_FULL_FT_S42_RERUN",
+  "model_name": "dbmdz/bert-base-turkish-cased",
+  "method": "full_ft",
+  "learning_rate": 2e-05,
+  "freeze_layers": 0,
+  "lora_r": 0,
+  "lora_alpha": 0,
+  "lora_target_modules": "all-linear",
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

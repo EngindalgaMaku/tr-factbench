@@ -1,0 +1,12 @@
+{
+  "run_id": "C0_M04_ELECTRA_FULL_FT_LR1E5_S42",
+  "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "full_ft",
+  "learning_rate": 1e-05,
+  "freeze_layers": 0,
+  "lora_r": 0,
+  "lora_alpha": 0,
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

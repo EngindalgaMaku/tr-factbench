@@ -1,0 +1,6 @@
+true_label,supported,partially_supported,contradicted,unverifiable,__invalid__
+supported,238,2,0,0,0
+partially_supported,1,216,23,0,0
+contradicted,0,4,236,0,0
+unverifiable,1,4,32,203,0
+__invalid__,0,0,0,0,0

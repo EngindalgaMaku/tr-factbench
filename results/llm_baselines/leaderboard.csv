@@ -1,0 +1,17 @@
+dataset,model,prompt_mode,strict_macro_f1,strict_accuracy,coverage
+dev_general,gpt_4_1_mini,few_shot_8,0.9443,0.9437,1.0
+dev_general,gpt_4_1_mini,zero_shot,0.8106,0.8146,1.0
+dev_general,gemma_4_26b_moe_free,few_shot_8,0.9699,0.9698,1.0
+dev_general,gemma_4_26b_moe_free,zero_shot,0.9433,0.9427,1.0
+dev_general,llama_3_3_70b,few_shot_8,0.9678,0.9677,1.0
+dev_general,llama_3_3_70b,zero_shot,0.8067,0.8052,1.0
+dev_general,qwen2_5_72b,few_shot_8,0.931,0.9302,1.0
+dev_general,qwen2_5_72b,zero_shot,0.8738,0.875,1.0
+dev_stress,gpt_4_1_mini,few_shot_8,0.8885,0.8883,1.0
+dev_stress,gpt_4_1_mini,zero_shot,0.6581,0.685,1.0
+dev_stress,gemma_4_26b_moe_free,few_shot_8,0.9168,0.9183,1.0
+dev_stress,gemma_4_26b_moe_free,zero_shot,0.9599,0.96,1.0
+dev_stress,llama_3_3_70b,few_shot_8,0.8481,0.8567,1.0
+dev_stress,llama_3_3_70b,zero_shot,0.5953,0.63,1.0
+dev_stress,qwen2_5_72b,few_shot_8,0.7812,0.8017,0.9983
+dev_stress,qwen2_5_72b,zero_shot,0.78,0.7933,0.9983

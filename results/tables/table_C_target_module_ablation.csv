@@ -1,0 +1,4 @@
+Run ID,Target Modules,Attn Modules,FFN Modules,Trainable Params,Status,DEV960 F1,DEV600 F1
+C7_M04_ELECTRA_QV_LORA16_S42,Query + Value only,24,0,"1,183,492",success,0.8833,0.8622
+C8_M04_ELECTRA_ALLATTN_LORA16_S42,All Attention (q+k+v+out),48,0,"1,773,316",success,0.8930,0.8462
+G1_C6_M04_ELECTRA_LORA16_DROP10_S42,All-Linear (attn + FFN),48,24,"3,247,876",success,0.9086,0.8727

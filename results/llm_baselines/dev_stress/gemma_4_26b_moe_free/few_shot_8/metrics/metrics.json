@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-07-28T12:54:44+00:00",
+  "dataset": "data/evaluation/legacy_experiment_version/dev_stress.jsonl",
+  "predictions": "results\\llm_baselines\\dev_stress\\gemma_4_26b_moe_free\\few_shot_8\\predictions.jsonl",
+  "requested_model": "google/gemma-4-26b-a4b-it:free",
+  "resolved_model": "google/gemma-4-26b-a4b-it:free",
+  "model_alias": "gemma_4_26b_moe_free",
+  "prompt_mode": "few_shot_8",
+  "examples": 600,
+  "valid_predictions": 600,
+  "invalid_or_missing_predictions": 0,
+  "coverage": 1.0,
+  "invalid_rate": 0.0,
+  "strict_metrics": {
+    "examples": 600,
+    "accuracy": 0.9183333333333333,
+    "macro_f1": 0.9168029424140505,
+    "weighted_f1": 0.9168029424140504
+  },
+  "valid_only_metrics": {
+    "examples": 600,
+    "accuracy": 0.9183333333333333,
+    "macro_f1": 0.9168029424140505,
+    "weighted_f1": 0.9168029424140504
+  },
+  "class_metrics": {
+    "supported": {
+      "precision": 1.0,
+      "recall": 0.96,
+      "f1": 0.9795918367346939,
+      "support": 150
+    },
+    "partially_supported": {
+      "precision": 0.8809523809523809,
+      "recall": 0.9866666666666667,
+      "f1": 0.9308176100628931,
+      "support": 150
+    },
+    "contradicted": {
+      "precision": 0.8352272727272727,
+      "recall": 0.98,
+      "f1": 0.901840490797546,
+      "support": 150
+    },
+    "unverifiable": {
+      "precision": 1.0,
+      "recall": 0.7466666666666667,
+      "f1": 0.8549618320610687,
+      "support": 150
+    }
+  },
+  "domain_metrics": {
+    "finance": {
+      "examples": 200,
+      "accuracy": 0.915,
+      "macro_f1": 0.9140009466148786,
+      "weighted_f1": 0.9140009466148785
+    },
+    "legal": {
+      "examples": 200,
+      "accuracy": 0.925,
+      "macro_f1": 0.923975188781014,
+      "weighted_f1": 0.923975188781014
+    },
+    "medical": {
+      "examples": 200,
+      "accuracy": 0.915,
+      "macro_f1": 0.9126157867799878,
+      "weighted_f1": 0.9126157867799877
+    }
+  },
+  "pair_confusions": {
+    "contradicted_to_unverifiable": 0,
+    "unverifiable_to_contradicted": 27,
+    "supported_to_partially_supported": 6,
+    "partially_supported_to_supported": 0
+  },
+  "gold_distribution": {
+    "unverifiable": 150,
+    "supported": 150,
+    "contradicted": 150,
+    "partially_supported": 150
+  },
+  "prediction_distribution": {
+    "unverifiable": 112,
+    "supported": 144,
+    "partially_supported": 168,
+    "contradicted": 176
+  },
+  "missing_or_invalid_example_ids": [],
+  "original_recorded_dataset_path": "data\\primary\\dev_stress.jsonl"
+}

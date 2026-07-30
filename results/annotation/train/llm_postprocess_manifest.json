@@ -1,0 +1,58 @@
+{
+  "created_at_utc": "2026-07-26T18:58:03+00:00",
+  "rule_version": "atomic_relation_rule_v1",
+  "source_file": "results/annotation/train/llm_preannotations.jsonl",
+  "source_kind": "legacy_alias_already_normalized_or_raw_unknown",
+  "raw_artifact_available": false,
+  "source_sha256": "a746f5118c5163ac34fcb35828c757f829ba8ad55b0ae67257eb96e93eb7d8ff",
+  "normalized_file": "results/annotation/train/llm_preannotations_normalized.jsonl",
+  "normalized_sha256": "a746f5118c5163ac34fcb35828c757f829ba8ad55b0ae67257eb96e93eb7d8ff",
+  "legacy_compatibility_alias": "results/annotation/train/llm_preannotations.jsonl",
+  "records": 4800,
+  "labels_changed_by_rule": 434,
+  "change_pairs": [
+    {
+      "from": "contradicted",
+      "to": "partially_supported",
+      "count": 326
+    },
+    {
+      "from": "contradicted",
+      "to": "supported",
+      "count": 2
+    },
+    {
+      "from": "contradicted",
+      "to": "unverifiable",
+      "count": 2
+    },
+    {
+      "from": "partially_supported",
+      "to": "contradicted",
+      "count": 7
+    },
+    {
+      "from": "partially_supported",
+      "to": "supported",
+      "count": 53
+    },
+    {
+      "from": "partially_supported",
+      "to": "unverifiable",
+      "count": 11
+    },
+    {
+      "from": "supported",
+      "to": "partially_supported",
+      "count": 7
+    },
+    {
+      "from": "unverifiable",
+      "to": "partially_supported",
+      "count": 26
+    }
+  ],
+  "candidate_label_matches_after_normalization": 4384,
+  "candidate_label_match_rate": 0.9133333333333333,
+  "note": "The original raw artifact was unavailable in this snapshot; the legacy file was used as the source. Its embedded llm_label_raw fields were preserved when available."
+}

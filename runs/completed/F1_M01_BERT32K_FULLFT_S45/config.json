@@ -1,0 +1,17 @@
+{
+  "run_id": "F1_M01_BERT32K_FULLFT_S45",
+  "model_name": "dbmdz/bert-base-turkish-cased",
+  "method": "full_ft",
+  "learning_rate": 2e-05,
+  "freeze_layers": 0,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "lora_target_modules": "all-linear",
+  "seed": 45,
+  "batch_size": 8,
+  "epochs": 5.0,
+  "max_length": 512,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01
+}

@@ -1,0 +1,33 @@
+{
+  "model": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "LoRA all-linear, alpha=2r, seed=42",
+  "results": [
+    {
+      "rank": 4,
+      "alpha": 8,
+      "dev960": 88.25,
+      "dev600": 85.3
+    },
+    {
+      "rank": 8,
+      "alpha": 16,
+      "dev960": 90.31,
+      "dev600": 83.07
+    },
+    {
+      "rank": 16,
+      "alpha": 32,
+      "dev960": 90.75,
+      "dev600": 85.78,
+      "optimal": true
+    },
+    {
+      "rank": 32,
+      "alpha": 64,
+      "dev960": 88.66,
+      "dev600": 85.25
+    }
+  ],
+  "optimal_rank": 16,
+  "finding": "r=16 iki kumede de en yuksek Macro F1 (%90.75 DEV960, %85.78 DEV600). r=4->r=8 +2.06pp kazanc (kapasite yetersizligi). r=8->r=16 +0.44pp ek kazanc (optimal nokta). r=16->r=32 -2.09pp dusus: ELECTRA mimarisi icin r=16 optimal rank."
+}

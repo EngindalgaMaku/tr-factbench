@@ -1,0 +1,16 @@
+{
+  "created_at_utc": "2026-07-26T11:00:41+00:00",
+  "metadata_corrected_at_utc": "2026-07-26T18:58:32+00:00",
+  "dataset_file": "data/primary/train.jsonl",
+  "dataset_sha256": "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17",
+  "output_file": "results/annotation/train/train_candidate_label_review.jsonl",
+  "mode": "candidate_label_review",
+  "annotator_id": "annotator_1",
+  "order_seed": 42,
+  "independent_annotation": false,
+  "candidate_labels_visible_in_ui": true,
+  "llm_suggestions_visible_in_ui": true,
+  "purpose": "candidate_label_refinement",
+  "app_version": "review_app_v2",
+  "note": "Metadata corrected to reflect the workflow actually used; existing human decisions were not changed."
+}

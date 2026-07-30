@@ -1,0 +1,162 @@
+[
+  {
+    "dataset": "dev_general",
+    "model": "gpt_4_1_mini",
+    "model_display": "GPT-4.1 mini",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.9443,
+    "strict_accuracy": 0.9437,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "gpt_4_1_mini",
+    "model_display": "GPT-4.1 mini",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.8106,
+    "strict_accuracy": 0.8146,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "gemma_4_26b_moe_free",
+    "model_display": "Gemma 4 26B MoE",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.9699,
+    "strict_accuracy": 0.9698,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "gemma_4_26b_moe_free",
+    "model_display": "Gemma 4 26B MoE",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.9433,
+    "strict_accuracy": 0.9427,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "llama_3_3_70b",
+    "model_display": "LLaMA 3.3 70B",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.9678,
+    "strict_accuracy": 0.9677,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "llama_3_3_70b",
+    "model_display": "LLaMA 3.3 70B",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.8067,
+    "strict_accuracy": 0.8052,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "qwen2_5_72b",
+    "model_display": "Qwen2.5 72B",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.931,
+    "strict_accuracy": 0.9302,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_general",
+    "model": "qwen2_5_72b",
+    "model_display": "Qwen2.5 72B",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.8738,
+    "strict_accuracy": 0.875,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "gpt_4_1_mini",
+    "model_display": "GPT-4.1 mini",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.8885,
+    "strict_accuracy": 0.8883,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "gpt_4_1_mini",
+    "model_display": "GPT-4.1 mini",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.6581,
+    "strict_accuracy": 0.685,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "gemma_4_26b_moe_free",
+    "model_display": "Gemma 4 26B MoE",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.9168,
+    "strict_accuracy": 0.9183,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "gemma_4_26b_moe_free",
+    "model_display": "Gemma 4 26B MoE",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.9599,
+    "strict_accuracy": 0.96,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "llama_3_3_70b",
+    "model_display": "LLaMA 3.3 70B",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.8481,
+    "strict_accuracy": 0.8567,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "llama_3_3_70b",
+    "model_display": "LLaMA 3.3 70B",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.5953,
+    "strict_accuracy": 0.63,
+    "coverage": 1.0
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "qwen2_5_72b",
+    "model_display": "Qwen2.5 72B",
+    "prompt_mode": "few_shot_8",
+    "prompt_display": "8-shot",
+    "strict_macro_f1": 0.7812,
+    "strict_accuracy": 0.8017,
+    "coverage": 0.9983
+  },
+  {
+    "dataset": "dev_stress",
+    "model": "qwen2_5_72b",
+    "model_display": "Qwen2.5 72B",
+    "prompt_mode": "zero_shot",
+    "prompt_display": "zero-shot",
+    "strict_macro_f1": 0.78,
+    "strict_accuracy": 0.7933,
+    "coverage": 0.9983
+  }
+]

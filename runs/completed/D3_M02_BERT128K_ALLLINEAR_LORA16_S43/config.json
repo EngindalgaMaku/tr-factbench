@@ -1,0 +1,17 @@
+{
+  "run_id": "D3_M02_BERT128K_ALLLINEAR_LORA16_S43",
+  "model_name": "dbmdz/bert-base-turkish-128k-cased",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "lora_target_modules": "all-linear",
+  "seed": 43,
+  "batch_size": 8,
+  "epochs": 5.0,
+  "max_length": 512,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01
+}

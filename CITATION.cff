@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite as below."
+type: software
+title: "TR-FactBench: A Multi-Domain Benchmark for Source-Grounded Factuality Verification in Turkish"
+authors:
+  - family-names: "Dalga"
+    given-names: "Engin"
+repository-code: "https://github.com/EngindalgaMaku/tr-factbench"
+url: "https://github.com/EngindalgaMaku/tr-factbench"
+license: MIT
+version: "0.1.0-preview"
+date-released: "2026-07-30"
+abstract: >
+  TR-FactBench is a 4-class source-grounded factuality verification benchmark
+  for Turkish. It covers three domains (finance, legal, medical) with 4,800
+  training, 960 general dev, and 600 stress-test examples. The benchmark
+  evaluates fine-tuned Turkish encoder models (including ELECTRA and ModernBERT)
+  and four zero-shot/few-shot LLM baselines.
+
+keywords:
+  - Turkish NLP
+  - factuality verification
+  - hallucination detection
+  - natural language inference
+  - LoRA
+  - ELECTRA
+
+note: >
+  Research preview. The first independent blind-human pass is complete for both
+  evaluation sets (DEV960 960/960; Dev600 600/600). Single-annotator provisional
+  evaluation files are included. Second annotation and adjudication are reserved
+  for a later stable release; do not treat this preview as fully adjudicated gold.

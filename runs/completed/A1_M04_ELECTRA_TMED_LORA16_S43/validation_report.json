@@ -1,0 +1,67 @@
+{
+  "qc_status": "degenerate_class_collapse",
+  "qc_failures": [
+    "DEV960 Macro F1 (0.1000) is below 0.30 threshold.",
+    "Class 'supported' has 0.0 F1 score in DEV960.",
+    "Class 'contradicted' has 0.0 F1 score in DEV960.",
+    "Class 'unverifiable' has 0.0 F1 score in DEV960."
+  ],
+  "d960_pred_class_counts": {
+    "1": 320
+  },
+  "d600_pred_class_counts": {
+    "1": 200
+  },
+  "d960_confusion_matrix": [
+    [
+      0,
+      80,
+      0,
+      0
+    ],
+    [
+      0,
+      80,
+      0,
+      0
+    ],
+    [
+      0,
+      80,
+      0,
+      0
+    ],
+    [
+      0,
+      80,
+      0,
+      0
+    ]
+  ],
+  "d600_confusion_matrix": [
+    [
+      0,
+      50,
+      0,
+      0
+    ],
+    [
+      0,
+      50,
+      0,
+      0
+    ],
+    [
+      0,
+      50,
+      0,
+      0
+    ],
+    [
+      0,
+      50,
+      0,
+      0
+    ]
+  ]
+}

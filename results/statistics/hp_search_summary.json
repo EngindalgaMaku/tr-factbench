@@ -1,0 +1,59 @@
+{
+  "search_protocol": {
+    "description": "Grid search over LR × LoRA rank for ELECTRA-TR discriminator",
+    "learning_rates_tried": [
+      "0.0001",
+      "0.0002",
+      "1e-05",
+      "2e-05",
+      "3e-05",
+      "5e-05"
+    ],
+    "lora_ranks_tried": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "models_tried": [
+      "TabiBERT",
+      "bert-base-multilingual-cased",
+      "bert-base-turkish-128k-cased",
+      "bert-base-turkish-128k-uncased",
+      "bert-base-turkish-cased",
+      "convbert-base-turkish-cased",
+      "convbert-base-turkish-mc4-cased",
+      "distilbert-base-turkish-cased",
+      "electra-base-turkish-cased-discriminator",
+      "mdeberta-v3-base",
+      "modernbert-tr-base-1k",
+      "roberta-base-turkish-uncased",
+      "turkish-large-bert-cased",
+      "xlm-roberta-base"
+    ],
+    "methods_tried": [
+      "freeze",
+      "full",
+      "full_ft",
+      "lora"
+    ],
+    "seeds_used": "Single seed (42) for HP search; multi-seed (42-46) for final config",
+    "total_hp_runs": 144,
+    "successful_hp_runs": 126
+  },
+  "selected_config": {
+    "model": "dbmdz/electra-base-turkish-cased-discriminator",
+    "method": "lora",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "learning_rate": 0.0002,
+    "target_modules": "all-linear",
+    "rationale": "r=16 achieves highest DEV960-GEN F1 in rank sweep; lr=2e-4 matches best B0 config"
+  },
+  "rank_sweep_summary": {
+    "C3_M04_ELECTRA_LORA4_S42": 0.8825,
+    "C3_M04_ELECTRA_LORA8_S42": 0.9031,
+    "B1_M04_ELECTRA_ALLLINEAR_LORA16_S42": 0.9086,
+    "C3_M04_ELECTRA_LORA32_S42": 0.8866
+  }
+}

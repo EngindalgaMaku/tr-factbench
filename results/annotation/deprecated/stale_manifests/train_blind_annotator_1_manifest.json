@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-07-26T10:59:47+00:00",
+  "dataset_file": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\tr-factbench\\data\\primary\\train.jsonl",
+  "dataset_sha256": "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17",
+  "output_file": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\tr-factbench\\results\\annotation\\train\\train_blind_annotator_1.jsonl",
+  "mode": "blind_human",
+  "annotator_id": "annotator_1",
+  "order_seed": 42,
+  "gold_labels_visible_in_ui": false,
+  "llm_suggestions_visible_in_ui": false,
+  "app_version": "dev600_review_app_v1"
+}

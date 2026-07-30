@@ -1,0 +1,17 @@
+{
+  "run_id": "F1_M12_MODERNBERT_LORA16_S42",
+  "model_name": "ytu-ce-cosmos/modernbert-tr-base-1k",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_target_modules": "all-linear",
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0,
+  "max_length": 512,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01
+}

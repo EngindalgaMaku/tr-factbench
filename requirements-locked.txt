@@ -1,0 +1,22 @@
+# Locked environment used for all G1 series runs (sentinel PASS: 2026-07-26)
+# Python 3.14.3 | CUDA 12.6 | GPU: see model_manifest.json in each run dir
+#
+# Install with:
+#   pip install -r requirements-locked.txt
+#
+# For CUDA 12.6 torch installation, see: https://pytorch.org/get-started/locally/
+#   pip install torch==2.11.0+cu126 --index-url https://download.pytorch.org/whl/cu126
+
+torch==2.11.0
+transformers==5.12.1
+peft==0.19.1
+scikit-learn==1.8.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+datasets>=2.14
+accelerate>=0.28
+evaluate>=0.4
+scipy>=1.10
+pandas>=2.0
+tqdm>=4.65

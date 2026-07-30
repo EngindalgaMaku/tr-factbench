@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-07-30T20:29:06+00:00",
+  "dataset_version": "TR-FactBench v0.1.0-preview",
+  "output_file": "results/annotation/dev960/dev960_provisional_single_annotator_v0.1.jsonl",
+  "data_release_file": "data/evaluation/preview_v0.1/dev_general.jsonl",
+  "output_sha256": "f17b3ad40df07146f09e1dfaedfcc74908b447dd97adba296fc5a509b61bd7e4",
+  "source_dataset": "data/evaluation/legacy_experiment_version/dev_general.jsonl",
+  "source_sha256": "2f05485670066558f3884196de110154acd9cc5cfe9be81ddd4f0253effb7f48",
+  "annotation_file": "results/annotation/dev960/dev_general_blind_annotator_1.jsonl",
+  "annotation_sha256": "f45803e1e1b5f9c63ee4d729ae5dc254f201f284f353f2162bac4e80368cff58",
+  "total_examples": 960,
+  "gold_source": "single_annotator_blind_human",
+  "gold_annotator": "annotator_1",
+  "label_changes_from_original_gold": 2,
+  "label_changes": [
+    {
+      "example_id": "legal_v2b1_example_004_unverifiable",
+      "from": "unverifiable",
+      "to": "contradicted"
+    },
+    {
+      "example_id": "finance_v2b8_example_003_unverifiable",
+      "from": "unverifiable",
+      "to": "contradicted"
+    }
+  ],
+  "claim_fixes": [],
+  "label_distribution": {
+    "contradicted": 242,
+    "partially_supported": 240,
+    "supported": 240,
+    "unverifiable": 238
+  },
+  "provisional": true,
+  "status": "provisional_single_annotator_v0.1",
+  "evaluation_note": "Archived encoder and LLM scores use the pre-review DEV960 file. The reviewed preview changes 2/960 labels; archived runs were not repeated."
+}

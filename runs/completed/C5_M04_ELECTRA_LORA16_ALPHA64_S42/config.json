@@ -1,0 +1,12 @@
+{
+  "run_id": "C5_M04_ELECTRA_LORA16_ALPHA64_S42",
+  "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 64,
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

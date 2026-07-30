@@ -1,0 +1,15 @@
+{
+  "run_id": "B1_M10_TABIBERT_ALLLINEAR_LORA16_S42",
+  "base_model": "boun-tabilab/TabiBERT",
+  "model_revision_sha": "36d24bfae8d67f7b1f7d0827fc43076e4a1c3e9f",
+  "python_version": "3.14.3",
+  "torch_version": "2.11.0+cu126",
+  "cuda_version": "12.6",
+  "transformers_version": "5.12.1",
+  "peft_version": "0.19.1",
+  "sklearn_version": "1.8.0",
+  "git_commit": "b991850dcab043603345efea83863cfc40187cb9",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "note": "Retroactively generated — reflects current env, not necessarily the env used for training."
+}

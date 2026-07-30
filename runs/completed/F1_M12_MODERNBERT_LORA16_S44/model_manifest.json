@@ -1,0 +1,14 @@
+{
+  "run_id": "F1_M12_MODERNBERT_LORA16_S44",
+  "base_model": "ytu-ce-cosmos/modernbert-tr-base-1k",
+  "model_revision_sha": "85f1110a51fe88e2097ec200fc00115076821925",
+  "python_version": "3.14.3",
+  "torch_version": "2.11.0+cu126",
+  "cuda_version": "12.6",
+  "transformers_version": "5.12.1",
+  "peft_version": "0.19.1",
+  "sklearn_version": "1.8.0",
+  "git_commit": "872843b1131720e2b26e42a992e7170a131da665",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

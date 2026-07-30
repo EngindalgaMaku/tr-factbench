@@ -1,0 +1,186 @@
+{
+  "best_run": "H1_DROP10_S45",
+  "confusion_matrix_dev960": [
+    [
+      219,
+      15,
+      6,
+      0
+    ],
+    [
+      14,
+      220,
+      6,
+      0
+    ],
+    [
+      9,
+      11,
+      212,
+      8
+    ],
+    [
+      1,
+      1,
+      24,
+      214
+    ]
+  ],
+  "confusion_matrix_dev600": [
+    [
+      136,
+      13,
+      1,
+      0
+    ],
+    [
+      14,
+      132,
+      4,
+      0
+    ],
+    [
+      1,
+      16,
+      129,
+      4
+    ],
+    [
+      0,
+      22,
+      6,
+      122
+    ]
+  ],
+  "per_class_f1_dev960": {
+    "supported": 0.9068,
+    "partially_supported": 0.9035,
+    "contradicted": 0.8689,
+    "unverifiable": 0.9264
+  },
+  "per_class_f1_dev600": {
+    "supported": 0.9037,
+    "partially_supported": 0.7928,
+    "contradicted": 0.8897,
+    "unverifiable": 0.8841
+  },
+  "per_domain_results": {
+    "finance": {
+      "n": 320,
+      "accuracy": 0.9,
+      "macro_f1": 0.9001,
+      "per_class_f1": {
+        "supported": 0.9057,
+        "partially_supported": 0.9157,
+        "contradicted": 0.8571,
+        "unverifiable": 0.9221
+      }
+    },
+    "legal": {
+      "n": 320,
+      "accuracy": 0.9094,
+      "macro_f1": 0.9094,
+      "per_class_f1": {
+        "supported": 0.9212,
+        "partially_supported": 0.9125,
+        "contradicted": 0.875,
+        "unverifiable": 0.929
+      }
+    },
+    "medical": {
+      "n": 320,
+      "accuracy": 0.8938,
+      "macro_f1": 0.8944,
+      "per_class_f1": {
+        "supported": 0.8931,
+        "partially_supported": 0.882,
+        "contradicted": 0.8743,
+        "unverifiable": 0.9281
+      }
+    }
+  },
+  "claim_length_vs_error": {
+    "<20": {
+      "n": 960,
+      "error_rate": 0.099,
+      "macro_f1": 0.9014
+    }
+  },
+  "top_error_pairs": [
+    {
+      "gold": "unverifiable",
+      "predicted": "contradicted",
+      "count": 24
+    },
+    {
+      "gold": "supported",
+      "predicted": "partially_supported",
+      "count": 15
+    },
+    {
+      "gold": "partially_supported",
+      "predicted": "supported",
+      "count": 14
+    },
+    {
+      "gold": "contradicted",
+      "predicted": "partially_supported",
+      "count": 11
+    },
+    {
+      "gold": "contradicted",
+      "predicted": "supported",
+      "count": 9
+    },
+    {
+      "gold": "contradicted",
+      "predicted": "unverifiable",
+      "count": 8
+    },
+    {
+      "gold": "supported",
+      "predicted": "contradicted",
+      "count": 6
+    },
+    {
+      "gold": "partially_supported",
+      "predicted": "contradicted",
+      "count": 6
+    },
+    {
+      "gold": "unverifiable",
+      "predicted": "partially_supported",
+      "count": 1
+    },
+    {
+      "gold": "unverifiable",
+      "predicted": "supported",
+      "count": 1
+    }
+  ],
+  "d1_models_per_class_f1": {
+    "ELECTRA_LoRA_S45": {
+      "supported": 0.9099,
+      "partially_supported": 0.8931,
+      "contradicted": 0.8931,
+      "unverifiable": 0.9325
+    },
+    "ELECTRA_Freeze50_S45": {
+      "supported": 0.863,
+      "partially_supported": 0.833,
+      "contradicted": 0.8508,
+      "unverifiable": 0.9278
+    },
+    "ELECTRA_Freeze50_S46": {
+      "supported": 0.8729,
+      "partially_supported": 0.8469,
+      "contradicted": 0.8514,
+      "unverifiable": 0.9359
+    }
+  },
+  "interpretation": {
+    "hardest_class": 0.8688524590163934,
+    "hardest_class_name": "contradicted",
+    "easiest_class_name": "unverifiable"
+  }
+}

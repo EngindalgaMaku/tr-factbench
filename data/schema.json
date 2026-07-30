@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TR-FactBench Example",
+  "description": "Schema for TR-FactBench JSONL records. Not all fields appear in all splits — see _field_coverage for details.",
+  "type": "object",
+  "required": [
+    "example_id",
+    "context_id",
+    "context",
+    "question",
+    "claim",
+    "gold_label",
+    "domain"
+  ],
+  "properties": {
+    "example_id": {
+      "type": "string",
+      "description": "Unique identifier. Format: {context_id}_{gold_label}",
+      "examples": [
+        "fin_1200_supported",
+        "med_0042_contradicted"
+      ]
+    },
+    "context_id": {
+      "type": "string",
+      "description": "Shared ID for all 4 examples from the same context passage.",
+      "examples": [
+        "fin_1200",
+        "med_0042"
+      ]
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "finance",
+        "legal",
+        "medical"
+      ]
+    },
+    "context": {
+      "type": "string",
+      "description": "Source passage in Turkish."
+    },
+    "question": {
+      "type": "string"
+    },
+    "claim": {
+      "type": "string"
+    },
+    "gold_label": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "contradicted",
+        "unverifiable"
+      ]
+    },
+    "annotation_status": {
+      "type": "string",
+      "description": "Construction and review maturity. Archived files use candidate-oriented statuses; the provisional evaluation files use single_annotator_provisional.",
+      "enum": [
+        "annotated",
+        "pending",
+        "candidate",
+        "candidate_gold_pending_blind_review",
+        "single_annotator_provisional"
+      ]
+    },
+    "annotation_notes": {
+      "type": "string",
+      "description": "Optional revision notes. Present in some train and dev_general records."
+    },
+    "dataset_version": {
+      "type": "string",
+      "description": "Dataset version. Present in stress and provisional evaluation records."
+    },
+    "legacy_subtype": {
+      "type": "string",
+      "description": "Internal construction tag. Present in train and dev_stress."
+    }
+  },
+  "additionalProperties": true,
+  "_field_coverage": {
+    "split_field_present": {
+      "train.jsonl": false,
+      "dev_general.jsonl": false,
+      "dev_stress.jsonl": false,
+      "note": "The 'split' field does not exist in the JSONL files. Use data/example_metadata.csv for split labels."
+    },
+    "annotation_status_present": {
+      "train.jsonl": true,
+      "dev_general.jsonl": false,
+      "dev_stress.jsonl": true,
+      "note": "The archived dev_general file lacks annotation_status. Both files under data/evaluation/preview_v0.1/ carry annotation_status=single_annotator_provisional directly.",
+      "evaluation/preview_v0.1/dev_general.jsonl": true,
+      "evaluation/preview_v0.1/dev_stress.jsonl": true
+    },
+    "dataset_version_present": {
+      "train.jsonl": false,
+      "dev_general.jsonl": false,
+      "dev_stress.jsonl": true,
+      "evaluation/preview_v0.1/dev_general.jsonl": true,
+      "evaluation/preview_v0.1/dev_stress.jsonl": true
+    },
+    "source_url_present": {
+      "train.jsonl": false,
+      "dev_general.jsonl": false,
+      "dev_stress.jsonl": true
+    }
+  },
+  "_sidecar": {
+    "file": "data/example_metadata.csv",
+    "description": "Sidecar file providing split, dataset_version, annotation_status, and source_id for the 6,360 archived experiment examples without changing their hashes. Preview files carry reviewed annotation metadata directly."
+  },
+  "_context_group": "Each context_id maps to exactly 4 examples, one per gold_label class."
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "B1_M05_ROBERTA_TR_ALLLINEAR_LORA16_S42",
+  "model_name": "TURKCELL/roberta-base-turkish-uncased",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

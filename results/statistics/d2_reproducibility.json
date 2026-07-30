@@ -1,0 +1,24 @@
+{
+  "sentinels": [
+    {
+      "sentinel": "D2_M01_BERT32K_FULL_FT_S42_RERUN",
+      "original_run": "B1_M01_BERT32K_FULL_FT_S42",
+      "original_f1": 0.8189,
+      "rerun_f1": 0.8149,
+      "f1_delta": 0.004,
+      "dataset_hash_match": true,
+      "tolerance_ok": true,
+      "status": "PASS"
+    },
+    {
+      "sentinel": "D2_M04_ELECTRA_LORA16_S42_RERUN",
+      "original_run": "B1_M04_ELECTRA_ALLLINEAR_LORA16_S42",
+      "original_f1": 0.9075,
+      "rerun_f1": 0.8992,
+      "f1_delta": 0.0083,
+      "dataset_hash_match": true,
+      "tolerance_ok": false,
+      "status": "FAIL"
+    }
+  ]
+}

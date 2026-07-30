@@ -1,0 +1,6 @@
+Run ID,Model,Target Modules,Rank,Trainable Params,Status,DEV960 F1,DEV600 F1
+B0_M01_TALL_LORA8_LR2e4_S42,BERT-32k,TALL (q+v),r=8,"297,988",degenerate_skewed,0.3258,0.1592
+B1_M01_BERT32K_ALL_ATTN_LORA8_S42,BERT-32k,All Attention (q+k+v+out),r=8,"1,342,468",degenerate_collapse,0.1014,0.1000
+B1_M02_BERT128K_TALL_LORA8_S42,BERT-128k,TALL (q+v),r=8,"1,342,468",degenerate_collapse,0.1000,0.1000
+B1_M01_BERT32K_ALLLINEAR_LORA8_S42,BERT-32k,All Linear (FFN dahil),r=8,"1,342,468",success,0.6847,0.4582
+B1_M01_BERT32K_ALLLINEAR_LORA16_S42,BERT-32k,All Linear (FFN dahil),r=16,"2,681,860",success,0.7938,0.7393

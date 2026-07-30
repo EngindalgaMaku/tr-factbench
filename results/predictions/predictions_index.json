@@ -1,0 +1,2018 @@
+{
+  "A1_M04_ELECTRA_TFIN_LORA16_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TFIN_LORA16_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TFIN_LORA16_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TFIN_LORA16_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TLEG_LORA16_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TLEG_LORA16_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TLEG_LORA16_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TLEG_LORA16_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMED_LORA16_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMED_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 200
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMED_LORA16_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMED_LORA16_S45": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMED_LORA16_S45/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMIX_LORA16_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMIX_LORA16_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A1_M04_ELECTRA_TMIX_LORA16_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A1_M04_ELECTRA_TMIX_LORA16_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOFIN_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOFIN_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOFIN_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOFIN_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOLEG_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S42/predictions_DEV600-STR.jsonl",
+      "n": 200
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S42/predictions_DEV960-GEN.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOLEG_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOLEG_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOLEG_S45": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOLEG_S45/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOMED_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOMED_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "A3_M04_ELECTRA_LODO_NOMED_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/A3_M04_ELECTRA_LODO_NOMED_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "B0_M01_TALL_LORA8_LR1e4_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR1e4_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR1e4_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B0_M01_TALL_LORA8_LR2e4_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR2e4_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR2e4_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B0_M01_TALL_LORA8_LR5e5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR5e5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B0_M01_TALL_LORA8_LR5e5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M01_BERT32K_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M01_BERT32K_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M01_BERT32K_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M01_BERT32K_ALLLINEAR_LORA8_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M01_BERT32K_ALLLINEAR_LORA8_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M01_BERT32K_ALLLINEAR_LORA8_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M01_BERT32K_ALL_ATTN_LORA8_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M01_BERT32K_ALL_ATTN_LORA8_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M01_BERT32K_ALL_ATTN_LORA8_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M01_BERT32K_FULL_FT_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M01_BERT32K_FULL_FT_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M01_BERT32K_FULL_FT_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M01_BERT32K_LORA32_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M01_BERT32K_LORA32_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M01_BERT32K_LORA32_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M02_BERT128K_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M02_BERT128K_TALL_LORA8_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M02_BERT128K_TALL_LORA8_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M02_BERT128K_TALL_LORA8_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M03_CONVBERT_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M03_CONVBERT_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M03_CONVBERT_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M04_ELECTRA_ALLLINEAR_LORA16_S42": {
+    "DEV600-FIN": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/B1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "B1_M05_ROBERTA_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M05_ROBERTA_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M05_ROBERTA_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M05_ROBERTA_TR_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M05_ROBERTA_TR_FULL_FT_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_FULL_FT_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_FULL_FT_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M05_ROBERTA_TR_LR5e5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_LR5e5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M05_ROBERTA_TR_LR5e5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M06_DISTILBERT_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M06_DISTILBERT_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M06_DISTILBERT_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M07_MBERT_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M07_MBERT_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M07_MBERT_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M08_XLMROBERTA_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M08_XLMROBERTA_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M08_XLMROBERTA_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M09_MDEBERTA_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M09_MDEBERTA_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M09_MDEBERTA_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M10_TABIBERT_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M10_TABIBERT_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M10_TABIBERT_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B1_M11_TURKLARGE_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B1_M11_TURKLARGE_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B1_M11_TURKLARGE_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M01_BERT32K_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M01_BERT32K_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M01_BERT32K_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M01_BERT32K_ALLLINEAR_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M01_BERT32K_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M01_BERT32K_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M02_BERT128K_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M02_BERT128K_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M02_BERT128K_ALLLINEAR_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M02_BERT128K_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M03_CONVBERT_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M03_CONVBERT_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M03_CONVBERT_ALLLINEAR_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M03_CONVBERT_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B2_M04_ELECTRA_ALLLINEAR_LORA16_S43": {
+    "DEV600-FIN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S43/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "B2_M04_ELECTRA_ALLLINEAR_LORA16_S44": {
+    "DEV600-FIN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV600-FIN.jsonl",
+      "n": 200
+    },
+    "DEV600-LEG": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV600-LEG.jsonl",
+      "n": 200
+    },
+    "DEV600-MED": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV600-MED.jsonl",
+      "n": 200
+    },
+    "DEV600-STR": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-FIN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV960-FIN.jsonl",
+      "n": 320
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    },
+    "DEV960-LEG": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV960-LEG.jsonl",
+      "n": 320
+    },
+    "DEV960-MED": {
+      "file": "runs/completed/B2_M04_ELECTRA_ALLLINEAR_LORA16_S44/predictions_DEV960-MED.jsonl",
+      "n": 320
+    }
+  },
+  "B3_M02_BERT128K_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B3_M02_BERT128K_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B3_M02_BERT128K_ALLLINEAR_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B3_M02_BERT128K_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B3_M03_CONVBERT_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/B3_M03_CONVBERT_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B3_M03_CONVBERT_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "B3_M03_CONVBERT_ALLLINEAR_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/B3_M03_CONVBERT_ALLLINEAR_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/B3_M03_CONVBERT_ALLLINEAR_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FREEZE50_LR2E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR2E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR2E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FREEZE50_LR3E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR3E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR3E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FREEZE50_LR5E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR5E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FREEZE50_LR5E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FULL_FT_LR1E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR1E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR1E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FULL_FT_LR2E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR2E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR2E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C0_M04_ELECTRA_FULL_FT_LR3E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR3E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C0_M04_ELECTRA_FULL_FT_LR3E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C1_M04_ELECTRA_FREEZE50_LR2E5_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/C1_M04_ELECTRA_FREEZE50_LR2E5_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C1_M04_ELECTRA_FREEZE50_LR2E5_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C1_M04_ELECTRA_FREEZE50_LR2E5_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/C1_M04_ELECTRA_FREEZE50_LR2E5_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C1_M04_ELECTRA_FREEZE50_LR2E5_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C1_M04_ELECTRA_FULL_FT_LR2E5_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/C1_M04_ELECTRA_FULL_FT_LR2E5_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C1_M04_ELECTRA_FULL_FT_LR2E5_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C1_M04_ELECTRA_FULL_FT_LR2E5_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/C1_M04_ELECTRA_FULL_FT_LR2E5_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C1_M04_ELECTRA_FULL_FT_LR2E5_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C2_M04_ELECTRA_FREEZE100_LR2E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE100_LR2E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE100_LR2E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C2_M04_ELECTRA_FREEZE25_LR2E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE25_LR2E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE25_LR2E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C2_M04_ELECTRA_FREEZE75_LR2E5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE75_LR2E5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C2_M04_ELECTRA_FREEZE75_LR2E5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C3_M04_ELECTRA_LORA32_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA32_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA32_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C3_M04_ELECTRA_LORA4_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA4_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA4_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C3_M04_ELECTRA_LORA8_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA8_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C3_M04_ELECTRA_LORA8_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C5_M04_ELECTRA_LORA16_ALPHA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C5_M04_ELECTRA_LORA16_ALPHA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C5_M04_ELECTRA_LORA16_ALPHA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C5_M04_ELECTRA_LORA16_ALPHA64_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C5_M04_ELECTRA_LORA16_ALPHA64_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C5_M04_ELECTRA_LORA16_ALPHA64_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C6_M01_BERT32K_ATTN_QKV_LORA8_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C6_M01_BERT32K_ATTN_QKV_LORA8_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C6_M01_BERT32K_ATTN_QKV_LORA8_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C6_M04_ELECTRA_LORA16_DROP0_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C6_M04_ELECTRA_LORA16_DROP0_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C6_M04_ELECTRA_LORA16_DROP0_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C6_M04_ELECTRA_LORA16_DROP10_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C6_M04_ELECTRA_LORA16_DROP10_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C6_M04_ELECTRA_LORA16_DROP10_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C7_M04_ELECTRA_QV_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C7_M04_ELECTRA_QV_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C7_M04_ELECTRA_QV_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "C8_M04_ELECTRA_ALLATTN_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/C8_M04_ELECTRA_ALLATTN_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/C8_M04_ELECTRA_ALLATTN_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M01_BERT_FULL_FT_LR2E5_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M01_BERT_FULL_FT_LR2E5_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M01_BERT_FULL_FT_LR2E5_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M01_BERT_FULL_FT_LR2E5_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M01_BERT_FULL_FT_LR2E5_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M04_ELECTRA_FREEZE50_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M04_ELECTRA_FREEZE50_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M04_ELECTRA_FREEZE50_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M04_ELECTRA_FREEZE50_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M04_ELECTRA_FREEZE50_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M04_ELECTRA_FREEZE50_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M04_ELECTRA_LORA16_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M04_ELECTRA_LORA16_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D1_M04_ELECTRA_LORA16_S47": {
+    "DEV600-STR": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S47/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D1_M04_ELECTRA_LORA16_S47/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D2_M01_BERT32K_FULL_FT_S42_RERUN": {
+    "DEV600-STR": {
+      "file": "runs/completed/D2_M01_BERT32K_FULL_FT_S42_RERUN/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D2_M01_BERT32K_FULL_FT_S42_RERUN/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D2_M04_ELECTRA_LORA16_S42_RERUN": {
+    "DEV600-STR": {
+      "file": "runs/completed/D2_M04_ELECTRA_LORA16_S42_RERUN/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D2_M04_ELECTRA_LORA16_S42_RERUN/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D3_M02_BERT128K_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/D3_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D3_M02_BERT128K_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D3_M02_BERT128K_ALLLINEAR_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/D3_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D3_M02_BERT128K_ALLLINEAR_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "D3_M02_BERT128K_LORA16_ATTN_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/D3_M02_BERT128K_LORA16_ATTN_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/D3_M02_BERT128K_LORA16_ATTN_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "E1_M04_ELECTRA_ALLLINEAR_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/E1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/E1_M04_ELECTRA_ALLLINEAR_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_FULLFT_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_FULLFT_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_FULLFT_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_FULLFT_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_LORA32_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_LORA32_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M01_BERT32K_LORA32_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M01_BERT32K_LORA32_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M02_BERT128K_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M02_BERT128K_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M02_BERT128K_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M02_BERT128K_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M03_CONVBERT_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M03_CONVBERT_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M03_CONVBERT_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M03_CONVBERT_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M04_ELECTRA_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M04_ELECTRA_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M04_ELECTRA_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M04_ELECTRA_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M07_MBERT_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M07_MBERT_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M07_MBERT_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M07_MBERT_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M12_MODERNBERT_LORA16_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M12_MODERNBERT_LORA16_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "F1_M12_MODERNBERT_LORA16_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/F1_M12_MODERNBERT_LORA16_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP0_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP0_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP0_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP0_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP0_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP0_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP10_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP10_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP10_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP10_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP10_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP10_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP5_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP5_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_C6_M04_ELECTRA_LORA16_DROP5_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_C6_M04_ELECTRA_LORA16_DROP5_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "G1_SENTINEL_DROP10_S45_RERUN": {
+    "DEV600-STR": {
+      "file": "runs/completed/G1_SENTINEL_DROP10_S45_RERUN/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/G1_SENTINEL_DROP10_S45_RERUN/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_DROP10_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_DROP10_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_DROP10_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_DROP10_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_DROP10_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_DROP10_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_DROP10_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_DROP10_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_DROP10_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_DROP10_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_DROP10_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_DROP10_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_DROP10_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_DROP10_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_DROP10_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H1_SENTINEL_DROP10_S45_RERUN": {
+    "DEV600-STR": {
+      "file": "runs/completed/H1_SENTINEL_DROP10_S45_RERUN/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H1_SENTINEL_DROP10_S45_RERUN/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H2_DROP0_S42": {
+    "DEV600-STR": {
+      "file": "runs/completed/H2_DROP0_S42/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H2_DROP0_S42/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H2_DROP0_S43": {
+    "DEV600-STR": {
+      "file": "runs/completed/H2_DROP0_S43/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H2_DROP0_S43/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H2_DROP0_S44": {
+    "DEV600-STR": {
+      "file": "runs/completed/H2_DROP0_S44/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H2_DROP0_S44/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H2_DROP0_S45": {
+    "DEV600-STR": {
+      "file": "runs/completed/H2_DROP0_S45/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H2_DROP0_S45/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  },
+  "H2_DROP0_S46": {
+    "DEV600-STR": {
+      "file": "runs/completed/H2_DROP0_S46/predictions_DEV600-STR.jsonl",
+      "n": 600
+    },
+    "DEV960-GEN": {
+      "file": "runs/completed/H2_DROP0_S46/predictions_DEV960-GEN.jsonl",
+      "n": 960
+    }
+  }
+}

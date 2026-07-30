@@ -1,0 +1,148 @@
+# Table D — Tüm Koşular (B0 dahil)
+
+| run_id | model_id | method | lora_rank | learning_rate | seed | status | trainable_params | train_seconds | peak_vram_mb | d960_f1 | d600_f1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| A1_M04_ELECTRA_TFIN_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 242.54 |  | 0.7969 | 0.7495 |
+| A1_M04_ELECTRA_TFIN_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 238.22 |  | 0.7768 | 0.7126 |
+| A1_M04_ELECTRA_TFIN_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 237.09 |  | 0.7934 | 0.7430 |
+| A1_M04_ELECTRA_TLEG_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 244.21 |  | 0.7087 | 0.4519 |
+| A1_M04_ELECTRA_TLEG_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 238.67 |  | 0.7182 | 0.6370 |
+| A1_M04_ELECTRA_TLEG_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 237.96 |  | 0.7988 | 0.7348 |
+| A1_M04_ELECTRA_TMED_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 240.32 |  | 0.7801 | 0.8038 |
+| A1_M04_ELECTRA_TMED_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | degenerate_class_collapse | 3247876 | 236.63 |  | 0.1000 | 0.1000 |
+| A1_M04_ELECTRA_TMED_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 237.12 |  | 0.7430 | 0.7536 |
+| A1_M04_ELECTRA_TMED_LORA16_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 244.73 |  | 0.7930 | 0.8212 |
+| A1_M04_ELECTRA_TMIX_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 277.63 |  | 0.7661 | 0.7002 |
+| A1_M04_ELECTRA_TMIX_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 278.48 |  | 0.8037 | 0.7634 |
+| A1_M04_ELECTRA_TMIX_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 288.43 |  | 0.7990 | 0.7279 |
+| A3_M04_ELECTRA_LODO_NOFIN_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 439.56 |  | 0.8442 | 0.8326 |
+| A3_M04_ELECTRA_LODO_NOFIN_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 446.91 |  | 0.8664 | 0.8624 |
+| A3_M04_ELECTRA_LODO_NOFIN_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 439.9 |  | 0.8609 | 0.8388 |
+| A3_M04_ELECTRA_LODO_NOLEG_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 3247876 | 441.35 |  | 0.1000 | 0.1000 |
+| A3_M04_ELECTRA_LODO_NOLEG_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 441.16 |  | 0.8734 | 0.8485 |
+| A3_M04_ELECTRA_LODO_NOLEG_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 448.36 |  | 0.8759 | 0.8585 |
+| A3_M04_ELECTRA_LODO_NOLEG_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 441.29 |  | 0.8816 | 0.8546 |
+| A3_M04_ELECTRA_LODO_NOMED_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 438.83 |  | 0.8068 | 0.6593 |
+| A3_M04_ELECTRA_LODO_NOMED_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 451.18 |  | 0.7930 | 0.6502 |
+| A3_M04_ELECTRA_LODO_NOMED_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 448.55 |  | 0.8603 | 0.7735 |
+| B0_M01_TALL_LORA8_LR1e4_S42 | bert-base-turkish-cased | lora | 8 | 0.0001 | 42 | degenerate_class_collapse | 297988 | 477.52 |  | 0.2791 | 0.1666 |
+| B0_M01_TALL_LORA8_LR2e4_S42 | bert-base-turkish-cased | lora | 8 | 0.0002 | 42 | degenerate_skewed | 297988 | 477.04 |  | 0.3258 | 0.1592 |
+| B0_M01_TALL_LORA8_LR5e5_S42 | bert-base-turkish-cased | lora | 8 | 5e-05 | 42 | degenerate_class_collapse | 297988 | 473.73 |  | 0.1000 | 0.0995 |
+| B1_M01_BERT32K_ALLLINEAR_LORA16_S42 | bert-base-turkish-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 694.0 |  | 0.7938 | 0.7393 |
+| B1_M01_BERT32K_ALLLINEAR_LORA8_S42 | bert-base-turkish-cased | lora | 8 | 0.0002 | 42 | success | 1342468 | 689.93 |  | 0.6847 | 0.4582 |
+| B1_M01_BERT32K_ALL_ATTN_LORA8_S42 | bert-base-turkish-cased | lora | 8 | 0.0002 | 42 | degenerate_class_collapse | 1342468 | 476.16 |  | 0.1014 | 0.1000 |
+| B1_M01_BERT32K_FULL_FT_S42 | bert-base-turkish-cased | full | 0 | 2e-05 | 42 | success | 110620420 | 583.1 | 3147.09 | 0.8189 | 0.6720 |
+| B1_M01_BERT32K_LORA32_S42 | bert-base-turkish-cased | lora | 32 | 0.0002 | 42 | success | 5360644 | 699.26 |  | 0.8212 | 0.7285 |
+| B1_M02_BERT128K_ALLLINEAR_LORA16_S42 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 694.94 |  | 0.8660 | 0.7870 |
+| B1_M02_BERT128K_TALL_LORA8_S42 | bert-base-turkish-128k-cased | lora | 8 | 0.0002 | 42 | degenerate_class_collapse | 1342468 | 683.4 |  | 0.1000 | 0.1000 |
+| B1_M03_CONVBERT_ALLLINEAR_LORA16_S42 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 42 | success | 3331972 | 1990.24 |  | 0.8857 | 0.7726 |
+| B1_M04_ELECTRA_ALLLINEAR_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 1697.28 |  | 0.9086 | 0.8545 |
+| B1_M05_ROBERTA_ALLLINEAR_LORA16_S42 | roberta-base-turkish-uncased | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 3247876 | 676.89 |  | 0.1000 | 0.1000 |
+| B1_M05_ROBERTA_TR_ALLLINEAR_LORA16_S42 | roberta-base-turkish-uncased | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 3247876 | 682.01 |  | 0.1126 | 0.1311 |
+| B1_M05_ROBERTA_TR_FULL_FT_S42 | roberta-base-turkish-uncased | full | 8 | 2e-05 | 42 | degenerate_class_collapse | 124648708 | 595.46 |  | 0.2805 | 0.2605 |
+| B1_M05_ROBERTA_TR_LR5e5_S42 | roberta-base-turkish-uncased | lora | 16 | 5e-05 | 42 | degenerate_class_collapse | 3247876 | 681.67 |  | 0.2090 | 0.2050 |
+| B1_M06_DISTILBERT_ALLLINEAR_LORA16_S42 | distilbert-base-turkish-cased | lora | 16 | 0.0002 | 42 | success | 1920772 | 360.71 |  | 0.5497 | 0.2855 |
+| B1_M07_MBERT_ALLLINEAR_LORA16_S42 | bert-base-multilingual-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 687.82 |  | 0.7965 | 0.6774 |
+| B1_M08_XLMROBERTA_ALLLINEAR_LORA16_S42 | xlm-roberta-base | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 2691136 | 686.52 |  | 0.1000 | 0.1000 |
+| B1_M09_MDEBERTA_ALLLINEAR_LORA16_S42 | mdeberta-v3-base | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 2691136 | 1580.26 |  | 0.1000 | 0.1000 |
+| B1_M10_TABIBERT_ALLLINEAR_LORA16_S42 | TabiBERT | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 3416128 | 969.32 |  | 0.1343 | 0.1203 |
+| B1_M11_TURKLARGE_ALLLINEAR_LORA16_S42 | turkish-large-bert-cased | lora | 16 | 0.0002 | 42 | degenerate_class_collapse | 7127104 | 1966.06 |  | 0.1000 | 0.1000 |
+| B2_M01_BERT32K_ALLLINEAR_LORA16_S43 | bert-base-turkish-cased | lora | 16 | 0.0002 | 43 | success | 2681860 | 676.36 |  | 0.8240 | 0.7714 |
+| B2_M01_BERT32K_ALLLINEAR_LORA16_S44 | bert-base-turkish-cased | lora | 16 | 0.0002 | 44 | success | 2681860 | 677.29 |  | 0.8475 | 0.7930 |
+| B2_M02_BERT128K_ALLLINEAR_LORA16_S42 | bert-base-turkish-128k-uncased | lora | 16 | 0.0002 | 42 | success | 2681860 | 688.22 |  | 0.8326 | 0.7864 |
+| B2_M02_BERT128K_ALLLINEAR_LORA16_S43 | bert-base-turkish-128k-uncased | lora | 16 | 0.0002 | 43 | success | 2681860 | 676.93 |  | 0.7360 | 0.7523 |
+| B2_M02_BERT128K_ALLLINEAR_LORA16_S44 | bert-base-turkish-128k-uncased | lora | 16 | 0.0002 | 44 | success | 2681860 | 703.07 |  | 0.7901 | 0.7352 |
+| B2_M03_CONVBERT_ALLLINEAR_LORA16_S42 | convbert-base-turkish-cased | lora | 16 | 0.0002 | 42 | success | 3331972 | 943.14 |  | 0.8808 | 0.7946 |
+| B2_M03_CONVBERT_ALLLINEAR_LORA16_S43 | convbert-base-turkish-cased | lora | 16 | 0.0002 | 43 | success | 3331972 | 937.76 |  | 0.8647 | 0.7674 |
+| B2_M03_CONVBERT_ALLLINEAR_LORA16_S44 | convbert-base-turkish-cased | lora | 16 | 0.0002 | 44 | success | 3331972 | 938.05 |  | 0.8871 | 0.8246 |
+| B2_M04_ELECTRA_ALLLINEAR_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 675.87 |  | 0.9012 | 0.8949 |
+| B2_M04_ELECTRA_ALLLINEAR_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 704.56 |  | 0.9021 | 0.8684 |
+| B3_M02_BERT128K_ALLLINEAR_LORA16_S42 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 680.75 |  | 0.7592 | 0.6190 |
+| B3_M02_BERT128K_ALLLINEAR_LORA16_S43 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 43 | success | 2681860 | 687.87 |  | 0.8538 | 0.7776 |
+| B3_M02_BERT128K_ALLLINEAR_LORA16_S44 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 44 | success | 2681860 | 684.23 |  | 0.8348 | 0.7703 |
+| B3_M03_CONVBERT_ALLLINEAR_LORA16_S43 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 43 | success | 3331972 | 958.97 |  | 0.8759 | 0.7907 |
+| B3_M03_CONVBERT_ALLLINEAR_LORA16_S44 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 44 | success | 3331972 | 953.75 |  | 0.8803 | 0.7586 |
+| C0_M04_ELECTRA_FREEZE50_LR2E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 42 | success | 43237059 | 376.37 | 1723.9541015625 | 0.8837 | 0.8271 |
+| C0_M04_ELECTRA_FREEZE50_LR3E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 3e-05 | 42 | success | 43237059 | 380.54 | 1723.9541015625 | 0.8827 | 0.8497 |
+| C0_M04_ELECTRA_FREEZE50_LR5E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 5e-05 | 42 | success | 43237059 | 381.01 | 1723.9541015625 | 0.8633 | 0.8059 |
+| C0_M04_ELECTRA_FULL_FT_LR1E5_S42 | electra-base-turkish-cased-discriminator | full_ft | 0 | 1e-05 | 42 | success | 110620420 | 590.22 |  | 0.8289 | 0.7790 |
+| C0_M04_ELECTRA_FULL_FT_LR2E5_S42 | electra-base-turkish-cased-discriminator | full_ft | 0 | 2e-05 | 42 | success | 110620420 | 583.04 |  | 0.8709 | 0.8228 |
+| C0_M04_ELECTRA_FULL_FT_LR3E5_S42 | electra-base-turkish-cased-discriminator | full_ft | 0 | 3e-05 | 42 | success | 110620420 | 614.77 |  | 0.8470 | 0.8205 |
+| C1_M04_ELECTRA_FREEZE50_LR2E5_S43 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 43 | success | 43237059 | 391.57 | 1723.9541015625 | 0.8699 | 0.8105 |
+| C1_M04_ELECTRA_FREEZE50_LR2E5_S44 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 44 | success | 43237059 | 390.48 | 1723.9541015625 | 0.8682 | 0.8019 |
+| C1_M04_ELECTRA_FULL_FT_LR2E5_S43 | electra-base-turkish-cased-discriminator | full_ft | 0 | 2e-05 | 43 | success | 110620420 | 581.96 |  | 0.8463 | 0.7896 |
+| C1_M04_ELECTRA_FULL_FT_LR2E5_S44 | electra-base-turkish-cased-discriminator | full_ft | 0 | 2e-05 | 44 | success | 110620420 | 592.86 |  | 0.8305 | 0.7651 |
+| C2_M04_ELECTRA_FREEZE100_LR2E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 42 | degenerate_class_collapse | 595267 | 218.52 | 536.7744140625 | 0.1253 | 0.1000 |
+| C2_M04_ELECTRA_FREEZE25_LR2E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 42 | success | 64557954 | 467.6 | 2324.49560546875 | 0.8676 | 0.8297 |
+| C2_M04_ELECTRA_FREEZE75_LR2E5_S42 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 42 | success | 21916163 | 291.4 | 1109.28759765625 | 0.8340 | 0.7239 |
+| C3_M04_ELECTRA_LORA32_S42 | electra-base-turkish-cased-discriminator | lora | 32 | 0.0002 | 42 | success | 5902084 | 716.2 |  | 0.8866 | 0.8525 |
+| C3_M04_ELECTRA_LORA4_S42 | electra-base-turkish-cased-discriminator | lora | 4 | 0.0002 | 42 | success | 1257220 | 707.15 |  | 0.8825 | 0.8530 |
+| C3_M04_ELECTRA_LORA8_S42 | electra-base-turkish-cased-discriminator | lora | 8 | 0.0002 | 42 | success | 1920772 | 693.71 |  | 0.9031 | 0.8307 |
+| C5_M04_ELECTRA_LORA16_ALPHA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 683.0 |  | 0.9045 | 0.8625 |
+| C5_M04_ELECTRA_LORA16_ALPHA64_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 698.19 |  | 0.8951 | 0.8317 |
+| C6_M01_BERT32K_ATTN_QKV_LORA8_S42 | bert-base-turkish-cased | lora | 8 | 0.0002 | 42 | success | 445444 | 495.41 |  | 0.6862 | 0.5219 |
+| C6_M04_ELECTRA_LORA16_DROP0_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 632.78 |  | 0.9045 | 0.8333 |
+| C6_M04_ELECTRA_LORA16_DROP10_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 710.36 |  | 0.8940 | 0.8610 |
+| C7_M04_ELECTRA_QV_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 1183492 | 473.65 |  | 0.8833 | 0.8622 |
+| C8_M04_ELECTRA_ALLATTN_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 1773316 | 507.79 |  | 0.8930 | 0.8462 |
+| D1_M01_BERT_FULL_FT_LR2E5_S43 | bert-base-turkish-cased | full_ft | 0 | 2e-05 | 43 | success | 110620420 | 585.04 |  | 0.8538 | 0.8313 |
+| D1_M01_BERT_FULL_FT_LR2E5_S44 | bert-base-turkish-cased | full_ft | 0 | 2e-05 | 44 | success | 110620420 | 586.78 |  | 0.8284 | 0.6248 |
+| D1_M01_BERT_FULL_FT_LR2E5_S45 | bert-base-turkish-cased | full_ft | 0 | 2e-05 | 45 | success | 110620420 | 585.21 |  | 0.7781 | 0.7337 |
+| D1_M01_BERT_FULL_FT_LR2E5_S46 | bert-base-turkish-cased | full_ft | 0 | 2e-05 | 46 | success | 110620420 | 588.56 |  | 0.8106 | 0.6562 |
+| D1_M04_ELECTRA_FREEZE50_S45 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 45 | success | 43237059 | 397.85 | 1723.9541015625 | 0.8686 | 0.8352 |
+| D1_M04_ELECTRA_FREEZE50_S46 | electra-base-turkish-cased-discriminator | freeze | 0 | 2e-05 | 46 | success | 43237059 | 384.97 | 1723.9541015625 | 0.8768 | 0.8080 |
+| D1_M04_ELECTRA_LORA16_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 678.42 |  | 0.9071 | 0.8879 |
+| D1_M04_ELECTRA_LORA16_S46 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 46 | degenerate_class_collapse | 3247876 | 694.64 |  | 0.1000 | 0.1000 |
+| D1_M04_ELECTRA_LORA16_S47 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 47 | success | 3247876 | 674.93 |  | 0.8931 | 0.8807 |
+| D2_M01_BERT32K_FULL_FT_S42_RERUN | bert-base-turkish-cased | full_ft | 0 | 2e-05 | 42 | success | 110620420 | 590.48 |  | 0.8149 | 0.6497 |
+| D2_M04_ELECTRA_LORA16_S42_RERUN | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 696.66 |  | 0.8992 | 0.8547 |
+| D3_M02_BERT128K_ALLLINEAR_LORA16_S42 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 684.22 | NA | 0.7640 | 0.6436 |
+| D3_M02_BERT128K_ALLLINEAR_LORA16_S43 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 43 | success | 2681860 | 691.37 | NA | 0.7880 | 0.6989 |
+| D3_M02_BERT128K_LORA16_ATTN_S42 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 684.92 | NA | 0.7909 | 0.6769 |
+| E1_M04_ELECTRA_ALLLINEAR_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 682.21 | NA | 0.8980 | 0.8695 |
+| F1_M01_BERT32K_FULLFT_S43 | bert-base-turkish-cased | full_ft | 8 | 2e-05 | 43 | success | 110620420 | 585.97 | NA | 0.8663 | 0.7672 |
+| F1_M01_BERT32K_FULLFT_S44 | bert-base-turkish-cased | full_ft | 8 | 2e-05 | 44 | success | 110620420 | 586.24 | NA | 0.8478 | 0.7404 |
+| F1_M01_BERT32K_FULLFT_S45 | bert-base-turkish-cased | full_ft | 8 | 2e-05 | 45 | success | 110620420 | 586.68 | NA | 0.8192 | 0.7717 |
+| F1_M01_BERT32K_LORA32_S42 | bert-base-turkish-cased | lora | 32 | 0.0002 | 42 | success | 5360644 | 681.42 | NA | 0.7926 | 0.5845 |
+| F1_M01_BERT32K_LORA32_S43 | bert-base-turkish-cased | lora | 32 | 0.0002 | 43 | success | 5360644 | 680.62 | NA | 0.8664 | 0.8100 |
+| F1_M01_BERT32K_LORA32_S44 | bert-base-turkish-cased | lora | 32 | 0.0002 | 44 | success | 5360644 | 680.98 | NA | 0.8488 | 0.7820 |
+| F1_M02_BERT128K_LORA16_S42 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 682.4 | NA | 0.8472 | 0.7798 |
+| F1_M02_BERT128K_LORA16_S43 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 43 | success | 2681860 | 682.1 | NA | 0.8093 | 0.7289 |
+| F1_M02_BERT128K_LORA16_S44 | bert-base-turkish-128k-cased | lora | 16 | 0.0002 | 44 | success | 2681860 | 681.74 | NA | 0.7725 | 0.6473 |
+| F1_M03_CONVBERT_LORA16_S42 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 42 | success | 3026692 | 904.22 | NA | 0.8676 | 0.7675 |
+| F1_M03_CONVBERT_LORA16_S43 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 43 | success | 3026692 | 903.39 | NA | 0.8705 | 0.7979 |
+| F1_M03_CONVBERT_LORA16_S44 | convbert-base-turkish-mc4-cased | lora | 16 | 0.0002 | 44 | success | 3026692 | 903.95 | NA | 0.8823 | 0.8332 |
+| F1_M04_ELECTRA_LORA16_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 683.53 | NA | 0.8992 | 0.8414 |
+| F1_M04_ELECTRA_LORA16_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 680.87 | NA | 0.9055 | 0.8954 |
+| F1_M04_ELECTRA_LORA16_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 683.12 | NA | 0.9127 | 0.8978 |
+| F1_M07_MBERT_LORA16_S42 | bert-base-multilingual-cased | lora | 16 | 0.0002 | 42 | success | 2681860 | 679.34 | NA | 0.7773 | 0.6397 |
+| F1_M07_MBERT_LORA16_S43 | bert-base-multilingual-cased | lora | 16 | 0.0002 | 43 | success | 2681860 | 678.09 | NA | 0.7711 | 0.6912 |
+| F1_M07_MBERT_LORA16_S44 | bert-base-multilingual-cased | lora | 16 | 0.0002 | 44 | success | 2681860 | 678.5 | NA | 0.7792 | 0.6909 |
+| F1_M12_MODERNBERT_LORA16_S42 | modernbert-tr-base-1k | lora | 16 | 0.0002 | 42 | success | 3406852 | 929.75 | NA | 0.8678 | 0.7647 |
+| F1_M12_MODERNBERT_LORA16_S43 | modernbert-tr-base-1k | lora | 16 | 0.0002 | 43 | success | 3406852 | 941.73 | NA | 0.8982 | 0.7674 |
+| F1_M12_MODERNBERT_LORA16_S44 | modernbert-tr-base-1k | lora | 16 | 0.0002 | 44 | success | 3406852 | 927.87 | NA | 0.8757 | 0.8411 |
+| G1_C6_M04_ELECTRA_LORA16_DROP0_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 656.03 | NA | 0.9062 | 0.8429 |
+| G1_C6_M04_ELECTRA_LORA16_DROP0_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 639.98 | NA | 0.9114 | 0.8963 |
+| G1_C6_M04_ELECTRA_LORA16_DROP0_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 641.24 | NA | 0.9125 | 0.8524 |
+| G1_C6_M04_ELECTRA_LORA16_DROP0_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 637.41 | NA | 0.8916 | 0.8747 |
+| G1_C6_M04_ELECTRA_LORA16_DROP0_S46 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 46 | degenerate_class_collapse | 3247876 | 649.72 | NA | 0.1000 | 0.1000 |
+| G1_C6_M04_ELECTRA_LORA16_DROP10_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 692.47 | NA | 0.9086 | 0.8727 |
+| G1_C6_M04_ELECTRA_LORA16_DROP10_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 678.66 | NA | 0.9014 | 0.8880 |
+| G1_C6_M04_ELECTRA_LORA16_DROP10_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 686.15 | NA | 0.9021 | 0.8817 |
+| G1_C6_M04_ELECTRA_LORA16_DROP10_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 699.61 | NA | 0.9095 | 0.8844 |
+| G1_C6_M04_ELECTRA_LORA16_DROP10_S46 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 46 | success | 3247876 | 691.65 | NA | 0.8992 | 0.8414 |
+| G1_C6_M04_ELECTRA_LORA16_DROP5_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 701.23 | NA | 0.9001 | 0.8608 |
+| G1_C6_M04_ELECTRA_LORA16_DROP5_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 693.73 | NA | 0.9012 | 0.8895 |
+| G1_C6_M04_ELECTRA_LORA16_DROP5_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 678.91 | NA | 0.9035 | 0.8640 |
+| G1_SENTINEL_DROP10_S45_RERUN | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 694.03 | NA | 0.9095 | 0.8910 |
+| H1_DROP10_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 1610.39 | NA | 0.8980 | 0.8696 |
+| H1_DROP10_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 676.63 | NA | 0.8842 | 0.8714 |
+| H1_DROP10_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 675.46 | NA | 0.8940 | 0.8487 |
+| H1_DROP10_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 675.91 | NA | 0.9014 | 0.8675 |
+| H1_DROP10_S46 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 46 | success | 3247876 | 677.01 | NA | 0.8876 | 0.8363 |
+| H1_SENTINEL_DROP10_S45_RERUN | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 685.85 | NA | 0.9027 | 0.8581 |
+| H2_DROP0_S42 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 42 | success | 3247876 | 630.48 | NA | 0.9055 | 0.8254 |
+| H2_DROP0_S43 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 43 | success | 3247876 | 632.04 | NA | 0.8901 | 0.8085 |
+| H2_DROP0_S44 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 44 | success | 3247876 | 628.95 | NA | 0.9108 | 0.8441 |
+| H2_DROP0_S45 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 45 | success | 3247876 | 635.09 | NA | 0.9058 | 0.8803 |
+| H2_DROP0_S46 | electra-base-turkish-cased-discriminator | lora | 16 | 0.0002 | 46 | success | 3247876 | 633.43 | NA | 0.9083 | 0.8583 |

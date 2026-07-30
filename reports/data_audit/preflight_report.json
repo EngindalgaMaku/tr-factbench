@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python_version": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
+    "pytorch_version": "2.10.0+cpu",
+    "cuda_available": false,
+    "gpu_name": "N/A (CPU or torch unavailable)",
+    "gpu_total_vram_gb": 0.0,
+    "bf16_supported": false
+  },
+  "data_manifest": {
+    "TALL": {
+      "file_name": "train.jsonl",
+      "sha256": "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17",
+      "num_records": 4800
+    },
+    "D960": {
+      "file_name": "dev_general.jsonl",
+      "sha256": "2f05485670066558f3884196de110154acd9cc5cfe9be81ddd4f0253effb7f48",
+      "num_records": 960
+    },
+    "D600": {
+      "file_name": "dev_stress.jsonl",
+      "sha256": "09b277c01f316921bc33b9cc72c8674b929a7019d1a3ad9ac2c45bef663a1658",
+      "num_records": 600
+    }
+  }
+}

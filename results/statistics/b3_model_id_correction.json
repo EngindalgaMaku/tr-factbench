@@ -1,0 +1,50 @@
+{
+  "issue": "B2 phase incorrectly used different model checkpoints for S43-S44",
+  "convbert": {
+    "intended": "dbmdz/convbert-base-turkish-mc4-cased",
+    "actual_b2_s43s44": "dbmdz/convbert-base-turkish-cased",
+    "correction": "B3 runs with correct mc4-cased checkpoint",
+    "canonical_runs": {
+      "S42": "B1_M03_CONVBERT_ALLLINEAR_LORA16_S42",
+      "S43": "B3_M03_CONVBERT_ALLLINEAR_LORA16_S43",
+      "S44": "B3_M03_CONVBERT_ALLLINEAR_LORA16_S44"
+    },
+    "canonical_f1_dev960": {
+      "S42": 0.8804,
+      "S43": 0.8789,
+      "S44": 0.8833
+    },
+    "canonical_mean": 0.8809,
+    "canonical_std": 0.0022
+  },
+  "bert128": {
+    "intended": "dbmdz/bert-base-turkish-128k-cased",
+    "actual_b2_s43s44": "dbmdz/bert-base-turkish-128k-uncased",
+    "correction": "B3 runs with correct 128k-cased checkpoint",
+    "canonical_runs": {
+      "S42": "B1_M02_BERT128K_ALLLINEAR_LORA16_S42",
+      "S43": "B3_M02_BERT128K_ALLLINEAR_LORA16_S43",
+      "S44": "B3_M02_BERT128K_ALLLINEAR_LORA16_S44"
+    },
+    "canonical_f1_dev960": {
+      "S42": 0.7592,
+      "S43": 0.8538,
+      "S44": 0.8348
+    },
+    "canonical_mean": 0.8159,
+    "canonical_std": 0.05,
+    "s42_rerun": {
+      "run_id": "B3_M02_BERT128K_ALLLINEAR_LORA16_S42",
+      "f1": 0.7592,
+      "note": "S42 yeniden koşusunda düşük performans tekrar gözlendi; kesin neden mevcut kayıtlarla belirlenemedi."
+    },
+    "interpretation": "Yüksek seed varyansı gözlendi (std=5.00 yüzde puanı). S42 yeniden koşusu düşük performansın tek bir raporlama hatası olmadığını gösterir; bununla birlikte nedenin optimizasyon, uygulama ayrıntısı veya başka bir etkenden kaynaklandığı mevcut kayıtlarla ayırt edilemez."
+  },
+  "invalidated_runs": [
+    "B2_M03_CONVBERT_ALLLINEAR_LORA16_S43",
+    "B2_M03_CONVBERT_ALLLINEAR_LORA16_S44",
+    "B2_M02_BERT128K_ALLLINEAR_LORA16_S43",
+    "B2_M02_BERT128K_ALLLINEAR_LORA16_S44"
+  ],
+  "note": "Eski model-kimliği uyuşmazlığı taşıyan B2 koşuları resmi karşılaştırmalardan dışlanmış ve doğru model kimlikleriyle üretilen koşular kullanılmıştır."
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "B0_M01_TALL_LORA8_LR5e5_S42",
+  "model_name": "dbmdz/bert-base-turkish-cased",
+  "method": "lora",
+  "learning_rate": 5e-05,
+  "freeze_layers": 0,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0
+}

@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-07-29T15:29:13+00:00",
+  "last_opened_at_utc": "2026-07-30T19:36:54+00:00",
+  "dataset_file": "data/evaluation/legacy_experiment_version/dev_general.jsonl",
+  "dataset_sha256": "2f05485670066558f3884196de110154acd9cc5cfe9be81ddd4f0253effb7f48",
+  "output_file": "results/annotation/dev960/dev_general_blind_annotator_1.jsonl",
+  "mode": "blind_human",
+  "annotator_id": "annotator_1",
+  "order_seed": 42,
+  "independent_annotation": true,
+  "candidate_labels_visible_in_ui": false,
+  "llm_suggestions_visible_in_ui": false,
+  "purpose": "independent_blind_human_annotation",
+  "app_version": "review_app_v2"
+}

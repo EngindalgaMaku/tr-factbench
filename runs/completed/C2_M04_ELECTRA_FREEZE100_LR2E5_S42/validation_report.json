@@ -1,0 +1,67 @@
+{
+  "qc_status": "degenerate_class_collapse",
+  "qc_failures": [
+    "DEV960 Macro F1 (0.1253) is below 0.30 threshold.",
+    "Class 'partially_supported' has 0.0 F1 score in DEV960."
+  ],
+  "d960_pred_class_counts": {
+    "2": 935,
+    "0": 23,
+    "3": 2
+  },
+  "d600_pred_class_counts": {
+    "2": 600
+  },
+  "d960_confusion_matrix": [
+    [
+      12,
+      0,
+      227,
+      1
+    ],
+    [
+      4,
+      0,
+      236,
+      0
+    ],
+    [
+      4,
+      0,
+      236,
+      0
+    ],
+    [
+      3,
+      0,
+      236,
+      1
+    ]
+  ],
+  "d600_confusion_matrix": [
+    [
+      0,
+      0,
+      150,
+      0
+    ],
+    [
+      0,
+      0,
+      150,
+      0
+    ],
+    [
+      0,
+      0,
+      150,
+      0
+    ],
+    [
+      0,
+      0,
+      150,
+      0
+    ]
+  ]
+}

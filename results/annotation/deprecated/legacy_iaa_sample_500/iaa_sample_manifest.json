@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-07-24T17:04:39.481844",
+  "source_file": "train.jsonl",
+  "total_sampled": 500,
+  "seed": 42,
+  "n_per_cell": 42,
+  "sample_sha256": "4abdab3f524fdba9987849de367cf79c1be8184447162db5a66d67b752b8ee42",
+  "cell_counts": {
+    "finance×supported": 42,
+    "finance×partially_supported": 42,
+    "finance×contradicted": 42,
+    "finance×unverifiable": 42,
+    "legal×supported": 42,
+    "legal×partially_supported": 42,
+    "legal×contradicted": 42,
+    "legal×unverifiable": 42,
+    "medical×supported": 42,
+    "medical×partially_supported": 42,
+    "medical×contradicted": 42,
+    "medical×unverifiable": 42
+  },
+  "status": "pending_annotator2",
+  "iaa_metric": "cohen_kappa",
+  "priority_classes": [
+    "partially_supported vs contradicted",
+    "partially_supported vs unverifiable"
+  ],
+  "note": "Bu dosya IAA çalışması için tabakalı örneklemdir. İkinci annotator iaa_sample_500_annotator2.jsonl'u doldurmalıdır. Kappa hesabı tamamlanınca 42_compute_iaa.py çalıştırılmalıdır."
+}

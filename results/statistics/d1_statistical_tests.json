@@ -1,0 +1,89 @@
+{
+  "scope": "historical D1 seed-level analysis; final release statistics pending locked configuration",
+  "bootstrap_percentile_ci": {
+    "ELECTRA_LoRA_r16": {
+      "mean": 0.9047499999999999,
+      "std": 0.0036501141534660587,
+      "ci95_lo": 0.9016500000000001,
+      "ci95_hi": 0.90785,
+      "n": 4
+    },
+    "ELECTRA_Freeze50": {
+      "mean": 0.8734400000000001,
+      "std": 0.006707682163012811,
+      "ci95_lo": 0.8686999999999999,
+      "ci95_hi": 0.8793000000000001,
+      "n": 5
+    },
+    "BERTurk_FullFT": {
+      "mean": 0.81796,
+      "std": 0.027556178980402923,
+      "ci95_lo": 0.79466,
+      "ci95_hi": 0.83866,
+      "n": 5
+    }
+  },
+  "paired_tests": [
+    {
+      "comparison": "ELECTRA_LoRA_r16 vs ELECTRA_Freeze50",
+      "common_seeds": [
+        "S42",
+        "S43",
+        "S44",
+        "S45"
+      ],
+      "n_common": 4,
+      "test_type": "paired_by_seed",
+      "mean_paired_difference_pp": 3.2149999999999985,
+      "paired_t_stat": 11.327282738143897,
+      "paired_t_p": 0.001475844367258,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.125
+    },
+    {
+      "comparison": "ELECTRA_LoRA_r16 vs BERTurk_FullFT",
+      "common_seeds": [
+        "S42",
+        "S43",
+        "S44",
+        "S45"
+      ],
+      "n_common": 4,
+      "test_type": "paired_by_seed",
+      "mean_paired_difference_pp": 8.495,
+      "paired_t_stat": 4.974496684952623,
+      "paired_t_p": 0.015609627956713,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.125
+    },
+    {
+      "comparison": "ELECTRA_Freeze50 vs BERTurk_FullFT",
+      "common_seeds": [
+        "S42",
+        "S43",
+        "S44",
+        "S45",
+        "S46"
+      ],
+      "n_common": 5,
+      "test_type": "paired_by_seed",
+      "mean_paired_difference_pp": 5.548000000000002,
+      "paired_t_stat": 4.369162245902602,
+      "paired_t_p": 0.011975923806649,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.0625
+    }
+  ],
+  "mcnemar_f1_seed43": {
+    "run_a": "F1_M04_ELECTRA_LORA16_S43",
+    "run_b": "F1_M01_BERT32K_FULLFT_S43",
+    "n_common": 960,
+    "n10_a_correct_b_wrong": 78,
+    "n01_a_wrong_b_correct": 41,
+    "n11_both_correct": 791,
+    "n00_both_wrong": 50,
+    "chi2_continuity_corrected": 10.890756302521009,
+    "p_value": 0.000966453583456993
+  },
+  "caution": "Seed counts are small. Report effect sizes and success/failure rates alongside p-values."
+}

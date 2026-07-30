@@ -1,0 +1,4 @@
+model,supported,partially_supported,contradicted,unverifiable
+ELECTRA_LoRA_S45,0.9099,0.8931,0.8931,0.9325
+ELECTRA_Freeze50_S45,0.863,0.833,0.8508,0.9278
+ELECTRA_Freeze50_S46,0.8729,0.8469,0.8514,0.9359

@@ -1,0 +1,174 @@
+# TR-FactBench release lock
+# Generated automatically by scripts/35_generate_lock_yaml.py
+# Do not edit manually — rerun the script to regenerate.
+release:
+  version: "0.1.0-preview"
+  status: "preview"
+  final_model_status: "reproducibility_passed_preview_ready"
+  git_commit: "unknown"
+
+canonical_artifacts:
+  metrics_file: "results/csv/metrics_long_canonical.csv"
+  metrics_sha256: "d00dffeb2dcae130e27f4e3173fa7768f5195668eeb1fc8d4d4a51cadfc70bee"
+  total_runs: 144
+  canonical_metric_rows: 432
+  successful_runs: 126
+  degenerate_class_collapse: 17
+  degenerate_skewed: 1
+
+final_selected_model:
+  run_id: "H1_DROP10_S45"
+  run_exists_in_repo: true
+  model_id: "dbmdz/electra-base-turkish-cased-discriminator"
+  method: "lora"
+  rank: 16
+  alpha: 32
+  dropout: 0.1
+  seed: 45
+  trainer_seed: 45
+  trainer_data_seed: 45
+  target_modules: "all-linear"
+  learning_rate: 0.0002
+  batch_size: 8
+  epochs: 5.0
+  max_length: 512
+  warmup_ratio: 0.06
+  weight_decay: 0.01
+  trainable_params: 3247876
+  total_params: 113868296
+  trainable_percentage: 2.8523
+  dev960_macro_f1: 0.9014
+  dev600_macro_f1: 0.8675
+  two_set_average: 0.8844
+  selection_rationale: >
+    The final seed-fixed comparison evaluates dropout=0.10 (H1) and dropout=0.00 (H2)
+    under the same Trainer seed/data_seed protocol across seeds 42-46. H2 is stronger
+    on DEV960, while H1 is stronger and more stable on DEV600-STR and has a slightly
+    higher two-set mean. H1 seed 45 is the selected checkpoint within the chosen H1
+    configuration (DEV960=0.9014, DEV600-STR=0.8675, AVG=0.8844).
+    NOTE: H2_DROP0_S45 achieves the highest individual scores on both sets
+    (DEV960=0.9058, DEV600-STR=0.8803). It may be reported alongside H1_DROP10_S45
+    in the paper as the best single-seed result, while H1 is retained as the
+    primary selection based on 5-seed stability criteria.
+  sentinel_run_id: "H1_SENTINEL_DROP10_S45_RERUN"
+  sentinel_exists: true
+  sentinel_comparison:
+    original_dev960: 0.9014
+    sentinel_dev960: 0.9027
+    delta_dev960: +0.0013
+    original_dev600: 0.8675
+    sentinel_dev600: 0.8581
+    delta_dev600: -0.0094
+    reproducibility_pass: true
+    threshold: 0.01
+    interpretation: "Performance-level reproducibility; not exact prediction-level identity."
+    threshold_rationale: >
+      A predeclared absolute Macro-F1 tolerance of 0.010 is used for full training
+      reruns. Both H1 sentinel deltas are computed directly from the archived metrics.
+
+historical_g1_dropout_ablation:
+  comparability_note: "All rows use the same pre-seed-fix G1 training pipeline."
+  drop0:
+    seeds_present: [42, 43, 44, 45, 46]
+    dev960_mean: 0.7443
+    dev960_sd: 0.3603
+    dev600_mean: 0.7133
+    dev600_sd: 0.3434
+    note: "Historical seed-46 collapse observed; not reproduced in the seed-fixed H2 rerun."
+  drop5:
+    seeds_present: [42, 43, 44]
+    dev960_mean: 0.9016
+    dev960_sd: 0.0017
+    dev600_mean: 0.8714
+    dev600_sd: 0.0157
+    note: "Three-seed screening only; eliminated before five-seed extension."
+  drop10:
+    seeds_present: [42, 43, 44, 45, 46]
+    dev960_mean: 0.9042
+    dev960_sd: 0.0046
+    dev600_mean: 0.8736
+    dev600_sd: 0.0189
+    note: "Historical screening result; final selection is based on the seed-fixed H1/H2 comparison."
+
+final_seed_fixed_dropout_comparison:
+  comparability_note: "H1 and H2 use the same Trainer seed/data_seed protocol; intended difference is LoRA dropout."
+  selection_basis: "Five-seed configuration-level behavior, not the best individual seed."
+  selected_series: "H1_DROP10"
+  h1_drop10:
+    seeds_present: [42, 43, 44, 45, 46]
+    dev960_mean: 0.8930
+    dev960_sd: 0.0071
+    dev600_mean: 0.8587
+    dev600_sd: 0.0155
+    two_set_mean: 0.8759
+  h2_drop0:
+    seeds_present: [42, 43, 44, 45, 46]
+    dev960_mean: 0.9041
+    dev960_sd: 0.0081
+    dev600_mean: 0.8433
+    dev600_sd: 0.0280
+    two_set_mean: 0.8737
+  interpretation: >
+    H2/dropout=0.00 has the higher DEV960 mean. H1/dropout=0.10 has the higher
+    DEV600-STR mean, lower DEV600-STR standard deviation, and slightly higher two-set
+    mean; therefore H1 is retained as the selected configuration.
+
+datasets:
+  train:
+    file: "data/primary/train.jsonl"
+    records: 4800
+    sha256: "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17"
+  dev_general:
+    file: "data/evaluation/legacy_experiment_version/dev_general.jsonl"
+    records: 960
+    sha256: "2f05485670066558f3884196de110154acd9cc5cfe9be81ddd4f0253effb7f48"
+  dev_stress:
+    file: "data/evaluation/legacy_experiment_version/dev_stress.jsonl"
+    records: 600
+    sha256: "09b277c01f316921bc33b9cc72c8674b929a7019d1a3ad9ac2c45bef663a1658"
+
+annotation_snapshot:
+  status_file: "annotation_status.json"
+  last_updated: "2026-07-30"
+  preview_release_ready: true
+  dev600_annotator_1: 600
+  dev600_annotator_2: 80
+  dev960_annotator_1: 960
+  dev960_annotator_2: 0
+  adjudication_status: "deferred_to_stable_release"
+  provisional_dev960_file: "data/evaluation/preview_v0.1/dev_general.jsonl"
+  provisional_dev960_sha256: "f17b3ad40df07146f09e1dfaedfcc74908b447dd97adba296fc5a509b61bd7e4"
+  provisional_dev960_label_revisions: 2
+  provisional_dev600_file: "data/evaluation/preview_v0.1/dev_stress.jsonl"
+  provisional_dev600_sha256: "bff12be9a92e7376dea9a801313be2734184803ce89b362be8075210dcb7717f"
+  provisional_dev600_label_revisions: 3
+  provisional_dev600_claim_fixes: 1
+  evaluation_version_note: "Archived scores use the original files. The preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one Dev600 claim correction; runs were not repeated."
+
+llm_baselines:
+  table_file: "results/tables/table_I_llm_baselines.csv"
+  table_sha256: "1a77141c1ac89921d82a200db33f0de8204168309122f496f20d346da0d8028c"
+  experiment_conditions: 16
+  models: 4
+  datasets: 2
+  prompt_modes: ["zero_shot", "few_shot_8"]
+
+pending_stable_release_requirements:
+  - "~~Run H1 reproducibility sentinel~~ DONE (H1_SENTINEL_DROP10_S45_RERUN; max_abs_delta=0.0094)."
+  - "Complete the second blind-human pass for both evaluation sets."
+  - "Compute pre-adjudication IAA and complete adjudication."
+  - "Complete the stratified, context-grouped train audit sample with two blind annotators."
+  - "Verify LoRA adapter loading and inference in a clean environment before Hugging Face publication."
+  - "Review applicable source terms before any rights-cleared commercial redistribution claim."
+
+commands:
+  preflight: "python scripts/00_preflight.py"
+  build_derived: "python scripts/04_build_derived_splits.py"
+  collect_results: "python scripts/13_collect_results.py"
+  validate_runs: "python scripts/14_validate_runs.py"
+  generate_final_dropout_report: "python scripts/37_final_dropout_report.py"
+  update_annotation_status: "python scripts/34_update_annotation_status.py"
+  build_preview_files: "python scripts/43_build_single_annotator_preview.py"
+  generate_llm_report: "python scripts/53_generate_llm_report.py"
+  generate_lock: "python scripts/35_generate_lock_yaml.py"
+  validate_release: "python scripts/99_validate_release.py"

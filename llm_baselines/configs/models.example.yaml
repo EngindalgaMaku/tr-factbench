@@ -1,0 +1,13 @@
+models:
+  - id: google/gemma-4-26b-a4b-it
+    alias: gemma_4_26b_moe
+    enabled: true
+  - id: openai/gpt-4.1-mini
+    alias: gpt_4_1_mini
+    enabled: true
+  - id: meta-llama/llama-3.3-70b-instruct
+    alias: llama_3_3_70b
+    enabled: true
+  - id: qwen/qwen-2.5-72b-instruct
+    alias: qwen2_5_72b
+    enabled: true

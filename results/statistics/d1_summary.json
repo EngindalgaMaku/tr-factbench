@@ -1,0 +1,87 @@
+{
+  "electra_lora_r16": {
+    "label": "ELECTRA-TR LoRA r=16 all-linear (tarihsel B1 çoklu-seed serisi)",
+    "protocol_seeds": "42, 43, 44, 45, 46",
+    "protocol_success_rate": "4/5 (80%)",
+    "collapsed_seeds": {
+      "S46": "degenerate_class_collapse, DEV960=10.00%"
+    },
+    "valid_seeds_f1": {
+      "S42": 0.9086,
+      "S43": 0.9012,
+      "S44": 0.9021,
+      "S45": 0.9071
+    },
+    "seed_scores_by_id": {
+      "S42": 0.9086,
+      "S43": 0.9012,
+      "S44": 0.9021,
+      "S45": 0.9071
+    },
+    "rescue_seed": {
+      "S47": 0.8931
+    },
+    "mean_4valid_seeds": 0.9047,
+    "std_4valid_seeds": 0.0037,
+    "n": 4,
+    "mean": 0.9047,
+    "std": 0.0037,
+    "min": 0.9012,
+    "max": 0.9086,
+    "seeds": [
+      0.9086,
+      0.9012,
+      0.9021,
+      0.9071
+    ],
+    "note": "S46 önceden belirlenmiş protokol seedi, class collapse nedeniyle başarısız. S47 ek kurtarma/duyarlılık koşusu."
+  },
+  "electra_freeze50": {
+    "label": "ELECTRA-TR Freeze-50 (güçlü alternatif)",
+    "seed_scores_by_id": {
+      "S42": 0.8837,
+      "S43": 0.8699,
+      "S44": 0.8682,
+      "S45": 0.8686,
+      "S46": 0.8768
+    },
+    "n": 5,
+    "mean": 0.8734,
+    "std": 0.0067,
+    "min": 0.8682,
+    "max": 0.8837,
+    "seeds": [
+      0.8837,
+      0.8699,
+      0.8682,
+      0.8686,
+      0.8768
+    ]
+  },
+  "bert_full_ft": {
+    "label": "BERTurk-32k Full FT LR=2e-5 (tarihsel baseline)",
+    "seed_scores_by_id": {
+      "S42": 0.8189,
+      "S43": 0.8538,
+      "S44": 0.8284,
+      "S45": 0.7781,
+      "S46": 0.8106
+    },
+    "n": 5,
+    "mean": 0.818,
+    "std": 0.0276,
+    "min": 0.7781,
+    "max": 0.8538,
+    "seeds": [
+      0.8189,
+      0.8538,
+      0.8284,
+      0.7781,
+      0.8106
+    ]
+  },
+  "pairwise_gap_pp": {
+    "lora_vs_freeze50": 3.13,
+    "lora_vs_bert_baseline": 8.68
+  }
+}

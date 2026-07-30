@@ -1,0 +1,11 @@
+gold_label,predicted_label,count
+unverifiable,contradicted,24
+supported,partially_supported,15
+partially_supported,supported,14
+contradicted,partially_supported,11
+contradicted,supported,9
+contradicted,unverifiable,8
+supported,contradicted,6
+partially_supported,contradicted,6
+unverifiable,partially_supported,1
+unverifiable,supported,1

@@ -1,0 +1,11 @@
+# Table A — Model Karşılaştırması (F1 serisi, 3-seed ortalama, DEV960-GEN macro F1 sırası)
+
+| Model | Method | Trainable Params | Trainable % | DEV960 F1 (avg) | DEV960 Sup | DEV960 PSup | DEV960 Cont | DEV960 Unver | DEV600 F1 (avg) | Seeds |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ELECTRA-TR | LoRA r=16 all-linear | 3,247,876 | 2.85% | 0.9058 | 0.9009 | 0.8855 | 0.8916 | 0.9451 | 0.8782 | 42/43/44 |
+| ModernBERT-TR | LoRA r=16 all-linear | 3,406,852 | 2.23% | 0.8806 | 0.8861 | 0.8882 | 0.8329 | 0.9151 | 0.7911 | 42/43/44 |
+| ConvBERT-TR | LoRA r=16 all-linear | 3,026,692 | 2.74% | 0.8735 | 0.8768 | 0.8559 | 0.8332 | 0.9280 | 0.7995 | 42/43/44 |
+| BERT-32k | Full Fine-tune | 110,620,420 | 100.00% | 0.8444 | 0.8373 | 0.8389 | 0.7814 | 0.9201 | 0.7598 | 43/44/45 |
+| BERT-32k | LoRA r=32 all-linear | 5,360,644 | 4.62% | 0.8359 | 0.8360 | 0.8239 | 0.7727 | 0.9112 | 0.7255 | 42/43/44 |
+| BERT-128k | LoRA r=16 all-linear | 2,681,860 | 1.43% | 0.8097 | 0.7885 | 0.7893 | 0.7541 | 0.9067 | 0.7187 | 42/43/44 |
+| mBERT | LoRA r=16 all-linear | 2,681,860 | 1.49% | 0.7759 | 0.7726 | 0.7705 | 0.7028 | 0.8575 | 0.6739 | 42/43/44 |

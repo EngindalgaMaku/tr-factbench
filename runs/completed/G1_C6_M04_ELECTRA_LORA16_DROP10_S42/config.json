@@ -1,0 +1,17 @@
+{
+  "run_id": "G1_C6_M04_ELECTRA_LORA16_DROP10_S42",
+  "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "lora",
+  "learning_rate": 0.0002,
+  "freeze_layers": 0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_target_modules": "query,key,value,dense,out_proj",
+  "seed": 42,
+  "batch_size": 8,
+  "epochs": 5.0,
+  "max_length": 512,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01
+}
