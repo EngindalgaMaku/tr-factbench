@@ -9,10 +9,10 @@
     "supported": 400
   },
   "dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_medical.jsonl",
-  "dev960_sha256": "f7e68dfa599af485bb236176b7267162bf345a65c78fcaa49b819bf056a9e6e8",
+  "dev960_sha256": "5fd43e034965f9c0254c2eca05e7963c34e935c078a2fc29c048efc189ef03e3",
   "dev960_num_records": 320,
   "dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_medical.jsonl",
-  "dev600_sha256": "76eb7d68f7bf2b11f8c3c610aad305a30c80a495091f99c5e2411ddb1284cfe0",
+  "dev600_sha256": "d7d081542ef5f2c68e86ed500cf6288f5accad755368820f5de6c6f8f0498964",
   "dev600_num_records": 200,
   "path_relocation": {
     "layout_version": "v0.1.0-preview-evaluation-layout",

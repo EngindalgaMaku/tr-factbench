@@ -9,10 +9,10 @@
     "partially_supported": 800
   },
   "dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_finance.jsonl",
-  "dev960_sha256": "6d263339f3e13c2928aea1e253953ccf2c787bb23207f1643bd0dd7e5e03dedd",
+  "dev960_sha256": "b732a86647d530b6e5766e15f0ef65fee631eb1d872321293c8c3e221ac5840f",
   "dev960_num_records": 320,
   "dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_finance.jsonl",
-  "dev600_sha256": "4908a90d481ebcb5ff3cc178c5fb3e1b56650b83f584850ff7d257f09313f9b8",
+  "dev600_sha256": "7ee8f4ad34c5431c87195071ab7c246db19d2ef51d2c77fb35367ca09ff0e9a8",
   "dev600_num_records": 200,
   "path_relocation": {
     "layout_version": "v0.1.0-preview-evaluation-layout",

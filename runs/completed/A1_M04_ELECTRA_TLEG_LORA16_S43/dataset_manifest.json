@@ -9,10 +9,10 @@
     "partially_supported": 400
   },
   "dev960_file": "data/evaluation/legacy_experiment_version/domain/dev960_general_legal.jsonl",
-  "dev960_sha256": "2225832d13429936505002cfb692ea53c30f213d6ad8375b4f25b5b96187573c",
+  "dev960_sha256": "27f721bcf52d0107e22064468f0fe51595713d668256aa5bf1a0d605cbd20b3c",
   "dev960_num_records": 320,
   "dev600_file": "data/evaluation/legacy_experiment_version/domain/dev600_stress_legal.jsonl",
-  "dev600_sha256": "9383e032fa377933c06bfca742b73d51f1445208e093eb452347be8691884f2b",
+  "dev600_sha256": "3b6eef32338b991899bb609fe53cd1968af1728fc1fb65ab782a74440411b968",
   "dev600_num_records": 200,
   "path_relocation": {
     "layout_version": "v0.1.0-preview-evaluation-layout",
