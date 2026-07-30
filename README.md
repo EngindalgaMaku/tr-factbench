@@ -133,16 +133,17 @@ The construction scripts, manifests, checksums, and audit outputs are included s
 
 ## Annotation and provenance status
 
-| Split | Current annotation status |
-|---|---|
-| Train | LLM pre-annotation complete; candidate-label review 24/4,800; two-person audit sample prepared, annotation not started |
-| General development | blind annotator 1: 960/960 complete; provisional preview released; annotator 2 and adjudication deferred |
-| Stress development | candidate-label review 600/600; blind annotator 1: 600/600 complete; provisional preview released; blind annotator 2: 80/600 |
+TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both evaluation sets:
 
-The recommended reviewed preview files are:
+- DEV960: 960/960 examples reviewed
+- Dev600: 600/600 examples reviewed
+
+The human-reviewed evaluation files are available at:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+
+A second annotation pass and adjudication are planned for a future release.
 
 Audit copies and manifests are stored under `results/annotation/dev960/` and `results/annotation/dev600/`. DEV960 contains two label revisions. Dev600 contains three label revisions and one documented claim correction. The revised label distributions remain close to balanced, and Macro-F1 is used as the primary metric. The files are suitable for the research-preview release; a later stable release will add the second blind pass and adjudication.
 
