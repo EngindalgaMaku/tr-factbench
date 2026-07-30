@@ -1,6 +1,6 @@
 {
   "train_file": "data/derived/leave_one_domain_out/train_3200_lodo_no_legal.jsonl",
-  "train_sha256": "d4fc83ef723e232bec2b5a778d3c2ae25b289d150e579e6fe7e25d9edca44ad8",
+  "train_sha256": "225ef57d4ae1a937e401e33377177a438be005d4c77d246636d4c56eb8ee692e",
   "train_num_records": 3200,
   "train_label_dist": {
     "contradicted": 800,
