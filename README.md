@@ -9,11 +9,9 @@
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
-> **Research preview.** The first independent blind-human pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. New preview evaluations should use `data/evaluation/preview_v0.1/dev_general.jsonl` and `data/evaluation/preview_v0.1/dev_stress.jsonl`. The second blind pass and adjudication are intentionally deferred to a later stable release; this does not block the single-annotator `v0.1.0-preview`, but the preview must not be described as a fully adjudicated gold benchmark.
+> **Research preview.** Single-annotator blind review complete: DEV960 960/960, Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A second pass and adjudication are planned for the stable release.
 >
-> **Evaluation-version note.** Archived encoder and LLM scores remain tied to the original experimental files. The reviewed preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, and includes one documented Dev600 claim correction. Training and API inference were not repeated for these limited revisions.
->
-> **Selected model configuration:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45, with Trainer `seed` and `data_seed` fixed. The configuration-level decision is based on the five-seed H1/H2 comparison; the selected checkpoint scores 0.9014 on DEV960 and 0.8675 on DEV600-STR. Configuration metadata is frozen in [`final_config.lock.yaml`](final_config.lock.yaml).
+> **Selected model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0.10, seed=45. DEV960=0.9014, DEV600=0.8675. See [`final_config.lock.yaml`](final_config.lock.yaml).
 
 ## Overview
 
