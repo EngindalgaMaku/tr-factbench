@@ -1,6 +1,6 @@
 {
   "train_file": "data/derived/train_domain/train_1600_legal.jsonl",
-  "train_sha256": "e3d99124d39a146f79d762206ab15310e91070dabb0c15c3f4e4c2bbff27a9d7",
+  "train_sha256": "a5d08301d08b5c44dbce1b8b37b520c27b2f4497d47d27dd79ac676353ab578d",
   "train_num_records": 1600,
   "train_label_dist": {
     "contradicted": 400,
