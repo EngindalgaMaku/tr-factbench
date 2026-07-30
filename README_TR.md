@@ -9,11 +9,9 @@
 
 **[English documentation](README.md)**
 
-> **Araştırma ön sürümü.** Her iki değerlendirme kümesinde de birinci bağımsız kör insan geçişi tamamlanmıştır: DEV960 960/960, Dev600 600/600. Yeni preview değerlendirmelerinde `data/evaluation/preview_v0.1/dev_general.jsonl` ve `data/evaluation/preview_v0.1/dev_stress.jsonl` kullanılmalıdır. İkinci kör geçiş ve uzlaştırma daha sonraki kararlı sürüme bırakılmıştır. Bu durum tek anotatörlü `v0.1.0-preview` yayınına engel değildir; ancak sürüm tam uzlaştırılmış altın standart olarak sunulmamalıdır.
+> **Araştırma ön sürümü.** Tek anotatörlü kör inceleme tamamlandı: DEV960 960/960, Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. İkinci geçiş ve uzlaştırma kararlı sürümde planlanmıştır.
 >
-> **Değerlendirme sürümü notu.** Arşivdeki encoder ve LLM skorları özgün deney dosyalarına bağlıdır. Gözden geçirilmiş preview sürümünde DEV960'ta 2/960, Dev600'de 3/600 etiket değişmiştir; ayrıca Dev600'de belgelenmiş bir iddia düzeltmesi vardır. Bu sınırlı değişiklikler için eğitim ve API çıkarımı tekrarlanmamıştır.
->
-> **Seçilen model yapılandırması:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, tohum=45; Trainer `seed` ve `data_seed` değerleri sabittir. Yapılandırma seçimi beş tohumlu H1/H2 karşılaştırmasına dayanır. Seçili checkpoint DEV960 üzerinde 0,9014, DEV600-STR üzerinde 0,8675 sonuç vermiştir. Yapılandırma bilgileri [`final_config.lock.yaml`](final_config.lock.yaml) dosyasında dondurulmuştur.
+> **Seçilen model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0,10, tohum=45. DEV960=0,9014, DEV600=0,8675. Bkz. [`final_config.lock.yaml`](final_config.lock.yaml).
 
 ## Genel bakış
 
@@ -119,20 +117,17 @@ Oluşturma betikleri, manifestler, sağlama toplamları ve denetim çıktıları
 
 ## Anotasyon ve kaynak durumu
 
-| Bölüm | Mevcut anotasyon durumu |
-|---|---|
-| Eğitim | LLM ön anotasyonu tamamlandı; aday etiket incelemesi 24/4.800; iki kişilik kalite örneklemi hazır, anotasyon başlamadı |
-| Genel geliştirme | kör anotatör 1: 960/960 tamamlandı; geçici preview yayımlandı; anotatör 2 ve uzlaştırma sonraya bırakıldı |
-| Stres geliştirme | aday etiket incelemesi 600/600; kör anotatör 1: 600/600 tamamlandı; geçici preview yayımlandı; kör anotatör 2: 80/600 |
+TR-FactBench v0.1.0-preview, her iki değerlendirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi içerir:
 
-Önerilen gözden geçirilmiş preview dosyaları şunlardır:
+- DEV960: 960/960 örnek incelendi
+- Dev600: 600/600 örnek incelendi
+
+İnsan tarafından gözden geçirilmiş değerlendirme dosyaları:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
 
-Denetim kopyaları ve manifestler `results/annotation/dev960/` ile `results/annotation/dev600/` altında tutulur. DEV960'ta iki etiket, Dev600'de üç etiket değiştirilmiş ve Dev600'de bir iddia düzeltmesi belgelenmiştir. Güncel dağılımlar dengeli yapıya çok yakındır ve ana ölçüt Macro-F1'dır. Bu dosyalar araştırma ön sürümü için uygundur; ikinci kör geçiş ve uzlaştırma kararlı sürümde tamamlanacaktır.
-
-`results/annotation/train_audit_600/` altındaki eğitim kalite örneklemi 150 bağlam ve 600 örnek içerir. Her alandan 50 bağlam seçilmiş ve her bağlamdaki dört iddianın tamamı korunmuştur. Kör girişte aday etiket ve gerçek örnek kimlikleri bulunmaz. İki bağımsız kör geçiş tamamlandığında `scripts/42_compute_iaa.py`, uzlaştırma öncesi ham uyumu, ağırlıksız Cohen κ değerini, sınıf/alan tanılarını ve bağlam düzeyinde bootstrap güven aralıklarını hesaplar.
+İkinci anotasyon geçişi ve uzlaştırma gelecekteki bir sürümde planlanmıştır.
 
 `data/sources_manifest.csv` her bağlam grubu için bir satır içerir. Stres kümesinde kaynak URL'leri mevcuttur. Eğitim ve genel geliştirme verisindeki bağlamlar, kamuya açık tıp, finans ve hukuk alan kaynaklarından yeniden yazılarak ve uyarlanarak oluşturulmuştur; bu nedenle her örnek için ayrı URL saklanmamıştır (manifest'te `provenance_status=source_adapted_no_item_url` olarak işaretlidir). Etiketler, iddianın sağlanan bağlam tarafından desteklenme durumunu ifade eder — dış dünyadaki genel doğruluğu değil. Yeniden dağıtım veya ticari kullanım öncesinde `data/DATA_LICENSE.md` ve `data/NOTICE.md` incelenmelidir.
 
