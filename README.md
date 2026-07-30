@@ -145,12 +145,6 @@ The human-reviewed evaluation files are available at:
 
 A second annotation pass and adjudication are planned for a future release.
 
-Audit copies and manifests are stored under `results/annotation/dev960/` and `results/annotation/dev600/`. DEV960 contains two label revisions. Dev600 contains three label revisions and one documented claim correction. The revised label distributions remain close to balanced, and Macro-F1 is used as the primary metric. The files are suitable for the research-preview release; a later stable release will add the second blind pass and adjudication.
-
-The train quality-audit sample under `results/annotation/train_audit_600/` contains 150 context groups and 600 examples, with 50 contexts per domain and all four claims retained per context. It uses opaque IDs and excludes candidate labels from the blind input. After two independent blind passes, `scripts/42_compute_iaa.py` computes pre-adjudication percent agreement, unweighted Cohen's κ, class/domain diagnostics, and context-level bootstrap confidence intervals.
-
-`data/sources_manifest.csv` contains one row per context group. Source URLs are available for the stress split. Train and general-development contexts are marked `provenance_status=source_adapted_no_item_url` — they were constructed by rewriting and adapting domain materials, so item-level URLs were not retained. Labels reflect context-supported factuality, not independent real-world verification. Review `data/DATA_LICENSE.md` and `data/NOTICE.md` before redistribution or commercial use.
-
 ## Benchmark protocol and current results
 
 The single canonical result source is `results/csv/metrics_long_canonical.csv`. It is rebuilt from run-level `predictions_*.jsonl` files by `scripts/13_collect_results.py`.
