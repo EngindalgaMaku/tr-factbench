@@ -6,6 +6,7 @@
 [![Release](https://img.shields.io/badge/release-v0.1.0--preview-orange.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Selected checkpoint](https://img.shields.io/badge/selected_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
+[![Model on HF](https://img.shields.io/badge/🤗%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
