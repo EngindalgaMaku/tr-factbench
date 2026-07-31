@@ -32,11 +32,9 @@ lines = []
 for f in files:
     p = ROOT / f
     if p.exists():
-        h = hashlib.sha256()
-        with p.open("rb") as fh:
-            for block in iter(lambda: fh.read(1024 * 1024), b""):
-                h.update(block)
-        lines.append(f"{h.hexdigest()}  {f}")
+        content = p.read_bytes().replace(b"\r\n", b"\n")
+        h = hashlib.sha256(content).hexdigest()
+        lines.append(f"{h}  {f}")
         print(f"OK: {f}")
     else:
         print(f"MISSING: {f}")
