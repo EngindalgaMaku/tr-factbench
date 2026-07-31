@@ -348,11 +348,74 @@ def validate_portability_and_text() -> None:
         fail("placeholder or old path in final_config.lock.yaml")
 
 
+def validate_preview_evaluation_run() -> None:
+    """Validate the H1_DROP10_S45_PREVIEW run under runs/preview_evaluations/."""
+    run_dir = ROOT / "runs/preview_evaluations/H1_DROP10_S45_PREVIEW"
+    if not run_dir.is_dir():
+        fail("missing preview evaluation run directory: runs/preview_evaluations/H1_DROP10_S45_PREVIEW")
+
+    # --- required metadata files ---
+    for fname in ("config.json", "dataset_manifest.json", "metrics.json",
+                  "model_manifest.json", "trainable_parameters.json",
+                  "trainer_state.json", "validation_report.json"):
+        if not (run_dir / fname).exists():
+            fail(f"H1_DROP10_S45_PREVIEW: missing {fname}")
+
+    # --- no absolute local paths ---
+    trainer_state = load_json(run_dir / "trainer_state.json")
+    ckpt = str(trainer_state.get("best_model_checkpoint", ""))
+    if re.match(r"^[A-Za-z]:[\\/]", ckpt):
+        fail(f"H1_DROP10_S45_PREVIEW/trainer_state.json: absolute local path found: {ckpt}")
+
+    # --- no ckpt/ weights committed ---
+    ckpt_dir = run_dir / "ckpt"
+    if ckpt_dir.exists() and any(ckpt_dir.rglob("*.safetensors")):
+        fail("H1_DROP10_S45_PREVIEW: adapter weights found in ckpt/ — should be gitignored")
+
+    # --- dataset manifest ---
+    dm = load_json(run_dir / "dataset_manifest.json")
+    preview_dev960 = ROOT / "data/evaluation/preview_v0.1/dev_general.jsonl"
+    preview_dev600 = ROOT / "data/evaluation/preview_v0.1/dev_stress.jsonl"
+    for field, expected_path in (("dev960_file", preview_dev960), ("dev600_file", preview_dev600)):
+        recorded = str(dm.get(field, "")).replace("\\", "/")
+        if not recorded.startswith("data/evaluation/preview_v0.1/"):
+            fail(f"H1_DROP10_S45_PREVIEW: {field} not pointing at preview files: {recorded}")
+        actual_hash = sha256(ROOT / recorded)
+        stored_hash = dm.get({"dev960_file": "dev960_sha256", "dev600_file": "dev600_sha256"}[field])
+        if actual_hash != stored_hash:
+            fail(f"H1_DROP10_S45_PREVIEW: {field} hash mismatch")
+
+    # --- prediction file counts and label coverage ---
+    for pred_file, expected_n, gold_source in (
+        ("predictions_DEV960-GEN.jsonl", 960, preview_dev960),
+        ("predictions_DEV600-STR.jsonl", 600, preview_dev600),
+    ):
+        preds = load_jsonl(run_dir / pred_file)
+        if len(preds) != expected_n:
+            fail(f"H1_DROP10_S45_PREVIEW/{pred_file}: expected {expected_n} rows, got {len(preds)}")
+        gold_records = load_jsonl(gold_source)
+        gold_by_id = {r["example_id"]: r["gold_label"] for r in gold_records}
+        pred_ids = {r["example_id"] for r in preds}
+        if pred_ids != set(gold_by_id):
+            fail(f"H1_DROP10_S45_PREVIEW/{pred_file}: ID mismatch with preview gold file")
+        for r in preds:
+            if r.get("gold_label") != gold_by_id.get(r["example_id"]):
+                fail(f"H1_DROP10_S45_PREVIEW/{pred_file}: gold label mismatch for example_id={r['example_id']}")
+
+    # --- metrics sanity (non-zero macro F1) ---
+    metrics = load_json(run_dir / "metrics.json")
+    for key in ("d960_macro_f1", "d600_macro_f1"):
+        val = metrics.get(key, 0)
+        if not (0.5 <= val <= 1.0):
+            fail(f"H1_DROP10_S45_PREVIEW/metrics.json: {key}={val} out of plausible range")
+
+
 def main() -> None:
     run_required_scripts()
     run_count, metric_count = validate_run_archive()
     validate_annotation_status()
     validate_preview_layout()
+    validate_preview_evaluation_run()
     validate_llm_artifacts()
     validate_portability_and_text()
 
@@ -368,6 +431,7 @@ def main() -> None:
 
     print(f"[PASS] release validation: {run_count} runs, {metric_count} canonical rows, no duplicates")
     print("       preview layout, hashes, mappings, portability, and text checks passed")
+    print("       preview evaluation run H1_DROP10_S45_PREVIEW validated")
 
 
 if __name__ == "__main__":

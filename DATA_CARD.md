@@ -47,7 +47,7 @@ The field name `gold_label` is retained for pipeline compatibility. In the previ
 
 The authoritative progress snapshot is `annotation_status.json`.
 
-The recommended reviewed preview files are `data/evaluation/preview_v0.1/dev_general.jsonl` and `data/evaluation/preview_v0.1/dev_stress.jsonl`. Audit copies and manifests are retained under `results/annotation/dev960/` and `results/annotation/dev600/`. The DEV960 preview changes 2/960 labels. The Dev600 preview changes 3/600 labels and includes one documented claim correction. Archived encoder and LLM scores remain tied to the original pre-review files; these limited revisions are disclosed rather than used to trigger repeat training or API inference.
+The recommended reviewed preview files are `data/evaluation/preview_v0.1/dev_general.jsonl` and `data/evaluation/preview_v0.1/dev_stress.jsonl`. Audit copies and manifests are retained under `results/annotation/dev960/` and `results/annotation/dev600/`. The DEV960 preview changes 2/960 labels. The Dev600 preview changes 3/600 labels and includes one documented claim correction. Archived encoder and LLM scores remain tied to the original pre-review files. The canonical 144-run encoder archive and API-based LLM experiments were not repeated. A separate single-seed retraining of the selected configuration was conducted on the reviewed preview files and is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522).
 
 ### Train audit sample
 

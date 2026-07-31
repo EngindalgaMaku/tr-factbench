@@ -13,6 +13,7 @@ Thumbs.db
 # ─── BÜYÜK DOSYALAR — runs/completed altındaki tüm model dosyaları ─
 # ckpt/ dizininin tamamını dışarıda bırak (adapter ağırlıkları dahil)
 runs/completed/**/ckpt/
+runs/preview_evaluations/**/ckpt/
 
 # Zip / archive
 *.zip
