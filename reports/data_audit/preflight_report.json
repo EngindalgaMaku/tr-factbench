@@ -1,12 +1,12 @@
 {
   "status": "PASS",
   "environment": {
-    "python_version": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
-    "pytorch_version": "2.10.0+cpu",
-    "cuda_available": false,
-    "gpu_name": "N/A (CPU or torch unavailable)",
-    "gpu_total_vram_gb": 0.0,
-    "bf16_supported": false
+    "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch_version": "2.11.0+cu126",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_total_vram_gb": 8.0,
+    "bf16_supported": true
   },
   "data_manifest": {
     "TALL": {
