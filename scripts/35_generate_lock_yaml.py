@@ -14,7 +14,6 @@ import csv
 import hashlib
 import json
 import statistics
-import subprocess
 import sys
 from pathlib import Path
 
@@ -159,12 +158,10 @@ if final_dev960 is None or final_dev600 is None:
     raise SystemExit(f"Final run metrics are missing from {METRICS}: {FINAL_RUN_ID}")
 final_average = (final_dev960 + final_dev600) / 2
 
-try:
-    commit = subprocess.check_output(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
-    ).strip()
-except Exception:
-    commit = "unknown"
+# A generated file cannot safely embed the current commit hash: committing the
+# regenerated lock changes HEAD again. Keep the lock deterministic and let the
+# Git tag/release identify the repository revision.
+commit = "not_embedded_use_release_tag"
 
 annotation_status = load_json(ANNOTATION_STATUS) if ANNOTATION_STATUS.exists() else {}
 llm_rows = list(csv.DictReader(LLM_TABLE.open(encoding="utf-8-sig", newline=""))) if LLM_TABLE.exists() else []

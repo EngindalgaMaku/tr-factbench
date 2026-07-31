@@ -1,4 +1,4 @@
-﻿context_id,split,domain,source_title,source_url,retrieved_at,source_type,rights_status,transformation_type,provenance_status,notes
+context_id,split,domain,source_title,source_url,retrieved_at,source_type,rights_status,transformation_type,provenance_status,notes
 finance_context_001,dev_general,finance,,,,publicly_available_domain_source,source_dependent,rewritten_and_adapted,source_adapted_no_item_url,Context constructed by substantially rewriting and adapting publicly available domain materials; item-level URL not retained.
 finance_context_002,dev_general,finance,,,,publicly_available_domain_source,source_dependent,rewritten_and_adapted,source_adapted_no_item_url,Context constructed by substantially rewriting and adapting publicly available domain materials; item-level URL not retained.
 finance_context_003,dev_general,finance,,,,publicly_available_domain_source,source_dependent,rewritten_and_adapted,source_adapted_no_item_url,Context constructed by substantially rewriting and adapting publicly available domain materials; item-level URL not retained.

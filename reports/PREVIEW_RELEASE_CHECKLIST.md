@@ -23,7 +23,7 @@
 - [ ] Attach or publish the repository archive
 - [ ] Optionally publish the selected LoRA adapter after a clean-environment load/inference test
 
-## Stable-release work — not a preview blocker
+## Planned for a future stable release
 
 - [ ] Complete annotator 2 for both evaluation sets
 - [ ] Compute pre-adjudication agreement

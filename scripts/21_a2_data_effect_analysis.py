@@ -216,7 +216,7 @@ print(f"\n  [OK] {stat_path.name}")
 # ── CSV ────────────────────────────────────────────────────────────
 csv_path = TABLE_DIR / "table_F_a2_data_effect.csv"
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator="\n")
     w.writerow(["Config", "Eğitim Boyutu", "DEV960 Ortalama F1", "DEV960 Std", "DEV600 Ortalama F1", "DEV600 Std"])
     for k, v in results.items():
         w.writerow([

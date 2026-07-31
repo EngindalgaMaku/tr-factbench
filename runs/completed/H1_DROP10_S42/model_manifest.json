@@ -1,4 +1,4 @@
-﻿{
+{
   "run_id": "H1_DROP10_S42",
   "base_model": "dbmdz/electra-base-turkish-cased-discriminator",
   "model_revision_sha": "44ba696463e4d853078f3094cec76ba4e924cfd1",

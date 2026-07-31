@@ -5,6 +5,14 @@
     "dev_general": "data/evaluation/preview_v0.1/dev_general.jsonl",
     "dev_stress": "data/evaluation/preview_v0.1/dev_stress.jsonl"
   },
+  "preview_domain_evaluation_files": [
+    "data/evaluation/preview_v0.1/domain/dev600_stress_finance.jsonl",
+    "data/evaluation/preview_v0.1/domain/dev600_stress_legal.jsonl",
+    "data/evaluation/preview_v0.1/domain/dev600_stress_medical.jsonl",
+    "data/evaluation/preview_v0.1/domain/dev960_general_finance.jsonl",
+    "data/evaluation/preview_v0.1/domain/dev960_general_legal.jsonl",
+    "data/evaluation/preview_v0.1/domain/dev960_general_medical.jsonl"
+  ],
   "archived_experiment_evaluation": {
     "dev_general": "data/evaluation/legacy_experiment_version/dev_general.jsonl",
     "dev_stress": "data/evaluation/legacy_experiment_version/dev_stress.jsonl"
@@ -22,12 +30,18 @@
     "preview_dev_stress": "bff12be9a92e7376dea9a801313be2734184803ce89b362be8075210dcb7717f",
     "legacy_dev_general": "2f05485670066558f3884196de110154acd9cc5cfe9be81ddd4f0253effb7f48",
     "legacy_dev_stress": "09b277c01f316921bc33b9cc72c8674b929a7019d1a3ad9ac2c45bef663a1658",
-    "dev600_stress_finance": "4908a90d481ebcb5ff3cc178c5fb3e1b56650b83f584850ff7d257f09313f9b8",
-    "dev600_stress_legal": "9383e032fa377933c06bfca742b73d51f1445208e093eb452347be8691884f2b",
-    "dev600_stress_medical": "76eb7d68f7bf2b11f8c3c610aad305a30c80a495091f99c5e2411ddb1284cfe0",
-    "dev960_general_finance": "6d263339f3e13c2928aea1e253953ccf2c787bb23207f1643bd0dd7e5e03dedd",
-    "dev960_general_legal": "2225832d13429936505002cfb692ea53c30f213d6ad8375b4f25b5b96187573c",
-    "dev960_general_medical": "f7e68dfa599af485bb236176b7267162bf345a65c78fcaa49b819bf056a9e6e8"
+    "dev600_stress_finance": "7ee8f4ad34c5431c87195071ab7c246db19d2ef51d2c77fb35367ca09ff0e9a8",
+    "dev600_stress_legal": "3b6eef32338b991899bb609fe53cd1968af1728fc1fb65ab782a74440411b968",
+    "dev600_stress_medical": "d7d081542ef5f2c68e86ed500cf6288f5accad755368820f5de6c6f8f0498964",
+    "dev960_general_finance": "b732a86647d530b6e5766e15f0ef65fee631eb1d872321293c8c3e221ac5840f",
+    "dev960_general_legal": "27f721bcf52d0107e22064468f0fe51595713d668256aa5bf1a0d605cbd20b3c",
+    "dev960_general_medical": "5fd43e034965f9c0254c2eca05e7963c34e935c078a2fc29c048efc189ef03e3",
+    "preview_dev600_stress_finance": "4f497457764bd08a36a0293193f05376fa1b9d9a7b9800db72fd8fc8ba0ba07b",
+    "preview_dev600_stress_legal": "ba403c52c50d61476bb9a1b411570abe5cb395f15c813843472630550b076199",
+    "preview_dev600_stress_medical": "7bfdf858c2f435b0e1b367ce4270bc812c518185158dbdcfc081b37b57e512d2",
+    "preview_dev960_general_finance": "76f13a200b42793760296666d5174201ce81347db58b83f79eb8792f4f702974",
+    "preview_dev960_general_legal": "072ed3d92422c9509c360d2f1239d40a6702adc3137fac01af54957a9cbc2662",
+    "preview_dev960_general_medical": "1210d0cf85723b7fc764055a79decafc45fd85e3c9a81c04c6f04d7edcf8cef8"
   },
-  "reproducibility_note": "All archived run manifests use repository-relative, resolvable paths. Their originally recorded runtime paths are retained under path_relocation, and all dataset SHA-256 values remain unchanged."
+  "reproducibility_note": "Archived run manifests use repository-relative, resolvable paths. Original runtime paths are retained under path_relocation, and archived dataset SHA-256 values are unchanged."
 }

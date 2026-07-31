@@ -244,7 +244,7 @@ for split, suffix in [("DEV960", "dev960"), ("DEV600", "dev600")]:
     split_rows = [r for s, r in cross_rows if s == split]
     out = TABLE_DIR / f"table_E_cross_domain_{suffix}_3seed.csv"
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=headers_cross, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=headers_cross, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(split_rows)
     print(f"  [CSV] {out.name}")
@@ -320,7 +320,7 @@ a2_headers = ["config","planned_seeds","successful_seeds","success_rate",
               "train_size","dev960_conditional_mean","dev960_conditional_std",
               "dev600_conditional_mean","dev600_conditional_std","extra_seeds"]
 with open(TABLE_DIR/"table_F_a2_data_effect.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=a2_headers, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=a2_headers, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(a2_rows)
 print(f"  [CSV] table_F_a2_data_effect.csv")

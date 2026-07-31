@@ -191,12 +191,12 @@ def write_csv_and_md(data: list[dict]) -> None:
         "system_prompt_sha256", "fewshot_sha256",
     ]
     with (TABLE_DIR / "table_I_llm_baselines.csv").open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for r in data:
             writer.writerow({k: r[k] for k in fields})
     with (RESULT_ROOT / "experiment_matrix.csv").open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for r in data:
             writer.writerow({k: r[k] for k in fields})

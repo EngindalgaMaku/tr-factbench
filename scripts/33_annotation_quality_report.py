@@ -181,7 +181,7 @@ for split, dist in label_dist.items():
     csv_rows.append(row)
 headers = ["split","total"] + LABEL_NAMES + [f"{k}_pct" for k in LABEL_NAMES]
 with open(TABLE_DIR/"table_h6_label_distribution.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(csv_rows)
 print(f"  [CSV] table_h6_label_distribution.csv")

@@ -2,7 +2,7 @@
 
 ## Status
 
-**Model configuration selected; benchmark release remains a research preview.** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter may accompany the preview after a clean-environment load/inference test. The second blind pass and adjudication are reserved for the later stable release.
+**Model configuration selected; benchmark release remains a research preview.** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter may be published separately after a clean-environment load and inference test. A second annotation pass and adjudication are planned for a future benchmark release.
 
 ## Model
 

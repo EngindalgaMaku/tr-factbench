@@ -4,7 +4,7 @@
 
 TR-FactBench is a Turkish source-grounded factuality-verification dataset covering finance, legal, and medical domains. Each example contains a context passage, a question, a claim, and one of four labels: `supported`, `partially_supported`, `contradicted`, or `unverifiable`.
 
-This is a **v0.1.0 research preview**. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. The release includes single-annotator provisional evaluation files. A second blind pass and adjudication are planned for the stable release, so this preview must not be described as a fully adjudicated gold benchmark.
+This is a **v0.1.0 research preview**. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second annotation pass and adjudication are planned for a future release.
 
 ## Primary data
 
@@ -28,9 +28,9 @@ Every context group contains exactly four examples, one per label, in the archiv
 
 ## Schema
 
-The authoritative schema is `data/schema.json`. The primary JSONL files contain the core example fields. Normalized split, release version, annotation status, and source identifiers are provided through `data/example_metadata.csv` without modifying the experimental files and their hashes.
+The authoritative schema is `data/schema.json`. The primary JSONL files contain the core example fields. `data/example_metadata.csv` describes the archived experiment version without modifying its files or hashes. Preview evaluation records include their review metadata directly; Dev600 legacy-to-preview IDs are mapped in `data/manifests/dev600_legacy_to_preview_id_map.csv`.
 
-The field name `gold_label` is retained for pipeline compatibility. In the provisional evaluation files it represents the completed first blind-human pass and is marked `single_annotator_provisional`; training labels remain construction-time candidate labels. Full gold status is reserved for a later two-annotator adjudicated release.
+The field name `gold_label` is retained for pipeline compatibility. In the preview evaluation files it represents the completed first blind-human pass and is marked `single_annotator_provisional`; training labels remain construction-time candidate labels.
 
 ## Annotation status
 
@@ -80,7 +80,7 @@ Item-level URL absence in the source-adapted splits is not treated as an annotat
 3. **LLM-assisted drafting:** Language models were used as construction aids rather than independent gold annotators.
 4. **Automated validation:** Scripts checked JSONL structure, label and domain balance, context-group completeness, identifier uniqueness, split overlap, and deterministic regeneration of derived views.
 5. **Candidate-label refinement:** For Dev600, a human reviewer compared the current candidate label with a normalized LLM analysis to identify apparent construction errors quickly. This stage was not used as human-human IAA evidence.
-6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 completed 80/600. The second pass and adjudication are not required for the v0.1.0 research preview; Cohen's κ will be computed for the later stable release after paired blind files are complete and before adjudication.
+6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 completed 80/600. Agreement statistics will be reported after paired blind annotation files are complete and before adjudication.
 
 ## LLM annotation artifacts
 
@@ -101,12 +101,11 @@ Four LLMs were evaluated in zero-shot and fixed 8-shot conditions on both develo
 
 - Autonomous medical, legal, or financial decision-making
 - Production fact checking without human review
-- Claims that this preview is a fully adjudicated gold benchmark
 - Commercial redistribution of adapted contexts without reviewing applicable source terms
 
 ## Known limitations
 
-1. Both evaluation sets have one complete blind-human pass, but neither has completed two-person adjudicated validation.
+1. Both evaluation sets have one complete blind-human review pass; the second pass and adjudication are planned for a future release.
 2. Dev600 annotator 2 is 80/600; DEV960 annotator 2 has not started. The train audit has also not started.
 3. Train and general-development contexts are source-adapted synthetic examples; item-level URLs were not retained for every context.
 4. The dataset is Turkish-only and covers three domains.

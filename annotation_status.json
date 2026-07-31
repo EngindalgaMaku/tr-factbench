@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-07-30",
-  "note": "Progress is derived from repository artifacts. One complete blind-human pass on both evaluation sets is sufficient for v0.1.0-preview; IAA requires paired blind files and is deferred to the stable release.",
+  "note": "Progress is derived from repository artifacts. The first blind-human review pass is complete for both evaluation sets. Agreement statistics and adjudication will be added after paired annotation is complete.",
   "dev_stress": {
     "total": 600,
     "candidate_label_review": {

@@ -87,11 +87,11 @@ out={'scope':'historical D1 seed-level analysis; final release statistics pendin
 (STAT_DIR/'d1_statistical_tests.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 with (TABLE_DIR/'table_stat_bootstrap_ci.csv').open('w',newline='',encoding='utf-8') as f:
-    w=csv.writer(f); w.writerow(['Model','n','Mean_F1','Std','CI95_Lo','CI95_Hi'])
+    w=csv.writer(f, lineterminator="\n"); w.writerow(['Model','n','Mean_F1','Std','CI95_Lo','CI95_Hi'])
     for k,v in ci.items(): w.writerow([labels[k],v['n'],f"{v['mean']:.4f}",f"{v['std']:.4f}",f"{v['ci95_lo']:.4f}",f"{v['ci95_hi']:.4f}"])
 with (TABLE_DIR/'table_stat_pairwise_tests.csv').open('w',newline='',encoding='utf-8') as f:
     cols=['comparison','common_seeds','n_common','test_type','mean_paired_difference_pp','paired_t_stat','paired_t_p','wilcoxon_stat','wilcoxon_p']
-    w=csv.DictWriter(f,fieldnames=cols,extrasaction='ignore');w.writeheader()
+    w=csv.DictWriter(f,fieldnames=cols,extrasaction='ignore', lineterminator="\n");w.writeheader()
     for r in pairwise:
         r=dict(r);r['common_seeds']='/'.join(r['common_seeds']);w.writerow(r)
 print('[OK] d1_statistical_tests.json and statistical tables')

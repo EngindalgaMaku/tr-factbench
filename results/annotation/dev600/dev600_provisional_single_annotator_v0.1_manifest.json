@@ -1,31 +1,54 @@
 {
-  "created_at_utc": "2026-07-30T20:29:06+00:00",
+  "created_at_utc": "2026-07-28T19:44:09+00:00",
   "dataset_version": "TR-FactBench v0.1.0-preview",
   "output_file": "results/annotation/dev600/dev600_provisional_single_annotator_v0.1.jsonl",
+  "data_release_file": "data/evaluation/preview_v0.1/dev_stress.jsonl",
   "output_sha256": "bff12be9a92e7376dea9a801313be2734184803ce89b362be8075210dcb7717f",
   "source_dataset": "data/evaluation/legacy_experiment_version/dev_stress.jsonl",
   "source_sha256": "09b277c01f316921bc33b9cc72c8674b929a7019d1a3ad9ac2c45bef663a1658",
   "annotation_file": "results/annotation/dev600/dev_stress_blind_annotator_1.jsonl",
   "annotation_sha256": "79cfc343d15a474e576e02f37733aef4b4bc08f13cc74622542a00936e2721d9",
+  "id_map_file": "data/manifests/dev600_legacy_to_preview_id_map.csv",
+  "id_map_sha256": "7187f7f5cab250c9882ffdc8cf993668439b1ddc2475593f63b2e5181308d9b4",
   "total_examples": 600,
   "gold_source": "single_annotator_blind_human",
   "gold_annotator": "annotator_1",
   "label_changes_from_original_gold": 3,
+  "label_changes": [
+    {
+      "legacy_example_id": "devfs_b2_0044",
+      "preview_example_id": "legal_stress_0095",
+      "from": "unverifiable",
+      "to": "partially_supported"
+    },
+    {
+      "legacy_example_id": "devv2_repl_0012",
+      "preview_example_id": "finance_stress_0135",
+      "from": "unverifiable",
+      "to": "contradicted"
+    },
+    {
+      "legacy_example_id": "devv2_repair_0012",
+      "preview_example_id": "finance_stress_0194",
+      "from": "unverifiable",
+      "to": "partially_supported"
+    }
+  ],
   "claim_fixes": [
     {
-      "example_id": "devv2_ma_b2_0031",
+      "legacy_example_id": "devv2_ma_b2_0031",
+      "preview_example_id": "finance_stress_0177",
       "original_claim": "Emirler geliş zamanına ve fiyatına bakılmadan eşleşir. Kuponlu araçlarda işlemiş faiz fiyat hesabına katılmaz.",
       "corrected_claim": "Emirler fiyat ve zaman önceliği gözetilmeden eşleşir. Kuponlu araçlarda kirli fiyat da işlemiş faizi içermez."
     }
   ],
-  "provisional": true,
-  "status": "provisional_single_annotator_v0.1",
-  "evaluation_note": "Archived model and LLM scores were produced before this reviewed preview. Three of 600 records changed; reported DEV600 scores may shift slightly, and runs were not repeated for this limited revision.",
-  "data_release_file": "data/evaluation/preview_v0.1/dev_stress.jsonl",
   "label_distribution": {
     "contradicted": 151,
     "partially_supported": 152,
     "supported": 150,
     "unverifiable": 147
-  }
+  },
+  "provisional": true,
+  "status": "provisional_single_annotator_v0.1",
+  "evaluation_note": "Archived encoder and LLM scores use the pre-review Dev600 file. The reviewed preview changes 3/600 labels and applies 1 documented claim correction; archived runs were not repeated."
 }

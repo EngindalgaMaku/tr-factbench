@@ -9,7 +9,7 @@
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
-> **Research preview.** Single-annotator blind review complete: DEV960 960/960, Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A second pass and adjudication are planned for the stable release.
+> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A second pass and adjudication are planned for a future release.
 >
 > **Selected model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0.10, seed=45. DEV960=0.9014, DEV600=0.8675. See [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -20,6 +20,8 @@ TR-FactBench evaluates whether a Turkish claim is supported by a supplied source
 ## Key results at a glance
 
 TR-FactBench compares a locally deployable Turkish encoder with four general-purpose LLMs under zero-shot and 8-shot prompting. The table below reports the best prompting condition observed for each LLM alongside the selected ELECTRA checkpoint. Full per-condition results are in the [LLM baselines](#llm-baselines) section.
+
+The reported scores were obtained on the archived pre-review evaluation files retained under `data/evaluation/legacy_experiment_version/`.
 
 | System | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
 |---|---:|---:|
@@ -53,10 +55,12 @@ The repository keeps the dataset, deterministic derived views, training and eval
 | Stress development — archived experiment version | `data/evaluation/legacy_experiment_version/dev_stress.jsonl` | 600 | 150 | 150 |
 | **Total** |  | **6,360** | **1,590** |  |
 
-For **new preview evaluations**, use the human-reviewed single-annotator files:
+For **new preview evaluations**, use the human-reviewed files:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+
+Domain-specific preview views are available under `data/evaluation/preview_v0.1/domain/`.
 
 The original `dev_general.jsonl` and `dev_stress.jsonl` files are retained unchanged because the archived model and LLM results were produced on those versions.
 
@@ -77,7 +81,7 @@ For decision rules, boundary examples, and guidance on commonly confused pairs, 
 
 ### Record format
 
-The primary JSONL files contain the core fields below. Release metadata such as split, dataset version, normalized annotation status, and source identifier is stored in `data/example_metadata.csv`.
+The primary JSONL files contain the core fields below. `data/example_metadata.csv` describes the archived experiment version. The preview evaluation files carry their review metadata directly, and Dev600 cross-version identifiers are listed in `data/manifests/dev600_legacy_to_preview_id_map.csv`.
 
 ```json
 {

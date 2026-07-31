@@ -5,8 +5,8 @@ A1 alan bazlı eğitim — Çapraz Domain Değerlendirmesi
 Her domain modeli, tüm domain dev setlerinde (medical, finance, legal) test edilir.
 
 Çıktı:
-  results/tables/table_E_cross_domain_matrix.csv
-  results/tables/table_E_cross_domain_matrix.md
+  results/tables/table_E_cross_domain_seed42_runtime.csv
+  results/tables/table_E_cross_domain_seed42_runtime.md
   results/figures/fig_07_cross_domain_heatmap.png
 """
 import sys, json, torch, csv
@@ -141,11 +141,15 @@ def main():
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
+    # Do not create an empty placeholder when model weights are unavailable.
+    if not any(value is not None for row in matrix.values() for value in row.values()):
+        raise SystemExit("No loadable model checkpoints were found; no runtime cross-domain table was written.")
+
     # Write CSV
     eval_labels = [el for el, _ in EVAL_SETS]
-    csv_path = TABLE_DIR / "table_E_cross_domain_matrix.csv"
+    csv_path = TABLE_DIR / "table_E_cross_domain_seed42_runtime.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["Train\\Eval"] + eval_labels)
         for _, model_label, _ in A1_MODELS:
             row = [model_label] + [matrix[model_label].get(el, "") for el in eval_labels]
@@ -153,7 +157,7 @@ def main():
     print(f"\n  [CSV] {csv_path.name}")
 
     # Write MD
-    md_path = TABLE_DIR / "table_E_cross_domain_matrix.md"
+    md_path = TABLE_DIR / "table_E_cross_domain_seed42_runtime.md"
     with open(md_path, "w", encoding="utf-8") as f:
         f.write("# Table E — Çapraz Domain Değerlendirme Matrisi (ELECTRA-TR, all-linear LoRA r=16, seed=42)\n\n")
         f.write("Her satır = eğitim domain'i. Her sütun = değerlendirme domain'i. **Kalın** = in-domain.\n\n")

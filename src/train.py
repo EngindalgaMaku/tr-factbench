@@ -410,7 +410,7 @@ def main():
     primary = Path("data/primary")
     preview_eval = Path("data/evaluation/preview_v0.1")
     derived = Path("data/derived/train_domain")
-    derived_dev = Path("data/derived/dev_domain")
+    preview_domain = preview_eval / "domain"
 
     if args.train_file:
         train_file = args.train_file
@@ -434,12 +434,12 @@ def main():
     elif args.domain == "multidomain":
         dev_file = preview_eval / "dev_general.jsonl"
     else:
-        candidate = derived_dev / f"dev960_general_{args.domain}.jsonl"
+        candidate = preview_domain / f"dev960_general_{args.domain}.jsonl"
         if candidate.exists():
             dev_file = candidate
         else:
             logger.warning(
-                f"Domain dev split '{candidate}' not found. Falling back to the reviewed preview dev_general.jsonl."
+                f"Preview domain split '{candidate}' not found. Falling back to the full reviewed preview dev_general.jsonl."
             )
             dev_file = preview_eval / "dev_general.jsonl"
 
@@ -468,11 +468,15 @@ def main():
         logger.info(f"Test file override: {test_path}")
     else:
         test_domains = ["medical", "finance", "legal", "multidomain"]
-        test_files = {}
-        for d in test_domains:
-            test_files[d] = path_prefix / "test" / f"turkish_hallucination_test_{d}.jsonl"
-            if not test_files[d].exists():
-                logger.error(f"Test split file does not exist: {test_files[d]}")
+        test_files = {
+            "medical": preview_domain / "dev600_stress_medical.jsonl",
+            "finance": preview_domain / "dev600_stress_finance.jsonl",
+            "legal": preview_domain / "dev600_stress_legal.jsonl",
+            "multidomain": preview_eval / "dev_stress.jsonl",
+        }
+        for test_domain, test_path in test_files.items():
+            if not test_path.exists():
+                logger.error(f"Test split file does not exist for {test_domain}: {test_path}")
                 sys.exit(1)
             
     # 2. Load and Validate Raw Data

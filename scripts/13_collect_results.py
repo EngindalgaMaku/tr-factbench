@@ -194,13 +194,13 @@ def collect(strict: bool = True):
 
     # Save runs.csv
     with open(CSV_DIR / "runs.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=runs_headers)
+        writer = csv.DictWriter(f, fieldnames=runs_headers, lineterminator="\n")
         writer.writeheader()
         writer.writerows(runs_rows)
 
     # Save canonical metrics_long_canonical.csv
     with open(CANONICAL_CSV, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=overall_headers)
+        writer = csv.DictWriter(f, fieldnames=overall_headers, lineterminator="\n")
         writer.writeheader()
         writer.writerows(overall_rows)
 

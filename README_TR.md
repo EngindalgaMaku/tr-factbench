@@ -9,7 +9,7 @@
 
 **[English documentation](README.md)**
 
-> **Araştırma ön sürümü.** Tek anotatörlü kör inceleme tamamlandı: DEV960 960/960, Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. İkinci geçiş ve uzlaştırma kararlı sürümde planlanmıştır.
+> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. İkinci geçiş ve uzlaştırma gelecekteki bir sürüm için planlanmıştır.
 >
 > **Seçilen model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0,10, tohum=45. DEV960=0,9014, DEV600=0,8675. Bkz. [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -39,10 +39,12 @@ Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme 
 | Stres geliştirme — arşiv deney sürümü | `data/evaluation/legacy_experiment_version/dev_stress.jsonl` | 600 | 150 | 150 |
 | **Toplam** |  | **6.360** | **1.590** |  |
 
-**Yeni preview değerlendirmeleri** için insan tarafından gözden geçirilmiş tek anotatörlü dosyalar kullanılmalıdır:
+**Yeni preview değerlendirmeleri** için insan tarafından gözden geçirilmiş dosyalar kullanılmalıdır:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+
+Alan bazlı preview görünümleri `data/evaluation/preview_v0.1/domain/` altında yer alır.
 
 Arşiv sonuçlarının kullandığı dosyalar `data/evaluation/legacy_experiment_version/` altında byte düzeyinde değiştirilmeden korunur. Yeni değerlendirmelerde aynı adlı dosyaların `preview_v0.1/` sürümü kullanılmalıdır.
 
@@ -63,7 +65,7 @@ Karar kuralları, sınır örnekleri ve sıkça karıştırılan çiftlere (`con
 
 ### Kayıt biçimi
 
-Ana JSONL dosyalarında aşağıdaki temel alanlar bulunur. Bölüm adı, veri seti sürümü, normalize edilmiş anotasyon durumu ve kaynak kimliği gibi yayın metadatası `data/example_metadata.csv` dosyasında tutulur.
+Ana JSONL dosyalarında aşağıdaki temel alanlar bulunur. `data/example_metadata.csv` arşiv deney sürümünü açıklar. Preview değerlendirme dosyaları inceleme metadatasını doğrudan taşır; Dev600 eski ve yeni kimlik eşlemesi `data/manifests/dev600_legacy_to_preview_id_map.csv` dosyasındadır.
 
 ```json
 {
@@ -132,6 +134,8 @@ TR-FactBench v0.1.0-preview, her iki değerlendirme kümesi için tamamlanmış 
 `data/sources_manifest.csv` her bağlam grubu için bir satır içerir. Stres kümesinde kaynak URL'leri mevcuttur. Eğitim ve genel geliştirme verisindeki bağlamlar, kamuya açık tıp, finans ve hukuk alan kaynaklarından yeniden yazılarak ve uyarlanarak oluşturulmuştur; bu nedenle her örnek için ayrı URL saklanmamıştır (manifest'te `provenance_status=source_adapted_no_item_url` olarak işaretlidir). Etiketler, iddianın sağlanan bağlam tarafından desteklenme durumunu ifade eder — dış dünyadaki genel doğruluğu değil. Yeniden dağıtım veya ticari kullanım öncesinde `data/DATA_LICENSE.md` ve `data/NOTICE.md` incelenmelidir.
 
 ## Deney protokolü ve mevcut sonuçlar
+
+Bu bölümde raporlanan skorlar, `data/evaluation/legacy_experiment_version/` altında korunan insan incelemesi öncesi deney dosyalarına aittir.
 
 Tek kanonik sonuç kaynağı `results/csv/metrics_long_canonical.csv` dosyasıdır. Dosya, `scripts/13_collect_results.py` tarafından koşu bazlı `predictions_*.jsonl` dosyalarından yeniden oluşturulur.
 

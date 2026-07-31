@@ -1,4 +1,4 @@
-﻿{
+{
   "run_id": "H1_DROP10_S46",
   "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
   "method": "lora",

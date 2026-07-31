@@ -8,7 +8,7 @@ This file documents known technical limitations of the current codebase. Items a
 
 **Status:** Fixed in commit `1025fb9`, updated domain path in `1025fb9` follow-up.
 
-`src/train.py` previously defaulted to `--label_set 5class` (legacy five-class format). The current primary release is four-class. The default is now `4class`. Training defaults use `data/primary/` and `data/derived/train_domain/`. New multidomain evaluation defaults use `data/evaluation/preview_v0.1/`, while archived experiment runners and manifests use `data/evaluation/legacy_experiment_version/`. Wrapper `scripts/10_run_experiment.py` always passes `--label_set 4class` and explicit file paths, so archived experiment results are unaffected.
+`src/train.py` previously defaulted to `--label_set 5class` (legacy five-class format). The current primary release is four-class. The default is now `4class`. Training defaults use `data/primary/` and `data/derived/train_domain/`. New general, stress, and domain-specific evaluations resolve to `data/evaluation/preview_v0.1/`; archived experiment runners and manifests use `data/evaluation/legacy_experiment_version/`. The direct-training test-path resolver was also corrected. Wrapper `scripts/10_run_experiment.py` always passes `--label_set 4class` and explicit file paths, so archived experiment results are unaffected.
 
 ---
 
@@ -92,16 +92,24 @@ The model adapter weights are not included in the repository due to file size. T
 
 ---
 
-## #11 — `table_E_cross_domain_matrix.csv` is empty and passes validation
+## #11 — Empty cross-domain placeholder table (resolved)
 
-**Status:** Known, not yet addressed.
+**Status:** Resolved in the preview release cleanup.
 
-`results/tables/table_E_cross_domain_matrix.csv` contains only a header row with no data cells populated. The release validator (`scripts/99_validate_release.py`) checks file existence but not that numeric cells are non-empty. The table should either be populated from the cross-domain run predictions or removed. The validator should be updated to assert non-empty numeric content for all table files.
+The empty seed-42 placeholder files `table_E_cross_domain_matrix.csv` and `.md` were removed. The populated three-seed summaries remain available as `table_E_cross_domain_dev960_3seed.csv` and `table_E_cross_domain_dev600_3seed.csv`. Release validation now rejects reintroduction of the empty placeholders.
 
 ---
 
-## #12 — UTF-8 BOM in approximately 91 files
+## #12 — UTF-8 BOM normalization (resolved)
 
-**Status:** Known, not yet addressed.
+**Status:** Resolved in the preview release cleanup.
 
-Approximately 91 files in the repository were written with a UTF-8 BOM (`\xef\xbb\xbf`). Current scripts use `encoding="utf-8-sig"` where necessary, which silently strips the BOM on read. However, external tools reading JSON or JSONL files with standard `utf-8` encoding may encounter parse errors. A cleanup pass should normalise all affected files to plain UTF-8 without BOM, followed by validation that no JSON or JSONL files contain a BOM.
+Text artifacts in the release were normalized to plain UTF-8 without BOM. Release validation checks JSON, JSONL, CSV, Markdown, Python, YAML, CFF, and text files for a UTF-8 BOM. Readers continue to accept `utf-8-sig` where compatibility with older snapshots is useful.
+
+---
+
+## #13 — Preview regeneration and Dev600 identifier mapping (resolved)
+
+**Status:** Resolved in the preview release cleanup.
+
+`scripts/43_build_single_annotator_preview.py` now rebuilds both evaluation files from the archived inputs and annotator-1 records. It applies the documented Dev600 claim correction explicitly, regenerates domain-specific preview views, and writes `data/manifests/dev600_legacy_to_preview_id_map.csv` for cross-version joins.

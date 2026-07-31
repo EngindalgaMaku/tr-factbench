@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -13,6 +12,22 @@ def count_jsonl(path: Path) -> int:
     if not path.exists():
         return 0
     return sum(1 for line in path.read_text(encoding="utf-8-sig").splitlines() if line.strip())
+
+
+
+
+def latest_review_date(paths: list[Path]) -> str:
+    dates: list[str] = []
+    for path in paths:
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.strip():
+                continue
+            value = json.loads(line).get("reviewed_at_utc")
+            if value:
+                dates.append(value[:10])
+    return max(dates) if dates else "2026-07-30"
 
 
 def progress(completed: int, total: int) -> dict:
@@ -30,9 +45,15 @@ dev960_dir = ROOT / "results/annotation/dev960"
 train_dir = ROOT / "results/annotation/train"
 train_audit_dir = ROOT / "results/annotation/train_audit_600"
 
+review_files = [
+    dev600_dir / "dev_stress_blind_annotator_1.jsonl",
+    dev600_dir / "dev_stress_blind_annotator_2.jsonl",
+    dev960_dir / "dev_general_blind_annotator_1.jsonl",
+]
+
 status = {
-    "last_updated": date.today().isoformat(),
-    "note": "Progress is derived from repository artifacts. One complete blind-human pass on both evaluation sets is sufficient for v0.1.0-preview; IAA requires paired blind files and is deferred to the stable release.",
+    "last_updated": latest_review_date(review_files),
+    "note": "Progress is derived from repository artifacts. The first blind-human review pass is complete for both evaluation sets. Agreement statistics and adjudication will be added after paired annotation is complete.",
     "dev_stress": {
         "total": 600,
         "candidate_label_review": progress(count_jsonl(dev600_dir / "dev_stress_candidate_label_review.jsonl"), 600),

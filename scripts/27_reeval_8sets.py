@@ -266,7 +266,7 @@ def write_metrics_overall(all_results: list):
 
     out = CSV_DIR / "metrics_long_canonical.csv"
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(final_rows)
     print(f"\n  [CSV] {out.name} ({len(new_rows)} yeni satır, {len(preserved)} korunan)")

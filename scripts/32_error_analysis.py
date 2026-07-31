@@ -184,7 +184,7 @@ csv_rows = []
 for (gold, pred), count in error_pairs.most_common():
     csv_rows.append({"gold_label": gold, "predicted_label": pred, "count": count})
 with open(TABLE_DIR/"table_h5_error_pairs.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=["gold_label","predicted_label","count"])
+    w = csv.DictWriter(f, fieldnames=["gold_label","predicted_label","count"], lineterminator="\n")
     w.writeheader()
     w.writerows(csv_rows)
 
@@ -195,7 +195,7 @@ for label, vals in d1_perclass.items():
     row.update(vals)
     pc_rows.append(row)
 with open(TABLE_DIR/"table_h5_per_class_f1.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=["model"]+LABEL_NAMES, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=["model"]+LABEL_NAMES, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(pc_rows)
 print(f"  [CSV] table_h5_error_pairs.csv, table_h5_per_class_f1.csv")

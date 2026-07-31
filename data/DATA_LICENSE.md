@@ -26,10 +26,8 @@ rights-cleared for commercial redistribution without independent rights review.
 ## Release status
 
 This is a research-preview dataset. Both evaluation sets include a completed first
-blind-human pass and are released as single-annotator provisional files. Training labels
-remain construction-time candidates. Independent second annotation and adjudication are
-reserved for a later stable release; the preview must not be treated as a fully
-adjudicated gold standard.
+blind-human review pass. Training labels remain construction-time candidates. A second
+annotation pass and adjudication are planned for a future release.
 
 ## Citation
 

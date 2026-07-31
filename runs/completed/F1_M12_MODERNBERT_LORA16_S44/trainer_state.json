@@ -1,7 +1,7 @@
 {
   "best_global_step": 1200,
   "best_metric": 0.8756869597800474,
-  "best_model_checkpoint": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\tr-factbench\\runs\\completed\\F1_M12_MODERNBERT_LORA16_S44\\ckpt\\modernbert-tr-base-1k\\multidomain\\seed_44\\checkpoints\\checkpoint-1200",
+  "best_model_checkpoint": "runs/completed/F1_M12_MODERNBERT_LORA16_S44/ckpt/modernbert-tr-base-1k/multidomain/seed_44/checkpoints/checkpoint-1200",
   "epoch": 2.0,
   "eval_steps": 500,
   "global_step": 1200,

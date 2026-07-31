@@ -44,7 +44,7 @@ def main() -> None:
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     fields = ["dataset", "model", "resolved_model", "prompt_mode", "examples", "coverage", "macro_f1", "accuracy", "weighted_f1", "invalid_rate", "metrics_file"]
     with output_csv.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     lines = [

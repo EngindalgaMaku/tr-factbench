@@ -96,7 +96,7 @@ summary["selection"] = {
 
 csv_path = TABLE_DIR / "table_H_final_dropout_comparison.csv"
 with csv_path.open("w", encoding="utf-8", newline="") as handle:
-    writer = csv.writer(handle)
+    writer = csv.writer(handle, lineterminator="\n")
     writer.writerow([
         "series", "dropout", "seeds", "dev960_mean", "dev960_sd", "dev960_min", "dev960_max",
         "dev600_mean", "dev600_sd", "dev600_min", "dev600_max", "two_set_mean", "selected", "interpretation"

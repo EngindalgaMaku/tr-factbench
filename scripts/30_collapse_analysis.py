@@ -237,7 +237,7 @@ for run_id, data in collapse_data.items():
 
 headers = ["run_id","macro_f1","is_collapse"] + [f"pred_{c}_pct" for c in LABEL_NAMES]
 with open(TABLE_DIR/"table_collapse_class_dist.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(csv_rows)
 print(f"  [CSV] table_collapse_class_dist.csv")

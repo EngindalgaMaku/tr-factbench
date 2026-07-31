@@ -1,15 +1,17 @@
 {
-  "created_at_utc": "2026-07-30T20:29:06+00:00",
+  "created_at_utc": "2026-07-30T19:36:54+00:00",
   "dataset_version": "TR-FactBench v0.1.0-preview",
   "release_status": "research_preview_single_annotator_reviewed",
   "recommended_evaluation_files": {
     "dev_general": "data/evaluation/preview_v0.1/dev_general.jsonl",
     "dev_stress": "data/evaluation/preview_v0.1/dev_stress.jsonl"
   },
+  "preview_domain_evaluation_directory": "data/evaluation/preview_v0.1/domain",
   "archived_experiment_files": {
     "dev_general": "data/evaluation/legacy_experiment_version/dev_general.jsonl",
     "dev_stress": "data/evaluation/legacy_experiment_version/dev_stress.jsonl"
   },
+  "dev600_id_map": "data/manifests/dev600_legacy_to_preview_id_map.csv",
   "annotation_summary": {
     "dev_general": {
       "annotator_1": "960/960 completed",
@@ -35,5 +37,5 @@
       }
     }
   },
-  "usage_note": "Use the provisional files for new preview evaluations. Archived benchmark scores remain tied to the original experimental files and are retained for reproducibility. The second blind pass and adjudication are planned for a later stable release and are not blockers for v0.1.0-preview."
+  "usage_note": "Use the human-reviewed preview files for new evaluations. Archived benchmark scores remain tied to the original experiment files retained for reproducibility. A second annotation pass and adjudication are planned for a future release."
 }

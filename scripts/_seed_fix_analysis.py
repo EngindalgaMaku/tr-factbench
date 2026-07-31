@@ -1,4 +1,4 @@
-﻿import json, sys
+import json, sys
 from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 

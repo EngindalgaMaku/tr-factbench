@@ -100,7 +100,7 @@ for rid, base in hp_runs.items():
 headers = ["run_id","model","method","lora_r","lora_alpha","lr","freeze_layers","seed",
            "qc_status","trainable_params","macro_f1_d960","macro_f1_d600"]
 with open(TABLE_DIR/"table_h3_all_runs.csv","w",newline="",encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     w.writerows(sorted(parsed, key=lambda x: x["run_id"]))
 print(f"\n  [CSV] table_h3_all_runs.csv ({len(parsed)} run)")
@@ -154,7 +154,7 @@ if lrs and ranks:
 
     pivot_headers = ["lr"] + [f"r{r}" for r in ranks]
     with open(TABLE_DIR/"table_h3_lr_rank_pivot.csv","w",newline="",encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=pivot_headers, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=pivot_headers, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(pivot_rows)
     print(f"  [CSV] table_h3_lr_rank_pivot.csv")

@@ -5,11 +5,11 @@ release:
   version: "0.1.0-preview"
   status: "preview"
   final_model_status: "reproducibility_passed_preview_ready"
-  git_commit: "unknown"
+  git_commit: "not_embedded_use_release_tag"
 
 canonical_artifacts:
   metrics_file: "results/csv/metrics_long_canonical.csv"
-  metrics_sha256: "d00dffeb2dcae130e27f4e3173fa7768f5195668eeb1fc8d4d4a51cadfc70bee"
+  metrics_sha256: "7e3352079d588d24fd746c9c99ba0e93da90c281383981b17bc2f3f044edbd40"
   total_runs: 144
   canonical_metric_rows: 432
   successful_runs: 126
@@ -147,7 +147,7 @@ annotation_snapshot:
 
 llm_baselines:
   table_file: "results/tables/table_I_llm_baselines.csv"
-  table_sha256: "1a77141c1ac89921d82a200db33f0de8204168309122f496f20d346da0d8028c"
+  table_sha256: "c351de87f0f5fac0f0c7e5d4bbd603a3635a59525ff38fe2880bcfccdb906f56"
   experiment_conditions: 16
   models: 4
   datasets: 2

@@ -10,7 +10,7 @@ The first independent blind-human pass is complete for both evaluation sets:
 - DEV600-STR: 600/600 reviewed by annotator 1
 - DEV600-STR annotator 2: 80/600
 
-This is a **single-annotator provisional research preview**, not a fully adjudicated gold release. The second blind pass and adjudication are planned for a later stable version.
+A second annotation pass and adjudication are planned for a future release.
 
 ## Files for new evaluations
 
@@ -18,6 +18,8 @@ Use:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+- Domain-specific views: `data/evaluation/preview_v0.1/domain/`
+- Dev600 ID mapping: `data/manifests/dev600_legacy_to_preview_id_map.csv`
 
 Archived encoder and LLM results remain reproducible through the byte-identical files in `data/evaluation/legacy_experiment_version/`. All archived manifests point to that directory and preserve their former recorded paths in relocation metadata.
 

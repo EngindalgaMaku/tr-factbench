@@ -46,7 +46,7 @@ for fpath, split, version in FILES:
     print(f"  {fpath.name}: {sum(1 for r in rows if r['split']==split)} rows")
 
 with open(OUT_CSV, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=FIELDS)
+    writer = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
     writer.writeheader()
     writer.writerows(rows)
 

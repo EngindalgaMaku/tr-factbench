@@ -26,7 +26,5 @@ keywords:
   - ELECTRA
 
 note: >
-  Research preview. The first independent blind-human pass is complete for both
-  evaluation sets (DEV960 960/960; Dev600 600/600). Single-annotator provisional
-  evaluation files are included. Second annotation and adjudication are reserved
-  for a later stable release; do not treat this preview as fully adjudicated gold.
+  Version 0.1.0-preview includes first-pass human-reviewed evaluation files.
+  See DATA_CARD.md for annotation details.

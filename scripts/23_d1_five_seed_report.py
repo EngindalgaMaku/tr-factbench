@@ -183,7 +183,7 @@ print(f"\n  [OK] {stat_path.name}")
 # ── CSV ────────────────────────────────────────────────────────────
 csv_path = TABLE_DIR / "table_G_d1_five_seed.csv"
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator="\n")
     w.writerow(["Konfigürasyon", "N", "Mean DEV960 F1", "Std", "Min", "Max"])
     for name, st in [("ELECTRA LoRA-r16", electra_lora_stat),
                      ("ELECTRA Freeze-50", freeze50_stat),

@@ -16,18 +16,30 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
+
       - name: Install validation dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install scikit-learn numpy pandas matplotlib seaborn scipy
+          pip install scikit-learn numpy pandas matplotlib seaborn scipy pytest
+
       - name: Compile Python sources
-        run: python -m compileall -q scripts src annotation
+        run: python -m compileall -q scripts src annotation llm_baselines
+
+      - name: Run LLM baseline tests
+        run: python -m pytest -q llm_baselines/tests
+
+      - name: Rebuild reviewed preview files
+        run: python scripts/43_build_single_annotator_preview.py
+
       - name: Preflight
         run: python scripts/00_preflight.py
+
       - name: Rebuild deterministic derived splits
         run: python scripts/04_build_derived_splits.py
+
       - name: Validate run artifacts
         run: python scripts/14_validate_runs.py
+
       - name: Rebuild canonical outputs
         run: |
           python scripts/13_collect_results.py
@@ -46,21 +58,27 @@ jobs:
           python scripts/35_generate_lock_yaml.py
           python scripts/37_final_dropout_report.py
           python scripts/17_aggregate_predictions.py
-      - name: Check no uncommitted generated file changes
-        run: |
-          git diff --exit-code -- \
-            results/csv/ results/statistics/ results/tables/ results/predictions/ \
-            reports/BENCHMARK_RESULTS.md reports/validation_audit.json \
-            data/checksums.sha256 || {
-            echo "ERROR: Generated files differ from committed state. Re-run pipeline scripts and commit."
-            exit 1
-          }
+          python scripts/_update_checksums.py
+
       - name: Release invariants
         run: python scripts/99_validate_release.py
-      - name: Verify checksums
+
+      - name: Check deterministic generated artifacts
         run: |
-          python scripts/_update_checksums.py
-          git diff --exit-code data/checksums.sha256 || {
-            echo "ERROR: checksums.sha256 out of date."
+          git diff --exit-code -- \
+            data/derived/ \
+            data/evaluation/preview_v0.1/ \
+            data/manifests/preview_evaluation_manifest_v0.1.json \
+            data/manifests/evaluation_layout_manifest_v0.1.json \
+            data/manifests/dev600_legacy_to_preview_id_map.csv \
+            data/checksums.sha256 \
+            results/annotation/dev600/dev600_provisional_single_annotator_v0.1.jsonl \
+            results/annotation/dev600/dev600_provisional_single_annotator_v0.1_manifest.json \
+            results/annotation/dev960/dev960_provisional_single_annotator_v0.1.jsonl \
+            results/annotation/dev960/dev960_provisional_single_annotator_v0.1_manifest.json \
+            results/csv/ results/statistics/ results/tables/ results/predictions/ \
+            reports/BENCHMARK_RESULTS.md reports/validation_audit.json \
+            final_config.lock.yaml || {
+            echo "ERROR: Generated files differ from committed state. Re-run pipeline scripts and commit."
             exit 1
           }

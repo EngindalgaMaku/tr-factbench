@@ -34,7 +34,7 @@ def read_csv(path: Path):
 
 def write_csv(path: Path, headers: list, rows: list):
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
     print(f"  [CSV] {path.name}")

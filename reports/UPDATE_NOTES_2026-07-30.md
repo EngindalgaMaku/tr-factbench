@@ -9,7 +9,7 @@ TR-FactBench is now packaged as `v0.1.0-preview` with one complete independent b
 - DEV600-STR annotator 2: 80/600 complete
 - DEV960-GEN annotator 2 and adjudication: deferred to the stable release
 
-The second annotation pass is not treated as a blocker for the research preview. The release remains explicitly single-annotator provisional and must not be presented as a fully adjudicated gold benchmark.
+A second annotation pass and adjudication are planned for a future release.
 
 ## Recommended preview files
 
@@ -33,6 +33,7 @@ The reviewed label distributions remain close to balanced. Macro-F1 remains the 
 - Added a reproducible preview builder: `scripts/43_build_single_annotator_preview.py`
 - Added the DEV960 preview audit file and manifest
 - Added a combined preview evaluation manifest
+- Added deterministic domain-specific preview views and a Dev600 legacy-to-preview ID map
 - Updated README, Turkish README, data card, model card, citation metadata, schema, licensing note, lock file, and validation rules
 - Updated release validation to require both provisional evaluation files and their audit copies
 - Marked the release lock as `preview_release_ready: true`

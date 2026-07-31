@@ -55,7 +55,7 @@ rows.sort(key=lambda r: (r["dataset"], r["model_display"], r["prompt_mode"]))
 csv_path = ROOT / "leaderboard.csv"
 fieldnames = ["dataset", "model", "prompt_mode", "strict_macro_f1", "strict_accuracy", "coverage"]
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
     writer.writeheader()
     for r in rows:
         writer.writerow({k: r[k] for k in fieldnames})
