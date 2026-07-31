@@ -1,0 +1,38 @@
+[
+  {
+    "eval_set": "DEV960-GEN",
+    "mode": "full",
+    "macro_f1": 0.899397,
+    "accuracy": 0.898958
+  },
+  {
+    "eval_set": "DEV960-GEN",
+    "mode": "claim_only",
+    "macro_f1": 0.40429,
+    "accuracy": 0.453125
+  },
+  {
+    "eval_set": "DEV960-GEN",
+    "mode": "shuffled",
+    "macro_f1": 0.373952,
+    "accuracy": 0.427083
+  },
+  {
+    "eval_set": "DEV600-STR",
+    "mode": "full",
+    "macro_f1": 0.868575,
+    "accuracy": 0.865
+  },
+  {
+    "eval_set": "DEV600-STR",
+    "mode": "claim_only",
+    "macro_f1": 0.385792,
+    "accuracy": 0.438333
+  },
+  {
+    "eval_set": "DEV600-STR",
+    "mode": "shuffled",
+    "macro_f1": 0.350838,
+    "accuracy": 0.418333
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "DEV960-GEN": {
+    "accuracy": 0.427083,
+    "macro_f1": 0.373952,
+    "per_class": {
+      "supported": 0.048387,
+      "partially_supported": 0.460177,
+      "contradicted": 0.503979,
+      "unverifiable": 0.483264
+    }
+  }
+}

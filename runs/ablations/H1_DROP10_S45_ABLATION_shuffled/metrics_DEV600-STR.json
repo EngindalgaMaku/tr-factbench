@@ -1,0 +1,12 @@
+{
+  "DEV600-STR": {
+    "accuracy": 0.418333,
+    "macro_f1": 0.350838,
+    "per_class": {
+      "supported": 0.026144,
+      "partially_supported": 0.380165,
+      "contradicted": 0.484848,
+      "unverifiable": 0.512195
+    }
+  }
+}
