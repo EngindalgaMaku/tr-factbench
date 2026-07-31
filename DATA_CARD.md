@@ -90,6 +90,18 @@ Current normalized LLM artifacts are stored as `llm_preannotations_normalized.js
 
 Four LLMs were evaluated in zero-shot and fixed 8-shot conditions on both development sets. Exact model IDs, prompt hashes, coverage, and strict metrics are documented in `reports/LLM_BASELINES.md` and `results/llm_baselines/experiment_matrix.csv`.
 
+## Context-dependence diagnostic
+
+An inference-only diagnostic was conducted on the human-reviewed preview evaluation files using one fixed trained ELECTRA checkpoint. The model was evaluated with the full input, with the context removed, and with the context replaced by a shuffled context while preserving the original question and claim.
+
+| Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
+|---|---:|---:|
+| **Full input** | **0.8994** | **0.8686** |
+| Claim only | 0.4043 | 0.3858 |
+| Shuffled context | 0.3740 | 0.3508 |
+
+The large performance reductions when context is removed or replaced provide evidence that the task and model predictions depend materially on the supplied passage–claim relation. They do not show that all lexical artifacts have been eliminated, but they indicate that claim-level cues alone are insufficient to explain the full-input result. Full definitions and machine-readable values are in `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`.
+
 ## Intended uses
 
 - Turkish factuality-verification research

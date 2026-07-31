@@ -200,6 +200,20 @@ Seçili checkpoint karışıklık matrisleri eski F1 tarama serisinden değil, `
 
 ![Seçili checkpoint karışıklık matrisi — DEV600](results/figures/tr/fig_06_confusion_matrix_selected_dev600.png)
 
+### Bağlam bağımlılığı ablasyonu (yalnızca çıkarım)
+
+Sınıflandırıcının yalnızca iddia düzeyindeki yüzey ipuçlarına değil, sunulan kanıta dayanıp dayanmadığını ölçmek için aynı eğitilmiş ELECTRA checkpointi insan gözden geçirmeli preview kümelerinde üç çıkarım koşuluyla değerlendirildi. Koşullar arasında yeniden eğitim yapılmadı; yalnızca modele verilen giriş değiştirildi.
+
+| Giriş koşulu | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
+|---|---:|---:|
+| **Tam giriş**: özgün bağlam + soru + iddia | **0,8994** | **0,8686** |
+| Yalnızca iddia koşulu: bağlam boş; özgün soru + iddia korunur | 0,4043 | 0,3858 |
+| Karıştırılmış bağlam: farklı bağlam; özgün soru + iddia korunur | 0,3740 | 0,3508 |
+
+Bağlamın kaldırılması Macro-F1 değerini DEV960-GEN'de 0,4951, DEV600-STR'de 0,4828 puan düşürmektedir. Bağlamın ilgisiz ve karıştırılmış bir bağlamla değiştirilmesi ise sırasıyla 0,5254 ve 0,5177 puanlık daha büyük bir düşüşe yol açmaktadır. Bu sonuç, tam giriş başarısının yalnızca iddia kalıplarıyla açıklanamayacağını ve modelin bağlam–iddia ilişkisini belirgin ölçüde kullandığını göstermektedir.
+
+Karıştırılmış koşulda sabit `seed=0` kullanılmış, her değerlendirme kümesindeki bağlamlar küme genelinde karıştırılmış ve bir örneğin kendi bağlamını yeniden alması engellenmiştir. Karıştırma aynı alanla sınırlandırılmamıştır. Makinece okunabilir ve makalede kullanılabilir tablolar [`table_J_context_dependence_ablation.csv`](results/tables/table_J_context_dependence_ablation.csv) ile [`table_J_context_dependence_ablation.md`](results/tables/table_J_context_dependence_ablation.md) dosyalarındadır. Bu tanısal sonuçlar yeni eğitim koşulları olmadığı için 144 koşuluk kanonik eğitim arşivinden ayrı tutulmuştur.
+
 ### Alan analizi ve keşifsel ablasyonlar
 
 Alanlar arası aktarım, bir alanı dışarıda bırakan eğitim, veri bileşimi, hedef modül ve tarihsel kararlılık sonuçları [`reports/BENCHMARK_RESULTS.md`](reports/BENCHMARK_RESULTS.md) dosyasında sunulur. Hedef modül sonuçları ana README dışında tutulmuştur; çünkü mevcut koşular FFN etkisini tek başına ayıran, parametre-eşlemeli ve çoklu tohumlu bir deney değildir.

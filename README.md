@@ -228,6 +228,20 @@ The selected checkpoint confusion matrices are generated from `H1_DROP10_S45`, n
 
 ![Selected checkpoint confusion matrix — DEV600](results/figures/en/fig_06_confusion_matrix_selected_dev600.png)
 
+### Context-dependence ablation (inference-only)
+
+To test whether the classifier depends on the supplied evidence rather than only on claim-level cues, the same trained ELECTRA checkpoint was evaluated on the human-reviewed preview sets under three inference conditions. No retraining was performed between conditions.
+
+| Input condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
+|---|---:|---:|
+| **Full input**: original context + question + claim | **0.8994** | **0.8686** |
+| Claim only: empty context; original question + claim retained | 0.4043 | 0.3858 |
+| Shuffled context: different context; original question + claim retained | 0.3740 | 0.3508 |
+
+Removing the context lowers Macro-F1 by 0.4951 on DEV960-GEN and 0.4828 on DEV600-STR. Replacing it with an unrelated shuffled context produces an even larger reduction: 0.5254 and 0.5177 points, respectively. The result indicates that the full-input performance depends substantially on the relation between the evidence passage and the claim, rather than being explained by claim wording alone.
+
+The shuffled condition uses a fixed seed of 0 and permutes contexts across each complete evaluation set while preventing self-matches; it is not restricted to same-domain contexts. Machine-readable and publication-ready versions are available in [`table_J_context_dependence_ablation.csv`](results/tables/table_J_context_dependence_ablation.csv) and [`table_J_context_dependence_ablation.md`](results/tables/table_J_context_dependence_ablation.md). These diagnostic rows are kept separate from the 144-run canonical training archive because they are inference-time transformations of one fixed checkpoint.
+
 ### Domain analysis and exploratory ablations
 
 Cross-domain transfer, leave-one-domain-out, data-composition, target-module, and historical stability results are documented in [`reports/BENCHMARK_RESULTS.md`](reports/BENCHMARK_RESULTS.md). Exploratory target-module results are kept out of the main README because the available runs are not yet a parameter-matched, multi-seed isolation of FFN effects.

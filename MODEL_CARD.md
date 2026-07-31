@@ -104,6 +104,20 @@ Environment recorded for the selected run:
 - PEFT 0.19.1
 - NVIDIA GeForce RTX 4060 Laptop GPU
 
+## Context-dependence ablation
+
+The same trained checkpoint was evaluated on the human-reviewed preview development sets under three inference-only conditions. No retraining was performed between conditions.
+
+| Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
+|---|---:|---:|
+| **Full input** | **0.8994** | **0.8686** |
+| Claim only | 0.4043 | 0.3858 |
+| Shuffled context | 0.3740 | 0.3508 |
+
+In the claim-only condition, the context is empty while the original question and claim are retained. In the shuffled-context condition, the original question and claim are paired with a different context drawn by a fixed seed-0 permutation of the full evaluation set. The drop of approximately 0.48–0.53 Macro-F1 relative to full input shows that the checkpoint relies substantially on the supplied evidence context. The shuffled condition is not same-domain constrained, so it should be interpreted as a broad wrong-context stress test rather than a fine-grained within-domain control.
+
+Detailed outputs are stored under `runs/ablations/`; publication-ready tables are available in `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`.
+
 ## LLM comparison
 
 The selected checkpoint is compared with four API-based LLMs under zero-shot and fixed 8-shot prompting. Results and exact model identifiers are reported in `reports/LLM_BASELINES.md`. Archived scores use the original evaluation files; the single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one documented Dev600 claim correction. The canonical 144-run encoder archive and API-based LLM experiments were not repeated. A separate single-seed retraining of the selected configuration on the reviewed preview files is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522). Note this is not the same adapter as the legacy H1_DROP10_S45 checkpoint.

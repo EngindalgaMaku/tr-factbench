@@ -106,6 +106,22 @@ The G1 dropout=0.00 collapse was genuine in that archived run, but it did not re
 
 This is performance-level reproducibility, not exact prediction-level identity.
 
+## Context-dependence ablation (inference-only)
+
+A fixed trained ELECTRA checkpoint was evaluated on the human-reviewed preview development sets under three input conditions. The model was not retrained between conditions. The experiment therefore isolates the effect of the inference input rather than training variance.
+
+| Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 | Δ vs. full (DEV960) | Δ vs. full (DEV600) |
+|---|---:|---:|---:|---:|
+| **Full input** | **0.8994** | **0.8686** | — | — |
+| Claim only | 0.4043 | 0.3858 | −0.4951 | −0.4828 |
+| Shuffled context | 0.3740 | 0.3508 | −0.5254 | −0.5177 |
+
+`full_input` uses the original context, question, and claim. In `claim_only`, the context field is empty while the original question and claim are retained. In `shuffled_context`, the original question and claim are retained but the context is replaced by a different randomly shuffled context. The shuffle uses seed 0 across each complete evaluation set, prevents self-matches, and is not constrained to the same domain.
+
+The large reductions under both controls show that the approximately 0.90 full-input performance cannot be attributed to claim wording alone. The shuffled-context condition performs below the context-removed condition, indicating that incorrect evidence can actively alter model decisions rather than being ignored.
+
+The underlying files are `runs/ablations/context_ablation_summary.json` and the condition-specific prediction and metric files under `runs/ablations/`. Publication-ready tables are provided as `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`. These results are intentionally excluded from `metrics_long_canonical.csv`: they are inference-time transformations of one fixed checkpoint, not additional training runs.
+
 ## LLM baselines
 
 Four LLMs were evaluated with instruction-only zero-shot and fixed 8-shot prompts on both development sets. The canonical tables, exact requested/resolved model IDs, coverage, and invalid-output counts are in [`LLM_BASELINES.md`](LLM_BASELINES.md) and `results/tables/table_I_llm_baselines.csv`.
@@ -135,6 +151,8 @@ Archived results use the original pre-review evaluation files. The current singl
 - `results/csv/metrics_long_canonical.csv`
 - `results/csv/runs.csv`
 - `results/tables/table_H_final_dropout_comparison.csv`
+- `results/tables/table_J_context_dependence_ablation.csv`
+- `results/tables/table_J_context_dependence_ablation.md`
 - `results/statistics/final_dropout_comparison.json`
 - `results/tables/`
 - `results/statistics/`
