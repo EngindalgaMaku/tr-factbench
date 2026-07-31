@@ -299,6 +299,15 @@ temsilî checkpoint'tir.
 | DEV960-GEN | 0,8930 ± 0,0071 | **0,9014** |
 | DEV600-STR | 0,8587 ± 0,0155 | **0,8675** |
 
+Yukarıdaki tüm değerler özgün deney değerlendirme dosyaları (legacy) üzerinden hesaplanmıştır. 5 etiket düzeltmesi ve 1 claim düzeltmesine karşı sağlamlığı değerlendirmek amacıyla **aynı yapılandırma ve tohum** (H1_DROP10_S45) kullanılarak yeniden eğitim yapılmış ve insan gözden geçirmeli preview dosyaları (`data/evaluation/preview_v0.1/`) üzerinde değerlendirilmiştir. Not: Bu, aynı checkpoint üzerinden inference değil, yeniden bir eğitim koşusudur; dolayısıyla performans farkı hem etiket değişikliklerini hem de yeni eğitim koşusundan kaynaklanan doğal varyasyonu yansıtmaktadır.
+
+| Değerlendirme seti | Legacy Macro-F1 | Preview Macro-F1 | Δ |
+|---|---:|---:|---:|
+| DEV960-GEN | 0,9014 | **0,8965** | −0,0049 |
+| DEV600-STR | 0,8675 | **0,8522** | −0,0153 |
+
+Yeniden eğitim koşusu `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` altında arşivlenmiştir. Küçük performans farkı sınırlı anotasyon değişiklikleriyle tutarlıdır; ancak farkın yalnızca bu değişikliklerden kaynaklandığı söylenemez.
+
 Dropout 0.00, DEV960-GEN üzerinde daha yüksek ortalama performans sağlarken, dropout 0.10
 DEV600-STR üzerinde daha güçlü ve kararlı sonuçlar üretmiştir. Bu nedenle dropout 0.10
 seçilmiş yayın yapılandırması olarak belirlenmiştir.

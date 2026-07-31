@@ -326,14 +326,14 @@ checkpoint planned for release.
 | DEV960-GEN | 0.8930 ± 0.0071 | **0.9014** |
 | DEV600-STR | 0.8587 ± 0.0155 | **0.8675** |
 
-All values above are scored on the original experimental evaluation files (legacy). The selected checkpoint was additionally evaluated on the human-reviewed preview files (`data/evaluation/preview_v0.1/`) to verify robustness to the 5 label revisions and 1 claim correction:
+All values above are scored on the original experimental evaluation files (legacy). To assess robustness to the 5 label revisions and 1 claim correction, the **same configuration and seed** (H1_DROP10_S45) were retrained and evaluated on the human-reviewed preview files (`data/evaluation/preview_v0.1/`). Note: this is a retraining run, not inference from the same checkpoint; consequently, the performance difference reflects both the label changes and natural variation from a new training run.
 
 | Evaluation set | Legacy Macro-F1 | Preview Macro-F1 | Δ |
 |---|---:|---:|---:|
 | DEV960-GEN | 0.9014 | **0.8965** | −0.0049 |
 | DEV600-STR | 0.8675 | **0.8522** | −0.0153 |
 
-The preview run is archived as `H1_DROP10_S45_PREVIEW` (same configuration, same seed). The small performance difference is expected given the limited label changes.
+The retraining run is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW`. The small performance difference is consistent with the limited annotation changes; causal attribution to those changes alone is not warranted since the checkpoint also differs.
 
 Dropout 0.00 achieved higher average performance on DEV960-GEN, while dropout 0.10 produced
 stronger and more stable results on DEV600-STR. The latter was therefore retained as the

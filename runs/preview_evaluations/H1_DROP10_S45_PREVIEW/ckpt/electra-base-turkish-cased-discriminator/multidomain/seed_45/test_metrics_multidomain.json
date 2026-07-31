@@ -1,0 +1,23 @@
+{
+  "test_loss": 0.3726635277271271,
+  "test_accuracy": 0.896875,
+  "test_macro_precision": 0.8970885886454124,
+  "test_macro_recall": 0.8971321069750214,
+  "test_macro_f1": 0.8965394596264187,
+  "test_weighted_f1": 0.8964116343027408,
+  "test_supported_precision": 0.8884297520661157,
+  "test_supported_recall": 0.8958333333333334,
+  "test_supported_f1": 0.8921161825726142,
+  "test_partially_supported_precision": 0.8724279835390947,
+  "test_partially_supported_recall": 0.8833333333333333,
+  "test_partially_supported_f1": 0.8778467908902692,
+  "test_contradicted_precision": 0.9147982062780269,
+  "test_contradicted_recall": 0.8429752066115702,
+  "test_contradicted_f1": 0.8774193548387097,
+  "test_unverifiable_precision": 0.9126984126984127,
+  "test_unverifiable_recall": 0.9663865546218487,
+  "test_unverifiable_f1": 0.9387755102040817,
+  "test_runtime": 17.3442,
+  "test_samples_per_second": 55.35,
+  "test_steps_per_second": 6.919
+}
