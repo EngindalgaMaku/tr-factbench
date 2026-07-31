@@ -110,11 +110,11 @@ The same trained checkpoint was evaluated on the human-reviewed preview developm
 
 | Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
 |---|---:|---:|
-| **Full input** | **0.8994** | **0.8686** |
-| Claim only | 0.4043 | 0.3858 |
-| Shuffled context | 0.3740 | 0.3508 |
+| **Full input** — ablation checkpoint | **0.8994** | **0.8686** |
+| No context: question + claim | 0.4043 | 0.3858 |
+| Shuffled context: question + claim | 0.3740 | 0.3508 |
 
-In the claim-only condition, the context is empty while the original question and claim are retained. In the shuffled-context condition, the original question and claim are paired with a different context drawn by a fixed seed-0 permutation of the full evaluation set. The drop of approximately 0.48–0.53 Macro-F1 relative to full input shows that the checkpoint relies substantially on the supplied evidence context. The shuffled condition is not same-domain constrained, so it should be interpreted as a broad wrong-context stress test rather than a fine-grained within-domain control.
+In the no-context condition, the context field is empty while the original question and claim are retained. In the shuffled-context condition, the original question and claim are paired with a different context drawn by a fixed seed-0 permutation of the full evaluation set. The drop of approximately 0.48–0.53 Macro-F1 relative to full input shows that the checkpoint relies substantially on the supplied evidence context. Context-free question–claim cues are insufficient to explain the full-input performance. The shuffled condition is not same-domain constrained, so it should be interpreted as a broad wrong-context stress test rather than a fine-grained within-domain control. See `runs/ablations/context_ablation_manifest.json` for checkpoint provenance.
 
 Detailed outputs are stored under `runs/ablations/`; publication-ready tables are available in `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`.
 

@@ -116,9 +116,9 @@ A fixed trained ELECTRA checkpoint was evaluated on the human-reviewed preview d
 | Claim only | 0.4043 | 0.3858 | −0.4951 | −0.4828 |
 | Shuffled context | 0.3740 | 0.3508 | −0.5254 | −0.5177 |
 
-`full_input` uses the original context, question, and claim. In `claim_only`, the context field is empty while the original question and claim are retained. In `shuffled_context`, the original question and claim are retained but the context is replaced by a different randomly shuffled context. The shuffle uses seed 0 across each complete evaluation set, prevents self-matches, and is not constrained to the same domain.
+`full_input` uses the original context, question, and claim. In the no-context condition (`no_context_question_claim`), the context field is empty while the original question and claim are retained. In `shuffled_context_question_claim`, the original question and claim are retained but the context is replaced by a different randomly shuffled context. The shuffle uses seed 0 across each complete evaluation set, prevents self-matches, and is not constrained to the same domain.
 
-The large reductions under both controls show that the approximately 0.90 full-input performance cannot be attributed to claim wording alone. The shuffled-context condition performs below the context-removed condition, indicating that incorrect evidence can actively alter model decisions rather than being ignored.
+The large reductions under both controls show that context-free question–claim cues are insufficient to explain the approximately 0.90 full-input performance. The shuffled-context condition performs below the context-removed condition, indicating that incorrect evidence can actively alter model decisions rather than being ignored.
 
 The underlying files are `runs/ablations/context_ablation_summary.json` and the condition-specific prediction and metric files under `runs/ablations/`. Publication-ready tables are provided as `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`. These results are intentionally excluded from `metrics_long_canonical.csv`: they are inference-time transformations of one fixed checkpoint, not additional training runs.
 

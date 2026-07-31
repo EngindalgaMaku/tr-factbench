@@ -238,7 +238,7 @@ To test whether the classifier depends on the supplied evidence rather than only
 | Claim only: empty context; original question + claim retained | 0.4043 | 0.3858 |
 | Shuffled context: different context; original question + claim retained | 0.3740 | 0.3508 |
 
-Removing the context lowers Macro-F1 by 0.4951 on DEV960-GEN and 0.4828 on DEV600-STR. Replacing it with an unrelated shuffled context produces an even larger reduction: 0.5254 and 0.5177 points, respectively. The result indicates that the full-input performance depends substantially on the relation between the evidence passage and the claim, rather than being explained by claim wording alone.
+Removing the context entirely (while retaining the original question and claim) lowers Macro-F1 by 0.4951 on DEV960-GEN and 0.4828 on DEV600-STR. Replacing it with an unrelated shuffled context produces an even larger reduction: 0.5254 and 0.5177 points, respectively. The result indicates that context-free question–claim cues are insufficient to explain the full-input performance; the model relies on the supplied evidence rather than claim-level shortcuts.
 
 The shuffled condition uses a fixed seed of 0 and permutes contexts across each complete evaluation set while preventing self-matches; it is not restricted to same-domain contexts. Machine-readable and publication-ready versions are available in [`table_J_context_dependence_ablation.csv`](results/tables/table_J_context_dependence_ablation.csv) and [`table_J_context_dependence_ablation.md`](results/tables/table_J_context_dependence_ablation.md). These diagnostic rows are kept separate from the 144-run canonical training archive because they are inference-time transformations of one fixed checkpoint.
 

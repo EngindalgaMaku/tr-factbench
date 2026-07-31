@@ -1,4 +1,4 @@
 condition,input_definition,DEV960-GEN_macro_f1,DEV600-STR_macro_f1,delta_vs_full_DEV960,delta_vs_full_DEV600
 full_input,Original context + original question + original claim,0.899397,0.868575,0.000000,0.000000
-claim_only,Empty context; original question + original claim retained,0.404290,0.385792,-0.495107,-0.482783
-shuffled_context,Context replaced by a different shuffled context; original question + original claim retained,0.373952,0.350838,-0.525445,-0.517737
+no_context_question_claim,Empty context; original question + original claim retained,0.404290,0.385792,-0.495107,-0.482783
+shuffled_context_question_claim,Context replaced by a different shuffled context; original question + original claim retained,0.373952,0.350838,-0.525445,-0.517737

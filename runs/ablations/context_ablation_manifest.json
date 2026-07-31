@@ -1,0 +1,53 @@
+{
+  "ablation_id": "context_dependence_ablation_v1",
+  "description": "Inference-only context-dependence diagnostic. Three input conditions evaluated on the same fixed checkpoint. No retraining was performed between conditions.",
+  "source_run_id": "H1_DROP10_S45_ABLATION",
+  "source_run_location": "runs/ablations/H1_DROP10_S45_ABLATION_run",
+  "source_run_notes": "Separately trained checkpoint using the same configuration and seed as the selected H1_DROP10_S45 run (ELECTRA, LoRA r=16, alpha=32, dropout=0.10, all-linear, lr=2e-4, seed=45, epochs=5). The original H1_DROP10_S45 adapter was not retained in the repository (gitignored); this ablation checkpoint was trained specifically for this diagnostic. Full-input scores differ slightly from H1_DROP10_S45 (DEV960: 0.8994 vs 0.9014; DEV600: 0.8686 vs 0.8675) due to training stochasticity at this seed — the three inference conditions all use the same H1_DROP10_S45_ABLATION checkpoint.",
+  "model": "dbmdz/electra-base-turkish-cased-discriminator",
+  "method": "lora",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_target_modules": "all-linear",
+  "seed": 45,
+  "evaluation_files": {
+    "DEV960-GEN": "data/evaluation/preview_v0.1/dev_general.jsonl",
+    "DEV600-STR": "data/evaluation/preview_v0.1/dev_stress.jsonl"
+  },
+  "conditions": [
+    {
+      "condition_id": "full_input",
+      "description": "Original context, question, and claim as provided in the evaluation file.",
+      "context_source": "original"
+    },
+    {
+      "condition_id": "no_context_question_claim",
+      "description": "Context field is empty string; original question and claim are retained. This is NOT a claim-only condition — the model receives both question and claim.",
+      "context_source": "empty"
+    },
+    {
+      "condition_id": "shuffled_context_question_claim",
+      "description": "Context is replaced by a different context from the same evaluation set using a fixed seed-0 permutation. Self-matches are prevented. Shuffling is not constrained to the same domain. Original question and claim are retained.",
+      "context_source": "shuffled",
+      "shuffle_seed": 0,
+      "shuffle_scope": "full evaluation set (not same-domain constrained)"
+    }
+  ],
+  "results_summary": {
+    "DEV960-GEN": {
+      "full_input": 0.8994,
+      "no_context_question_claim": 0.4043,
+      "shuffled_context_question_claim": 0.3740
+    },
+    "DEV600-STR": {
+      "full_input": 0.8686,
+      "no_context_question_claim": 0.3858,
+      "shuffled_context_question_claim": 0.3508
+    }
+  },
+  "training_repeated_between_conditions": false,
+  "script": "scripts/44_context_ablation_eval.py",
+  "detailed_outputs": "runs/ablations/H1_DROP10_S45_ABLATION_{full,claim_only,shuffled}/",
+  "publication_table": "results/tables/table_J_context_dependence_ablation.md"
+}

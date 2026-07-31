@@ -92,15 +92,15 @@ Four LLMs were evaluated in zero-shot and fixed 8-shot conditions on both develo
 
 ## Context-dependence diagnostic
 
-An inference-only diagnostic was conducted on the human-reviewed preview evaluation files using one fixed trained ELECTRA checkpoint. The model was evaluated with the full input, with the context removed, and with the context replaced by a shuffled context while preserving the original question and claim.
+An inference-only diagnostic was conducted on the human-reviewed preview evaluation files using one fixed trained ELECTRA checkpoint (see `runs/ablations/context_ablation_manifest.json` for provenance). The model was evaluated with the full input, with the context removed (original question and claim retained), and with the context replaced by a shuffled context while preserving the original question and claim.
 
 | Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
 |---|---:|---:|
 | **Full input** | **0.8994** | **0.8686** |
-| Claim only | 0.4043 | 0.3858 |
-| Shuffled context | 0.3740 | 0.3508 |
+| No context: question + claim | 0.4043 | 0.3858 |
+| Shuffled context: question + claim | 0.3740 | 0.3508 |
 
-The large performance reductions when context is removed or replaced provide evidence that the task and model predictions depend materially on the supplied passage–claim relation. They do not show that all lexical artifacts have been eliminated, but they indicate that claim-level cues alone are insufficient to explain the full-input result. Full definitions and machine-readable values are in `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`.
+The large performance reductions when context is removed or replaced provide evidence that the task and model predictions depend materially on the supplied passage–claim relation. They do not show that all lexical artifacts have been eliminated, but they indicate that context-free question–claim cues are insufficient to explain the full-input result. Full definitions and machine-readable values are in `results/tables/table_J_context_dependence_ablation.csv` and `results/tables/table_J_context_dependence_ablation.md`.
 
 ## Intended uses
 

@@ -1,0 +1,17 @@
+{
+  "domain": "multidomain",
+  "model_name": "dbmdz/electra-base-turkish-cased-discriminator",
+  "seed": 45,
+  "learning_rate": 0.0002,
+  "batch_size": 8,
+  "epochs": 5.0,
+  "max_length": 512,
+  "input_view": "full_input",
+  "use_train_dev_final": false,
+  "peft_type": "lora",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "freeze_layers": 0,
+  "trainable_pct": 2.8523093030214484,
+  "peak_gpu_memory_mb": 2781.08935546875
+}
