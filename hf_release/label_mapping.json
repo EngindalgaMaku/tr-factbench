@@ -1,0 +1,21 @@
+{
+  "id2label": {
+    "0": "supported",
+    "1": "partially_supported",
+    "2": "contradicted",
+    "3": "unverifiable"
+  },
+  "label2id": {
+    "supported": 0,
+    "partially_supported": 1,
+    "contradicted": 2,
+    "unverifiable": 3
+  },
+  "num_labels": 4,
+  "label_descriptions": {
+    "supported": "The claim is directly supported by the evidence context.",
+    "partially_supported": "The claim is partially supported; some aspects align with the context but others do not or cannot be confirmed.",
+    "contradicted": "The claim is explicitly contradicted by the evidence context.",
+    "unverifiable": "The claim cannot be verified or refuted based on the supplied context alone."
+  }
+}
