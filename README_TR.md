@@ -403,11 +403,26 @@ Makine-okunur sonuçlar `results/tables/table_I_llm_baselines.csv` ve
 
 ## Model yayını
 
-Hugging Face üzerinde şu adla bir LoRA adaptörü yayımlanması planlanmaktadır:
+Seçilen LoRA adaptörü Hugging Face üzerinde kamuya açık olarak yayımlanmıştır:
 
-`EngindalgaMaku/tr-factbench-electra-lora`
+**[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45; Trainer `seed` ve `data_seed` uygulanmış). H1 sentinel, 0,010 metrik toleransı içinde geçmiştir. Adaptör, temiz ortamda yükleme/tahmin testinden sonra araştırma ön sürümüne eşlik edebilir. İkinci kör geçiş ve uzlaştırmanın tamamlanması daha sonraki kararlı sürümün koşuludur.
+**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45). DEV960=0,9014, DEV600-STR=0,8675. H1 sentinel 0,010 metrik toleransı içinde geçmiştir. Hub üzerinden yükleme ve tahmin doğrulandı — bkz. `hf_release/_test_hub_load.py`. İkinci kör geçiş ve uzlaştırmanın tamamlanması daha sonraki kararlı sürümün koşuludur.
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+BASE  = "dbmdz/electra-base-turkish-cased-discriminator"
+REPO  = "angeldust007/tr-factbench-electra-lora"
+ID2LABEL = {0: "supported", 1: "partially_supported", 2: "contradicted", 3: "unverifiable"}
+
+tokenizer  = AutoTokenizer.from_pretrained(BASE, revision="44ba696463e4d853078f3094cec76ba4e924cfd1")
+base_model = AutoModelForSequenceClassification.from_pretrained(BASE, num_labels=4, ignore_mismatched_sizes=True)
+model      = PeftModel.from_pretrained(base_model, REPO).eval()
+```
+
+Tam yükleme ve doğrulama betiği için [`hf_release/inference_example.py`](hf_release/inference_example.py) dosyasına bakın.
 
 ## Yayın yol haritası
 
@@ -415,11 +430,11 @@ Kararlı `v1.0.0` sürümünden önce şu çalışmaların tamamlanması planlan
 
 - ~~eşlenmiş çoklu tohum model karşılaştırması~~ ✓ tamamlandı
 - ~~nihai dropout karşılaştırması~~ ✓ tamamlandı (H1/dropout=0,10 ve H2/dropout=0,00; her biri beş tohum, H1 seçildi)
-- ~~seçilen yapılandırmanın yeniden üretilebilirlik koşusu~~ ✓ tamamlandı (sentinel GEÇTI)
+- ~~seçilen yapılandırmanın yeniden üretilebilirlik koşusu~~ ✓ tamamlandı (sentinel GEÇTİ)
+- ~~adaptörün temiz ortamda yükleme/tahmin testinin yapılması~~ ✓ tamamlandı (Hub GEÇTİ)
+- ~~seçilen LoRA adaptörünün Hugging Face üzerinde yayımlanması~~ ✓ tamamlandı ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
 - her iki değerlendirme kümesi için ikinci kör insan geçişinin ve uzlaştırmanın tamamlanması
 - eğitim kümesindeki 600 örneklik bağlam-gruplu kalite denetiminin iki kör anotörle tamamlanması
-- adaptörün temiz ortamda yükleme/tahmin testinin yapılması
-- seçilen LoRA adaptörünün Hugging Face üzerinde yayımlanması
 
 ## Lisans ve atıf
 

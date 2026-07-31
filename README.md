@@ -427,11 +427,26 @@ Machine-readable results are available in `results/tables/table_I_llm_baselines.
 
 ## Model release
 
-A Hugging Face LoRA-adapter release is planned under:
+The selected LoRA adapter is publicly available on Hugging Face:
 
-`EngindalgaMaku/tr-factbench-electra-lora`
+**[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45, seed+data_seed fix applied). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). The adapter can accompany the research preview after a clean load/inference test. Completion of the second blind pass and adjudication remains a requirement for the later stable release.
+**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). Hub load and inference verified — see `hf_release/_test_hub_load.py`. Completion of the second blind pass and adjudication remains a requirement for the later stable release.
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+BASE  = "dbmdz/electra-base-turkish-cased-discriminator"
+REPO  = "angeldust007/tr-factbench-electra-lora"
+ID2LABEL = {0: "supported", 1: "partially_supported", 2: "contradicted", 3: "unverifiable"}
+
+tokenizer  = AutoTokenizer.from_pretrained(BASE, revision="44ba696463e4d853078f3094cec76ba4e924cfd1")
+base_model = AutoModelForSequenceClassification.from_pretrained(BASE, num_labels=4, ignore_mismatched_sizes=True)
+model      = PeftModel.from_pretrained(base_model, REPO).eval()
+```
+
+See [`hf_release/inference_example.py`](hf_release/inference_example.py) for a complete loading and verification script.
 
 ## Release roadmap
 
@@ -440,10 +455,10 @@ Before a stable `v1.0.0` release, the project plans to complete:
 - ~~aligned multi-seed model comparison~~ ✓ completed
 - ~~final dropout comparison~~ ✓ completed (H1/dropout=0.10 vs H2/dropout=0.00, five seeds each; H1 selected)
 - ~~reproducibility rerun of the selected configuration~~ ✓ completed (sentinel PASS)
+- ~~clean-environment adapter loading/inference verification~~ ✓ completed (Hub PASS)
+- ~~Hugging Face publication of the selected LoRA adapter~~ ✓ completed ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
 - completion of the second blind-human pass and adjudication for both evaluation sets
 - completion of the 600-example, context-grouped train quality audit with two blind annotators
-- clean-environment adapter loading/inference verification
-- Hugging Face publication of the selected LoRA adapter
 
 ## Licensing and citation
 
