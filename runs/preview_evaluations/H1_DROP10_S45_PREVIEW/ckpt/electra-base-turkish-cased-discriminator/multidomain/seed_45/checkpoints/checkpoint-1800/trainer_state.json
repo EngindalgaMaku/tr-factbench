@@ -1,7 +1,7 @@
 {
   "best_global_step": 1800,
   "best_metric": 0.8965394596264187,
-  "best_model_checkpoint": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\tr-factbench-v0.1.0-preview\\runs\\completed\\H1_DROP10_S45_PREVIEW\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_45\\checkpoints\\checkpoint-1800",
+  "best_model_checkpoint": "runs/preview_evaluations/H1_DROP10_S45_PREVIEW/ckpt/electra-base-turkish-cased-discriminator/multidomain/seed_45/checkpoints/checkpoint-1800",
   "epoch": 3.0,
   "eval_steps": 500,
   "global_step": 1800,

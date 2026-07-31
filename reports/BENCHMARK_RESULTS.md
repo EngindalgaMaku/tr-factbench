@@ -122,7 +122,7 @@ Four LLMs were evaluated with instruction-only zero-shot and fixed 8-shot prompt
 | Qwen2.5 72B, 8-shot | 0.9310 | 0.7812 |
 | Selected ELECTRA S45 | 0.9014 | 0.8675 |
 
-Archived results use the original pre-review evaluation files. The current single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, and includes one Dev600 claim correction. Displayed values may therefore move slightly on the reviewed preview files; runs were not repeated for these limited revisions.
+Archived results use the original pre-review evaluation files. The current single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, and includes one Dev600 claim correction. The canonical 144-run encoder archive and LLM experiments were not repeated. A separate single-seed retraining of the selected configuration on the reviewed preview files is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522).
 
 ## Interpretation limits
 

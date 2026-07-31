@@ -54,7 +54,7 @@ Selected ELECTRA checkpoint (`H1_DROP10_S45`): **0.8675 Macro-F1**.
   identical provider-routing condition.
 - All few-shot runs used the same fixed demonstration file with SHA-256
   `2b30bc4360ea5922d3b969a1fcc65528cf10df481afecdd7ace968142d78e8ba`.
-- Archived scores were produced on the original pre-review evaluation files. The single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one additional Dev600 claim correction. Reported values may therefore shift slightly on the reviewed preview files; API calls and model training were not repeated.
+- Archived scores were produced on the original pre-review evaluation files. The single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one additional Dev600 claim correction. API calls and the canonical 144-run encoder archive were not repeated. A separate single-seed retraining of the selected encoder configuration on the reviewed preview files is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522).
 
 Machine-readable results are available in `results/tables/table_I_llm_baselines.csv` and
 `results/llm_baselines/leaderboard.csv`.

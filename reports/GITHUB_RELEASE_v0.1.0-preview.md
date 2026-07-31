@@ -48,7 +48,7 @@ Archived encoder and LLM results remain reproducible through the byte-identical 
 
 ## Evaluation-version note
 
-Archived scores use the original pre-review evaluation files. The provisional preview files contain limited human-review revisions, so scores may shift slightly when systems are evaluated again on the reviewed versions. Training and API inference were not repeated for this preview packaging update.
+Archived scores use the original pre-review evaluation files. The provisional preview files contain limited human-review revisions (5 label changes, 1 claim correction). The canonical 144-run encoder archive and API-based LLM experiments were not repeated. A separate single-seed retraining of the selected configuration on the reviewed preview files is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522). This is not the same adapter as the legacy selected checkpoint.
 
 ## Citation
 

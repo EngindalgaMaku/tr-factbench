@@ -106,7 +106,7 @@ Environment recorded for the selected run:
 
 ## LLM comparison
 
-The selected checkpoint is compared with four API-based LLMs under zero-shot and fixed 8-shot prompting. Results and exact model identifiers are reported in `reports/LLM_BASELINES.md`. Archived scores use the original evaluation files; the single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one documented Dev600 claim correction. The runs were not repeated for these limited revisions.
+The selected checkpoint is compared with four API-based LLMs under zero-shot and fixed 8-shot prompting. Results and exact model identifiers are reported in `reports/LLM_BASELINES.md`. Archived scores use the original evaluation files; the single-annotator preview changes 2/960 DEV960 labels and 3/600 Dev600 labels, with one documented Dev600 claim correction. The canonical 144-run encoder archive and API-based LLM experiments were not repeated. A separate single-seed retraining of the selected configuration on the reviewed preview files is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522). Note this is not the same adapter as the legacy H1_DROP10_S45 checkpoint.
 
 ## Intended use
 
