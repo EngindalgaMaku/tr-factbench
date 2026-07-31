@@ -326,6 +326,15 @@ checkpoint planned for release.
 | DEV960-GEN | 0.8930 ± 0.0071 | **0.9014** |
 | DEV600-STR | 0.8587 ± 0.0155 | **0.8675** |
 
+All values above are scored on the original experimental evaluation files (legacy). The selected checkpoint was additionally evaluated on the human-reviewed preview files (`data/evaluation/preview_v0.1/`) to verify robustness to the 5 label revisions and 1 claim correction:
+
+| Evaluation set | Legacy Macro-F1 | Preview Macro-F1 | Δ |
+|---|---:|---:|---:|
+| DEV960-GEN | 0.9014 | **0.8965** | −0.0049 |
+| DEV600-STR | 0.8675 | **0.8522** | −0.0153 |
+
+The preview run is archived as `H1_DROP10_S45_PREVIEW` (same configuration, same seed). The small performance difference is expected given the limited label changes.
+
 Dropout 0.00 achieved higher average performance on DEV960-GEN, while dropout 0.10 produced
 stronger and more stable results on DEV600-STR. The latter was therefore retained as the
 selected release configuration.
