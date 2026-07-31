@@ -86,10 +86,11 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
 
 
 def sha256(path: Path) -> str:
+    """SHA-256 of a file, normalised to LF so the hash is identical on all platforms."""
     digest = hashlib.sha256()
     with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
+        content = handle.read()
+    digest.update(content.replace(b"\r\n", b"\n"))
     return digest.hexdigest()
 
 
