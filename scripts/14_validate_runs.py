@@ -131,10 +131,14 @@ def validate_run(run_path: Path, fix: bool = False):
             "dev960_file": "dev960_sha256",
             "dev600_file": "dev600_sha256",
         }
+        ALLOWED_DEV_PREFIXES = (
+            "data/evaluation/legacy_experiment_version/",
+            "data/evaluation/preview_v0.1/",
+        )
         for field in ("train_file", "dev960_file", "dev600_file"):
             recorded = str(dm.get(field, "")).replace("\\", "/")
-            if field.startswith("dev") and not recorded.startswith("data/evaluation/legacy_experiment_version/"):
-                result["issues"].append(f"DATASET_PATH_MISMATCH: {field}={recorded!r} is outside the legacy experiment directory")
+            if field.startswith("dev") and not any(recorded.startswith(p) for p in ALLOWED_DEV_PREFIXES):
+                result["issues"].append(f"DATASET_PATH_MISMATCH: {field}={recorded!r} is outside the allowed evaluation directories")
                 result["status"] = "FAIL"
                 continue
             if field == "train_file" and not (recorded.startswith("data/primary/") or recorded.startswith("data/derived/")):
@@ -151,14 +155,20 @@ def validate_run(run_path: Path, fix: bool = False):
             if expected_hash != actual_hash:
                 result["issues"].append(f"DATASET_HASH_MISMATCH: {field} expected={expected_hash}, actual={actual_hash}")
                 result["status"] = "FAIL"
-        relocation = dm.get("path_relocation", {})
-        if not all(relocation.get(key) for key in (
-            "original_recorded_train_file",
-            "original_recorded_dev960_file",
-            "original_recorded_dev600_file",
-        )):
-            result["issues"].append("MISSING_RELOCATION_HISTORY: original experiment paths are not retained")
-            result["status"] = "FAIL"
+        # Relocation history is only required for runs that used legacy experiment paths.
+        is_legacy_dev = any(
+            str(dm.get(f, "")).replace("\\", "/").startswith("data/evaluation/legacy_experiment_version/")
+            for f in ("dev960_file", "dev600_file")
+        )
+        if is_legacy_dev:
+            relocation = dm.get("path_relocation", {})
+            if not all(relocation.get(key) for key in (
+                "original_recorded_train_file",
+                "original_recorded_dev960_file",
+                "original_recorded_dev600_file",
+            )):
+                result["issues"].append("MISSING_RELOCATION_HISTORY: original experiment paths are not retained")
+                result["status"] = "FAIL"
 
     metrics_file = run_path / "metrics.json"
     if not metrics_file.exists():
