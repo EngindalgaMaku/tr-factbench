@@ -207,7 +207,7 @@ Sınıflandırıcının yalnızca iddia düzeyindeki yüzey ipuçlarına değil,
 | Giriş koşulu | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
 |---|---:|---:|
 | **Tam giriş**: özgün bağlam + soru + iddia | **0,8994** | **0,8686** |
-| Yalnızca iddia koşulu: bağlam boş; özgün soru + iddia korunur | 0,4043 | 0,3858 |
+| Bağlamsız giriş: soru + iddia (bağlam boş; özgün soru + iddia korunur) | 0,4043 | 0,3858 |
 | Karıştırılmış bağlam: farklı bağlam; özgün soru + iddia korunur | 0,3740 | 0,3508 |
 
 Bağlamın tamamen kaldırılması (soru ve iddia sabit tutularak) Macro-F1 değerini DEV960-GEN'de 0,4951, DEV600-STR'de 0,4828 puan düşürmektedir. Bağlamın ilgisiz ve karıştırılmış bir bağlamla değiştirilmesi ise sırasıyla 0,5254 ve 0,5177 puanlık daha büyük bir düşüşe yol açmaktadır. Bu sonuç, bağlamdan bağımsız soru–iddia ipuçlarının tam girişte elde edilen performansı açıklamak için yetersiz olduğunu ve modelin sağlanan kanıt metnine gerçekten dayandığını göstermektedir.

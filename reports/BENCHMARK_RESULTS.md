@@ -113,7 +113,7 @@ A fixed trained ELECTRA checkpoint was evaluated on the human-reviewed preview d
 | Condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 | Δ vs. full (DEV960) | Δ vs. full (DEV600) |
 |---|---:|---:|---:|---:|
 | **Full input** | **0.8994** | **0.8686** | — | — |
-| Claim only | 0.4043 | 0.3858 | −0.4951 | −0.4828 |
+| No context: question + claim | 0.4043 | 0.3858 | −0.4951 | −0.4828 |
 | Shuffled context | 0.3740 | 0.3508 | −0.5254 | −0.5177 |
 
 `full_input` uses the original context, question, and claim. In the no-context condition (`no_context_question_claim`), the context field is empty while the original question and claim are retained. In `shuffled_context_question_claim`, the original question and claim are retained but the context is replaced by a different randomly shuffled context. The shuffle uses seed 0 across each complete evaluation set, prevents self-matches, and is not constrained to the same domain.

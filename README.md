@@ -235,7 +235,7 @@ To test whether the classifier depends on the supplied evidence rather than only
 | Input condition | DEV960-GEN Macro-F1 | DEV600-STR Macro-F1 |
 |---|---:|---:|
 | **Full input**: original context + question + claim | **0.8994** | **0.8686** |
-| Claim only: empty context; original question + claim retained | 0.4043 | 0.3858 |
+| No context: question + claim (empty context; original question + claim retained) | 0.4043 | 0.3858 |
 | Shuffled context: different context; original question + claim retained | 0.3740 | 0.3508 |
 
 Removing the context entirely (while retaining the original question and claim) lowers Macro-F1 by 0.4951 on DEV960-GEN and 0.4828 on DEV600-STR. Replacing it with an unrelated shuffled context produces an even larger reduction: 0.5254 and 0.5177 points, respectively. The result indicates that context-free question–claim cues are insufficient to explain the full-input performance; the model relies on the supplied evidence rather than claim-level shortcuts.
