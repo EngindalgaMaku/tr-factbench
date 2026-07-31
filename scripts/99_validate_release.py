@@ -92,7 +92,8 @@ def validate_run_archive() -> tuple[int, int]:
             "dev600_file": "dev600_sha256",
         }.items():
             relative = str(manifest.get(field, "")).replace("\\", "/")
-            if field.startswith("dev") and not relative.startswith(legacy_prefix):
+            allowed_dev_prefixes = (legacy_prefix, "data/evaluation/preview_v0.1/")
+            if field.startswith("dev") and not any(relative.startswith(p) for p in allowed_dev_prefixes):
                 fail(f"{run_dir.name}: {field} is outside the archived experiment layout: {relative}")
             if field == "train_file" and not (
                 relative.startswith("data/primary/") or relative.startswith("data/derived/")
@@ -103,14 +104,20 @@ def validate_run_archive() -> tuple[int, int]:
                 fail(f"{run_dir.name}: relocated dataset file does not exist: {relative}")
             if manifest.get(hash_field) != sha256(path):
                 fail(f"{run_dir.name}: {hash_field} does not match relocated file")
-        relocation = manifest.get("path_relocation", {})
-        required = (
-            "original_recorded_train_file",
-            "original_recorded_dev960_file",
-            "original_recorded_dev600_file",
+        # Relocation history is only required for runs that used legacy experiment paths.
+        is_legacy_dev = any(
+            str(manifest.get(f, "")).replace("\\", "/").startswith(legacy_prefix)
+            for f in ("dev960_file", "dev600_file")
         )
-        if not all(relocation.get(key) for key in required):
-            fail(f"{run_dir.name}: missing original recorded dataset paths")
+        if is_legacy_dev:
+            relocation = manifest.get("path_relocation", {})
+            required = (
+                "original_recorded_train_file",
+                "original_recorded_dev960_file",
+                "original_recorded_dev600_file",
+            )
+            if not all(relocation.get(key) for key in required):
+                fail(f"{run_dir.name}: missing original recorded dataset paths")
 
         trainer_state = run_dir / "trainer_state.json"
         if trainer_state.exists():
