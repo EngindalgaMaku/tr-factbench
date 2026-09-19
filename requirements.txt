@@ -14,7 +14,6 @@
 # Versions of numpy, scipy, pandas, datasets, accelerate, evaluate, and
 # matplotlib are NOT recorded in the manifests; exact archived values are unknown.
 # For reproducibility, use the above confirmed versions.
-# See KNOWN_ISSUES.md for details on environment-sensitivity.
 torch>=2.0
 transformers>=5.0
 peft>=0.15

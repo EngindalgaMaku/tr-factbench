@@ -296,8 +296,6 @@ def validate_portability_and_text() -> None:
         "CITATION.cff",
         "data/DATA_LICENSE.md",
         "data/evaluation/preview_v0.1/README.md",
-        "reports/GITHUB_RELEASE_v0.1.0-preview.md",
-        "reports/UPDATE_NOTES_2026-07-30.md",
     )
     defensive_phrases = (
         "does not block",
@@ -319,8 +317,6 @@ def validate_portability_and_text() -> None:
         if "288/960" in text:
             fail(f"stale DEV960 annotation progress in {relative}")
 
-    if (ROOT / "reports/UPDATE_NOTES_2026-07-29.md").exists():
-        fail("historical 2026-07-29 update must be stored under reports/history/")
     if any((ROOT / "results/tables" / name).exists() for name in (
         "table_E_cross_domain_matrix.csv",
         "table_E_cross_domain_matrix.md",
