@@ -1,0 +1,34 @@
+{
+  "config_version": "1.0",
+  "frozen_at": "2026-08-19T20:29:00Z",
+  "frozen_at_local": "2026-08-19T23:29:00+03:00",
+  "provenance_correction": "Initial record incorrectly labeled 20:29+03:00 (=17:29Z); corrected to 20:29Z (=23:29+03:00). Gold freeze was at 21:15+03:00 (=18:15Z), so inference correctly followed freeze.",
+  "run_id": "K1_H1DROP10S45_GOLD480_v1.0",
+  "verifier_family": "K1",
+  "model_label": "H1_DROP10_S45",
+  "architecture": "ELECTRA-TR LoRA",
+  "base_model": "dbmdz/electra-base-turkish-cased-discriminator",
+  "base_model_revision": "44ba696463e4d853078f3094cec76ba4e924cfd1",
+  "adapter_path_relative": "runs/ablations/H1_DROP10_S45_ABLATION_run/ckpt/electra-base-turkish-cased-discriminator/multidomain/seed_45/best_model",
+  "lora_rank": 16,
+  "seed": 45,
+  "dropout": 0.1,
+  "training_split": "multidomain",
+  "max_length": 512,
+  "label_mapping": {
+    "0": "supported",
+    "1": "partially_supported",
+    "2": "contradicted",
+    "3": "unverifiable"
+  },
+  "input_format": {
+    "text_a": "[CONTEXT] {context}",
+    "text_b": "[QUESTION] {question} [CLAIM] {claim}"
+  },
+  "eval_dataset": "TR-FactBench_controlled480_GOLD_v1.0.jsonl",
+  "eval_dataset_sha256": "04bcc52ad73ba98c6648ae15d6fabf695eb11bca645a375f7af9cef378df910c",
+  "eval_script": "verifier_hold/run_final_eval.py",
+  "device": "cuda",
+  "batch_size": 1,
+  "notes": "Single-pass final evaluation on frozen gold. Gold labels cannot be changed based on model output."
+}

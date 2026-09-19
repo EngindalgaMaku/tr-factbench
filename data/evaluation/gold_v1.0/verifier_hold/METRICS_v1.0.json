@@ -1,0 +1,80 @@
+{
+  "n": 480,
+  "accuracy": 0.8313,
+  "macro_f1": 0.8301,
+  "macro_precision": 0.8424,
+  "macro_recall": 0.8314,
+  "cohen_kappa": 0.775,
+  "per_class": {
+    "supported": {
+      "precision": 0.8647,
+      "recall": 0.9583,
+      "f1": 0.9091,
+      "support": 120
+    },
+    "partially_supported": {
+      "precision": 0.7574,
+      "recall": 0.8655,
+      "f1": 0.8078,
+      "support": 119
+    },
+    "contradicted": {
+      "precision": 0.7823,
+      "recall": 0.8017,
+      "f1": 0.7918,
+      "support": 121
+    },
+    "unverifiable": {
+      "precision": 0.9655,
+      "recall": 0.7,
+      "f1": 0.8116,
+      "support": 120
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "supported",
+      "partially_supported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "matrix": [
+      [
+        115,
+        3,
+        1,
+        1
+      ],
+      [
+        11,
+        103,
+        5,
+        0
+      ],
+      [
+        4,
+        18,
+        97,
+        2
+      ],
+      [
+        3,
+        12,
+        21,
+        84
+      ]
+    ]
+  },
+  "gold_distribution": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "pred_distribution": {
+    "supported": 133,
+    "partially_supported": 136,
+    "contradicted": 124,
+    "unverifiable": 87
+  }
+}

@@ -1,3 +1,8 @@
+# Minimum versions aligned with the archived training environment.
+# Archived: transformers 5.12.1, peft 0.19.1, torch 2.11.0+cu126.
+# The original lower bounds (transformers>=4.40.0, peft>=0.10.0) predate
+# the PEFT SEQ_CLS/FEATURE_EXTRACTION API used in this project and could
+# silently load the adapter with an incompatible configuration.
 torch>=2.0.0
-transformers>=4.40.0
-peft>=0.10.0
+transformers>=5.0.0
+peft>=0.15.0

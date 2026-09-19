@@ -1,0 +1,43 @@
+{
+  "release": "TR-FactBench_GOLD_RELEASE_v1.0",
+  "status": "gold_frozen_verifier_complete",
+  "freeze_timestamp": "2026-08-19T21:15:00+03:00",
+  "n_examples": 480,
+  "raw_agreement_count": 432,
+  "raw_agreement_rate": 0.9,
+  "cohens_kappa": 0.8666373392296918,
+  "n_disagreements": 48,
+  "adjudication_method": "disagreements_discussed; annotator_A_label_selected_in_each_case; not a predeclared automatic A-priority rule",
+  "gold_distribution": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "canonical_gold_sha256": "04bcc52ad73ba98c6648ae15d6fabf695eb11bca645a375f7af9cef378df910c",
+  "gold_label_vector_sha256": "44df24c1dccbffdf93e710db6f7c550dbd47bc9130832488dd23a68c4a535614",
+  "authoritative_preannotation_evaluation_surface_sha256": "a134bdecb40ca2c8340dca2402b62940793d63e7ff9428f7b3234ea1e81c1b73",
+  "final_verifier_run": true,
+  "final_verifier_run_id": "K1_H1DROP10S45_GOLD480_v1.0",
+  "final_verifier_run_timestamp": "2026-08-19T20:29:00Z",
+  "final_verifier_run_timestamp_local": "2026-08-19T23:29:00+03:00",
+  "timestamp_provenance_correction": "Initial record had 20:29+03:00 (=17:29Z, before gold freeze). Corrected to 20:29Z (=23:29+03:00). Gold freeze was 2026-08-19T18:15Z; inference followed correctly.",
+  "final_verifier_results": {
+    "accuracy": 0.8313,
+    "macro_f1": 0.8301,
+    "macro_precision": 0.8424,
+    "macro_recall": 0.8314,
+    "cohen_kappa": 0.775,
+    "per_class_f1": {
+      "supported": 0.9091,
+      "partially_supported": 0.8078,
+      "contradicted": 0.7918,
+      "unverifiable": 0.8116
+    },
+    "predictions_file": "verifier_hold/PREDICTIONS_v1.0.jsonl",
+    "metrics_file": "verifier_hold/METRICS_v1.0.json",
+    "report_file": "verifier_hold/REPORT_v1.0.md",
+    "predictions_sha256": "15322002241e34ab68fae83d724471b2a4a9730d85707b98efd7295671c8ccab",
+    "metrics_sha256": "f55f7e04018de1cf7cb7a6ede9b5b00e12d43189054f21fc18c770594fc5ea11"
+  }
+}

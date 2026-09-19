@@ -155,12 +155,23 @@ def apply_shortcut_ablation(data: list[dict], view: str, seed: int) -> list[dict
     processed = []
     
     if view == "shuffled_context_claim":
-        # Extract and shuffle all contexts
+        # Extract and shuffle all contexts.
+        # Always use seed=0 for consistency with the published ablation protocol
+        # (README: "fixed seed of 0") regardless of the training seed argument.
+        # Also guarantee no self-matches: a record must not receive its own context.
         contexts = [r["context"] for r in data]
-        rng = random.Random(seed)
-        rng.shuffle(contexts)
-        
-        for r, shuffled_ctx in zip(data, contexts):
+        rng = random.Random(0)
+        indices = list(range(len(contexts)))
+        rng.shuffle(indices)
+        # Repair any position where a record would still get its own context.
+        for i in range(len(indices)):
+            if indices[i] == i:
+                # Swap with the next position (wrapping around)
+                swap_target = (i + 1) % len(indices)
+                indices[i], indices[swap_target] = indices[swap_target], indices[i]
+        shuffled_contexts = [contexts[j] for j in indices]
+
+        for r, shuffled_ctx in zip(data, shuffled_contexts):
             processed.append({
                 "example_id": r["example_id"],
                 "context_id": r["context_id"],
@@ -501,7 +512,12 @@ def main():
     # Load tokenizer
     logger.info(f"Loading tokenizer: {args.model_name}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
-    
+
+    # LABEL_MAP must be defined before tokenize_dataset is called.
+    # Previously this was assigned after the function definition (line 533), which
+    # worked only due to Python closure late-binding — fragile and misleading.
+    LABEL_MAP = LABEL2ID
+
     def tokenize_dataset(data: list[dict]) -> Dataset:
         # Form sequence inputs
         first_texts = [r["context"] for r in data]
@@ -530,7 +546,6 @@ def main():
             
         return Dataset.from_dict(tokenized)
         
-    LABEL_MAP = LABEL2ID
     logger.info("Tokenizing datasets...")
     train_ds = tokenize_dataset(proc_train)
     dev_ds = tokenize_dataset(proc_dev)
