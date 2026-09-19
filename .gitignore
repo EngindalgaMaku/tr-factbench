@@ -38,6 +38,11 @@ runs/ablations/**/ckpt/
 # scripts/.env
 .yapilacaklar.md
 .env
+KNOWN_ISSUES.md
+reports/PREVIEW_RELEASE_CHECKLIST.md
+reports/GITHUB_RELEASE_v0.1.0-preview.md
+reports/UPDATE_NOTES_*.md
+reports/history/UPDATE_NOTES_*.md
 
 # ─── Paper / LRE drafts — local only, never publish ──────────
 makale/
