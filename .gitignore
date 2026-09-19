@@ -35,6 +35,23 @@ runs/ablations/**/ckpt/
 # results/csv/metrics_long_canonical.csv
 # results/tables/
 # results/statistics/
-# scripts/.env 
-.yapilacaklar.md 
-.env  
+# scripts/.env
+.yapilacaklar.md
+.env
+
+# ─── Paper / LRE drafts — local only, never publish ──────────
+makale/
+makale_ismsit6/
+lre/
+
+# ─── Incomplete annotation sessions ──────────────────────────
+results/annotation/train_4800/
+results/annotation/train/train_blind_annotator_1.jsonl
+results/annotation/train/train_blind_annotator_1_manifest.json
+results/annotation/train/llm_gold_mismatches.csv
+results/annotation/train/llm_gold_mismatches.jsonl
+
+# ─── Local scratch helpers ───────────────────────────────────
+scripts/_find_train_label_mismatches.py
+scripts/_inspect_train.py
+scripts/45_build_train_4800_blind_pack.py

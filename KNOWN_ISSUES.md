@@ -4,6 +4,30 @@ This file documents known technical limitations of the current codebase. Items a
 
 ---
 
+## #14 — `LABEL_MAP` used before assignment inside `tokenize_dataset` (resolved)
+
+**Status:** Fixed.
+
+`src/train.py` defined `tokenize_dataset()` at line ~505 and assigned `LABEL_MAP = LABEL2ID` at line ~533, after the function definition. The function referenced `LABEL_MAP` inside its body. This worked only because of Python's closure late-binding (the variable was resolved at call time, not at definition time), making the code fragile and misleading. Any reordering of the surrounding block would produce an `UnboundLocalError`. The assignment has been moved to immediately before the `tokenize_dataset` definition so the binding order matches the reading order.
+
+---
+
+## #15 — `shuffled_context_claim` used training seed instead of fixed seed=0; no self-match guard (resolved)
+
+**Status:** Fixed.
+
+`apply_shortcut_ablation()` in `src/train.py` used `random.Random(seed)` (the training seed argument) for shuffling contexts in the `shuffled_context_claim` view. The published ablation protocol specifies *"a fixed seed of 0"*; using the training seed produced a different shuffle for every experiment seed, making cross-run comparisons unreliable. Additionally, the plain `rng.shuffle()` call offered no guarantee that a record would not receive its own original context. The view now always uses `random.Random(0)` and applies a single-swap repair pass to eliminate any remaining self-matches after shuffling.
+
+---
+
+## #16 — `hf_release/requirements.txt` minimum versions were incompatible with the training environment (resolved)
+
+**Status:** Fixed.
+
+`hf_release/requirements.txt` required `transformers>=4.40.0` and `peft>=0.10.0`. The archived training environment uses `transformers 5.12.1` and `peft 0.19.1`. The PEFT `SEQ_CLS`/`FEATURE_EXTRACTION` task-type API used by this project is not available in older PEFT versions, and the `all-linear` LoRA target expansion and `exclude_modules` behaviour differ across major versions. Loading the adapter with incompatible versions could silently produce wrong results. The lower bounds have been raised to `transformers>=5.0.0` and `peft>=0.15.0`.
+
+---
+
 ## #1 — Default label set in `src/train.py` was `5class` (resolved)
 
 **Status:** Fixed in commit `1025fb9`, updated domain path in `1025fb9` follow-up.

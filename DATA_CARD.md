@@ -41,6 +41,7 @@ The field name `gold_label` is retained for pipeline compatibility. In the previ
 | Dev600 blind annotator 2 | 80/600 complete; candidate and LLM outputs hidden |
 | Dev600 adjudication | not started |
 | DEV960 blind annotator 1 | 960/960 complete; provisional preview released |
+| Gold-480 dual-annotator freeze | 480/480 A and 480/480 B complete; 48 disagreements adjudicated; frozen as `data/evaluation/gold_v1.0/` |
 | Train LLM pre-annotation | 4,800/4,800 complete |
 | Train candidate-label review | 24/4,800 complete |
 | Train two-person quality audit | 600-example sample prepared; both blind passes not started |
@@ -48,6 +49,10 @@ The field name `gold_label` is retained for pipeline compatibility. In the previ
 The authoritative progress snapshot is `annotation_status.json`.
 
 The recommended reviewed preview files are `data/evaluation/preview_v0.1/dev_general.jsonl` and `data/evaluation/preview_v0.1/dev_stress.jsonl`. Audit copies and manifests are retained under `results/annotation/dev960/` and `results/annotation/dev600/`. The DEV960 preview changes 2/960 labels. The Dev600 preview changes 3/600 labels and includes one documented claim correction. Archived encoder and LLM scores remain tied to the original pre-review files. The canonical 144-run encoder archive and API-based LLM experiments were not repeated. A separate single-seed retraining of the selected configuration was conducted on the reviewed preview files and is archived under `runs/preview_evaluations/H1_DROP10_S45_PREVIEW` (DEV960=0.8965, DEV600=0.8522).
+
+### Gold-480 freeze (v1.0)
+
+`data/evaluation/gold_v1.0/` is a frozen 480-example dual-annotator gold set (120 context groups). Annotators A and B each labelled 480/480 independently. Raw agreement is 432/480 (90.00%, Cohen's κ = 0.8666). The 48 disagreements were adjudicated; the canonical file is `gold_v1.0/gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl`. Raw annotator files, agreement tables, adjudication log, and provenance sit in the same package.
 
 ### Train audit sample
 

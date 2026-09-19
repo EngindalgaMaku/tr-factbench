@@ -37,10 +37,15 @@ DATASET_PRESETS = {
         "preannotations": ROOT / "results" / "annotation" / "dev960" / "llm_preannotations_normalized.jsonl",
         "output_dir": ROOT / "results" / "annotation" / "dev960",
     },
-    "train (4800 — egitim)": {
+    "train (4800 — aday etiket incelemesi, kör değil)": {
         "dataset": ROOT / "data" / "primary" / "train.jsonl",
         "preannotations": ROOT / "results" / "annotation" / "train" / "llm_preannotations_normalized.jsonl",
         "output_dir": ROOT / "results" / "annotation" / "train",
+    },
+    "train (4800 — LRE Gate 1 kör audit)": {
+        "dataset": ROOT / "results" / "annotation" / "train_4800" / "train_4800_blind_input.jsonl",
+        "preannotations": ROOT / "results" / "annotation" / "train" / "llm_preannotations_normalized.jsonl",
+        "output_dir": ROOT / "results" / "annotation" / "train_4800",
     },
     "train audit (600 — kör kalite örneklemi)": {
         "dataset": ROOT / "results" / "annotation" / "train_audit_600" / "train_audit_600_blind_input.jsonl",
@@ -51,6 +56,8 @@ DATASET_PRESETS = {
 DATASET_DEFAULT = ROOT / "data" / "evaluation" / "legacy_experiment_version" / "dev_stress.jsonl"
 PREANNOTATIONS_DEFAULT = ROOT / "results" / "annotation" / "dev600" / "llm_preannotations_normalized.jsonl"
 OUTPUT_DIR_DEFAULT = ROOT / "results" / "annotation" / "dev600"
+LABEL_GUIDE_TR = ROOT / "docs" / "LABEL_GUIDE_TR.md"
+LABEL_GUIDE_EN = ROOT / "docs" / "LABEL_GUIDE.md"
 
 # Aday etiketler yalnız candidate_label_review modunda bilinçli olarak gösterilir.
 def _load_candidate_labels(dataset_path: Path) -> dict[str, str]:
@@ -122,6 +129,48 @@ def create_manifest(path: Path, *, dataset_path: Path, output_path: Path, mode: 
 def _index_key(mode: str, annotator_id: str, dataset_stem: str) -> str:
     return f"group_index__{mode}__{annotator_id}__{dataset_stem}"
 
+
+def _load_label_guide(path: Path) -> str:
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8-sig")
+
+
+def render_label_guide_sidebar() -> None:
+    st.header("Etiketleme kılavuzu")
+    st.caption(
+        "Karar sorusu: bağlam iddianın **tersini açıkça mı** söylüyor, yoksa yalnızca **bahsetmiyor mu**? "
+        "Açık ters bilgi + desteklenen atom yok → `contradicted`. Yalnızca yokluk → `unverifiable`. "
+        "`partially_supported` yalnız çok atomlu iddiada kullanılır."
+    )
+    guide_tr = _load_label_guide(LABEL_GUIDE_TR)
+    guide_en = _load_label_guide(LABEL_GUIDE_EN)
+    if guide_tr:
+        st.download_button(
+            "Türkçe kılavuzu indir",
+            data=guide_tr,
+            file_name="LABEL_GUIDE_TR.md",
+            mime="text/markdown",
+            use_container_width=True,
+            key="download_label_guide_tr",
+        )
+        with st.expander("Türkçe kılavuzu burada aç", expanded=False):
+            st.markdown(guide_tr)
+    else:
+        st.warning(f"Türkçe kılavuz bulunamadı: {LABEL_GUIDE_TR}")
+    if guide_en:
+        st.download_button(
+            "English guide indir",
+            data=guide_en,
+            file_name="LABEL_GUIDE.md",
+            mime="text/markdown",
+            use_container_width=True,
+            key="download_label_guide_en",
+        )
+        with st.expander("Open English guide", expanded=False):
+            st.markdown(guide_en)
+    st.caption(f"Kaynak: `{LABEL_GUIDE_TR.relative_to(ROOT).as_posix()}`")
+
 def set_index(index: int, group_count: int, *, mode: str, annotator_id: str, dataset_stem: str) -> None:
     st.session_state[_index_key(mode, annotator_id, dataset_stem)] = max(0, min(index, group_count - 1))
     st.session_state.group_started_monotonic = time.monotonic()
@@ -132,6 +181,7 @@ def review_key(mode: str, annotator_id: str, example_id: str) -> str:
 
 
 st.title("TR-FactBench Anotasyon ve Aday Etiket İnceleme Arayüzü")
+st.caption("Etiketleme kılavuzu sol menüde. Tam metin yerel `docs/LABEL_GUIDE_TR.md` dosyasından yüklenir.")
 
 with st.sidebar:
     st.header("Oturum")
@@ -150,6 +200,7 @@ with st.sidebar:
         "Gerçek iki-insan IAA için iki ayrı kişi, kör insan modunda ve birbirinin kararlarını görmeden çalışmalıdır. "
         "Aday etiket incelemesi bağımsız anotasyon değildir."
     )
+    render_label_guide_sidebar()
 
 if mode == "blind_human":
     st.caption("Kör mod: aday etiketler, LLM önerileri ve iç örnek kimlikleri gösterilmez.")
@@ -182,7 +233,9 @@ if mode == "candidate_label_review":
         st.error(f"{len(missing_preannotations)} örnek için LLM ön anotasyonu eksik. İlk örnekler: {missing_preannotations[:10]}")
         st.stop()
 
-_dstem = dataset_path.stem  # dev_stress or dev_general
+_dstem = dataset_path.stem  # dev_stress, dev_general, train, train_4800_blind_input, ...
+if _dstem.endswith("_blind_input"):
+    _dstem = _dstem[: -len("_blind_input")]
 if mode == "candidate_label_review":
     output_path = output_dir / f"{_dstem}_candidate_label_review.jsonl"
     manifest_path = output_dir / "candidate_label_review_manifest.json"
