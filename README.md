@@ -10,7 +10,7 @@
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
-> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A second pass and adjudication are planned for a future release.
+> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`.
 >
 > **Selected model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0.10, seed=45. DEV960=0.9014, DEV600=0.8675. See [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -34,11 +34,12 @@ The reported scores were obtained on the archived pre-review evaluation files re
 
 Key observations: Gemma 4 26B achieves the strongest overall performance across both sets. The selected local ELECTRA checkpoint remains competitive on the stress set, outperforming the best Qwen and matching GPT-4.1 mini. Few-shot prompting is not uniformly beneficial — Gemma performs better zero-shot than 8-shot on DEV600-STR. ELECTRA provides local inference without per-example API calls.
 
-The repository keeps the dataset, deterministic derived views, training and evaluation code, run-level predictions, validation reports, and canonical benchmark results together. Model weights are not stored in Git; the selected LoRA adapter will be published separately on Hugging Face after final stability checks.
+The repository keeps the dataset, deterministic derived views, training and evaluation code, run-level predictions, validation reports, and canonical benchmark results together. Model weights are not stored in Git; the selected LoRA adapter is published at [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora).
 
 ## What is included
 
 - **Primary dataset splits:** 6,360 examples in 1,590 context groups
+- **Frozen gold set:** 480 dual-annotator examples in 120 groups (`data/evaluation/gold_v1.0/`)
 - **Derived experiment views:** domain-specific, mixed-domain, and leave-one-domain-out splits
 - **Training pipeline:** full fine-tuning, freezing, and LoRA configurations
 - **Evaluation pipeline:** general, stress, and domain-specific evaluation sets
@@ -52,18 +53,20 @@ The repository keeps the dataset, deterministic derived views, training and eval
 | Split | File | Examples | Context groups | Per-class count |
 |---|---|---:|---:|---:|
 | Train | `data/primary/train.jsonl` | 4,800 | 1,200 | 1,200 |
-| General development — archived experiment version | `data/evaluation/legacy_experiment_version/dev_general.jsonl` | 960 | 240 | 240 |
-| Stress development — archived experiment version | `data/evaluation/legacy_experiment_version/dev_stress.jsonl` | 600 | 150 | 150 |
-| **Total** |  | **6,360** | **1,590** |  |
+| General development | `data/evaluation/preview_v0.1/dev_general.jsonl` | 960 | 240 | ~240 |
+| Stress development | `data/evaluation/preview_v0.1/dev_stress.jsonl` | 600 | 150 | ~150 |
+| Gold-480 (frozen) | `data/evaluation/gold_v1.0/gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl` | 480 | 120 | ~120 |
+| **Total (primary + eval)** |  | **6,840** | **1,710** |  |
 
-For **new preview evaluations**, use the human-reviewed files:
+For **new evaluations**, use:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+- `data/evaluation/gold_v1.0/` for the frozen dual-annotator gold set
+
+Gold-480 is a separate held-out set; it does not overlap train, DEV960, or Dev600.
 
 Domain-specific preview views are available under `data/evaluation/preview_v0.1/domain/`.
-
-The original `dev_general.jsonl` and `dev_stress.jsonl` files are retained unchanged because the archived model and LLM results were produced on those versions.
 
 Each `context_id` is paired with exactly four claims: one `supported`, one `partially_supported`, one `contradicted`, and one `unverifiable` example. This grouped design keeps the source passage fixed while varying the factual relation between context and claim.
 
@@ -136,17 +139,17 @@ The construction scripts, manifests, checksums, and audit outputs are included s
 
 ## Annotation and provenance status
 
-TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both evaluation sets:
+TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both development sets, plus a frozen dual-annotator gold set:
 
-- DEV960: 960/960 examples reviewed
-- Dev600: 600/600 examples reviewed
+- DEV960: 960/960 examples reviewed (single-annotator preview)
+- Dev600: 600/600 examples reviewed (single-annotator preview)
+- Gold-480: 480/480 Annotator A and 480/480 Annotator B; 48 disagreements adjudicated; frozen
 
 The human-reviewed evaluation files are available at:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
-
-A second annotation pass and adjudication are planned for a future release.
+- `data/evaluation/gold_v1.0/`
 
 ## Benchmark protocol and current results
 
@@ -254,7 +257,10 @@ Cross-domain transfer, leave-one-domain-out, data-composition, target-module, an
 ```text
 tr-factbench/
 ├── data/
-│   ├── primary/              # Published train and development splits
+│   ├── primary/              # Published train split
+│   ├── evaluation/
+│   │   ├── preview_v0.1/     # Reviewed DEV960 and Dev600
+│   │   └── gold_v1.0/        # Frozen dual-annotator gold-480
 │   ├── derived/              # Deterministically generated experiment views
 │   ├── example_metadata.csv
 │   ├── sources_manifest.csv
@@ -457,7 +463,8 @@ Before a stable `v1.0.0` release, the project plans to complete:
 - ~~reproducibility rerun of the selected configuration~~ ✓ completed (sentinel PASS)
 - ~~clean-environment adapter loading/inference verification~~ ✓ completed (Hub PASS)
 - ~~Hugging Face publication of the selected LoRA adapter~~ ✓ completed ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
-- completion of the second blind-human pass and adjudication for both evaluation sets
+- ~~frozen 480-example dual-annotator gold set~~ ✓ completed (`data/evaluation/gold_v1.0/`)
+- completion of the second blind-human pass and adjudication for DEV960 and Dev600
 - completion of the 600-example, context-grouped train quality audit with two blind annotators
 
 ## Licensing and citation

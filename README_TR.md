@@ -9,7 +9,7 @@
 
 **[English documentation](README.md)**
 
-> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. İkinci geçiş ve uzlaştırma gelecekteki bir sürüm için planlanmıştır.
+> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır.
 >
 > **Seçilen model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0,10, tohum=45. DEV960=0,9014, DEV600=0,8675. Bkz. [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -17,11 +17,12 @@
 
 TR-FactBench, Türkçe bir iddianın verilen kaynak bağlamıyla ne ölçüde doğrulanabildiğini değerlendiren dört sınıflı bir karşılaştırma veri setidir. **Finans, hukuk ve tıp** alanlarını kapsar. Dört etiket sınıfı: `supported`, `partially_supported`, `contradicted`, `unverifiable`. Tanımlar ve karar kuralları için [Etiket tanımları](#etiket-tanımları) ve [Etiketleme Kılavuzu](docs/LABEL_GUIDE_TR.md) belgelerine bakınız.
 
-Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme kodları, koşu bazlı tahminler, doğrulama raporları ve kanonik benchmark sonuçları birlikte tutulur. Model ağırlıkları Git deposunda bulunmaz. Seçilen LoRA adaptörü, nihai kararlılık kontrollerinden sonra Hugging Face üzerinde ayrıca yayımlanacaktır.
+Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme kodları, koşu bazlı tahminler, doğrulama raporları ve kanonik benchmark sonuçları birlikte tutulur. Model ağırlıkları Git deposunda bulunmaz. Seçilen LoRA adaptörü [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora) adresinde yayımlanmıştır.
 
 ## Depoda neler var?
 
 - **Ana veri bölümleri:** 1.590 bağlam grubunda 6.360 örnek
+- **Dondurulmuş gold kümesi:** 120 grupta 480 çift-annotator örnek (`data/evaluation/gold_v1.0/`)
 - **Türev deney görünümleri:** alan özelinde, karma alanlı ve bir alanı dışarıda bırakan bölümler
 - **Eğitim hattı:** tam ince ayar, katman dondurma ve LoRA yapılandırmaları
 - **Değerlendirme hattı:** genel, stres ve alan özelinde değerlendirme kümeleri
@@ -35,18 +36,20 @@ Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme 
 | Bölüm | Dosya | Örnek | Bağlam grubu | Sınıf başına örnek |
 |---|---|---:|---:|---:|
 | Eğitim | `data/primary/train.jsonl` | 4.800 | 1.200 | 1.200 |
-| Genel geliştirme — arşiv deney sürümü | `data/evaluation/legacy_experiment_version/dev_general.jsonl` | 960 | 240 | 240 |
-| Stres geliştirme — arşiv deney sürümü | `data/evaluation/legacy_experiment_version/dev_stress.jsonl` | 600 | 150 | 150 |
-| **Toplam** |  | **6.360** | **1.590** |  |
+| Genel geliştirme | `data/evaluation/preview_v0.1/dev_general.jsonl` | 960 | 240 | ~240 |
+| Stres geliştirme | `data/evaluation/preview_v0.1/dev_stress.jsonl` | 600 | 150 | ~150 |
+| Gold-480 (dondurulmuş) | `data/evaluation/gold_v1.0/gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl` | 480 | 120 | ~120 |
+| **Toplam (ana + değerlendirme)** |  | **6.840** | **1.710** |  |
 
-**Yeni preview değerlendirmeleri** için insan tarafından gözden geçirilmiş dosyalar kullanılmalıdır:
+**Yeni değerlendirmeler** için:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
+- dondurulmuş çift-annotator gold kümesi için `data/evaluation/gold_v1.0/`
+
+Gold-480 ayrı bir held-out kümedir; train, DEV960 ve Dev600 ile örtüşmez.
 
 Alan bazlı preview görünümleri `data/evaluation/preview_v0.1/domain/` altında yer alır.
-
-Arşiv sonuçlarının kullandığı dosyalar `data/evaluation/legacy_experiment_version/` altında byte düzeyinde değiştirilmeden korunur. Yeni değerlendirmelerde aynı adlı dosyaların `preview_v0.1/` sürümü kullanılmalıdır.
 
 Her `context_id` tam olarak dört iddiayla eşleştirilmiştir: bir `supported`, bir `partially_supported`, bir `contradicted` ve bir `unverifiable` örneği. Bu gruplu tasarımda kaynak pasaj sabit tutulurken bağlam ile iddia arasındaki olgusal ilişki değiştirilir.
 
@@ -119,17 +122,17 @@ Oluşturma betikleri, manifestler, sağlama toplamları ve denetim çıktıları
 
 ## Anotasyon ve kaynak durumu
 
-TR-FactBench v0.1.0-preview, her iki değerlendirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi içerir:
+TR-FactBench v0.1.0-preview, her iki geliştirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi ve dondurulmuş bir çift-annotator gold kümesi içerir:
 
-- DEV960: 960/960 örnek incelendi
-- Dev600: 600/600 örnek incelendi
+- DEV960: 960/960 örnek incelendi (tek-annotator preview)
+- Dev600: 600/600 örnek incelendi (tek-annotator preview)
+- Gold-480: Annotator A 480/480 ve Annotator B 480/480; 48 uyuşmazlık uzlaştırıldı; donduruldu
 
 İnsan tarafından gözden geçirilmiş değerlendirme dosyaları:
 
 - `data/evaluation/preview_v0.1/dev_general.jsonl`
 - `data/evaluation/preview_v0.1/dev_stress.jsonl`
-
-İkinci anotasyon geçişi ve uzlaştırma gelecekteki bir sürümde planlanmıştır.
+- `data/evaluation/gold_v1.0/`
 
 `data/sources_manifest.csv` her bağlam grubu için bir satır içerir. Stres kümesinde kaynak URL'leri mevcuttur. Eğitim ve genel geliştirme verisindeki bağlamlar, kamuya açık tıp, finans ve hukuk alan kaynaklarından yeniden yazılarak ve uyarlanarak oluşturulmuştur; bu nedenle her örnek için ayrı URL saklanmamıştır (manifest'te `provenance_status=source_adapted_no_item_url` olarak işaretlidir). Etiketler, iddianın sağlanan bağlam tarafından desteklenme durumunu ifade eder — dış dünyadaki genel doğruluğu değil. Yeniden dağıtım veya ticari kullanım öncesinde `data/DATA_LICENSE.md` ve `data/NOTICE.md` incelenmelidir.
 
@@ -225,7 +228,10 @@ Alanlar arası aktarım, bir alanı dışarıda bırakan eğitim, veri bileşimi
 ```text
 tr-factbench/
 ├── data/
-│   ├── primary/              # Yayımlanan eğitim ve geliştirme bölümleri
+│   ├── primary/              # Yayımlanan eğitim bölümü
+│   ├── evaluation/
+│   │   ├── preview_v0.1/     # İncelenmiş DEV960 ve Dev600
+│   │   └── gold_v1.0/        # Dondurulmuş çift-annotator gold-480
 │   ├── derived/              # Deterministik deney görünümleri
 │   ├── example_metadata.csv
 │   ├── sources_manifest.csv
@@ -433,7 +439,8 @@ Kararlı `v1.0.0` sürümünden önce şu çalışmaların tamamlanması planlan
 - ~~seçilen yapılandırmanın yeniden üretilebilirlik koşusu~~ ✓ tamamlandı (sentinel GEÇTİ)
 - ~~adaptörün temiz ortamda yükleme/tahmin testinin yapılması~~ ✓ tamamlandı (Hub GEÇTİ)
 - ~~seçilen LoRA adaptörünün Hugging Face üzerinde yayımlanması~~ ✓ tamamlandı ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
-- her iki değerlendirme kümesi için ikinci kör insan geçişinin ve uzlaştırmanın tamamlanması
+- ~~dondurulmuş 480 örnekli çift-annotator gold kümesi~~ ✓ tamamlandı (`data/evaluation/gold_v1.0/`)
+- DEV960 ve Dev600 için ikinci kör insan geçişinin ve uzlaştırmanın tamamlanması
 - eğitim kümesindeki 600 örneklik bağlam-gruplu kalite denetiminin iki kör anotörle tamamlanması
 
 ## Lisans ve atıf
