@@ -2,7 +2,7 @@
 
 ## Status
 
-**Model configuration selected; benchmark release remains a research preview.** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter may be published separately after a clean-environment load and inference test. A second annotation pass and adjudication are planned for a future benchmark release.
+**Model configuration selected; this preview resource is frozen as-is.** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter is published separately. A second development-set annotation pass is a known limitation of this preview, not remaining work.
 
 ## Model
 
@@ -130,18 +130,18 @@ The selected checkpoint is compared with four API-based LLMs under zero-shot and
 
 ## Limitations
 
-- Both evaluation sets have one completed blind-human pass. Dev600 annotator 2 is 80/600; DEV960 annotator 2 and adjudication have not started.
+- Both evaluation sets have one completed blind-human pass. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen preview, not remaining work. Training labels remain construction-time (silver). A frozen 600-example prefix of train is a single-annotator noise estimate (45/600 mismatch), not gold and not IAA. Full Gate 1 4,800 and `train_audit_600` are cancelled.
 - DEV960 and DEV600 were used during model selection and are development sets, not untouched final test sets.
 - The model is limited to Turkish and the finance, legal, and medical domains represented in the benchmark.
 - It must not be used as an autonomous medical, legal, or financial decision system.
 - The selected configuration prioritizes stress-set robustness; H2/dropout=0.00 has the higher general-set mean.
 
-## Pending before Hugging Face preview release
+## Hugging Face publication extras (optional; does not mean FactBench is incomplete)
 
-1. Complete the clean-environment adapter load and inference test.
+1. Clean-environment adapter load and inference test.
 2. Publish the adapter, adapter configuration, label mapping, exact dataset hashes, base-model revision, and tested loading example.
 
-For a later stable release, complete the second blind-human pass, adjudication, and disclosure of any final label changes.
+This preview resource is frozen as-is. A second blind-human pass on the development sets is not required to close it.
 
 ## Planned Hugging Face repository
 

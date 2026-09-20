@@ -44,10 +44,9 @@ reports/GITHUB_RELEASE_v0.1.0-preview.md
 reports/UPDATE_NOTES_*.md
 reports/history/UPDATE_NOTES_*.md
 
-# ─── Paper / LRE drafts — local only, never publish ──────────
+# ─── Paper drafts — local only, never publish ────────────────
+# All venue copies live under makale/{ismsit,ismsit6,lre}.
 makale/
-makale_ismsit6/
-lre/
 
 # ─── Incomplete annotation sessions ──────────────────────────
 results/annotation/train_4800/

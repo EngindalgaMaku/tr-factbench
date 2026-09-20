@@ -4,7 +4,7 @@
 
 TR-FactBench is a Turkish source-grounded factuality-verification dataset covering finance, legal, and medical domains. Each example contains a context passage, a question, a claim, and one of four labels: `supported`, `partially_supported`, `contradicted`, or `unverifiable`.
 
-This is a **v0.1.0 research preview**. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second annotation pass and adjudication are planned for a future release.
+This is a **v0.1.0 research preview**, frozen as-is. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second development-set pass is a known limitation of this preview, **not** remaining work required to close the resource.
 
 ## Primary data
 
@@ -38,13 +38,17 @@ The field name `gold_label` is retained for pipeline compatibility. In the previ
 |---|---|
 | Dev600 candidate-label refinement | 600/600 complete; candidate and LLM suggestion were intentionally visible |
 | Dev600 blind annotator 1 | 600/600 complete; candidate and LLM outputs hidden |
-| Dev600 blind annotator 2 | 80/600 complete; candidate and LLM outputs hidden |
-| Dev600 adjudication | not started |
+| Dev600 blind annotator 2 | 80/600 leftover; **not required** to close this resource |
+| Dev600 adjudication | not done; **not required** to close this resource |
+| DEV960 candidate-label refinement | not started; **not required** to close this resource (only Dev600 ran this QC pass) |
 | DEV960 blind annotator 1 | 960/960 complete; provisional preview released |
+| DEV960 blind annotator 2 | 0/960 leftover; **not required** to close this resource |
+| DEV960 adjudication | not done; **not required** to close this resource |
 | Gold-480 dual-annotator freeze | 480/480 A and 480/480 B complete; 48 disagreements adjudicated; frozen as `data/evaluation/gold_v1.0/` |
 | Train LLM pre-annotation | 4,800/4,800 complete |
-| Train candidate-label review | 24/4,800 complete |
-| Train two-person quality audit | 600-example sample prepared; both blind passes not started |
+| Train candidate-label review | 24/4,800 leftover; cancelled / not in scope |
+| Train prefix-150 silver audit | 600/600 frozen (seed-42 prefix of `train_4800`; one annotator; 45/600 mismatch vs construction). Training labels remain silver. See `results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`. |
+| Train two-person quality audit (`train_audit_600`) | Pack prepared but never annotated; **cancelled / out of scope**. Distinct from prefix-150. Full Gate 1 4,800 is also cancelled. |
 
 The authoritative progress snapshot is `annotation_status.json`.
 
@@ -54,19 +58,22 @@ The recommended reviewed preview files are `data/evaluation/preview_v0.1/dev_gen
 
 `data/evaluation/gold_v1.0/` is a frozen 480-example dual-annotator gold set (120 context groups). Annotators A and B each labelled 480/480 independently. Raw agreement is 432/480 (90.00%, Cohen's κ = 0.8666). The 48 disagreements were adjudicated; the canonical file is `gold_v1.0/gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl`. Raw annotator files, agreement tables, adjudication log, and provenance sit in the same package.
 
-### Train audit sample
+### Train prefix-150 silver audit (frozen 2026-09-20)
 
-`results/annotation/train_audit_600/` contains a stratified, context-grouped quality-audit sample:
+A predeclared freeze of the first 150 context groups of the seed-42 shuffle of the full `train_4800` blind pack:
 
-- 150 context groups
-- 50 contexts per domain
-- all four claims retained for each selected context
-- 600 examples total
-- context-length stratification within each domain
-- opaque IDs in the blind input
-- candidate labels stored in a separate reference file that must not be shown to annotators
+- 150 groups / 600 examples (12.5% of train)
+- one annotator, `blind_human`, candidate labels hidden
+- 555/600 agree with construction (92.50%); 45/600 mismatch (7.50%; Wilson 95% CI 5.65–9.89%)
+- **not** gold; `data/primary/train.jsonl` is unchanged
+- **not** IAA (single annotator; Cohen's κ is not computed)
+- **not** `train_audit_600`
 
-After two independent blind-human passes, `scripts/42_compute_iaa.py` computes pre-adjudication percent agreement, unweighted Cohen's κ, class- and domain-level diagnostics, and context-level bootstrap confidence intervals. Agreement must be reported before adjudication.
+Public summary: `results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`. Gold-480 IAA is evaluation-gold evidence and must not be cited as evidence about this training audit.
+
+### Train audit sample (`train_audit_600`, cancelled)
+
+`results/annotation/train_audit_600/` is an unused construction artifact: a stratified 150-context / 600-example sample that was prepared but never annotated. It is **cancelled / out of scope**. Prefix-150 is not a substitute, and this pack will not be completed. Full Gate 1 4,800 (beyond the frozen prefix) is also cancelled. Training labels remain construction-time (silver).
 
 ## Provenance
 
@@ -85,7 +92,7 @@ Item-level URL absence in the source-adapted splits is not treated as an annotat
 3. **LLM-assisted drafting:** Language models were used as construction aids rather than independent gold annotators.
 4. **Automated validation:** Scripts checked JSONL structure, label and domain balance, context-group completeness, identifier uniqueness, split overlap, and deterministic regeneration of derived views.
 5. **Candidate-label refinement:** For Dev600, a human reviewer compared the current candidate label with a normalized LLM analysis to identify apparent construction errors quickly. This stage was not used as human-human IAA evidence.
-6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 completed 80/600. Agreement statistics will be reported after paired blind annotation files are complete and before adjudication.
+6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen preview, not remaining work. Formal human-human Cohen's κ on the development sets is therefore not reported.
 
 ## LLM annotation artifacts
 
@@ -122,8 +129,8 @@ The large performance reductions when context is removed or replaced provide evi
 
 ## Known limitations
 
-1. Both evaluation sets have one complete blind-human review pass; the second pass and adjudication are planned for a future release.
-2. Dev600 annotator 2 is 80/600; DEV960 annotator 2 has not started. The train audit has also not started.
+1. Both evaluation sets have one complete blind-human review pass. A second pass and adjudication are **not** part of this frozen preview (Dev600 A2 is 80/600 leftover; DEV960 A2 was not started).
+2. Training labels remain construction-time (silver). A 600-example prefix of `train_4800` is frozen as a single-annotator noise estimate (45/600 mismatch). Full Gate 1 4,800 and the stratified two-person `train_audit_600` pack are cancelled / out of scope.
 3. Train and general-development contexts are source-adapted synthetic examples; item-level URLs were not retained for every context.
 4. The dataset is Turkish-only and covers three domains.
 5. The stress set is deliberately harder and is not distribution-identical to the general development set.

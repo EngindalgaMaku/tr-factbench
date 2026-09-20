@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-30",
-  "note": "Progress is derived from repository artifacts. The first blind-human review pass is complete for both evaluation sets. Agreement statistics and adjudication will be added after paired annotation is complete.",
+  "last_updated": "2026-09-20",
+  "note": "This preview resource is frozen as-is. Progress is derived from repository artifacts. The first blind-human review pass is complete for both evaluation sets. Gold-480 is a frozen dual-annotator evaluation set. A predeclared 600-example prefix of train_4800 (seed 42, annotator 1) is frozen as a silver-train noise estimate; training labels remain construction-time candidates. Full Gate 1 4,800, leftover train candidate-label review, and the stratified two-person train_audit_600 pack are cancelled / out of scope. A second development-set pass (Dev600 A2 leftover 80/600; DEV960 A2 0/960) is a known limitation, not remaining work required to close this resource.",
   "dev_stress": {
     "total": 600,
     "candidate_label_review": {
@@ -18,16 +18,16 @@
       "role": "blind_human",
       "completed": 80,
       "total": 600,
-      "status": "in_progress"
+      "status": "leftover_not_required"
     },
-    "iaa_adjudication": "not_started"
+    "iaa_adjudication": "not_required"
   },
   "dev_general": {
     "total": 960,
     "candidate_label_review": {
       "completed": 0,
       "total": 960,
-      "status": "not_started"
+      "status": "leftover_not_required"
     },
     "annotator_1": {
       "role": "blind_human",
@@ -39,9 +39,9 @@
       "role": "blind_human",
       "completed": 0,
       "total": 960,
-      "status": "not_started"
+      "status": "leftover_not_required"
     },
-    "iaa_adjudication": "not_started"
+    "iaa_adjudication": "not_required"
   },
   "train": {
     "total": 4800,
@@ -49,23 +49,61 @@
     "candidate_label_review": {
       "completed": 24,
       "total": 4800,
-      "status": "in_progress"
-    }
+      "status": "cancelled"
+    },
+    "labels": "construction_time_silver",
+    "gold_relabel": false
   },
-  "train_audit_600": {
-    "sample_file_present": true,
+  "train_4800_prefix150": {
+    "freeze_id": "train_4800_prefix150_seed42_annotator_1_v1",
+    "status": "frozen",
+    "what": "predeclared first 150 context groups of the seed-42 shuffle of the full train_4800 blind pack",
     "annotator_1": {
       "role": "blind_human",
-      "completed": 0,
+      "completed": 600,
       "total": 600,
-      "status": "not_started"
+      "status": "frozen"
     },
     "annotator_2": {
       "role": "blind_human",
       "completed": 0,
       "total": 600,
-      "status": "not_started"
+      "status": "cancelled"
     },
-    "iaa_adjudication": "not_started"
+    "order_seed": 42,
+    "examples": 600,
+    "context_groups": 150,
+    "fraction_of_train": 0.125,
+    "agree_vs_construction": 555,
+    "mismatch_vs_construction": 45,
+    "mismatch_rate": 0.075,
+    "wilson95_mismatch": {
+      "lo": 0.0565,
+      "hi": 0.0989
+    },
+    "iaa": "not_applicable_single_annotator",
+    "gold": false,
+    "not_train_audit_600": true,
+    "not_full_gate1": true,
+    "full_gate1": "cancelled",
+    "public_summary": "results/annotation/TRAIN_4800_PREFIX150_FREEZE.md"
+  },
+  "train_audit_600": {
+    "sample_file_present": true,
+    "status": "cancelled",
+    "note": "Stratified 50-contexts-per-domain sample was prepared but never annotated. Cancelled / out of scope. Distinct from the frozen train_4800_prefix150 silver audit. Do not start two blinds.",
+    "annotator_1": {
+      "role": "blind_human",
+      "completed": 0,
+      "total": 600,
+      "status": "cancelled"
+    },
+    "annotator_2": {
+      "role": "blind_human",
+      "completed": 0,
+      "total": 600,
+      "status": "cancelled"
+    },
+    "iaa_adjudication": "cancelled"
   }
 }

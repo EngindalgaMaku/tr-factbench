@@ -10,7 +10,7 @@
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
-> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`.
+> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`. Training labels remain construction-time (silver); a frozen 600-example prefix of train is a noise estimate, not gold.
 >
 > **Selected model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0.10, seed=45. DEV960=0.9014, DEV600=0.8675. See [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -133,17 +133,18 @@ The current release was prepared as a structured research dataset rather than co
 3. **LLM-assisted drafting:** Candidate questions and claims were produced with language-model assistance. The language model was used as a construction aid, not as an independent gold annotator.
 4. **Automated validation:** Scripts checked JSONL structure, label and domain balance, context-group completeness, identifier uniqueness, split overlap, and deterministic regeneration of derived views.
 5. **Selection and balancing:** The released primary splits were selected to maintain exact class balance and equal domain coverage. Automatic selection does not replace human semantic verification.
-6. **Candidate-label refinement and blind review:** Dev600 completed the LLM-assisted human candidate-label quality-control pass and the first independent blind-human pass (600/600). DEV960 also completed its first independent blind-human pass (960/960). The second Dev600 pass is 80/600, while the second DEV960 pass and adjudication are deferred to the stable release. A separate 600-example, context-grouped train audit sample has been prepared for two blind annotators.
+6. **Candidate-label refinement and blind review:** Dev600 completed the LLM-assisted human candidate-label quality-control pass and the first independent blind-human pass (600/600). DEV960 also completed its first independent blind-human pass (960/960). The second Dev600 pass is 80/600 leftover; the second DEV960 pass was not started. That second pass is a known limitation of this frozen preview, not remaining work. Training labels remain construction-time candidates. A predeclared 600-example prefix of the full train blind pack (150 groups, seed 42, one annotator) is frozen as a silver-train noise estimate (45/600 mismatch vs construction; not IAA, not gold). Full Gate 1 4,800 and the stratified two-person `train_audit_600` pack are cancelled / out of scope.
 
 The construction scripts, manifests, checksums, and audit outputs are included so that later corrections can be tracked without silently replacing the original release.
 
 ## Annotation and provenance status
 
-TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both development sets, plus a frozen dual-annotator gold set:
+TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both development sets, plus a frozen dual-annotator gold set. Training labels are still construction-time (silver):
 
 - DEV960: 960/960 examples reviewed (single-annotator preview)
 - Dev600: 600/600 examples reviewed (single-annotator preview)
 - Gold-480: 480/480 Annotator A and 480/480 Annotator B; 48 disagreements adjudicated; frozen
+- Train prefix-150: 600/600 frozen (one annotator vs construction; 45 mismatches). Not gold, not IAA, not `train_audit_600`. Summary: [`results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`](results/annotation/TRAIN_4800_PREFIX150_FREEZE.md)
 
 The human-reviewed evaluation files are available at:
 
@@ -437,7 +438,7 @@ The selected LoRA adapter is publicly available on Hugging Face:
 
 **[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). Hub load and inference verified — see `hf_release/_test_hub_load.py`. Completion of the second blind pass and adjudication remains a requirement for the later stable release.
+**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). Hub load and inference verified — see `hf_release/_test_hub_load.py`. This preview resource is frozen as-is; a second development-set pass is not required to close it.
 
 ```python
 from peft import PeftModel
@@ -456,16 +457,17 @@ See [`hf_release/inference_example.py`](hf_release/inference_example.py) for a c
 
 ## Release roadmap
 
-Before a stable `v1.0.0` release, the project plans to complete:
+This preview resource is frozen as-is. Training uses construction-time labels plus the 600-example prefix-150 silver audit (12.5% of train). A second blind-human pass on DEV960/Dev600 is **not** required to close the resource.
 
-- ~~aligned multi-seed model comparison~~ ✓ completed
-- ~~final dropout comparison~~ ✓ completed (H1/dropout=0.10 vs H2/dropout=0.00, five seeds each; H1 selected)
-- ~~reproducibility rerun of the selected configuration~~ ✓ completed (sentinel PASS)
-- ~~clean-environment adapter loading/inference verification~~ ✓ completed (Hub PASS)
-- ~~Hugging Face publication of the selected LoRA adapter~~ ✓ completed ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
-- ~~frozen 480-example dual-annotator gold set~~ ✓ completed (`data/evaluation/gold_v1.0/`)
-- completion of the second blind-human pass and adjudication for DEV960 and Dev600
-- completion of the 600-example, context-grouped train quality audit with two blind annotators
+Completed:
+
+- ~~aligned multi-seed model comparison~~ ✓
+- ~~final dropout comparison~~ ✓ (H1/dropout=0.10 vs H2/dropout=0.00, five seeds each; H1 selected)
+- ~~reproducibility rerun of the selected configuration~~ ✓ (sentinel PASS)
+- ~~clean-environment adapter loading/inference verification~~ ✓ (Hub PASS)
+- ~~Hugging Face publication of the selected LoRA adapter~~ ✓ ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
+- ~~frozen 480-example dual-annotator gold set~~ ✓ (`data/evaluation/gold_v1.0/`)
+- ~~train prefix-150 silver audit~~ ✓ (600/600; full Gate 1 4,800 and `train_audit_600` cancelled)
 
 ## Licensing and citation
 

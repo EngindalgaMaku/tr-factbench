@@ -16,16 +16,20 @@ Cross-lingual veya multilingual transfer değerlendirilmemiştir.
 **İleri çalışma:** mBERT ve XLM-R ile cross-lingual transfer.
 
 ## L3: Preview Anotasyon Durumu (Belgelenmiş Sınırlılık)
-Dev600 için aday etiket kalite kontrolü ve birinci kör insan geçişi (600/600),
-DEV960 için de birinci kör insan geçişi (960/960) tamamlanmıştır. Bu iki küme
-tek anotatörlü araştırma ön sürümü olarak yayımlanabilir. İkinci Dev600 geçişi
-80/600 düzeyindedir; ikinci DEV960 geçişi ve uzlaştırma kararlı sürüme bırakılmıştır.
-Bu nedenle formal insan-insan Cohen κ değeri henüz raporlanmamaktadır.
+Bu önizleme kaynağı bu haliyle dondurulmuştur. Dev600 için aday etiket kalite
+kontrolü ve birinci kör insan geçişi (600/600), DEV960 için de birinci kör
+insan geçişi (960/960) tamamlanmıştır. İkinci Dev600 geçişi 80/600 leftover'dır;
+ikinci DEV960 geçişi başlatılmamıştır. Bu, kaynağı kapatmak için kalan iş değil,
+dondurulmuş önizlemenin bilinen sınırlılığıdır. Formal insan-insan Cohen κ
+değerlendirme kümelerinde raporlanmaz.
 
-Eğitim kümesinin tamamı çift anotasyona sokulmayacaktır. Bunun yerine 150 bağlam grubu
-ve 600 örnekten oluşan, alan ve bağlam uzunluğuna göre tabakalandırılmış bir kalite denetimi
-örneklemi iki farklı kişi tarafından kör biçimde değerlendirilecektir. Kappa uzlaştırmadan
-önce, güven aralıkları bağlam grubu düzeyinde bootstrap ile hesaplanacaktır.
+Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş). 2026-09-20'de
+train_4800 paketinin seed-42 sırasındaki ilk 150 grubu (600 örnek, tek anotör)
+gümüş gürültü kestirimi olarak dondurulmuştur (yapı etiketine göre 45/600 uyuşmazlık).
+Bu IAA değildir, gold değildir ve `train_audit_600` değildir. Tam Gate 1 4.800
+ve tabakalı iki-kişilik `train_audit_600` paketi iptal / kapsam dışıdır. Kappa,
+değerlendirme kümelerinde iki kör dosya varsa ve uzlaştırmadan önce hesaplanır;
+tek anotörlü prefix için κ uydurulmaz.
 
 ## L4: Hiperparametre Arama Kapsamı (Orta Risk)
 Learning rate araması yalnızca lr=2e-4 noktasında gerçekleştirilmiştir (ELECTRA için).

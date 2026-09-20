@@ -127,8 +127,16 @@ print(f"  Dev600 kör anotör 2: {dev_status.get('annotator_2', {}).get('complet
 print(f"  DEV960 kör anotör 1: {dev960_status.get('annotator_1', {}).get('completed', 0)}/960")
 print(f"  DEV960 kör anotör 2: {dev960_status.get('annotator_2', {}).get('completed', 0)}/960")
 print(f"  Dev600 uzlaştırma: {dev_status.get('iaa_adjudication', 'unknown')}")
-print("  Train kalite denetimi: 150 bağlam / 600 örnek örneklemi hazır; iki kör geçiş bekleniyor.")
-print("  Formal insan-insan Cohen κ, iki kör dosya tamamlandıktan sonra ve uzlaştırmadan önce hesaplanacaktır.")
+prefix = annotation_progress.get("train_4800_prefix150", {})
+print(
+    "  Train prefix-150 (gümüş): "
+    f"{prefix.get('status', 'missing')} "
+    f"{prefix.get('examples', 0)}/{prefix.get('examples', 600)} "
+    f"mismatch={prefix.get('mismatch_vs_construction', 'n/a')} "
+    "(IAA değil, gold değil, train_audit_600 değil)"
+)
+print("  Train kalite denetimi train_audit_600: paket hazırlandı ama anotasyon yapılmadı; iptal / kapsam dışı. Prefix-150 bunun yerine geçmez.")
+print("  Tam Gate 1 4.800 (önek-150 dışı) iptal. Formal insan-insan Cohen κ, değerlendirme kümelerinde iki kör dosya varsa ve uzlaştırmadan önce hesaplanır. Tek anotörlü prefix-150 için κ hesaplanmaz.")
 train_review = annotation_progress.get("train", {}).get("candidate_label_review", {})
 print(
     "  Train aday etiket incelemesi: "
@@ -142,14 +150,20 @@ report = {
     "annotation_format": "candidate_train_labels_plus_single_annotator_preview_evaluation",
     "iaa_kappa": None,
     "iaa_status": (
-        f"stable-release IAA pending — DEV960 annotator 1 {dev960_status.get('annotator_1', {}).get('completed', 0)}/960; "
+        "not required to close this resource — "
+        f"DEV960 annotator 1 {dev960_status.get('annotator_1', {}).get('completed', 0)}/960; "
         f"Dev600 annotator 1 {dev_status.get('annotator_1', {}).get('completed', 0)}/600; "
-        f"Dev600 annotator 2 {dev_status.get('annotator_2', {}).get('completed', 0)}/600"
+        f"Dev600 annotator 2 {dev_status.get('annotator_2', {}).get('completed', 0)}/600 leftover"
     ),
     "limitation": (
-        "Both evaluation sets have a complete first blind-human pass and are released as "
-        "single-annotator provisional preview files. Formal human-human Cohen's kappa is "
-        "reserved for the later stable release after paired blind files are complete and before adjudication."
+        "This preview resource is frozen as-is. Both evaluation sets have a complete first "
+        "blind-human pass and are released as single-annotator provisional preview files. "
+        "A second development-set pass is a known limitation, not remaining work. Formal "
+        "human-human Cohen's kappa on the development sets is therefore not reported. "
+        "A frozen 600-example prefix of train_4800 (seed 42, annotator 1) is a silver-train noise estimate "
+        "(45/600 mismatch vs construction); it is not IAA, not gold, and not train_audit_600. "
+        "Full Gate 1 4,800 and train_audit_600 are cancelled / out of scope. "
+        "Training labels remain construction-time candidates."
     ),
     "annotation_progress": annotation_progress,
     "available_quality_evidence": {
@@ -209,16 +223,20 @@ Cross-lingual veya multilingual transfer değerlendirilmemiştir.
 **İleri çalışma:** mBERT ve XLM-R ile cross-lingual transfer.
 
 ## L3: Preview Anotasyon Durumu (Belgelenmiş Sınırlılık)
-Dev600 için aday etiket kalite kontrolü ve birinci kör insan geçişi (600/600),
-DEV960 için de birinci kör insan geçişi (960/960) tamamlanmıştır. Bu iki küme
-tek anotatörlü araştırma ön sürümü olarak yayımlanabilir. İkinci Dev600 geçişi
-80/600 düzeyindedir; ikinci DEV960 geçişi ve uzlaştırma kararlı sürüme bırakılmıştır.
-Bu nedenle formal insan-insan Cohen κ değeri henüz raporlanmamaktadır.
+Bu önizleme kaynağı bu haliyle dondurulmuştur. Dev600 için aday etiket kalite
+kontrolü ve birinci kör insan geçişi (600/600), DEV960 için de birinci kör
+insan geçişi (960/960) tamamlanmıştır. İkinci Dev600 geçişi 80/600 leftover'dır;
+ikinci DEV960 geçişi başlatılmamıştır. Bu, kaynağı kapatmak için kalan iş değil,
+dondurulmuş önizlemenin bilinen sınırlılığıdır. Formal insan-insan Cohen κ
+değerlendirme kümelerinde raporlanmaz.
 
-Eğitim kümesinin tamamı çift anotasyona sokulmayacaktır. Bunun yerine 150 bağlam grubu
-ve 600 örnekten oluşan, alan ve bağlam uzunluğuna göre tabakalandırılmış bir kalite denetimi
-örneklemi iki farklı kişi tarafından kör biçimde değerlendirilecektir. Kappa uzlaştırmadan
-önce, güven aralıkları bağlam grubu düzeyinde bootstrap ile hesaplanacaktır.
+Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş). 2026-09-20'de
+train_4800 paketinin seed-42 sırasındaki ilk 150 grubu (600 örnek, tek anotör)
+gümüş gürültü kestirimi olarak dondurulmuştur (yapı etiketine göre 45/600 uyuşmazlık).
+Bu IAA değildir, gold değildir ve `train_audit_600` değildir. Tam Gate 1 4.800
+ve tabakalı iki-kişilik `train_audit_600` paketi iptal / kapsam dışıdır. Kappa,
+değerlendirme kümelerinde iki kör dosya varsa ve uzlaştırmadan önce hesaplanır;
+tek anotörlü prefix için κ uydurulmaz.
 
 ## L4: Hiperparametre Arama Kapsamı (Orta Risk)
 Learning rate araması yalnızca lr=2e-4 noktasında gerçekleştirilmiştir (ELECTRA için).

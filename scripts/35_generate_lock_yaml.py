@@ -319,7 +319,7 @@ lines += [
     f"  dev600_annotator_2: {annotation_status.get('dev_stress', {}).get('annotator_2', {}).get('completed', 0)}",
     f"  dev960_annotator_1: {annotation_status.get('dev_general', {}).get('annotator_1', {}).get('completed', 0)}",
     f"  dev960_annotator_2: {annotation_status.get('dev_general', {}).get('annotator_2', {}).get('completed', 0)}",
-    '  adjudication_status: "deferred_to_stable_release"',
+    '  adjudication_status: "not_required_preview_limitation"',
     f"  provisional_dev960_file: {q(DEV960_PREVIEW.relative_to(ROOT).as_posix())}",
     f"  provisional_dev960_sha256: {q(sha256(DEV960_PREVIEW)) if DEV960_PREVIEW.exists() else q('missing')}",
     f"  provisional_dev960_label_revisions: {preview960_manifest.get('label_changes_from_original_gold', 0)}",

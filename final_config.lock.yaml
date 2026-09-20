@@ -135,7 +135,7 @@ annotation_snapshot:
   dev600_annotator_2: 80
   dev960_annotator_1: 960
   dev960_annotator_2: 0
-  adjudication_status: "deferred_to_stable_release"
+  adjudication_status: "not_required_preview_limitation"
   provisional_dev960_file: "data/evaluation/preview_v0.1/dev_general.jsonl"
   provisional_dev960_sha256: "f17b3ad40df07146f09e1dfaedfcc74908b447dd97adba296fc5a509b61bd7e4"
   provisional_dev960_label_revisions: 2

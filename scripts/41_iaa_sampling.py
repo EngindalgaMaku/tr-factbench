@@ -1,15 +1,7 @@
-"""Build the context-grouped train quality-audit sample.
+"""Historical builder for the unused train_audit_600 quality-audit sample.
 
-The audit sample is not a new gold training split. It is a blinded quality-control
-sample drawn from the 4,800-example training set:
-
-- 150 context groups total
-- 50 contexts per domain
-- all four claims retained for every selected context
-- 600 examples total
-- context-length-stratified random sampling within each domain
-- opaque IDs in the blind input; source IDs and candidate labels are kept in a
-  separate reference file that must not be shown to annotators
+That pack was prepared but never annotated and is cancelled / out of scope.
+Do not treat a re-run as a live annotation task. Prefix-150 is a different freeze.
 """
 from __future__ import annotations
 
@@ -74,7 +66,8 @@ def archive_legacy_files() -> list[str]:
             "# Deprecated legacy IAA sample\n\n"
             "These files used item-level sampling and copied the candidate label into an "
             "annotator field. They are retained only for audit history and **must not** be "
-            "used as human-human IAA evidence. Use `results/annotation/train_audit_600/` instead.\n",
+            "used as human-human IAA evidence. The later `train_audit_600` pack was also "
+            "prepared but never annotated and is cancelled.\n",
             encoding="utf-8",
         )
     return archived
@@ -202,13 +195,11 @@ manifest = {
 }
 MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 README.write_text(
-    "# Train audit 600\n\n"
+    "# Train audit 600 — cancelled / unused pack\n\n"
     "This directory contains a context-grouped quality-audit sample from the training set. "
     "It includes 150 contexts (50 per domain) and all four claims from each context, for 600 examples.\n\n"
-    "- Use `train_audit_600_blind_input.jsonl` in blind-human mode.\n"
-    "- Do not show `train_audit_600_candidate_reference.jsonl` to annotators.\n"
-    "- Produce two independent blind annotation files, then run `scripts/42_compute_iaa.py`.\n"
-    "- Cohen's kappa is computed before adjudication.\n",
+    "**Status: cancelled / out of scope.** Files were generated but never annotated. "
+    "Do not start two blinds. Prefix-150 is a different freeze.\n",
     encoding="utf-8",
 )
 
