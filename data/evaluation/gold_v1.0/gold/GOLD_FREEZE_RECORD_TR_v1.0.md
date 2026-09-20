@@ -1,6 +1,8 @@
 # TR-FactBench Gold Release Freeze v1.0
 
-Durum: **GOLD FROZEN / FINAL VERIFIER HENÜZ ÇALIŞTIRILMADI**
+Durum: **GOLD FROZEN / VERIFIER ÇALIŞTIRILDI — SONUÇLAR DONDURULDU**
+
+Freeze anındaki “verifier henüz çalıştırılmadı” kaydı `verifier_hold/FINAL_VERIFIER_NOT_RUN_TR.md` içinde arşivlenmiştir. Final verifier `K1_H1DROP10S45_GOLD480_v1.0` (Macro-F1 0.8301); ayrıntı `RELEASE_MANIFEST_v1.0.json` ve `verifier_hold/VERIFIER_RUN_RECORD_TR_v1.0.md`.
 
 Freeze zamanı: `2026-08-19T21:15:00+03:00`
 

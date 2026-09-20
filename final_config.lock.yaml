@@ -129,7 +129,7 @@ datasets:
 
 annotation_snapshot:
   status_file: "annotation_status.json"
-  last_updated: "2026-07-30"
+  last_updated: "2026-09-20"
   preview_release_ready: true
   dev600_annotator_1: 600
   dev600_annotator_2: 80
@@ -153,13 +153,13 @@ llm_baselines:
   datasets: 2
   prompt_modes: ["zero_shot", "few_shot_8"]
 
-pending_stable_release_requirements:
+known_limitations_and_publication_extras:
   - "~~Run H1 reproducibility sentinel~~ DONE (H1_SENTINEL_DROP10_S45_RERUN; max_abs_delta=0.0094)."
-  - "Complete the second blind-human pass for both evaluation sets."
-  - "Compute pre-adjudication IAA and complete adjudication."
-  - "Complete the stratified, context-grouped train audit sample with two blind annotators."
-  - "Verify LoRA adapter loading and inference in a clean environment before Hugging Face publication."
-  - "Review applicable source terms before any rights-cleared commercial redistribution claim."
+  - "~~Hugging Face adapter load/inference~~ DONE (Hub PASS; angeldust007/tr-factbench-electra-lora)."
+  - "Second development-set blind pass: known limitation of this frozen preview, not remaining work."
+  - "Development-set IAA and adjudication: known limitation, not remaining work."
+  - "Full Gate 1 4,800 and train_audit_600: cancelled / out of scope."
+  - "Review applicable source terms before any rights-cleared commercial redistribution claim (publication extra)."
 
 commands:
   preflight: "python scripts/00_preflight.py"

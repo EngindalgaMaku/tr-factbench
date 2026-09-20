@@ -138,14 +138,13 @@ The selected checkpoint is compared with four API-based LLMs under zero-shot and
 
 ## Hugging Face publication extras (optional; does not mean FactBench is incomplete)
 
-1. Clean-environment adapter load and inference test.
-2. Publish the adapter, adapter configuration, label mapping, exact dataset hashes, base-model revision, and tested loading example.
+The selected LoRA adapter is published at `angeldust007/tr-factbench-electra-lora`. Clean-environment Hub load and inference were verified (`hf_release/_test_hub_load.py`).
 
 This preview resource is frozen as-is. A second blind-human pass on the development sets is not required to close it.
 
-## Planned Hugging Face repository
+## Published Hugging Face repository
 
-`EngindalgaMaku/tr-factbench-electra-lora`
+`angeldust007/tr-factbench-electra-lora`
 
 ## Citation
 

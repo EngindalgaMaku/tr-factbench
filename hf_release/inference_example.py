@@ -1,5 +1,5 @@
 """
-Inference example for engin-dalga/tr-factbench-electra-lora
+Inference example for angeldust007/tr-factbench-electra-lora
 
 Loads the LoRA adapter on top of the exact base-model revision used during training
 and runs factuality verification on a short example.
@@ -20,7 +20,7 @@ from peft import PeftModel
 # ── Configuration ─────────────────────────────────────────────────────────────
 BASE_MODEL = "dbmdz/electra-base-turkish-cased-discriminator"
 BASE_MODEL_REVISION = "44ba696463e4d853078f3094cec76ba4e924cfd1"
-ADAPTER_REPO = "engin-dalga/tr-factbench-electra-lora"   # Hugging Face Hub ID
+ADAPTER_REPO = "angeldust007/tr-factbench-electra-lora"   # Hugging Face Hub ID
 
 LABEL_MAPPING = {
     0: "supported",
