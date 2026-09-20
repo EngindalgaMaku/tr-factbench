@@ -69,35 +69,29 @@ LLM'ye mevcut aday etiket, gerçek `example_id` veya bağlam içindeki özgün i
 streamlit run annotation/review_app.py
 ```
 
-Arayüz Dev600, Dev960, tam eğitim kümesi ve 600 örneklik eğitim kalite örneklemiyle çalışır.
+Arayüz Dev600 ve Dev960 ile çalışır. Tam train Gate 1 (`train_4800`), kalan 24/4.800 aday etiket incelemesi ve `train_audit_600` iptal / kapsam dışı; bu ön ayarlar sunulmaz.
 
-## Eğitim kalite örneklemi
+## Train-4800 önek-150 dondurması (gümüş, 2026-09-20)
 
-Örneklemi oluşturmak veya yenilemek için:
+`results/annotation/train_4800/` paketinin seed-42 sırasındaki ilk 150 bağlam grubu dondurulmuştur:
 
-```bash
-python scripts/41_iaa_sampling.py
-```
+- 600 örnek, tek anotör, `blind_human`
+- yapı etiketine göre 45/600 uyuşmazlık (%7,50; Wilson %95 GA %5,65–%9,89)
+- **gold değil;** bu etiketler `data/primary/train.jsonl` dosyasına yazılmaz
+- **IAA değil** (tek anotör)
+- **`train_audit_600` değil**
 
-Üretilen örneklem:
+Genel özet: `results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`. Gold-480 IAA değerlendirme-gold kanıtıdır; bu eğitim denetiminin kanıtı değildir.
 
-- 150 bağlam grubu,
-- her alandan 50 bağlam,
-- her bağlamdaki dört iddianın tamamı,
-- toplam 600 örnek,
-- kör girişte opak kimlikler
+## İptal edilen eğitim paketleri (kapsam dışı)
 
-içerir. `train_audit_600_candidate_reference.jsonl` anotörlere gösterilmemelidir.
+Dosya olarak hazırlanmış ama **anotasyon yapılmayacak** paketler:
 
-İki kör insan geçişinden sonra:
+- tam `train_4800` Gate 1 (dondurulmuş önek-150 dışındaki Reviewer A/B + uzlaştırma)
+- kalan 24/4.800 eğitim aday etiket incelemesi
+- tabakalı iki-kişilik `train_audit_600`
 
-```bash
-python scripts/42_compute_iaa.py \
-  --annotator1 results/annotation/train_audit_600/train_audit_600_blind_annotator_1.jsonl \
-  --annotator2 results/annotation/train_audit_600/train_audit_600_blind_annotator_2.jsonl
-```
-
-Rapor uzlaştırma öncesi ham uyumu, ağırlıksız Cohen κ değerini, karmaşıklık matrisini, sınıf/alan tanılarını, anlaşmazlıkları ve bağlam düzeyinde bootstrap güven aralıklarını üretir.
+`results/annotation/train_audit_600/` kullanılmayan bir inşa artığıdır. Önek-150 onun yerine geçmez; o paket tamamlanmayacaktır. `data/primary/train.jsonl` gold ile yeniden etiketlenmez.
 
 ## Dev600 raporu
 

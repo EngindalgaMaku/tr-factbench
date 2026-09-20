@@ -125,7 +125,7 @@ Removing or corrupting the context drops Macro-F1 by approximately 0.50. This co
 - Covers three domains: finance, legal, medical.
 - DEV960-GEN and DEV600-STR are development sets used during model selection, not held-out final test sets.
 - Must not be used as an autonomous medical, legal, or financial decision system.
-- Second blind-human annotation pass and inter-annotator adjudication are planned for a future release.
+- Second blind-human annotation pass is a known limitation of this frozen preview, not remaining work required to close the resource.
 
 ## Training data
 

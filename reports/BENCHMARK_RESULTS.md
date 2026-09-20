@@ -143,7 +143,7 @@ Archived results use the original pre-review evaluation files. The current singl
 ## Interpretation limits
 
 - DEV960 and DEV600 are development sets used during model selection; they are not untouched final test sets.
-- Annotator 1 is complete for DEV960 and Dev600. Dev600 annotator 2 is 80/600; the remaining second-pass work and adjudication are deferred to the stable release.
+- Annotator 1 is complete for DEV960 and Dev600. Dev600 annotator 2 is 80/600 leftover; that second pass is a known limitation of this frozen preview, not remaining work.
 - F1, G1, H1, and H2 represent different experiment stages and are labeled separately.
 
 ## Machine-readable outputs

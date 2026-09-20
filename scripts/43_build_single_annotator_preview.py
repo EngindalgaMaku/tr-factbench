@@ -370,7 +370,8 @@ def main() -> None:
         "usage_note": (
             "Use the human-reviewed preview files for new evaluations. Archived benchmark "
             "scores remain tied to the original experiment files retained for reproducibility. "
-            "A second annotation pass and adjudication are planned for a future release."
+            "This preview is frozen as-is. A second annotation pass is a known limitation, "
+            "not remaining work required to close the resource."
         ),
     }
     write_json(ROOT / "data/manifests/preview_evaluation_manifest_v0.1.json", combined)

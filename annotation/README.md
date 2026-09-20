@@ -69,27 +69,29 @@ The model never receives `gold_label`, real example IDs, or the original within-
 streamlit run annotation/review_app.py
 ```
 
-The application supports Dev600, Dev960, the full train split, and the context-grouped train audit sample.
+The application supports Dev600 and Dev960. Full train Gate 1 (`train_4800`), leftover train candidate-label review, and `train_audit_600` are cancelled / out of scope; those presets are not offered.
 
-## Train audit sample
+## Train-4800 prefix-150 freeze (silver, 2026-09-20)
 
-Generate or refresh the 600-example audit sample:
+The first 150 context groups of the seed-42 shuffle of `results/annotation/train_4800/` are frozen:
 
-```bash
-python scripts/41_iaa_sampling.py
-```
+- 600 examples, one annotator, `blind_human`
+- 45/600 mismatch vs construction-time labels (7.50%; Wilson 95% CI 5.65–9.89%)
+- **not** gold; do not write these labels into `data/primary/train.jsonl`
+- **not** IAA (single annotator)
+- **not** `train_audit_600`
 
-This creates 150 context groups, 50 per domain, retaining all four claims per context. Blind input uses opaque IDs. The candidate reference file must not be shown to annotators.
+Public summary: `results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`. Gold-480 IAA is evaluation-gold evidence, not evidence about this training audit.
 
-After two independent blind passes:
+## Cancelled train packs (not in scope)
 
-```bash
-python scripts/42_compute_iaa.py \
-  --annotator1 results/annotation/train_audit_600/train_audit_600_blind_annotator_1.jsonl \
-  --annotator2 results/annotation/train_audit_600/train_audit_600_blind_annotator_2.jsonl
-```
+The following were prepared as files but will **not** be annotated:
 
-The report includes pre-adjudication percent agreement, unweighted Cohen's kappa, confusion matrices, domain/class diagnostics, disagreements, and context-level bootstrap confidence intervals.
+- full `train_4800` Gate 1 (Reviewer A/B + adjudication beyond the frozen prefix-150)
+- leftover 24/4,800 train candidate-label review
+- stratified two-person `train_audit_600`
+
+`results/annotation/train_audit_600/` is an unused construction artifact. Prefix-150 is not a substitute for that pack, and that pack will not be completed. Do not gold-relabel `data/primary/train.jsonl`.
 
 ## Dev600 reporting
 

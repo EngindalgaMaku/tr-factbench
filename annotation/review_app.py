@@ -37,22 +37,10 @@ DATASET_PRESETS = {
         "preannotations": ROOT / "results" / "annotation" / "dev960" / "llm_preannotations_normalized.jsonl",
         "output_dir": ROOT / "results" / "annotation" / "dev960",
     },
-    "train (4800 — aday etiket incelemesi, kör değil)": {
-        "dataset": ROOT / "data" / "primary" / "train.jsonl",
-        "preannotations": ROOT / "results" / "annotation" / "train" / "llm_preannotations_normalized.jsonl",
-        "output_dir": ROOT / "results" / "annotation" / "train",
-    },
-    "train (4800 — LRE Gate 1 kör audit)": {
-        "dataset": ROOT / "results" / "annotation" / "train_4800" / "train_4800_blind_input.jsonl",
-        "preannotations": ROOT / "results" / "annotation" / "train" / "llm_preannotations_normalized.jsonl",
-        "output_dir": ROOT / "results" / "annotation" / "train_4800",
-    },
-    "train audit (600 — kör kalite örneklemi)": {
-        "dataset": ROOT / "results" / "annotation" / "train_audit_600" / "train_audit_600_blind_input.jsonl",
-        "preannotations": ROOT / "results" / "annotation" / "train" / "llm_preannotations_normalized.jsonl",
-        "output_dir": ROOT / "results" / "annotation" / "train_audit_600",
-    },
 }
+# Full train_4800 Gate 1, leftover 24/4,800 candidate-label review, and
+# train_audit_600 two-person audit are cancelled / out of scope. Do not
+# re-add live presets that could overwrite the prefix-150 freeze.
 DATASET_DEFAULT = ROOT / "data" / "evaluation" / "legacy_experiment_version" / "dev_stress.jsonl"
 PREANNOTATIONS_DEFAULT = ROOT / "results" / "annotation" / "dev600" / "llm_preannotations_normalized.jsonl"
 OUTPUT_DIR_DEFAULT = ROOT / "results" / "annotation" / "dev600"

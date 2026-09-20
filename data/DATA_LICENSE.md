@@ -25,9 +25,11 @@ rights-cleared for commercial redistribution without independent rights review.
 
 ## Release status
 
-This is a research-preview dataset. Both evaluation sets include a completed first
-blind-human review pass. Training labels remain construction-time candidates. A second
-annotation pass and adjudication are planned for a future release.
+This is a research-preview dataset, frozen as-is. Both evaluation sets include a
+completed first blind-human review pass. Training labels remain construction-time
+candidates (silver). A frozen 600-example prefix of train is a single-annotator
+noise estimate, not gold and not IAA. A second evaluation annotation pass is a
+known limitation of this preview, not remaining work required to close the resource.
 
 ## Citation
 

@@ -9,7 +9,7 @@
 
 **[English documentation](README.md)**
 
-> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır.
+> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş); dondurulmuş 600 örneklik train öneki gürültü kestirimidir, gold değildir.
 >
 > **Seçilen model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0,10, tohum=45. DEV960=0,9014, DEV600=0,8675. Bkz. [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -116,17 +116,18 @@ Bu sürüm, doğal biçimde oluşmuş dört etiketli bir derlemden doğrudan top
 3. **LLM destekli taslak üretimi:** Aday soru ve iddiaların hazırlanmasında dil modellerinden destek alınmıştır. Dil modeli, bağımsız altın standart anotör olarak değil, veri oluşturma aracı olarak kullanılmıştır.
 4. **Otomatik doğrulama:** Betikler JSONL yapısını, etiket ve alan dengesini, bağlam gruplarının eksiksizliğini, kimliklerin benzersizliğini, bölümler arası çakışmaları ve türev görünümlerin deterministik biçimde yeniden üretilebilmesini denetlemiştir.
 5. **Seçim ve dengeleme:** Yayımlanan ana bölümler tam sınıf dengesi ve eşit alan dağılımı korunacak biçimde seçilmiştir. Otomatik seçim, insan tarafından yapılan anlamsal doğrulamanın yerine geçmez.
-6. **Aday etiket iyileştirme ve kör inceleme:** Dev600 üzerinde insan denetimli aday etiket kalite kontrolü ve birinci bağımsız kör insan geçişi tamamlanmıştır (600/600). DEV960'ın birinci bağımsız kör insan geçişi de tamamlanmıştır (960/960). Dev600 ikinci geçişi 80/600 düzeyindedir; DEV960 ikinci geçişi ve uzlaştırma kararlı sürüme bırakılmıştır. Eğitim kümesi için ayrıca 150 bağlamdan oluşan 600 örneklik çift-kör kalite örneklemi hazırlanmıştır.
+6. **Aday etiket iyileştirme ve kör inceleme:** Dev600 üzerinde insan denetimli aday etiket kalite kontrolü ve birinci bağımsız kör insan geçişi tamamlanmıştır (600/600). DEV960'ın birinci bağımsız kör insan geçişi de tamamlanmıştır (960/960). Dev600 ikinci geçişi 80/600 leftover'dır; DEV960 ikinci geçişi başlatılmamıştır. Bu, dondurulmuş önizlemenin bilinen sınırlılığıdır, kalan iş değildir. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir. Tam train kör paketinin seed-42 sırasındaki ilk 150 grubu (600 örnek, tek anotör) gümüş-eğitim gürültü kestirimi olarak dondurulmuştur (yapı etiketine göre 45/600 uyuşmazlık; IAA değil, gold değil). Tam Gate 1 4.800 ve tabakalı iki-kişilik `train_audit_600` paketi iptal / kapsam dışıdır.
 
 Oluşturma betikleri, manifestler, sağlama toplamları ve denetim çıktıları depoda tutulur. Böylece daha sonraki etiket düzeltmeleri, önceki sürüm sessizce değiştirilmeden izlenebilir.
 
 ## Anotasyon ve kaynak durumu
 
-TR-FactBench v0.1.0-preview, her iki geliştirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi ve dondurulmuş bir çift-annotator gold kümesi içerir:
+TR-FactBench v0.1.0-preview, her iki geliştirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi ve dondurulmuş bir çift-annotator gold kümesi içerir. Eğitim etiketleri hâlâ üretim aşamasındaki aday etiketlerdir (gümüş):
 
 - DEV960: 960/960 örnek incelendi (tek-annotator preview)
 - Dev600: 600/600 örnek incelendi (tek-annotator preview)
 - Gold-480: Annotator A 480/480 ve Annotator B 480/480; 48 uyuşmazlık uzlaştırıldı; donduruldu
+- Train önek-150: 600/600 donduruldu (tek anotör, yapı etiketine göre 45 uyuşmazlık). Gold değil, IAA değil, `train_audit_600` değil. Özet: [`results/annotation/TRAIN_4800_PREFIX150_FREEZE.md`](results/annotation/TRAIN_4800_PREFIX150_FREEZE.md)
 
 İnsan tarafından gözden geçirilmiş değerlendirme dosyaları:
 
@@ -413,7 +414,7 @@ Seçilen LoRA adaptörü Hugging Face üzerinde kamuya açık olarak yayımlanm�
 
 **[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45). DEV960=0,9014, DEV600-STR=0,8675. H1 sentinel 0,010 metrik toleransı içinde geçmiştir. Hub üzerinden yükleme ve tahmin doğrulandı — bkz. `hf_release/_test_hub_load.py`. İkinci kör geçiş ve uzlaştırmanın tamamlanması daha sonraki kararlı sürümün koşuludur.
+**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45). DEV960=0,9014, DEV600-STR=0,8675. H1 sentinel 0,010 metrik toleransı içinde geçmiştir. Hub üzerinden yükleme ve tahmin doğrulandı — bkz. `hf_release/_test_hub_load.py`. Bu önizleme kaynağı bu haliyle dondurulmuştur; ikinci geliştirme geçişi kaynağı kapatmak için gerekli değildir.
 
 ```python
 from peft import PeftModel
@@ -432,16 +433,17 @@ Tam yükleme ve doğrulama betiği için [`hf_release/inference_example.py`](hf_
 
 ## Yayın yol haritası
 
-Kararlı `v1.0.0` sürümünden önce şu çalışmaların tamamlanması planlanmaktadır:
+Bu önizleme kaynağı bu haliyle dondurulmuştur. Eğitim etiketleri gümüştür; önek-150 (%12,5) gümüş gürültü kestirimidir. DEV960/Dev600 ikinci kör geçişi kaynağı kapatmak için **gerekli değildir**.
 
-- ~~eşlenmiş çoklu tohum model karşılaştırması~~ ✓ tamamlandı
-- ~~nihai dropout karşılaştırması~~ ✓ tamamlandı (H1/dropout=0,10 ve H2/dropout=0,00; her biri beş tohum, H1 seçildi)
-- ~~seçilen yapılandırmanın yeniden üretilebilirlik koşusu~~ ✓ tamamlandı (sentinel GEÇTİ)
-- ~~adaptörün temiz ortamda yükleme/tahmin testinin yapılması~~ ✓ tamamlandı (Hub GEÇTİ)
-- ~~seçilen LoRA adaptörünün Hugging Face üzerinde yayımlanması~~ ✓ tamamlandı ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
-- ~~dondurulmuş 480 örnekli çift-annotator gold kümesi~~ ✓ tamamlandı (`data/evaluation/gold_v1.0/`)
-- DEV960 ve Dev600 için ikinci kör insan geçişinin ve uzlaştırmanın tamamlanması
-- eğitim kümesindeki 600 örneklik bağlam-gruplu kalite denetiminin iki kör anotörle tamamlanması
+Tamamlanan:
+
+- ~~eşlenmiş çoklu tohum model karşılaştırması~~ ✓
+- ~~nihai dropout karşılaştırması~~ ✓ (H1/dropout=0,10 ve H2/dropout=0,00; her biri beş tohum, H1 seçildi)
+- ~~seçilen yapılandırmanın yeniden üretilebilirlik koşusu~~ ✓ (sentinel GEÇTİ)
+- ~~adaptörün temiz ortamda yükleme/tahmin testinin yapılması~~ ✓ (Hub GEÇTİ)
+- ~~seçilen LoRA adaptörünün Hugging Face üzerinde yayımlanması~~ ✓ ([angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora))
+- ~~dondurulmuş 480 örnekli çift-annotator gold kümesi~~ ✓ (`data/evaluation/gold_v1.0/`)
+- ~~train önek-150 gümüş denetim~~ ✓ (600/600; tam Gate 1 4.800 ve `train_audit_600` iptal)
 
 ## Lisans ve atıf
 
