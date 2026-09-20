@@ -48,6 +48,9 @@ reports/history/UPDATE_NOTES_*.md
 # All venue copies live under makale/{ismsit,ismsit6,lre}.
 makale/
 
+# ─── Local Gate 2 gold-LLM leftovers (not part of the preview release) ─
+results/llm_baselines/gold_v1.0/
+
 # ─── Incomplete annotation sessions ──────────────────────────
 results/annotation/train_4800/
 results/annotation/train/train_blind_annotator_1.jsonl

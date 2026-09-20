@@ -10,8 +10,6 @@ tags:
 - turkish
 - nli
 - sequence-classification
-datasets:
-- engin-dalga/tr-factbench
 pipeline_tag: text-classification
 ---
 
@@ -81,7 +79,7 @@ from peft import PeftModel
 
 BASE_MODEL = "dbmdz/electra-base-turkish-cased-discriminator"
 BASE_MODEL_REVISION = "44ba696463e4d853078f3094cec76ba4e924cfd1"
-ADAPTER_REPO = "engin-dalga/tr-factbench-electra-lora"
+ADAPTER_REPO = "angeldust007/tr-factbench-electra-lora"
 
 LABEL_MAPPING = {0: "supported", 1: "partially_supported", 2: "contradicted", 3: "unverifiable"}
 

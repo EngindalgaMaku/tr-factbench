@@ -269,12 +269,29 @@ def validate_llm_artifacts() -> None:
         fail("final_config.lock.yaml LLM table hash is stale")
 
 
+def _is_untracked_gold_llm_tree(path: Path) -> bool:
+    """Local Gate 2 leftovers under results/llm_baselines/gold_v1.0/ are not release artifacts."""
+    try:
+        relative = path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return False
+    return relative.startswith("results/llm_baselines/gold_v1.0/")
+
+
 def validate_portability_and_text() -> None:
     for path in ROOT.rglob("*"):
-        if path.is_file() and path.suffix.lower() in TEXT_EXTENSIONS and path.read_bytes().startswith(b"\xef\xbb\xbf"):
+        if not path.is_file() or path.suffix.lower() not in TEXT_EXTENSIONS:
+            continue
+        if _is_untracked_gold_llm_tree(path):
+            continue
+        if path.read_bytes().startswith(b"\xef\xbb\xbf"):
             fail(f"UTF-8 BOM found in {path.relative_to(ROOT)}")
 
-    active_manifests = list((ROOT / "results/llm_baselines").glob("*/*/*/manifest.json"))
+    # Only the published DEV LLM matrices are release-active. gold_v1.0/ is a
+    # local leftover (absolute Windows paths, incomplete runs) and is gitignored.
+    active_manifests = []
+    for dataset in ("dev_general", "dev_stress"):
+        active_manifests.extend((ROOT / "results/llm_baselines" / dataset).glob("*/*/manifest.json"))
     active_manifests += [
         ROOT / "results/annotation/dev600/llm_preannotation_manifest.json",
         ROOT / "results/annotation/dev960/llm_preannotation_manifest.json",
