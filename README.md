@@ -469,6 +469,11 @@ Completed:
 - ~~frozen 480-example dual-annotator gold set~~ ✓ (`data/evaluation/gold_v1.0/`)
 - ~~train prefix-150 silver audit~~ ✓ (600/600; full Gate 1 4,800 and `train_audit_600` cancelled)
 
+## Ecosystem & Modular Extensions
+
+* **K1 Direct Verifier:** Sequence-pair ELECTRA-TR + LoRA verifier benchmarked in this repository and accepted for IEEE ISMSIT 2026.
+* **K2 Modular Pipeline:** Fine-grained atomic claim decomposition (Gemma-4 QLoRA) and NLI aggregation framework is available in the companion repository: [tr-factbench-k2-nli](https://github.com/EngindalgaMaku/tr-factbench-k2-nli).
+
 ## Licensing and citation
 
 - Code: MIT (`LICENSE`)
@@ -476,3 +481,17 @@ Completed:
 - Context passages: source-dependent rights (`data/NOTICE.md`, `data/sources_manifest.csv`)
 
 Citation metadata is provided in [`CITATION.cff`](CITATION.cff).
+
+If you use TR-FactBench or its modular extensions in your research, please cite our foundational paper:
+
+```bibtex
+@inproceedings{dalga2026source,
+  title={Source-Grounded Factuality Verification in Turkish: A Multi-Domain Experimental Study},
+  author={Dalga, Engin and Ball{\i}, Serkan},
+  booktitle={2026 10th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT)},
+  year={2026},
+  pages={1--6},
+  publisher={IEEE}
+}
+```
+
