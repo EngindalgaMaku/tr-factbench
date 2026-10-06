@@ -62,3 +62,7 @@ results/annotation/train/llm_gold_mismatches.jsonl
 scripts/_find_train_label_mismatches.py
 scripts/_inspect_train.py
 scripts/45_build_train_4800_blind_pack.py
+
+# Construction records: internal (contain unmasked entities/alias maps), not for public release
+data/construction_records/**/*.zip
+data/construction_records/**/*.csv
