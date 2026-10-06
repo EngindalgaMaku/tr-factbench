@@ -33,3 +33,6 @@ Eğer ileride üçüncü bağımsız adjudicator kullanılmak istenirse bu v1.0 
 | 48 anlaşmazlık adjudication | Önceki oturum | Tartışma ile A etiketi seçildi |
 | Gold freeze | 2026-08-19T18:15Z | 480 örnek donduruldu |
 | Final verifier inference | 2026-08-19T20:29Z | K1 H1_DROP10_S45, Macro-F1=0.8301 |
+## Ek (2026-10-06)
+
+Uzlaşma tartışması iki anotatör (A ve B) arasında yapılmıştır; üçüncü bir hakem bulunmamaktadır. Annotator A veri setini oluşturan araştırmacıdır. Ayrıntı ve B etiketleri ile uzlaşılan 432 örnek üzerinde sağlamlık analizi: `provenance/ANNOTATOR_ROLES_ERRATUM_TR_v1.0.1.md`.

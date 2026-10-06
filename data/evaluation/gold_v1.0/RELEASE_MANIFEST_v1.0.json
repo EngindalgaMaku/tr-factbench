@@ -39,5 +39,13 @@
     "report_file": "verifier_hold/REPORT_v1.0.md",
     "predictions_sha256": "15322002241e34ab68fae83d724471b2a4a9730d85707b98efd7295671c8ccab",
     "metrics_sha256": "f55f7e04018de1cf7cb7a6ede9b5b00e12d43189054f21fc18c770594fc5ea11"
+  },
+  "annotator_roles_erratum": {
+    "date": "2026-10-06",
+    "annotator_A": "dataset constructor (researcher)",
+    "annotator_B": "independent annotator (IT teacher), not involved in construction",
+    "adjudication": "two-annotator consensus discussion; no third adjudicator; A label adopted in 48/48",
+    "file": "provenance/ANNOTATOR_ROLES_ERRATUM_TR_v1.0.1.md",
+    "gold_labels_changed": false
   }
 }

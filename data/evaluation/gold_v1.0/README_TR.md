@@ -35,6 +35,8 @@ Bu paket 480 kontrollü değerlendirme örneğinin iki annotator pass'i, adjudic
 | unverifiable | 0.8116 |
 
 ## Önemli provenance notu
+**Düzeltme (2026-10-06):** Annotator A veri setini oluşturan araştırmacıdır; Annotator B bağımsız bir bilişim öğretmenidir; 48 uyuşmazlık üçüncü kişi olmadan A ve B'nin tartışmasıyla çözülmüştür. Ayrıntı: `provenance/ANNOTATOR_ROLES_ERRATUM_TR_v1.0.1.md`.
+
 Uyuşmazlıklarda A etiketinin seçilmesi önceden tanımlı bir kural olarak uygulanmadı. Adjudication sonucunda 48 uyuşmazlığın tamamında A kararı benimsendi. Bu nedenle final gold label vektörü A'nın label vektörüyle aynıdır; bu durum raporlarda açıkça belirtilmiştir.
 
 Gold etiketler verifier sonucuna göre değiştirilemez.
