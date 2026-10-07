@@ -1,0 +1,195 @@
+{
+  "method": {
+    "folds": 10,
+    "permutations": 200,
+    "seed": 42,
+    "classifier": "TF-IDF(sublinear) + LinearSVC(C=1, balanced)",
+    "null": "labels permuted within context groups"
+  },
+  "splits": {
+    "train": {
+      "n": 4800,
+      "groups": 1200,
+      "views": {
+        "claim_word": {
+          "macro_f1": 0.5159,
+          "null_mean": 0.2497,
+          "null_p95": 0.261,
+          "p_empirical": 0.005
+        },
+        "claim_char": {
+          "macro_f1": 0.5737,
+          "null_mean": 0.2491,
+          "null_p95": 0.2604,
+          "p_empirical": 0.005
+        },
+        "question_word": {
+          "macro_f1": 0.3815
+        },
+        "question_claim_word": {
+          "macro_f1": 0.504
+        }
+      },
+      "label_stats": {
+        "supported": {
+          "n": 1200,
+          "mean_claim_words": 13.05,
+          "mean_context_overlap": 0.665
+        },
+        "partially_supported": {
+          "n": 1200,
+          "mean_claim_words": 15.55,
+          "mean_context_overlap": 0.517
+        },
+        "contradicted": {
+          "n": 1200,
+          "mean_claim_words": 10.88,
+          "mean_context_overlap": 0.523
+        },
+        "unverifiable": {
+          "n": 1200,
+          "mean_claim_words": 10.38,
+          "mean_context_overlap": 0.33
+        }
+      }
+    },
+    "dev960": {
+      "n": 960,
+      "groups": 240,
+      "views": {
+        "claim_word": {
+          "macro_f1": 0.5132,
+          "null_mean": 0.2508,
+          "null_p95": 0.2756,
+          "p_empirical": 0.005
+        },
+        "claim_char": {
+          "macro_f1": 0.5307,
+          "null_mean": 0.2482,
+          "null_p95": 0.2732,
+          "p_empirical": 0.005
+        },
+        "question_word": {
+          "macro_f1": 0.3047
+        },
+        "question_claim_word": {
+          "macro_f1": 0.4691
+        }
+      },
+      "label_stats": {
+        "supported": {
+          "n": 240,
+          "mean_claim_words": 16.61,
+          "mean_context_overlap": 0.766
+        },
+        "partially_supported": {
+          "n": 240,
+          "mean_claim_words": 15.69,
+          "mean_context_overlap": 0.527
+        },
+        "contradicted": {
+          "n": 242,
+          "mean_claim_words": 13.16,
+          "mean_context_overlap": 0.518
+        },
+        "unverifiable": {
+          "n": 238,
+          "mean_claim_words": 12.77,
+          "mean_context_overlap": 0.264
+        }
+      }
+    },
+    "dev600": {
+      "n": 600,
+      "groups": 150,
+      "views": {
+        "claim_word": {
+          "macro_f1": 0.5471,
+          "null_mean": 0.2495,
+          "null_p95": 0.2855,
+          "p_empirical": 0.005
+        },
+        "claim_char": {
+          "macro_f1": 0.6171,
+          "null_mean": 0.2531,
+          "null_p95": 0.2855,
+          "p_empirical": 0.005
+        },
+        "question_word": {
+          "macro_f1": 0.1796
+        },
+        "question_claim_word": {
+          "macro_f1": 0.4903
+        }
+      },
+      "label_stats": {
+        "supported": {
+          "n": 150,
+          "mean_claim_words": 18.5,
+          "mean_context_overlap": 0.685
+        },
+        "partially_supported": {
+          "n": 152,
+          "mean_claim_words": 16.74,
+          "mean_context_overlap": 0.552
+        },
+        "contradicted": {
+          "n": 151,
+          "mean_claim_words": 15.54,
+          "mean_context_overlap": 0.453
+        },
+        "unverifiable": {
+          "n": 147,
+          "mean_claim_words": 14.19,
+          "mean_context_overlap": 0.272
+        }
+      }
+    },
+    "gold480": {
+      "n": 480,
+      "groups": 120,
+      "views": {
+        "claim_word": {
+          "macro_f1": 0.4798,
+          "null_mean": 0.2483,
+          "null_p95": 0.285,
+          "p_empirical": 0.005
+        },
+        "claim_char": {
+          "macro_f1": 0.4828,
+          "null_mean": 0.2511,
+          "null_p95": 0.2827,
+          "p_empirical": 0.005
+        },
+        "question_word": {
+          "macro_f1": 0.1837
+        },
+        "question_claim_word": {
+          "macro_f1": 0.4424
+        }
+      },
+      "label_stats": {
+        "supported": {
+          "n": 120,
+          "mean_claim_words": 18.68,
+          "mean_context_overlap": 0.754
+        },
+        "partially_supported": {
+          "n": 119,
+          "mean_claim_words": 17.86,
+          "mean_context_overlap": 0.615
+        },
+        "contradicted": {
+          "n": 121,
+          "mean_claim_words": 15.27,
+          "mean_context_overlap": 0.541
+        },
+        "unverifiable": {
+          "n": 120,
+          "mean_claim_words": 17.38,
+          "mean_context_overlap": 0.331
+        }
+      }
+    }
+  }
+}
