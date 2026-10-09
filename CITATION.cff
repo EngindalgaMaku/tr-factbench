@@ -5,6 +5,8 @@ title: "TR-FactBench: A Multi-Domain Benchmark for Source-Grounded Factuality Ve
 authors:
   - family-names: "Dalga"
     given-names: "Engin"
+  - family-names: "Ballı"
+    given-names: "Serkan"
 repository-code: "https://github.com/EngindalgaMaku/tr-factbench"
 url: "https://github.com/EngindalgaMaku/tr-factbench"
 license: MIT
