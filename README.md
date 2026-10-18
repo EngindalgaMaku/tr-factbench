@@ -2,7 +2,7 @@
 
 **A Multi-Domain Benchmark for Source-Grounded Factuality Verification in Turkish**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456360.svg)](https://doi.org/10.5281/zenodo.23456360)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456359.svg)](https://doi.org/10.5281/zenodo.23456359)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/badge/release-v1.0.1-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
