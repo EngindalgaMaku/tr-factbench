@@ -2,6 +2,7 @@
 
 **Türkçe Kaynak-Temelli Olgusal Doğrulama İçin Çok Alanlı Karşılaştırma Veri Seti**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456360.svg)](https://doi.org/10.5281/zenodo.23456360)
 [![Lisans: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
 [![Sürüm](https://img.shields.io/badge/sürüm-v1.0.0-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
