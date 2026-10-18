@@ -13,9 +13,7 @@ authors:
     affiliation: "Burdur Mehmet Akif Ersoy University"
 repository-code: "https://github.com/EngindalgaMaku/tr-factbench"
 url: "https://github.com/EngindalgaMaku/tr-factbench"
-license:
-  - MIT
-  - CC-BY-4.0
+license: CC-BY-4.0
 version: "1.0.0"
 date-released: "2026-10-19"
 abstract: >
@@ -35,9 +33,3 @@ keywords:
   - natural language inference
   - LoRA
   - ELECTRA
-
-note: >
-  Version 1.0.0 is the frozen, citable release. It includes first-pass
-  human-reviewed development files, the double-annotated Gold-480 held-out set,
-  and the frozen held-out predictions and analyses. See DATA_CARD.md for
-  annotation details.
