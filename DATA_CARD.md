@@ -4,7 +4,7 @@
 
 TR-FactBench is a Turkish source-grounded factuality-verification dataset covering finance, legal, and medical domains. Each example contains a context passage, a question, a claim, and one of four labels: `supported`, `partially_supported`, `contradicted`, or `unverifiable`.
 
-This is a **v0.1.0 research preview**, frozen as-is. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second development-set pass is a known limitation of this preview, **not** remaining work required to close the resource.
+This is **release v1.0.0**, frozen as-is. It succeeds the v0.1.0 research preview and adds the Gold-480 held-out evaluation records. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second development-set pass is a known limitation of this release, **not** remaining work required to close the resource.
 
 ## Primary data
 
@@ -92,7 +92,7 @@ Item-level URL absence in the source-adapted splits is not treated as an annotat
 3. **LLM-assisted drafting:** Language models were used as construction aids rather than independent gold annotators.
 4. **Automated validation:** Scripts checked JSONL structure, label and domain balance, context-group completeness, identifier uniqueness, split overlap, and deterministic regeneration of derived views.
 5. **Candidate-label refinement:** For Dev600, a human reviewer compared the current candidate label with a normalized LLM analysis to identify apparent construction errors quickly. This stage was not used as human-human IAA evidence.
-6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen preview, not remaining work. Formal human-human Cohen's κ on the development sets is therefore not reported.
+6. **Independent blind validation:** Annotator 1 completed all 600 Dev600 examples and all 960 DEV960 examples without seeing candidate labels or LLM suggestions. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen release, not remaining work. Formal human-human Cohen's κ on the development sets is therefore not reported.
 
 ## LLM annotation artifacts
 
@@ -129,7 +129,7 @@ The large performance reductions when context is removed or replaced provide evi
 
 ## Known limitations
 
-1. Both evaluation sets have one complete blind-human review pass. A second pass and adjudication are **not** part of this frozen preview (Dev600 A2 is 80/600 leftover; DEV960 A2 was not started).
+1. Both evaluation sets have one complete blind-human review pass. A second pass and adjudication are **not** part of this frozen release (Dev600 A2 is 80/600 leftover; DEV960 A2 was not started).
 2. Training labels remain construction-time (silver). A 600-example prefix of `train_4800` is frozen as a single-annotator noise estimate (45/600 mismatch). Full Gate 1 4,800 and the stratified two-person `train_audit_600` pack are cancelled / out of scope.
 3. Train and general-development contexts are source-adapted synthetic examples; item-level URLs were not retained for every context.
 4. The dataset is Turkish-only and covers three domains.

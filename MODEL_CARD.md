@@ -2,7 +2,7 @@
 
 ## Status
 
-**Model configuration selected; this preview resource is frozen as-is.** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter is published separately. A second development-set annotation pass is a known limitation of this preview, not remaining work.
+**Model configuration selected; this resource is frozen as-is (release v1.0.0).** The selected checkpoint candidate is `H1_DROP10_S45`. Configuration selection is based on the seed-fixed five-run H1/H2 comparison rather than the strongest individual run. The H1 reproducibility sentinel passed the predeclared 0.010 absolute Macro-F1 tolerance. Model weights are not stored in Git; the LoRA adapter is published separately. A second development-set annotation pass is a known limitation of this release, not remaining work.
 
 ## Model
 
@@ -130,7 +130,7 @@ The selected checkpoint is compared with four API-based LLMs under zero-shot and
 
 ## Limitations
 
-- Both evaluation sets have one completed blind-human pass. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen preview, not remaining work. Training labels remain construction-time (silver). A frozen 600-example prefix of train is a single-annotator noise estimate (45/600 mismatch), not gold and not IAA. Full Gate 1 4,800 and `train_audit_600` are cancelled.
+- Both evaluation sets have one completed blind-human pass. Dev600 annotator 2 is 80/600 leftover; DEV960 annotator 2 was not started. That second pass is a known limitation of this frozen release, not remaining work. Training labels remain construction-time (silver). A frozen 600-example prefix of train is a single-annotator noise estimate (45/600 mismatch), not gold and not IAA. Full Gate 1 4,800 and `train_audit_600` are cancelled.
 - DEV960 and DEV600 were used during model selection and are development sets, not untouched final test sets.
 - The model is limited to Turkish and the finance, legal, and medical domains represented in the benchmark.
 - It must not be used as an autonomous medical, legal, or financial decision system.
@@ -140,7 +140,7 @@ The selected checkpoint is compared with four API-based LLMs under zero-shot and
 
 The selected LoRA adapter is published at `angeldust007/tr-factbench-electra-lora`. Clean-environment Hub load and inference were verified (`hf_release/_test_hub_load.py`).
 
-This preview resource is frozen as-is. A second blind-human pass on the development sets is not required to close it.
+This resource is frozen as-is. A second blind-human pass on the development sets is not required to close it.
 
 ## Published Hugging Face repository
 

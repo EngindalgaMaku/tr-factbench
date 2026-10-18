@@ -3,13 +3,15 @@
 **Türkçe Kaynak-Temelli Olgusal Doğrulama İçin Çok Alanlı Karşılaştırma Veri Seti**
 
 [![Lisans: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
-[![Sürüm](https://img.shields.io/badge/sürüm-v0.1.0--preview-orange.svg)](CITATION.cff)
+[![Sürüm](https://img.shields.io/badge/sürüm-v1.0.0-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Seçili checkpoint](https://img.shields.io/badge/secili_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 
 **[English documentation](README.md)**
 
-> **Araştırma ön sürümü.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş); dondurulmuş 600 örneklik train öneki gürültü kestirimidir, gold değildir.
+> **Sürüm v1.0.0.** Bu, TR-FactBench'in atıf yapılabilir sürümüdür. Dört bölümü dondurur ve Gold-480 dış değerlendirme sonuçlarını ekler: kodlayıcının ve sekiz LLM koşulunun dondurulmuş tahminleri (`results/llm_baselines/gold_v1.0/`), bağlam grubu düzeyinde eşleştirilmiş bootstrap (`scripts/46_gold_group_bootstrap.py`), Gold-480 bağlam ablasyonu (`scripts/91_gold480_context_ablation.py`), sınıf bazında, anotatör sağlamlığı ve hata örtüşmesi analizleri (`scripts/92_gold480_supplementary_analyses.py`) ve veri seti profili (`scripts/93_dataset_profile.py`). Önceki yolların geçerli kalması için `preview_v0.1/` gibi klasör adları değiştirilmemiştir.
+>
+> **Etiketleme durumu.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş); dondurulmuş 600 örneklik train öneki gürültü kestirimidir, gold değildir.
 >
 > **Seçilen model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0,10, tohum=45. DEV960=0,9014, DEV600=0,8675. Bkz. [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -116,13 +118,13 @@ Bu sürüm, doğal biçimde oluşmuş dört etiketli bir derlemden doğrudan top
 3. **LLM destekli taslak üretimi:** Aday soru ve iddiaların hazırlanmasında dil modellerinden destek alınmıştır. Dil modeli, bağımsız altın standart anotör olarak değil, veri oluşturma aracı olarak kullanılmıştır.
 4. **Otomatik doğrulama:** Betikler JSONL yapısını, etiket ve alan dengesini, bağlam gruplarının eksiksizliğini, kimliklerin benzersizliğini, bölümler arası çakışmaları ve türev görünümlerin deterministik biçimde yeniden üretilebilmesini denetlemiştir.
 5. **Seçim ve dengeleme:** Yayımlanan ana bölümler tam sınıf dengesi ve eşit alan dağılımı korunacak biçimde seçilmiştir. Otomatik seçim, insan tarafından yapılan anlamsal doğrulamanın yerine geçmez.
-6. **Aday etiket iyileştirme ve kör inceleme:** Dev600 üzerinde insan denetimli aday etiket kalite kontrolü ve birinci bağımsız kör insan geçişi tamamlanmıştır (600/600). DEV960'ın birinci bağımsız kör insan geçişi de tamamlanmıştır (960/960). Dev600 ikinci geçişi 80/600 leftover'dır; DEV960 ikinci geçişi başlatılmamıştır. Bu, dondurulmuş önizlemenin bilinen sınırlılığıdır, kalan iş değildir. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir. Tam train kör paketinin seed-42 sırasındaki ilk 150 grubu (600 örnek, tek anotör) gümüş-eğitim gürültü kestirimi olarak dondurulmuştur (yapı etiketine göre 45/600 uyuşmazlık; IAA değil, gold değil). Tam Gate 1 4.800 ve tabakalı iki-kişilik `train_audit_600` paketi iptal / kapsam dışıdır.
+6. **Aday etiket iyileştirme ve kör inceleme:** Dev600 üzerinde insan denetimli aday etiket kalite kontrolü ve birinci bağımsız kör insan geçişi tamamlanmıştır (600/600). DEV960'ın birinci bağımsız kör insan geçişi de tamamlanmıştır (960/960). Dev600 ikinci geçişi 80/600 leftover'dır; DEV960 ikinci geçişi başlatılmamıştır. Bu, dondurulmuş sürümün bilinen sınırlılığıdır, kalan iş değildir. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir. Tam train kör paketinin seed-42 sırasındaki ilk 150 grubu (600 örnek, tek anotör) gümüş-eğitim gürültü kestirimi olarak dondurulmuştur (yapı etiketine göre 45/600 uyuşmazlık; IAA değil, gold değil). Tam Gate 1 4.800 ve tabakalı iki-kişilik `train_audit_600` paketi iptal / kapsam dışıdır.
 
 Oluşturma betikleri, manifestler, sağlama toplamları ve denetim çıktıları depoda tutulur. Böylece daha sonraki etiket düzeltmeleri, önceki sürüm sessizce değiştirilmeden izlenebilir.
 
 ## Anotasyon ve kaynak durumu
 
-TR-FactBench v0.1.0-preview, her iki geliştirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi ve dondurulmuş bir çift-annotator gold kümesi içerir. Eğitim etiketleri hâlâ üretim aşamasındaki aday etiketlerdir (gümüş):
+TR-FactBench v1.0.0, her iki geliştirme kümesi için tamamlanmış bağımsız kör insan inceleme geçişi ve dondurulmuş bir çift-annotator gold kümesi içerir. Eğitim etiketleri hâlâ üretim aşamasındaki aday etiketlerdir (gümüş):
 
 - DEV960: 960/960 örnek incelendi (tek-annotator preview)
 - Dev600: 600/600 örnek incelendi (tek-annotator preview)
@@ -414,7 +416,7 @@ Seçilen LoRA adaptörü Hugging Face üzerinde kamuya açık olarak yayımlanm�
 
 **[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45). DEV960=0,9014, DEV600-STR=0,8675. H1 sentinel 0,010 metrik toleransı içinde geçmiştir. Hub üzerinden yükleme ve tahmin doğrulandı — bkz. `hf_release/_test_hub_load.py`. Bu önizleme kaynağı bu haliyle dondurulmuştur; ikinci geliştirme geçişi kaynağı kapatmak için gerekli değildir.
+**Seçili checkpoint yapılandırması:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0,10, seed=45). DEV960=0,9014, DEV600-STR=0,8675. H1 sentinel 0,010 metrik toleransı içinde geçmiştir. Hub üzerinden yükleme ve tahmin doğrulandı — bkz. `hf_release/_test_hub_load.py`. Bu kaynak bu haliyle dondurulmuştur; ikinci geliştirme geçişi kaynağı kapatmak için gerekli değildir.
 
 ```python
 from peft import PeftModel
@@ -433,7 +435,7 @@ Tam yükleme ve doğrulama betiği için [`hf_release/inference_example.py`](hf_
 
 ## Yayın yol haritası
 
-Bu önizleme kaynağı bu haliyle dondurulmuştur. Eğitim etiketleri gümüştür; önek-150 (%12,5) gümüş gürültü kestirimidir. DEV960/Dev600 ikinci kör geçişi kaynağı kapatmak için **gerekli değildir**.
+Bu kaynak bu haliyle dondurulmuştur. Eğitim etiketleri gümüştür; önek-150 (%12,5) gümüş gürültü kestirimidir. DEV960/Dev600 ikinci kör geçişi kaynağı kapatmak için **gerekli değildir**.
 
 Tamamlanan:
 

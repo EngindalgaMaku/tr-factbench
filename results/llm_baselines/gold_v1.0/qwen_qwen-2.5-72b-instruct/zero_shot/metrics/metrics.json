@@ -1,0 +1,84 @@
+{
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt_mode": "zero_shot",
+  "dataset": "gold_v1.0",
+  "n_total": 480,
+  "n_valid": 480,
+  "n_missing_failed": 0,
+  "coverage_rate": 1.0,
+  "accuracy": 0.825,
+  "macro_f1": 0.8160316091954023,
+  "weighted_f1": 0.8160770114942528,
+  "per_class": {
+    "supported": {
+      "f1": 0.9916666666666667,
+      "precision": 0.9916666666666667,
+      "recall": 0.9916666666666667,
+      "support": 120
+    },
+    "partially_supported": {
+      "f1": 0.792,
+      "precision": 0.7557251908396947,
+      "recall": 0.8319327731092437,
+      "support": 119
+    },
+    "contradicted": {
+      "f1": 0.8137931034482758,
+      "precision": 0.6982248520710059,
+      "recall": 0.9752066115702479,
+      "support": 121
+    },
+    "unverifiable": {
+      "f1": 0.6666666666666666,
+      "precision": 1.0,
+      "recall": 0.5,
+      "support": 120
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "supported",
+      "partially_supported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "matrix": [
+      [
+        119,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        99,
+        19,
+        0
+      ],
+      [
+        0,
+        3,
+        118,
+        0
+      ],
+      [
+        0,
+        28,
+        32,
+        60
+      ]
+    ]
+  },
+  "label_dist_gold": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "label_dist_pred": {
+    "supported": 120,
+    "partially_supported": 131,
+    "contradicted": 169,
+    "unverifiable": 60
+  }
+}

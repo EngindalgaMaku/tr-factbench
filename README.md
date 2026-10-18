@@ -3,14 +3,16 @@
 **A Multi-Domain Benchmark for Source-Grounded Factuality Verification in Turkish**
 
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v0.1.0--preview-orange.svg)](CITATION.cff)
+[![Release](https://img.shields.io/badge/release-v1.0.0-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Selected checkpoint](https://img.shields.io/badge/selected_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 [![Model on HF](https://img.shields.io/badge/🤗%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
-> **Research preview.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`. Training labels remain construction-time (silver); a frozen 600-example prefix of train is a noise estimate, not gold.
+> **Release v1.0.0.** This is the citable release of TR-FactBench. It freezes the four splits and adds the Gold-480 held-out results: the frozen predictions of the encoder and of eight prompted LLM conditions (`results/llm_baselines/gold_v1.0/`), the paired context-group bootstrap (`scripts/46_gold_group_bootstrap.py`), the Gold-480 context ablation (`scripts/91_gold480_context_ablation.py`), the per-class, annotator-robustness and error-overlap analyses (`scripts/92_gold480_supplementary_analyses.py`), and the dataset profile (`scripts/93_dataset_profile.py`). Directory names such as `preview_v0.1/` are kept unchanged so that earlier paths remain valid.
+>
+> **Annotation status.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`. Training labels remain construction-time (silver); a frozen 600-example prefix of train is a noise estimate, not gold.
 >
 > **Selected model:** `H1_DROP10_S45` — ELECTRA-TR, LoRA r=16, dropout=0.10, seed=45. DEV960=0.9014, DEV600=0.8675. See [`final_config.lock.yaml`](final_config.lock.yaml).
 
@@ -133,13 +135,13 @@ The current release was prepared as a structured research dataset rather than co
 3. **LLM-assisted drafting:** Candidate questions and claims were produced with language-model assistance. The language model was used as a construction aid, not as an independent gold annotator.
 4. **Automated validation:** Scripts checked JSONL structure, label and domain balance, context-group completeness, identifier uniqueness, split overlap, and deterministic regeneration of derived views.
 5. **Selection and balancing:** The released primary splits were selected to maintain exact class balance and equal domain coverage. Automatic selection does not replace human semantic verification.
-6. **Candidate-label refinement and blind review:** Dev600 completed the LLM-assisted human candidate-label quality-control pass and the first independent blind-human pass (600/600). DEV960 also completed its first independent blind-human pass (960/960). The second Dev600 pass is 80/600 leftover; the second DEV960 pass was not started. That second pass is a known limitation of this frozen preview, not remaining work. Training labels remain construction-time candidates. A predeclared 600-example prefix of the full train blind pack (150 groups, seed 42, one annotator) is frozen as a silver-train noise estimate (45/600 mismatch vs construction; not IAA, not gold). Full Gate 1 4,800 and the stratified two-person `train_audit_600` pack are cancelled / out of scope.
+6. **Candidate-label refinement and blind review:** Dev600 completed the LLM-assisted human candidate-label quality-control pass and the first independent blind-human pass (600/600). DEV960 also completed its first independent blind-human pass (960/960). The second Dev600 pass is 80/600 leftover; the second DEV960 pass was not started. That second pass is a known limitation of this frozen release, not remaining work. Training labels remain construction-time candidates. A predeclared 600-example prefix of the full train blind pack (150 groups, seed 42, one annotator) is frozen as a silver-train noise estimate (45/600 mismatch vs construction; not IAA, not gold). Full Gate 1 4,800 and the stratified two-person `train_audit_600` pack are cancelled / out of scope.
 
 The construction scripts, manifests, checksums, and audit outputs are included so that later corrections can be tracked without silently replacing the original release.
 
 ## Annotation and provenance status
 
-TR-FactBench v0.1.0-preview includes one completed independent blind annotation pass for both development sets, plus a frozen dual-annotator gold set. Training labels are still construction-time (silver):
+TR-FactBench v1.0.0 includes one completed independent blind annotation pass for both development sets, plus a frozen dual-annotator gold set. Training labels are still construction-time (silver):
 
 - DEV960: 960/960 examples reviewed (single-annotator preview)
 - Dev600: 600/600 examples reviewed (single-annotator preview)
@@ -438,7 +440,7 @@ The selected LoRA adapter is publicly available on Hugging Face:
 
 **[🤗 angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora)**
 
-**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). Hub load and inference verified — see `hf_release/_test_hub_load.py`. This preview resource is frozen as-is; a second development-set pass is not required to close it.
+**Selected checkpoint configuration:** `H1_DROP10_S45` (ELECTRA-TR, LoRA r=16 all-linear, dropout=0.10, seed=45). DEV960=0.9014, DEV600-STR=0.8675. Reproducibility sentinel `H1_SENTINEL_DROP10_S45_RERUN` PASS (Δ < 0.010). Hub load and inference verified — see `hf_release/_test_hub_load.py`. This resource is frozen as-is; a second development-set pass is not required to close it.
 
 ```python
 from peft import PeftModel
@@ -457,7 +459,7 @@ See [`hf_release/inference_example.py`](hf_release/inference_example.py) for a c
 
 ## Release roadmap
 
-This preview resource is frozen as-is. Training uses construction-time labels plus the 600-example prefix-150 silver audit (12.5% of train). A second blind-human pass on DEV960/Dev600 is **not** required to close the resource.
+This resource is frozen as-is. Training uses construction-time labels plus the 600-example prefix-150 silver audit (12.5% of train). A second blind-human pass on DEV960/Dev600 is **not** required to close the resource.
 
 Completed:
 

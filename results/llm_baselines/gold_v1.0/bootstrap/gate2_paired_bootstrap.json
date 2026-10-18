@@ -1,0 +1,341 @@
+{
+  "generated_at_utc": "2026-08-30T14:15:44+00:00",
+  "dataset": "gold_v1.0",
+  "gold_file": "data/evaluation/gold_v1.0/gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl",
+  "gold_sha256": "04bcc52ad73ba98c6648ae15d6fabf695eb11bca645a375f7af9cef378df910c",
+  "n_examples": 480,
+  "n_groups": 120,
+  "group_size": 4,
+  "grouping": "identical context text (gold_v1.0 has no context_id)",
+  "metric": "macro_f1",
+  "labels": [
+    "supported",
+    "partially_supported",
+    "contradicted",
+    "unverifiable"
+  ],
+  "resampling_unit": "context_group",
+  "n_bootstrap": 20000,
+  "seed": 42,
+  "ci": "percentile",
+  "alpha": 0.05,
+  "delta_definition": "system_macro_f1 - k1_macro_f1",
+  "reference_encoder": "k1_electra",
+  "systems": [
+    {
+      "key": "k1_electra",
+      "display": "K1 ELECTRA-TR LoRA (H1_DROP10_S45)",
+      "kind": "encoder",
+      "model": "H1_DROP10_S45",
+      "prompt_mode": null,
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.8300912459845599,
+      "macro_f1_ci95": [
+        0.7983050816597601,
+        0.860351162963156
+      ],
+      "bootstrap_mean": 0.8298918289341007,
+      "source": "data/evaluation/gold_v1.0/verifier_hold/PREDICTIONS_v1.0.jsonl",
+      "source_sha256": "15322002241e34ab68fae83d724471b2a4a9730d85707b98efd7295671c8ccab"
+    },
+    {
+      "key": "gpt_zs",
+      "display": "GPT-4.1-mini zero-shot",
+      "kind": "llm",
+      "model": "openai/gpt-4.1-mini",
+      "prompt_mode": "zero_shot",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.7620520762148195,
+      "macro_f1_ci95": [
+        0.7301228358122963,
+        0.7938679261923275
+      ],
+      "bootstrap_mean": 0.7618071547444388,
+      "source": "results/llm_baselines/gold_v1.0/openai_gpt-4.1-mini/zero_shot/predictions.jsonl",
+      "source_sha256": "1abf7e57ec8862cc107306be381cd250950a5fba736255059ef1ca0724f55d53"
+    },
+    {
+      "key": "gpt_8s",
+      "display": "GPT-4.1-mini 8-shot",
+      "kind": "llm",
+      "model": "openai/gpt-4.1-mini",
+      "prompt_mode": "few_shot_8",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.9097559121937365,
+      "macro_f1_ci95": [
+        0.882154472036201,
+        0.9351989389920425
+      ],
+      "bootstrap_mean": 0.9097094348375647,
+      "source": "results/llm_baselines/gold_v1.0/openai_gpt-4.1-mini/few_shot_8/predictions.jsonl",
+      "source_sha256": "b4de7708bdff757047902b50746e96f2991993d37c8d0cf24e0975c6fa493c2a"
+    },
+    {
+      "key": "gemma_zs",
+      "display": "Gemma-4-26B zero-shot",
+      "kind": "llm",
+      "model": "google/gemma-4-26b-a4b-it",
+      "prompt_mode": "zero_shot",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.9022228295375917,
+      "macro_f1_ci95": [
+        0.8755178248197653,
+        0.926910795293774
+      ],
+      "bootstrap_mean": 0.9022737932209981,
+      "source": "results/llm_baselines/gold_v1.0/google_gemma-4-26b-a4b-it/zero_shot/predictions.jsonl",
+      "source_sha256": "8d6058d435f4929a3840dabf1f6f24537d8c86334b1412d8d596026c6efc3729"
+    },
+    {
+      "key": "gemma_8s",
+      "display": "Gemma-4-26B 8-shot",
+      "kind": "llm",
+      "model": "google/gemma-4-26b-a4b-it",
+      "prompt_mode": "few_shot_8",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.8990639695239752,
+      "macro_f1_ci95": [
+        0.8738352918712169,
+        0.9226378522706672
+      ],
+      "bootstrap_mean": 0.8989361320780012,
+      "source": "results/llm_baselines/gold_v1.0/google_gemma-4-26b-a4b-it/few_shot_8/predictions.jsonl",
+      "source_sha256": "9823aef0eb061ca9d27bea30981766273d97ff64207ffef318e0e8ee598fe352"
+    },
+    {
+      "key": "llama_zs",
+      "display": "Llama-3.3-70B zero-shot",
+      "kind": "llm",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "prompt_mode": "zero_shot",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.7016424751718868,
+      "macro_f1_ci95": [
+        0.6677117625138603,
+        0.7347515936422142
+      ],
+      "bootstrap_mean": 0.7012520113869469,
+      "source": "results/llm_baselines/gold_v1.0/meta-llama_llama-3.3-70b-instruct/zero_shot/predictions.jsonl",
+      "source_sha256": "c914c8d3e63fa6ffc45e31ba4692ed6863a3f2960361c8383d861ddef9bbc834"
+    },
+    {
+      "key": "llama_8s",
+      "display": "Llama-3.3-70B 8-shot",
+      "kind": "llm",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "prompt_mode": "few_shot_8",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.9085061897390574,
+      "macro_f1_ci95": [
+        0.8831201236736612,
+        0.9316622286437648
+      ],
+      "bootstrap_mean": 0.9084498907331267,
+      "source": "results/llm_baselines/gold_v1.0/meta-llama_llama-3.3-70b-instruct/few_shot_8/predictions.jsonl",
+      "source_sha256": "b56cb9f84fa3646b5ac2298001d799220d598c2d3a50ada3450e4b8e4201b86c"
+    },
+    {
+      "key": "qwen_zs",
+      "display": "Qwen-2.5-72B zero-shot",
+      "kind": "llm",
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "prompt_mode": "zero_shot",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.8160316091954023,
+      "macro_f1_ci95": [
+        0.783352005175011,
+        0.847501800886511
+      ],
+      "bootstrap_mean": 0.8158949203946256,
+      "source": "results/llm_baselines/gold_v1.0/qwen_qwen-2.5-72b-instruct/zero_shot/predictions.jsonl",
+      "source_sha256": "6a2e1933be4f5e347d9697489bb0749ce0a5f04b4f6b0c06c3ea5fd9ff3ae53c"
+    },
+    {
+      "key": "qwen_8s",
+      "display": "Qwen-2.5-72B 8-shot",
+      "kind": "llm",
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "prompt_mode": "few_shot_8",
+      "n_valid": 480,
+      "coverage": 1.0,
+      "macro_f1": 0.865492725203189,
+      "macro_f1_ci95": [
+        0.8342822754786431,
+        0.8946444211225627
+      ],
+      "bootstrap_mean": 0.8652743266284053,
+      "source": "results/llm_baselines/gold_v1.0/qwen_qwen-2.5-72b-instruct/few_shot_8/predictions.jsonl",
+      "source_sha256": "ac9eefe2ca78ce70f7c37e97f8f01773406d5fbdd12ea9bd1754e3ef6a40ebac"
+    }
+  ],
+  "paired_vs_k1": [
+    {
+      "system": "gpt_zs",
+      "display": "GPT-4.1-mini zero-shot",
+      "delta_macro_f1": -0.06803916976974034,
+      "delta_ci95": [
+        -0.11347215379655598,
+        -0.022715295265417473
+      ],
+      "bootstrap_mean_delta": -0.068084674189662,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": false,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": true
+    },
+    {
+      "system": "gpt_8s",
+      "display": "GPT-4.1-mini 8-shot",
+      "delta_macro_f1": 0.07966466620917667,
+      "delta_ci95": [
+        0.0415508037055518,
+        0.11825829483273792
+      ],
+      "bootstrap_mean_delta": 0.07981760590346393,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": true,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    },
+    {
+      "system": "gemma_zs",
+      "display": "Gemma-4-26B zero-shot",
+      "delta_macro_f1": 0.07213158355303184,
+      "delta_ci95": [
+        0.03545637009224008,
+        0.10966964018805679
+      ],
+      "bootstrap_mean_delta": 0.0723819642868971,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": true,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    },
+    {
+      "system": "gemma_8s",
+      "display": "Gemma-4-26B 8-shot",
+      "delta_macro_f1": 0.0689727235394153,
+      "delta_ci95": [
+        0.036545397544692916,
+        0.10268053983811141
+      ],
+      "bootstrap_mean_delta": 0.06904430314390031,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": true,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    },
+    {
+      "system": "llama_zs",
+      "display": "Llama-3.3-70B zero-shot",
+      "delta_macro_f1": -0.12844877081267303,
+      "delta_ci95": [
+        -0.16999990945760518,
+        -0.08726591022366918
+      ],
+      "bootstrap_mean_delta": -0.12863981754715392,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": false,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": true
+    },
+    {
+      "system": "llama_8s",
+      "display": "Llama-3.3-70B 8-shot",
+      "delta_macro_f1": 0.07841494375449753,
+      "delta_ci95": [
+        0.043471475694230835,
+        0.11360613774226526
+      ],
+      "bootstrap_mean_delta": 0.07855806179902586,
+      "ci_excludes_zero": true,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": true,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    },
+    {
+      "system": "qwen_zs",
+      "display": "Qwen-2.5-72B zero-shot",
+      "delta_macro_f1": -0.014059636789157559,
+      "delta_ci95": [
+        -0.05500321109228454,
+        0.027757156097025087
+      ],
+      "bootstrap_mean_delta": -0.013996908539475064,
+      "ci_excludes_zero": false,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": false,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    },
+    {
+      "system": "qwen_8s",
+      "display": "Qwen-2.5-72B 8-shot",
+      "delta_macro_f1": 0.03540147921862913,
+      "delta_ci95": [
+        -0.004083303061527884,
+        0.07509021741723844
+      ],
+      "bootstrap_mean_delta": 0.03538249769430446,
+      "ci_excludes_zero": false,
+      "better_than_k1_if_ci_excludes_zero_and_delta_positive": false,
+      "worse_than_k1_if_ci_excludes_zero_and_delta_negative": false
+    }
+  ],
+  "paired_fewshot_minus_zeroshot": [
+    {
+      "zero_shot": "gpt_zs",
+      "few_shot_8": "gpt_8s",
+      "display": "GPT-4.1-mini 8-shot − GPT-4.1-mini zero-shot",
+      "delta_macro_f1": 0.147703835978917,
+      "delta_ci95": [
+        0.11350684376550405,
+        0.18230024660425903
+      ],
+      "bootstrap_mean_delta": 0.14790228009312592,
+      "ci_excludes_zero": true
+    },
+    {
+      "zero_shot": "gemma_zs",
+      "few_shot_8": "gemma_8s",
+      "display": "Gemma-4-26B 8-shot − Gemma-4-26B zero-shot",
+      "delta_macro_f1": -0.003158860013616538,
+      "delta_ci95": [
+        -0.03131485518622429,
+        0.024807324758319094
+      ],
+      "bootstrap_mean_delta": -0.003337661142996777,
+      "ci_excludes_zero": false
+    },
+    {
+      "zero_shot": "llama_zs",
+      "few_shot_8": "llama_8s",
+      "display": "Llama-3.3-70B 8-shot − Llama-3.3-70B zero-shot",
+      "delta_macro_f1": 0.20686371456717056,
+      "delta_ci95": [
+        0.1776223754930121,
+        0.2369622329499284
+      ],
+      "bootstrap_mean_delta": 0.2071978793461798,
+      "ci_excludes_zero": true
+    },
+    {
+      "zero_shot": "qwen_zs",
+      "few_shot_8": "qwen_8s",
+      "display": "Qwen-2.5-72B 8-shot − Qwen-2.5-72B zero-shot",
+      "delta_macro_f1": 0.04946111600778669,
+      "delta_ci95": [
+        0.01589226857739521,
+        0.0823958244667903
+      ],
+      "bootstrap_mean_delta": 0.049379406233779524,
+      "ci_excludes_zero": true
+    }
+  ],
+  "notes": [
+    "Four sibling claims sharing a context are always resampled together.",
+    "Invalid/missing LLM outputs are treated as fatal; all eight Gate 2 conditions have 480/480 coverage.",
+    "K1 gold CI in v23 used the same grouping and 20,000 replicates; this run freezes seed=42.",
+    "A CI that includes 0 is compatible with no paired Macro-F1 difference at 95%."
+  ]
+}

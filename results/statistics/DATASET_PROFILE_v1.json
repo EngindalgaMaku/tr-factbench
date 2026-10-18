@@ -1,0 +1,54 @@
+{
+  "train": {
+    "n_examples": 4800,
+    "n_contexts": 1200,
+    "mean_context_words": 102.3033,
+    "mean_question_words": 9.8246,
+    "mean_claim_words": 12.4663,
+    "claim_context_overlap": {
+      "supported": 0.66526,
+      "partially_supported": 0.517347,
+      "contradicted": 0.523268,
+      "unverifiable": 0.330021
+    }
+  },
+  "dev_general_reviewed": {
+    "n_examples": 960,
+    "n_contexts": 240,
+    "mean_context_words": 132.9667,
+    "mean_question_words": 10.7594,
+    "mean_claim_words": 14.5573,
+    "claim_context_overlap": {
+      "supported": 0.766055,
+      "partially_supported": 0.527357,
+      "contradicted": 0.517603,
+      "unverifiable": 0.26354
+    }
+  },
+  "dev_stress_reviewed": {
+    "n_examples": 600,
+    "n_contexts": 150,
+    "mean_context_words": 113.0933,
+    "mean_question_words": 12.1333,
+    "mean_claim_words": 16.2533,
+    "claim_context_overlap": {
+      "supported": 0.684634,
+      "partially_supported": 0.552481,
+      "contradicted": 0.453283,
+      "unverifiable": 0.272289
+    }
+  },
+  "gold480": {
+    "n_examples": 480,
+    "n_contexts": 120,
+    "mean_context_words": 67.45,
+    "mean_question_words": 10.625,
+    "mean_claim_words": 17.2937,
+    "claim_context_overlap": {
+      "supported": 0.75421,
+      "partially_supported": 0.615139,
+      "contradicted": 0.54063,
+      "unverifiable": 0.331192
+    }
+  }
+}

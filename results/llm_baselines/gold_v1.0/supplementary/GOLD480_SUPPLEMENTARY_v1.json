@@ -1,0 +1,258 @@
+{
+  "per_class_f1": {
+    "encoder": {
+      "supported": 0.909091,
+      "partially_supported": 0.807843,
+      "contradicted": 0.791837,
+      "unverifiable": 0.811594
+    },
+    "gpt_0s": {
+      "supported": 0.995816,
+      "partially_supported": 0.384106,
+      "contradicted": 0.711765,
+      "unverifiable": 0.956522
+    },
+    "gpt_8s": {
+      "supported": 0.995816,
+      "partially_supported": 0.80543,
+      "contradicted": 0.876404,
+      "unverifiable": 0.961373
+    },
+    "gemma_0s": {
+      "supported": 0.978723,
+      "partially_supported": 0.871212,
+      "contradicted": 0.929688,
+      "unverifiable": 0.829268
+    },
+    "gemma_8s": {
+      "supported": 0.991667,
+      "partially_supported": 0.827839,
+      "contradicted": 0.959016,
+      "unverifiable": 0.817734
+    },
+    "llama_0s": {
+      "supported": 0.991667,
+      "partially_supported": 0.420455,
+      "contradicted": 0.677871,
+      "unverifiable": 0.716578
+    },
+    "llama_8s": {
+      "supported": 0.983193,
+      "partially_supported": 0.829268,
+      "contradicted": 0.922481,
+      "unverifiable": 0.899083
+    },
+    "qwen_0s": {
+      "supported": 0.991667,
+      "partially_supported": 0.792,
+      "contradicted": 0.813793,
+      "unverifiable": 0.666667
+    },
+    "qwen_8s": {
+      "supported": 0.991736,
+      "partially_supported": 0.756972,
+      "contradicted": 0.889734,
+      "unverifiable": 0.823529
+    }
+  },
+  "annotator_robustness": {
+    "encoder": {
+      "macro_f1_vs_gold": 0.830091,
+      "macro_f1_vs_annotator_B": 0.784101,
+      "macro_f1_on_agreed_432": 0.842493
+    },
+    "gpt_0s": {
+      "macro_f1_vs_gold": 0.762052,
+      "macro_f1_vs_annotator_B": 0.754549,
+      "macro_f1_on_agreed_432": 0.78587
+    },
+    "gpt_8s": {
+      "macro_f1_vs_gold": 0.909756,
+      "macro_f1_vs_annotator_B": 0.858667,
+      "macro_f1_on_agreed_432": 0.925435
+    },
+    "gemma_0s": {
+      "macro_f1_vs_gold": 0.902223,
+      "macro_f1_vs_annotator_B": 0.826943,
+      "macro_f1_on_agreed_432": 0.905413
+    },
+    "gemma_8s": {
+      "macro_f1_vs_gold": 0.899064,
+      "macro_f1_vs_annotator_B": 0.843322,
+      "macro_f1_on_agreed_432": 0.909162
+    },
+    "llama_0s": {
+      "macro_f1_vs_gold": 0.701642,
+      "macro_f1_vs_annotator_B": 0.70901,
+      "macro_f1_on_agreed_432": 0.729085
+    },
+    "llama_8s": {
+      "macro_f1_vs_gold": 0.908506,
+      "macro_f1_vs_annotator_B": 0.862492,
+      "macro_f1_on_agreed_432": 0.924508
+    },
+    "qwen_0s": {
+      "macro_f1_vs_gold": 0.816032,
+      "macro_f1_vs_annotator_B": 0.783506,
+      "macro_f1_on_agreed_432": 0.832635
+    },
+    "qwen_8s": {
+      "macro_f1_vs_gold": 0.865493,
+      "macro_f1_vs_annotator_B": 0.829086,
+      "macro_f1_on_agreed_432": 0.881614
+    }
+  },
+  "error_overlap": {
+    "gpt_0s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 65,
+      "both_wrong": 16,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 4,
+        "partially_supported": 6,
+        "contradicted": 24,
+        "unverifiable": 31
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "gpt_8s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 70,
+      "both_wrong": 11,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 13,
+        "contradicted": 22,
+        "unverifiable": 30
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "gemma_0s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 62,
+      "both_wrong": 19,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 4,
+        "partially_supported": 16,
+        "contradicted": 23,
+        "unverifiable": 19
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "gemma_8s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 55,
+      "both_wrong": 26,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 14,
+        "contradicted": 22,
+        "unverifiable": 14
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "llama_0s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 40,
+      "both_wrong": 41,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 4,
+        "partially_supported": 3,
+        "contradicted": 24,
+        "unverifiable": 9
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "llama_8s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 64,
+      "both_wrong": 17,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 4,
+        "partially_supported": 14,
+        "contradicted": 22,
+        "unverifiable": 24
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "qwen_0s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 47,
+      "both_wrong": 34,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 4,
+        "partially_supported": 13,
+        "contradicted": 22,
+        "unverifiable": 8
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    },
+    "qwen_8s": {
+      "encoder_errors": 81,
+      "llm_correct_on_encoder_errors": 58,
+      "both_wrong": 23,
+      "llm_correct_on_encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 12,
+        "contradicted": 22,
+        "unverifiable": 19
+      },
+      "encoder_errors_by_gold_label": {
+        "supported": 5,
+        "partially_supported": 16,
+        "contradicted": 24,
+        "unverifiable": 36
+      }
+    }
+  },
+  "wrong_for_encoder_and_strongest": {
+    "conditions": [
+      "gpt_8s",
+      "llama_8s",
+      "gemma_0s",
+      "gemma_8s"
+    ],
+    "n": 4,
+    "ids": [
+      "tfb_ex_0183",
+      "tfb_ex_0184",
+      "tfb_ex_0224",
+      "tfb_ex_0368"
+    ]
+  }
+}

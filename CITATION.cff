@@ -5,19 +5,28 @@ title: "TR-FactBench: A Multi-Domain Benchmark for Source-Grounded Factuality Ve
 authors:
   - family-names: "Dalga"
     given-names: "Engin"
+    orcid: "https://orcid.org/0009-0002-5545-9778"
+    affiliation: "Burdur Mehmet Akif Ersoy University"
   - family-names: "Ballı"
     given-names: "Serkan"
+    orcid: "https://orcid.org/0000-0002-4825-139X"
+    affiliation: "Burdur Mehmet Akif Ersoy University"
 repository-code: "https://github.com/EngindalgaMaku/tr-factbench"
 url: "https://github.com/EngindalgaMaku/tr-factbench"
-license: MIT
-version: "0.1.0-preview"
-date-released: "2026-07-30"
+license:
+  - MIT
+  - CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-10-19"
 abstract: >
   TR-FactBench is a 4-class source-grounded factuality verification benchmark
   for Turkish. It covers three domains (finance, legal, medical) with 4,800
-  training, 960 general dev, and 600 stress-test examples. The benchmark
-  evaluates fine-tuned Turkish encoder models (including ELECTRA and ModernBERT)
-  and four zero-shot/few-shot LLM baselines.
+  training, 960 general dev, and 600 stress-test examples, and a held-out
+  set of 480 examples (120 source contexts) labeled independently by two
+  annotators and adjudicated (Cohen's kappa 0.867). The benchmark evaluates
+  fine-tuned Turkish encoder models (including ELECTRA and ModernBERT) and four
+  zero-shot/few-shot LLM baselines. Code is released under MIT; project-created
+  questions, claims, labels, and metadata under CC BY 4.0.
 
 keywords:
   - Turkish NLP
@@ -28,5 +37,7 @@ keywords:
   - ELECTRA
 
 note: >
-  Version 0.1.0-preview includes first-pass human-reviewed evaluation files.
-  See DATA_CARD.md for annotation details.
+  Version 1.0.0 is the frozen, citable release. It includes first-pass
+  human-reviewed development files, the double-annotated Gold-480 held-out set,
+  and the frozen held-out predictions and analyses. See DATA_CARD.md for
+  annotation details.

@@ -1,0 +1,84 @@
+{
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "prompt_mode": "few_shot_8",
+  "dataset": "gold_v1.0",
+  "n_total": 480,
+  "n_valid": 480,
+  "n_missing_failed": 0,
+  "coverage_rate": 1.0,
+  "accuracy": 0.9083333333333333,
+  "macro_f1": 0.9085061897390573,
+  "weighted_f1": 0.9087003820879576,
+  "per_class": {
+    "supported": {
+      "f1": 0.9831932773109243,
+      "precision": 0.9915254237288136,
+      "recall": 0.975,
+      "support": 120
+    },
+    "partially_supported": {
+      "f1": 0.8292682926829268,
+      "precision": 0.8031496062992126,
+      "recall": 0.8571428571428571,
+      "support": 119
+    },
+    "contradicted": {
+      "f1": 0.9224806201550387,
+      "precision": 0.8686131386861314,
+      "recall": 0.9834710743801653,
+      "support": 121
+    },
+    "unverifiable": {
+      "f1": 0.8990825688073395,
+      "precision": 1.0,
+      "recall": 0.8166666666666667,
+      "support": 120
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "supported",
+      "partially_supported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "matrix": [
+      [
+        117,
+        3,
+        0,
+        0
+      ],
+      [
+        1,
+        102,
+        16,
+        0
+      ],
+      [
+        0,
+        2,
+        119,
+        0
+      ],
+      [
+        0,
+        20,
+        2,
+        98
+      ]
+    ]
+  },
+  "label_dist_gold": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "label_dist_pred": {
+    "supported": 118,
+    "partially_supported": 127,
+    "contradicted": 137,
+    "unverifiable": 98
+  }
+}

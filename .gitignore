@@ -48,8 +48,24 @@ reports/history/UPDATE_NOTES_*.md
 # All venue copies live under makale/{ismsit,ismsit6,lre}.
 makale/
 
-# ─── Local Gate 2 gold-LLM leftovers (not part of the preview release) ─
-results/llm_baselines/gold_v1.0/
+# ─── Gold-480 LLM runs: publish only the eight frozen Gate 2 conditions ─
+# (GPT-4.1 mini, Gemma 4 26B A4B, Llama 3.3 70B, Qwen2.5 72B; zero-shot and 8-shot),
+# the paired bootstrap and the supplementary analyses. Exploratory leftovers stay local.
+results/llm_baselines/gold_v1.0/*
+!results/llm_baselines/gold_v1.0/openai_gpt-4.1-mini/
+!results/llm_baselines/gold_v1.0/google_gemma-4-26b-a4b-it/
+!results/llm_baselines/gold_v1.0/meta-llama_llama-3.3-70b-instruct/
+!results/llm_baselines/gold_v1.0/qwen_qwen-2.5-72b-instruct/
+!results/llm_baselines/gold_v1.0/bootstrap/
+!results/llm_baselines/gold_v1.0/supplementary/
+
+# ─── Local CI debugging helpers ──────────────────────────────
+_ci_*.json
+_ci_debug_hashes.py
+_ci_logs/
+_fetch_ci_log.py
+_lock_blob.yaml
+results/shortcut_audit/_cache.json
 
 # ─── Incomplete annotation sessions ──────────────────────────
 results/annotation/train_4800/

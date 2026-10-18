@@ -1,0 +1,84 @@
+{
+  "model": "openai/gpt-4.1-mini",
+  "prompt_mode": "few_shot_8",
+  "dataset": "gold_v1.0",
+  "n_total": 480,
+  "n_valid": 480,
+  "n_missing_failed": 0,
+  "coverage_rate": 1.0,
+  "accuracy": 0.9104166666666667,
+  "macro_f1": 0.9097559121937365,
+  "weighted_f1": 0.9099037760065045,
+  "per_class": {
+    "supported": {
+      "f1": 0.99581589958159,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "support": 120
+    },
+    "partially_supported": {
+      "f1": 0.8054298642533937,
+      "precision": 0.8725490196078431,
+      "recall": 0.7478991596638656,
+      "support": 119
+    },
+    "contradicted": {
+      "f1": 0.8764044943820225,
+      "precision": 0.8013698630136986,
+      "recall": 0.9669421487603306,
+      "support": 121
+    },
+    "unverifiable": {
+      "f1": 0.9613733905579399,
+      "precision": 0.9911504424778761,
+      "recall": 0.9333333333333333,
+      "support": 120
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "supported",
+      "partially_supported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "matrix": [
+      [
+        119,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        89,
+        29,
+        1
+      ],
+      [
+        0,
+        4,
+        117,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        112
+      ]
+    ]
+  },
+  "label_dist_gold": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "label_dist_pred": {
+    "supported": 119,
+    "partially_supported": 102,
+    "contradicted": 146,
+    "unverifiable": 113
+  }
+}

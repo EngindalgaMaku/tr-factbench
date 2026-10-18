@@ -1,0 +1,84 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "prompt_mode": "few_shot_8",
+  "dataset": "gold_v1.0",
+  "n_total": 480,
+  "n_valid": 480,
+  "n_missing_failed": 0,
+  "coverage_rate": 1.0,
+  "accuracy": 0.9,
+  "macro_f1": 0.8990639695239752,
+  "weighted_f1": 0.8993372561189831,
+  "per_class": {
+    "supported": {
+      "f1": 0.9916666666666667,
+      "precision": 0.9916666666666667,
+      "recall": 0.9916666666666667,
+      "support": 120
+    },
+    "partially_supported": {
+      "f1": 0.8278388278388278,
+      "precision": 0.7337662337662337,
+      "recall": 0.9495798319327731,
+      "support": 119
+    },
+    "contradicted": {
+      "f1": 0.9590163934426229,
+      "precision": 0.9512195121951219,
+      "recall": 0.9669421487603306,
+      "support": 121
+    },
+    "unverifiable": {
+      "f1": 0.8177339901477833,
+      "precision": 1.0,
+      "recall": 0.6916666666666667,
+      "support": 120
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "supported",
+      "partially_supported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "matrix": [
+      [
+        119,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        113,
+        5,
+        0
+      ],
+      [
+        0,
+        4,
+        117,
+        0
+      ],
+      [
+        0,
+        36,
+        1,
+        83
+      ]
+    ]
+  },
+  "label_dist_gold": {
+    "supported": 120,
+    "partially_supported": 119,
+    "contradicted": 121,
+    "unverifiable": 120
+  },
+  "label_dist_pred": {
+    "supported": 120,
+    "partially_supported": 154,
+    "contradicted": 123,
+    "unverifiable": 83
+  }
+}
