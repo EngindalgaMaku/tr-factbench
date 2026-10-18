@@ -9,6 +9,10 @@ Supplementary Gold-480 analyses of the frozen held-out predictions (no inference
 3. error overlap between the encoder and each LLM condition, and the examples that
    the encoder and the four strongest prompted conditions all get wrong
 
+4. human reference: Annotator B's blind labels scored against the adjudicated labels, with a
+   95% CI and paired differences (system minus B) on the same context-group bootstrap draws as
+   scripts/46_gold_group_bootstrap.py (120 groups, 20,000 draws, seed 42)
+
 Gold labels, annotator files and predictions are only read, never written.
 Output: results/llm_baselines/gold_v1.0/supplementary/GOLD480_SUPPLEMENTARY_v1.json
 
@@ -52,6 +56,40 @@ def per_class_f1(gold, pred):
 def macro_f1(gold, pred, ids=None):
     ref = gold if ids is None else {i: gold[i] for i in ids}
     return sum(per_class_f1(ref, pred).values()) / len(LABELS)
+
+
+def human_reference(gold, ann_b, preds):
+    import importlib.util
+    from collections import defaultdict
+    import numpy as np
+    spec = importlib.util.spec_from_file_location("boot46", ROOT / "scripts" / "46_gold_group_bootstrap.py")
+    b46 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(b46)
+
+    rows = load_jsonl(GOLD_DIR / "gold/TR-FactBench_controlled480_GOLD_v1.0.jsonl")
+    ids = [r["release_example_id"] for r in rows]
+    grouped = defaultdict(list)
+    for idx, r in enumerate(rows):
+        grouped[r["context"]].append(idx)
+    order = sorted(grouped, key=lambda c: ids[grouped[c][0]])
+    group_idx = np.array([grouped[c] for c in order], dtype=np.int64)
+    rng = np.random.default_rng(b46.SEED)
+    draws = rng.integers(0, b46.EXPECTED_GROUPS, size=(b46.N_BOOTSTRAP, b46.EXPECTED_GROUPS), dtype=np.int64)
+    ex = group_idx[draws].reshape(b46.N_BOOTSTRAP, b46.EXPECTED_EXAMPLES)
+    enc = lambda labels: np.array([b46.LABEL_TO_I[labels[i]] for i in ids], dtype=np.int64)
+    y = enc(gold)
+    systems = {"annotator_B": enc(ann_b), **{k: enc(v) for k, v in preds.items()}}
+    boot = {k: np.array([b46.macro_f1(y[e], p[e]) for e in ex]) for k, p in systems.items()}
+    point = {k: b46.macro_f1(y, p) for k, p in systems.items()}
+    out = {"macro_f1": round(point["annotator_B"], 6),
+           "macro_f1_ci95": [round(x, 6) for x in b46.percentile_ci(boot["annotator_B"])],
+           "paired_delta_system_minus_B": {}}
+    for k in preds:
+        d = boot[k] - boot["annotator_B"]
+        out["paired_delta_system_minus_B"][k] = {
+            "delta": round(point[k] - point["annotator_B"], 6),
+            "ci95": [round(x, 6) for x in b46.percentile_ci(d)]}
+    return out
 
 
 def main() -> None:
@@ -98,6 +136,10 @@ def main() -> None:
     all_wrong = sorted(i for i in enc_err if all(preds[s][i] != gold[i] for s in STRONGEST))
     result["wrong_for_encoder_and_strongest"] = {"conditions": STRONGEST, "n": len(all_wrong), "ids": all_wrong}
 
+    # Human reference: Annotator B's blind labels scored against the adjudicated labels, with the
+    # same context-group bootstrap as scripts/46 (120 groups, 20,000 draws, seed 42, same draws).
+    result["human_reference_annotator_B"] = human_reference(gold, ann_b, preds)
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for name in preds:
@@ -110,6 +152,10 @@ def main() -> None:
           "| unverifiable:", g["llm_correct_on_encoder_errors_by_gold_label"]["unverifiable"], "/",
           g["encoder_errors_by_gold_label"]["unverifiable"])
     print("wrong for encoder and strongest four:", len(all_wrong))
+    h = result["human_reference_annotator_B"]
+    print("annotator B vs adjudicated: %.3f [%.3f, %.3f]" % (h["macro_f1"], *h["macro_f1_ci95"]))
+    for k, v in h["paired_delta_system_minus_B"].items():
+        print(f"  {k:9s} minus B {v['delta']:+.3f} [{v['ci95'][0]:+.3f}, {v['ci95'][1]:+.3f}]")
 
 
 if __name__ == "__main__":

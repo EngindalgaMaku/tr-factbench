@@ -4,13 +4,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456360.svg)](https://doi.org/10.5281/zenodo.23456360)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-green.svg)](CITATION.cff)
+[![Release](https://img.shields.io/badge/release-v1.0.1-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Selected checkpoint](https://img.shields.io/badge/selected_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 [![Model on HF](https://img.shields.io/badge/🤗%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
+> **v1.0.1** adds the human-reference analysis (Annotator B scored against the adjudicated labels, with the same bootstrap; `scripts/92`), Turkish-aware lower-casing in the dataset profile (`scripts/93`), and the Turkish morphological-marker and lemma-overlap analysis (`scripts/94_turkish_phenomena.py`, outputs in `results/statistics/`). Data files are unchanged.
+>
 > **Release v1.0.0.** This is the citable release of TR-FactBench. It freezes the four splits and adds the Gold-480 held-out results: the frozen predictions of the encoder and of eight prompted LLM conditions (`results/llm_baselines/gold_v1.0/`), the paired context-group bootstrap (`scripts/46_gold_group_bootstrap.py`), the Gold-480 context ablation (`scripts/91_gold480_context_ablation.py`), the per-class, annotator-robustness and error-overlap analyses (`scripts/92_gold480_supplementary_analyses.py`), and the dataset profile (`scripts/93_dataset_profile.py`). Directory names such as `preview_v0.1/` are kept unchanged so that earlier paths remain valid.
 >
 > **Annotation status.** The first blind-human review pass is complete: DEV960 960/960 and Dev600 600/600. Use `data/evaluation/preview_v0.1/` for new evaluations. A frozen 480-example dual-annotator gold set is in `data/evaluation/gold_v1.0/`. Training labels remain construction-time (silver); a frozen 600-example prefix of train is a noise estimate, not gold.

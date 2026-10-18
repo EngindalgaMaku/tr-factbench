@@ -1,0 +1,245 @@
+{
+  "train": {
+    "supported": {
+      "neg": 0.166667,
+      "neg_new": 0.0075,
+      "able": 0.1975,
+      "able_new": 0.036667,
+      "nec": 0.026667,
+      "nec_new": 0.013333,
+      "modal_shift": 0.0125,
+      "modal_shift_count": 15,
+      "n": 1200,
+      "overlap_word": 0.666996,
+      "overlap_lemma": 0.833876
+    },
+    "partially_supported": {
+      "neg": 0.166667,
+      "neg_new": 0.0375,
+      "able": 0.285,
+      "able_new": 0.065833,
+      "nec": 0.0475,
+      "nec_new": 0.025833,
+      "modal_shift": 0.016667,
+      "modal_shift_count": 20,
+      "n": 1200,
+      "overlap_word": 0.519345,
+      "overlap_lemma": 0.698898
+    },
+    "contradicted": {
+      "neg": 0.265,
+      "neg_new": 0.103333,
+      "able": 0.060833,
+      "able_new": 0.015,
+      "nec": 0.03,
+      "nec_new": 0.016667,
+      "modal_shift": 0.019167,
+      "modal_shift_count": 23,
+      "n": 1200,
+      "overlap_word": 0.526447,
+      "overlap_lemma": 0.705993
+    },
+    "unverifiable": {
+      "neg": 0.036667,
+      "neg_new": 0.009167,
+      "able": 0.041667,
+      "able_new": 0.011667,
+      "nec": 0.039167,
+      "nec_new": 0.0275,
+      "modal_shift": 0.029167,
+      "modal_shift_count": 35,
+      "n": 1200,
+      "overlap_word": 0.328465,
+      "overlap_lemma": 0.491121
+    }
+  },
+  "dev_general_reviewed": {
+    "supported": {
+      "neg": 0.108333,
+      "neg_new": 0.0,
+      "able": 0.270833,
+      "able_new": 0.004167,
+      "nec": 0.033333,
+      "nec_new": 0.004167,
+      "modal_shift": 0.016667,
+      "modal_shift_count": 4,
+      "n": 240,
+      "overlap_word": 0.767783,
+      "overlap_lemma": 0.899244
+    },
+    "partially_supported": {
+      "neg": 0.170833,
+      "neg_new": 0.016667,
+      "able": 0.2875,
+      "able_new": 0.020833,
+      "nec": 0.1,
+      "nec_new": 0.041667,
+      "modal_shift": 0.0625,
+      "modal_shift_count": 15,
+      "n": 240,
+      "overlap_word": 0.526366,
+      "overlap_lemma": 0.704597
+    },
+    "contradicted": {
+      "neg": 0.380165,
+      "neg_new": 0.11157,
+      "able": 0.066116,
+      "able_new": 0.008264,
+      "nec": 0.066116,
+      "nec_new": 0.033058,
+      "modal_shift": 0.053719,
+      "modal_shift_count": 13,
+      "n": 242,
+      "overlap_word": 0.518303,
+      "overlap_lemma": 0.715014
+    },
+    "unverifiable": {
+      "neg": 0.046218,
+      "neg_new": 0.012605,
+      "able": 0.05042,
+      "able_new": 0.004202,
+      "nec": 0.07563,
+      "nec_new": 0.054622,
+      "modal_shift": 0.05042,
+      "modal_shift_count": 12,
+      "n": 238,
+      "overlap_word": 0.262462,
+      "overlap_lemma": 0.41234
+    }
+  },
+  "dev_stress_reviewed": {
+    "supported": {
+      "neg": 0.193333,
+      "neg_new": 0.0,
+      "able": 0.36,
+      "able_new": 0.006667,
+      "nec": 0.086667,
+      "nec_new": 0.026667,
+      "modal_shift": 0.06,
+      "modal_shift_count": 9,
+      "n": 150,
+      "overlap_word": 0.685411,
+      "overlap_lemma": 0.858659
+    },
+    "partially_supported": {
+      "neg": 0.171053,
+      "neg_new": 0.019737,
+      "able": 0.302632,
+      "able_new": 0.032895,
+      "nec": 0.072368,
+      "nec_new": 0.032895,
+      "modal_shift": 0.039474,
+      "modal_shift_count": 6,
+      "n": 152,
+      "overlap_word": 0.552829,
+      "overlap_lemma": 0.745445
+    },
+    "contradicted": {
+      "neg": 0.350993,
+      "neg_new": 0.013245,
+      "able": 0.046358,
+      "able_new": 0.006623,
+      "nec": 0.046358,
+      "nec_new": 0.013245,
+      "modal_shift": 0.033113,
+      "modal_shift_count": 5,
+      "n": 151,
+      "overlap_word": 0.455777,
+      "overlap_lemma": 0.660361
+    },
+    "unverifiable": {
+      "neg": 0.027211,
+      "neg_new": 0.0,
+      "able": 0.115646,
+      "able_new": 0.006803,
+      "nec": 0.013605,
+      "nec_new": 0.0,
+      "modal_shift": 0.013605,
+      "modal_shift_count": 2,
+      "n": 147,
+      "overlap_word": 0.272141,
+      "overlap_lemma": 0.423503
+    }
+  },
+  "gold480": {
+    "supported": {
+      "neg": 0.191667,
+      "neg_new": 0.0,
+      "able": 0.366667,
+      "able_new": 0.041667,
+      "nec": 0.075,
+      "nec_new": 0.0,
+      "modal_shift": 0.016667,
+      "modal_shift_count": 2,
+      "n": 120,
+      "overlap_word": 0.75751,
+      "overlap_lemma": 0.880311
+    },
+    "partially_supported": {
+      "neg": 0.201681,
+      "neg_new": 0.05042,
+      "able": 0.327731,
+      "able_new": 0.016807,
+      "nec": 0.151261,
+      "nec_new": 0.07563,
+      "modal_shift": 0.02521,
+      "modal_shift_count": 3,
+      "n": 119,
+      "overlap_word": 0.617653,
+      "overlap_lemma": 0.748662
+    },
+    "contradicted": {
+      "neg": 0.371901,
+      "neg_new": 0.173554,
+      "able": 0.157025,
+      "able_new": 0.049587,
+      "nec": 0.082645,
+      "nec_new": 0.049587,
+      "modal_shift": 0.016529,
+      "modal_shift_count": 2,
+      "n": 121,
+      "overlap_word": 0.546632,
+      "overlap_lemma": 0.729326
+    },
+    "unverifiable": {
+      "neg": 0.091667,
+      "neg_new": 0.016667,
+      "able": 0.075,
+      "able_new": 0.025,
+      "nec": 0.066667,
+      "nec_new": 0.058333,
+      "modal_shift": 0.033333,
+      "modal_shift_count": 4,
+      "n": 120,
+      "overlap_word": 0.333218,
+      "overlap_lemma": 0.487588
+    }
+  },
+  "gold480_error_rates": {
+    "all": {
+      "n": 480,
+      "encoder": 0.16875,
+      "gpt41mini_8shot": 0.089583
+    },
+    "none": {
+      "n": 262,
+      "encoder": 0.209924,
+      "gpt41mini_8shot": 0.099237
+    },
+    "neg": {
+      "n": 103,
+      "encoder": 0.135922,
+      "gpt41mini_8shot": 0.087379
+    },
+    "nec": {
+      "n": 45,
+      "encoder": 0.177778,
+      "gpt41mini_8shot": 0.111111
+    },
+    "able": {
+      "n": 111,
+      "encoder": 0.072072,
+      "gpt41mini_8shot": 0.072072
+    }
+  }
+}

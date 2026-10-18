@@ -6,10 +6,10 @@
     "mean_question_words": 9.8246,
     "mean_claim_words": 12.4663,
     "claim_context_overlap": {
-      "supported": 0.66526,
-      "partially_supported": 0.517347,
-      "contradicted": 0.523268,
-      "unverifiable": 0.330021
+      "supported": 0.666996,
+      "partially_supported": 0.519345,
+      "contradicted": 0.526447,
+      "unverifiable": 0.328465
     }
   },
   "dev_general_reviewed": {
@@ -19,10 +19,10 @@
     "mean_question_words": 10.7594,
     "mean_claim_words": 14.5573,
     "claim_context_overlap": {
-      "supported": 0.766055,
-      "partially_supported": 0.527357,
-      "contradicted": 0.517603,
-      "unverifiable": 0.26354
+      "supported": 0.767783,
+      "partially_supported": 0.526366,
+      "contradicted": 0.518303,
+      "unverifiable": 0.262462
     }
   },
   "dev_stress_reviewed": {
@@ -32,10 +32,10 @@
     "mean_question_words": 12.1333,
     "mean_claim_words": 16.2533,
     "claim_context_overlap": {
-      "supported": 0.684634,
-      "partially_supported": 0.552481,
-      "contradicted": 0.453283,
-      "unverifiable": 0.272289
+      "supported": 0.685411,
+      "partially_supported": 0.552829,
+      "contradicted": 0.455777,
+      "unverifiable": 0.272141
     }
   },
   "gold480": {
@@ -45,10 +45,10 @@
     "mean_question_words": 10.625,
     "mean_claim_words": 17.2937,
     "claim_context_overlap": {
-      "supported": 0.75421,
-      "partially_supported": 0.615139,
-      "contradicted": 0.54063,
-      "unverifiable": 0.331192
+      "supported": 0.75751,
+      "partially_supported": 0.617653,
+      "contradicted": 0.546632,
+      "unverifiable": 0.333218
     }
   }
 }

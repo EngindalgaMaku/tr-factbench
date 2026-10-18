@@ -5,7 +5,7 @@ Surface profile of the four splits (train, reviewed DEV960, reviewed DEV600, Gol
 
 - mean context length (whitespace words, averaged over distinct contexts)
 - mean question and claim length (whitespace words, averaged over examples)
-- claim--context word overlap by label: share of claim word types (lower-cased \\w+)
+- claim--context word overlap by label: share of claim word types (Turkish-aware lower-cased \\w+)
   that also occur in the context, averaged over the examples of each gold/candidate label
 
 Data files are only read. Output: results/statistics/DATASET_PROFILE_v1.json
@@ -36,9 +36,14 @@ def load_jsonl(path):
         return [json.loads(line) for line in f if line.strip()]
 
 
+def tr_lower(text):
+    """Turkish-aware lower-casing: I -> ı and İ -> i before str.lower()."""
+    return text.replace("I", "ı").replace("İ", "i").lower()
+
+
 def overlap(claim, context):
-    cw = set(WORD.findall(claim.lower()))
-    return len(cw & set(WORD.findall(context.lower()))) / len(cw) if cw else 0.0
+    cw = set(WORD.findall(tr_lower(claim)))
+    return len(cw & set(WORD.findall(tr_lower(context)))) / len(cw) if cw else 0.0
 
 
 def main() -> None:

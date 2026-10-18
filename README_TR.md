@@ -4,12 +4,14 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456360.svg)](https://doi.org/10.5281/zenodo.23456360)
 [![Lisans: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
-[![Sürüm](https://img.shields.io/badge/sürüm-v1.0.0-green.svg)](CITATION.cff)
+[![Sürüm](https://img.shields.io/badge/sürüm-v1.0.1-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Seçili checkpoint](https://img.shields.io/badge/secili_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 
 **[English documentation](README.md)**
 
+> **v1.0.1** sürümü insan referansı analizini (Anotatör B'nin uzlaşılmış etiketlere göre başarısı, aynı bootstrap ile; `scripts/92`), veri profilinde Türkçe küçük harf dönüşümünü (`scripts/93`) ve Türkçe biçimbilim işaretçileri ile kök örtüşmesi analizini (`scripts/94_turkish_phenomena.py`, çıktılar `results/statistics/` altında) ekler. Veri dosyaları değişmemiştir.
+>
 > **Sürüm v1.0.0.** Bu, TR-FactBench'in atıf yapılabilir sürümüdür. Dört bölümü dondurur ve Gold-480 dış değerlendirme sonuçlarını ekler: kodlayıcının ve sekiz LLM koşulunun dondurulmuş tahminleri (`results/llm_baselines/gold_v1.0/`), bağlam grubu düzeyinde eşleştirilmiş bootstrap (`scripts/46_gold_group_bootstrap.py`), Gold-480 bağlam ablasyonu (`scripts/91_gold480_context_ablation.py`), sınıf bazında, anotatör sağlamlığı ve hata örtüşmesi analizleri (`scripts/92_gold480_supplementary_analyses.py`) ve veri seti profili (`scripts/93_dataset_profile.py`). Önceki yolların geçerli kalması için `preview_v0.1/` gibi klasör adları değiştirilmemiştir.
 >
 > **Etiketleme durumu.** Birinci kör insan incelemesi tamamlandı: DEV960 960/960 ve Dev600 600/600. Yeni değerlendirmeler için `data/evaluation/preview_v0.1/` kullanınız. Dondurulmuş 480 örnekli çift-annotator gold kümesi `data/evaluation/gold_v1.0/` altındadır. Eğitim etiketleri üretim aşamasındaki aday etiketlerdir (gümüş); dondurulmuş 600 örneklik train öneki gürültü kestirimidir, gold değildir.

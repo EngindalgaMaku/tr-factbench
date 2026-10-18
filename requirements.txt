@@ -27,3 +27,5 @@ evaluate>=0.4
 scipy>=1.10
 pandas>=2.0
 tqdm>=4.65
+# Optional, only for scripts/94_turkish_phenomena.py (not needed for training or evaluation):
+# zeyrek==0.1.3
