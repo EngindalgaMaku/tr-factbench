@@ -7,7 +7,8 @@
 [![Release](https://img.shields.io/badge/release-v1.0.1-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Selected checkpoint](https://img.shields.io/badge/selected_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
-[![Model on HF](https://img.shields.io/badge/🤗%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+[![K1 Model on HF](https://img.shields.io/badge/🤗%20K1%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+[![Atomizer on HF](https://img.shields.io/badge/🤗%20Atomizer-angeldust007%2Ftr--factbench--gemma--atomizer-orange.svg)](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
 
 **[Türkçe dokümantasyon](README_TR.md)**
 
@@ -39,7 +40,7 @@ The reported scores were obtained on the archived pre-review evaluation files re
 
 Key observations: Gemma 4 26B achieves the strongest overall performance across both sets. The selected local ELECTRA checkpoint remains competitive on the stress set, outperforming the best Qwen and matching GPT-4.1 mini. Few-shot prompting is not uniformly beneficial — Gemma performs better zero-shot than 8-shot on DEV600-STR. ELECTRA provides local inference without per-example API calls.
 
-The repository keeps the dataset, deterministic derived views, training and evaluation code, run-level predictions, validation reports, and canonical benchmark results together. Model weights are not stored in Git; the selected LoRA adapter is published at [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora).
+The repository keeps the dataset, deterministic derived views, training and evaluation code, run-level predictions, validation reports, and canonical benchmark results together. Model weights are not stored in Git; the selected K1 LoRA adapter is published at [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora), and the companion K2 proposition atomizer QLoRA adapter is published at [angeldust007/tr-factbench-gemma-atomizer](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer).
 
 ## What is included
 

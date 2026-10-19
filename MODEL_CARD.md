@@ -138,13 +138,14 @@ The selected checkpoint is compared with four API-based LLMs under zero-shot and
 
 ## Hugging Face publication extras (optional; does not mean FactBench is incomplete)
 
-The selected LoRA adapter is published at `angeldust007/tr-factbench-electra-lora`. Clean-environment Hub load and inference were verified (`hf_release/_test_hub_load.py`).
+The selected LoRA adapter is published at [`angeldust007/tr-factbench-electra-lora`](https://huggingface.co/angeldust007/tr-factbench-electra-lora). Clean-environment Hub load and inference were verified (`hf_release/_test_hub_load.py`). The companion K2 proposition decomposition (atomizer) QLoRA adapter is also publicly available at [`angeldust007/tr-factbench-gemma-atomizer`](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer).
 
 This resource is frozen as-is. A second blind-human pass on the development sets is not required to close it.
 
-## Published Hugging Face repository
+## Published Hugging Face repositories
 
-`angeldust007/tr-factbench-electra-lora`
+- **K1 Holistic Verifier (ELECTRA-TR LoRA):** [`angeldust007/tr-factbench-electra-lora`](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+- **K2 Proposition Atomizer (Gemma-4-E2B-it QLoRA):** [`angeldust007/tr-factbench-gemma-atomizer`](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
 
 ## Citation
 

@@ -7,6 +7,8 @@
 [![Sürüm](https://img.shields.io/badge/sürüm-v1.0.1-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Seçili checkpoint](https://img.shields.io/badge/secili_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
+[![K1 Model HF](https://img.shields.io/badge/🤗%20K1%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+[![Atomizer HF](https://img.shields.io/badge/🤗%20Atomizer-angeldust007%2Ftr--factbench--gemma--atomizer-orange.svg)](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
 
 **[English documentation](README.md)**
 
@@ -22,7 +24,7 @@
 
 TR-FactBench, Türkçe bir iddianın verilen kaynak bağlamıyla ne ölçüde doğrulanabildiğini değerlendiren dört sınıflı bir karşılaştırma veri setidir. **Finans, hukuk ve tıp** alanlarını kapsar. Dört etiket sınıfı: `supported`, `partially_supported`, `contradicted`, `unverifiable`. Tanımlar ve karar kuralları için [Etiket tanımları](#etiket-tanımları) ve [Etiketleme Kılavuzu](docs/LABEL_GUIDE_TR.md) belgelerine bakınız.
 
-Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme kodları, koşu bazlı tahminler, doğrulama raporları ve kanonik benchmark sonuçları birlikte tutulur. Model ağırlıkları Git deposunda bulunmaz. Seçilen LoRA adaptörü [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora) adresinde yayımlanmıştır.
+Depoda veri seti, deterministik türev görünümler, eğitim ve değerlendirme kodları, koşu bazlı tahminler, doğrulama raporları ve kanonik benchmark sonuçları birlikte tutulur. Model ağırlıkları Git deposunda bulunmaz. Seçilen K1 LoRA adaptörü [angeldust007/tr-factbench-electra-lora](https://huggingface.co/angeldust007/tr-factbench-electra-lora) adresinde, K2 önerme ayrıştırıcı (atomizer) QLoRA adaptörü ise [angeldust007/tr-factbench-gemma-atomizer](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer) adresinde yayımlanmıştır.
 
 ## Depoda neler var?
 
