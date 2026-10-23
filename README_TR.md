@@ -4,13 +4,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456359.svg)](https://doi.org/10.5281/zenodo.23456359)
 [![Lisans: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
-[![Sürüm](https://img.shields.io/badge/sürüm-v1.0.1-green.svg)](CITATION.cff)
+[![Sürüm](https://img.shields.io/badge/sürüm-v1.1.0-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Seçili checkpoint](https://img.shields.io/badge/secili_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 [![K1 Model HF](https://img.shields.io/badge/🤗%20K1%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
 [![Atomizer HF](https://img.shields.io/badge/🤗%20Atomizer-angeldust007%2Ftr--factbench--gemma--atomizer-orange.svg)](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
 
 **[English documentation](README.md)**
+
+> **v1.1.0** sürümü Gold-480 uzlaştırmasına ilişkin yayım sonrası bir duyarlılık analizi ekler. A ve B'den bağımsız üçüncü bir anotatör, 48 A/B uyuşmazlığını uzlaşılan 32 örnekle karıştırılmış olarak, önceden kaydedilmiş bir analiz planıyla kör biçimde etiketlemiştir (`results/annotation/gold480_annotator_c/`, `scripts/95`, `scripts/96`). Üçüncü anotatör 48 uyuşmazlığın 46'sında uzlaştırılmış etiketi seçmiş, çoğunluk etiketleri 480 gold etiketinin 2'sini değiştirmektedir. Gold etiketleri ve veri dosyaları değişmemiştir.
 
 > **v1.0.1** sürümü insan referansı analizini (Anotatör B'nin uzlaşılmış etiketlere göre başarısı, aynı bootstrap ile; `scripts/92`), veri profilinde Türkçe küçük harf dönüşümünü (`scripts/93`) ve Türkçe biçimbilim işaretçileri ile kök örtüşmesi analizini (`scripts/94_turkish_phenomena.py`, çıktılar `results/statistics/` altında) ekler. Veri dosyaları değişmemiştir.
 >

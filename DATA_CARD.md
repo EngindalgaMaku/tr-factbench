@@ -4,7 +4,7 @@
 
 TR-FactBench is a Turkish source-grounded factuality-verification dataset covering finance, legal, and medical domains. Each example contains a context passage, a question, a claim, and one of four labels: `supported`, `partially_supported`, `contradicted`, or `unverifiable`.
 
-This is **release v1.0.0**, frozen as-is. It succeeds the v0.1.0 research preview and adds the Gold-480 held-out evaluation records. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second development-set pass is a known limitation of this release, **not** remaining work required to close the resource.
+This is **release v1.1.0**; the data files are frozen as of v1.0.0. It succeeds the v0.1.0 research preview and adds the Gold-480 held-out evaluation records. Candidate labels were produced through controlled LLM-assisted construction and automated validation. The first independent blind-human review pass is complete for both evaluation sets: DEV960 960/960 and Dev600 600/600. A second development-set pass is a known limitation of this release, **not** remaining work required to close the resource.
 
 ## Primary data
 

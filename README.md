@@ -4,13 +4,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23456359.svg)](https://doi.org/10.5281/zenodo.23456359)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.1-green.svg)](CITATION.cff)
+[![Release](https://img.shields.io/badge/release-v1.1.0-green.svg)](CITATION.cff)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](requirements.txt)
 [![Selected checkpoint](https://img.shields.io/badge/selected_checkpoint-H1_DROP10_S45-green.svg)](final_config.lock.yaml)
 [![K1 Model on HF](https://img.shields.io/badge/🤗%20K1%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
 [![Atomizer on HF](https://img.shields.io/badge/🤗%20Atomizer-angeldust007%2Ftr--factbench--gemma--atomizer-orange.svg)](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
 
 **[Türkçe dokümantasyon](README_TR.md)**
+
+> **v1.1.0** adds a post-release sensitivity analysis of the Gold-480 adjudication. A third annotator, independent of A and B, blind-labeled the 48 A/B disagreements mixed with 32 agreed examples under a pre-registered analysis plan (`results/annotation/gold480_annotator_c/`, `scripts/95`, `scripts/96`). The third annotator chose the adjudicated label on 46 of the 48 disagreements, and majority labels change 2 of the 480 gold labels. Gold labels and data files are unchanged.
 
 > **v1.0.1** adds the human-reference analysis (Annotator B scored against the adjudicated labels, with the same bootstrap; `scripts/92`), Turkish-aware lower-casing in the dataset profile (`scripts/93`), and the Turkish morphological-marker and lemma-overlap analysis (`scripts/94_turkish_phenomena.py`, outputs in `results/statistics/`). Data files are unchanged.
 >

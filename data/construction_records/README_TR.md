@@ -1,6 +1,6 @@
 # İnşa kayıtları (iç kayıt)
 
-Bu klasör, veri setinin ChatGPT web arayüzü (GPT-5.5) yardımıyla inşa edildiği oturumlardan indirilen kayıtların kopyasıdır. Özgün dosyalar yazarın `Downloads` klasöründedir; kopyalama tarihi 2026-10-07'dir.
+Bu klasör, veri setinin ChatGPT web arayüzü (GPT-5.5) yardımıyla inşa edildiği oturumların kayıtlarını içerir. Kayıtlar 2026-10-07'de kopyalanmıştır. Özgün dosyalar yazarda saklanmaktadır.
 
 - `gold480_v1.0/`: Gold-480 kontrollü test kümesinin kapılı (Gate 0–10) inşa protokolü, önerme sayısı kuralı, F01 kısayol raporları, parti paketleri ve ön anotasyon dondurma anlık görüntüsü (v4.3; 12 partinin tamamı, protokol v0.5, yöntem notları, varlık güvenliği politikası).
 - `train_dev/`: DEV600 kısayol temizliği paketi, eğitim kümesi yapaylık incelemesi ve eğitim kümesi tek anotatör paketi.

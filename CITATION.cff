@@ -15,8 +15,8 @@ doi: "10.5281/zenodo.23456359"
 repository-code: "https://github.com/EngindalgaMaku/tr-factbench"
 url: "https://github.com/EngindalgaMaku/tr-factbench"
 license: CC-BY-4.0
-version: "1.0.1"
-date-released: "2026-10-18"
+version: "1.1.0"
+date-released: "2026-10-24"
 abstract: >
   TR-FactBench is a 4-class source-grounded factuality verification benchmark
   for Turkish. It covers three domains (finance, legal, medical) with 4,800
