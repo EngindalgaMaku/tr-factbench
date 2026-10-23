@@ -1,0 +1,289 @@
+{
+  "inputs": {
+    "C_file": "ANNOTATION_C_final_2026-10-23.xlsx"
+  },
+  "care_check": {
+    "n": 32,
+    "agree": 31,
+    "rate": 0.969,
+    "kappa": 0.958,
+    "low_reliability": false,
+    "confusion": {
+      "contradicted->partially_supported": 1
+    }
+  },
+  "primary": {
+    "n": 48,
+    "counts": {
+      "A": 46,
+      "B": 2
+    },
+    "by_pair_type": {
+      "A=partially_supported / B=contradicted": {
+        "A": 24,
+        "B": 1
+      },
+      "A=unverifiable / B=partially_supported": {
+        "A": 6,
+        "B": 1
+      },
+      "A=supported / B=partially_supported": {
+        "A": 5
+      },
+      "A=contradicted / B=partially_supported": {
+        "A": 4
+      },
+      "A=unverifiable / B=contradicted": {
+        "A": 3
+      },
+      "A=partially_supported / B=supported": {
+        "A": 3
+      },
+      "A=unverifiable / B=supported": {
+        "A": 1
+      }
+    },
+    "neither_labels": {}
+  },
+  "majority_labels": {
+    "changed": 2,
+    "transitions": {
+      "partially_supported->contradicted": 1,
+      "unverifiable->partially_supported": 1
+    }
+  },
+  "systems": {
+    "K1 (ELECTRA-TR)": {
+      "gold_v1.0": {
+        "acc": 0.8313,
+        "macro_f1": 0.8301
+      },
+      "majority_ABC": {
+        "acc": 0.8313,
+        "macro_f1": 0.8303
+      }
+    },
+    "K2 soft-prob": {
+      "gold_v1.0": {
+        "acc": 0.8042,
+        "macro_f1": 0.8065
+      },
+      "majority_ABC": {
+        "acc": 0.8,
+        "macro_f1": 0.8024
+      }
+    },
+    "Hybrid P0 (V4 judge)": {
+      "gold_v1.0": {
+        "acc": 0.9313,
+        "macro_f1": 0.9315
+      },
+      "majority_ABC": {
+        "acc": 0.9271,
+        "macro_f1": 0.9273
+      }
+    },
+    "GPT-4.1-mini 0-shot": {
+      "gold_v1.0": {
+        "acc": 0.7896,
+        "macro_f1": 0.7621
+      },
+      "majority_ABC": {
+        "acc": 0.7896,
+        "macro_f1": 0.7619
+      }
+    },
+    "GPT-4.1-mini 8-shot": {
+      "gold_v1.0": {
+        "acc": 0.9104,
+        "macro_f1": 0.9098
+      },
+      "majority_ABC": {
+        "acc": 0.9062,
+        "macro_f1": 0.9056
+      }
+    },
+    "Gemma-4-26B 0-shot": {
+      "gold_v1.0": {
+        "acc": 0.9042,
+        "macro_f1": 0.9022
+      },
+      "majority_ABC": {
+        "acc": 0.9042,
+        "macro_f1": 0.9023
+      }
+    },
+    "Gemma-4-26B 8-shot": {
+      "gold_v1.0": {
+        "acc": 0.9,
+        "macro_f1": 0.8991
+      },
+      "majority_ABC": {
+        "acc": 0.9,
+        "macro_f1": 0.8991
+      }
+    },
+    "Llama-3.3-70B 0-shot": {
+      "gold_v1.0": {
+        "acc": 0.7167,
+        "macro_f1": 0.7016
+      },
+      "majority_ABC": {
+        "acc": 0.7167,
+        "macro_f1": 0.7008
+      }
+    },
+    "Llama-3.3-70B 8-shot": {
+      "gold_v1.0": {
+        "acc": 0.9083,
+        "macro_f1": 0.9085
+      },
+      "majority_ABC": {
+        "acc": 0.9125,
+        "macro_f1": 0.9126
+      }
+    },
+    "Qwen-2.5-72B 0-shot": {
+      "gold_v1.0": {
+        "acc": 0.825,
+        "macro_f1": 0.816
+      },
+      "majority_ABC": {
+        "acc": 0.825,
+        "macro_f1": 0.8163
+      }
+    },
+    "Qwen-2.5-72B 8-shot": {
+      "gold_v1.0": {
+        "acc": 0.8667,
+        "macro_f1": 0.8655
+      },
+      "majority_ABC": {
+        "acc": 0.8667,
+        "macro_f1": 0.8657
+      }
+    }
+  },
+  "mcnemar_P0_vs": {
+    "K1 (ELECTRA-TR)": {
+      "gold_v1.0": {
+        "P0_only": 54,
+        "other_only": 6,
+        "p": 0.0
+      },
+      "majority_ABC": {
+        "P0_only": 53,
+        "other_only": 7,
+        "p": 0.0
+      }
+    },
+    "K2 soft-prob": {
+      "gold_v1.0": {
+        "P0_only": 63,
+        "other_only": 2,
+        "p": 0.0
+      },
+      "majority_ABC": {
+        "P0_only": 63,
+        "other_only": 2,
+        "p": 0.0
+      }
+    },
+    "GPT-4.1-mini 0-shot": {
+      "gold_v1.0": {
+        "P0_only": 91,
+        "other_only": 23,
+        "p": 0.0
+      },
+      "majority_ABC": {
+        "P0_only": 90,
+        "other_only": 24,
+        "p": 0.0
+      }
+    },
+    "GPT-4.1-mini 8-shot": {
+      "gold_v1.0": {
+        "P0_only": 35,
+        "other_only": 25,
+        "p": 0.2451
+      },
+      "majority_ABC": {
+        "P0_only": 35,
+        "other_only": 25,
+        "p": 0.2451
+      }
+    },
+    "Gemma-4-26B 0-shot": {
+      "gold_v1.0": {
+        "P0_only": 37,
+        "other_only": 24,
+        "p": 0.1237
+      },
+      "majority_ABC": {
+        "P0_only": 36,
+        "other_only": 25,
+        "p": 0.2
+      }
+    },
+    "Gemma-4-26B 8-shot": {
+      "gold_v1.0": {
+        "P0_only": 39,
+        "other_only": 24,
+        "p": 0.0769
+      },
+      "majority_ABC": {
+        "P0_only": 38,
+        "other_only": 25,
+        "p": 0.1299
+      }
+    },
+    "Llama-3.3-70B 0-shot": {
+      "gold_v1.0": {
+        "P0_only": 120,
+        "other_only": 17,
+        "p": 0.0
+      },
+      "majority_ABC": {
+        "P0_only": 119,
+        "other_only": 18,
+        "p": 0.0
+      }
+    },
+    "Llama-3.3-70B 8-shot": {
+      "gold_v1.0": {
+        "P0_only": 39,
+        "other_only": 28,
+        "p": 0.2215
+      },
+      "majority_ABC": {
+        "P0_only": 37,
+        "other_only": 30,
+        "p": 0.4638
+      }
+    },
+    "Qwen-2.5-72B 0-shot": {
+      "gold_v1.0": {
+        "P0_only": 68,
+        "other_only": 17,
+        "p": 0.0
+      },
+      "majority_ABC": {
+        "P0_only": 67,
+        "other_only": 18,
+        "p": 0.0
+      }
+    },
+    "Qwen-2.5-72B 8-shot": {
+      "gold_v1.0": {
+        "P0_only": 55,
+        "other_only": 24,
+        "p": 0.0006
+      },
+      "majority_ABC": {
+        "P0_only": 54,
+        "other_only": 25,
+        "p": 0.0015
+      }
+    }
+  }
+}

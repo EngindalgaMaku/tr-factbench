@@ -1,0 +1,22 @@
+{
+  "tohum": 42,
+  "madde_sayisi": 80,
+  "uyusmazlik": 48,
+  "dolgu": 32,
+  "dolgu_sinif_dagilimi": {
+    "supported": 8,
+    "partially_supported": 8,
+    "contradicted": 8,
+    "unverifiable": 8
+  },
+  "sha256": {
+    "package/ANNOTATION_C.xlsx": "ba1cfd723b61144a0cd48329b66cdad179a9fc19490cf10942e5c0a7831d14cd",
+    "package/LABEL_GUIDE_TR.md": "185f8f58fa56438a60ad4e6cdf1d9fc427ee565ec9649dd834a2fdc56a695ad9",
+    "package/INSTRUCTIONS_TR.md": "6e60105efe58a7acedceec11d826ec86cbc30c70086f94a91abc17ca2dd53dab",
+    "private/blind_key.csv": "8935b83fef87869ff158f2422f8aa8b35151994d63dbff76fadc0232a638e1f3"
+  },
+  "kaynak_sha256": {
+    "gold": "04bcc52ad73ba98c6648ae15d6fabf695eb11bca645a375f7af9cef378df910c",
+    "adjudication": "938a9cc6a354f172bf4cc2f7e5b0ca77b3ff8df37b3cf65a3aea56083f15aa13"
+  }
+}
