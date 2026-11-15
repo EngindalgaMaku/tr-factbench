@@ -28,6 +28,10 @@ TR-FactBench evaluates whether a Turkish claim is supported by a supplied source
 
 ## Key results at a glance
 
+**Held-out set (Gold-480, the reference evaluation).** Two annotators agreed on 432 of 480 examples (Cohen's κ = 0.867). The selected ELECTRA-TR encoder reaches **0.830 Macro-F1** (95% CI [0.798, 0.860]); the four strongest prompted LLM conditions reach 0.899–0.910, and the second annotator scored against the adjudicated labels reaches 0.900. Details: `results/llm_baselines/gold_v1.0/` and `scripts/46`, `scripts/92`.
+
+**Development sets.**
+
 TR-FactBench compares a locally deployable Turkish encoder with four general-purpose LLMs under zero-shot and 8-shot prompting. The table below reports the best prompting condition observed for each LLM alongside the selected ELECTRA checkpoint. Full per-condition results are in the [LLM baselines](#llm-baselines) section.
 
 The reported scores were obtained on the archived pre-review evaluation files retained under `data/evaluation/legacy_experiment_version/`.
