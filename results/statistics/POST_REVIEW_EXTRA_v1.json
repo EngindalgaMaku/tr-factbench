@@ -1,0 +1,864 @@
+{
+ "easy_hard_claim_only": {
+  "definition": "easy = at least 2 of 3 seeds of the partial-input encoder predict the gold label",
+  "n_easy": 254,
+  "n_hard": 226,
+  "easy_by_label": {
+   "supported": 84,
+   "unverifiable": 40,
+   "partially_supported": 74,
+   "contradicted": 56
+  },
+  "systems": {
+   "Encoder": {
+    "easy_macro_f1": 0.916,
+    "hard_macro_f1": 0.727,
+    "easy_acc": 0.925,
+    "hard_acc": 0.726
+   },
+   "GPT-4.1 mini zero-shot": {
+    "easy_macro_f1": 0.745,
+    "hard_macro_f1": 0.779,
+    "easy_acc": 0.76,
+    "hard_acc": 0.823
+   },
+   "GPT-4.1 mini 8-shot": {
+    "easy_macro_f1": 0.919,
+    "hard_macro_f1": 0.899,
+    "easy_acc": 0.917,
+    "hard_acc": 0.903
+   },
+   "Gemma 4 zero-shot": {
+    "easy_macro_f1": 0.927,
+    "hard_macro_f1": 0.878,
+    "easy_acc": 0.937,
+    "hard_acc": 0.867
+   },
+   "Gemma 4 8-shot": {
+    "easy_macro_f1": 0.948,
+    "hard_macro_f1": 0.849,
+    "easy_acc": 0.957,
+    "hard_acc": 0.836
+   },
+   "Llama 3.3 zero-shot": {
+    "easy_macro_f1": 0.722,
+    "hard_macro_f1": 0.679,
+    "easy_acc": 0.744,
+    "hard_acc": 0.686
+   },
+   "Llama 3.3 8-shot": {
+    "easy_macro_f1": 0.928,
+    "hard_macro_f1": 0.89,
+    "easy_acc": 0.929,
+    "hard_acc": 0.885
+   },
+   "Qwen2.5 zero-shot": {
+    "easy_macro_f1": 0.842,
+    "hard_macro_f1": 0.785,
+    "easy_acc": 0.874,
+    "hard_acc": 0.77
+   },
+   "Qwen2.5 8-shot": {
+    "easy_macro_f1": 0.914,
+    "hard_macro_f1": 0.82,
+    "easy_acc": 0.917,
+    "hard_acc": 0.81
+   },
+   "Annotator B": {
+    "easy_macro_f1": 0.908,
+    "hard_macro_f1": 0.886,
+    "easy_acc": 0.906,
+    "hard_acc": 0.894
+   }
+  },
+  "hard_ids": [
+   "tfb_ex_0002",
+   "tfb_ex_0003",
+   "tfb_ex_0004",
+   "tfb_ex_0006",
+   "tfb_ex_0007",
+   "tfb_ex_0008",
+   "tfb_ex_0010",
+   "tfb_ex_0011",
+   "tfb_ex_0013",
+   "tfb_ex_0014",
+   "tfb_ex_0015",
+   "tfb_ex_0016",
+   "tfb_ex_0017",
+   "tfb_ex_0018",
+   "tfb_ex_0019",
+   "tfb_ex_0020",
+   "tfb_ex_0022",
+   "tfb_ex_0023",
+   "tfb_ex_0025",
+   "tfb_ex_0027",
+   "tfb_ex_0030",
+   "tfb_ex_0031",
+   "tfb_ex_0032",
+   "tfb_ex_0034",
+   "tfb_ex_0035",
+   "tfb_ex_0036",
+   "tfb_ex_0037",
+   "tfb_ex_0039",
+   "tfb_ex_0040",
+   "tfb_ex_0042",
+   "tfb_ex_0043",
+   "tfb_ex_0044",
+   "tfb_ex_0045",
+   "tfb_ex_0048",
+   "tfb_ex_0054",
+   "tfb_ex_0055",
+   "tfb_ex_0056",
+   "tfb_ex_0058",
+   "tfb_ex_0060",
+   "tfb_ex_0064",
+   "tfb_ex_0066",
+   "tfb_ex_0068",
+   "tfb_ex_0070",
+   "tfb_ex_0076",
+   "tfb_ex_0077",
+   "tfb_ex_0079",
+   "tfb_ex_0080",
+   "tfb_ex_0084",
+   "tfb_ex_0085",
+   "tfb_ex_0088",
+   "tfb_ex_0091",
+   "tfb_ex_0096",
+   "tfb_ex_0097",
+   "tfb_ex_0100",
+   "tfb_ex_0104",
+   "tfb_ex_0106",
+   "tfb_ex_0109",
+   "tfb_ex_0111",
+   "tfb_ex_0115",
+   "tfb_ex_0119",
+   "tfb_ex_0120",
+   "tfb_ex_0125",
+   "tfb_ex_0127",
+   "tfb_ex_0129",
+   "tfb_ex_0131",
+   "tfb_ex_0134",
+   "tfb_ex_0135",
+   "tfb_ex_0138",
+   "tfb_ex_0140",
+   "tfb_ex_0143",
+   "tfb_ex_0144",
+   "tfb_ex_0145",
+   "tfb_ex_0146",
+   "tfb_ex_0147",
+   "tfb_ex_0148",
+   "tfb_ex_0151",
+   "tfb_ex_0156",
+   "tfb_ex_0157",
+   "tfb_ex_0159",
+   "tfb_ex_0160",
+   "tfb_ex_0164",
+   "tfb_ex_0166",
+   "tfb_ex_0168",
+   "tfb_ex_0172",
+   "tfb_ex_0174",
+   "tfb_ex_0175",
+   "tfb_ex_0177",
+   "tfb_ex_0180",
+   "tfb_ex_0182",
+   "tfb_ex_0183",
+   "tfb_ex_0184",
+   "tfb_ex_0185",
+   "tfb_ex_0187",
+   "tfb_ex_0188",
+   "tfb_ex_0191",
+   "tfb_ex_0192",
+   "tfb_ex_0194",
+   "tfb_ex_0195",
+   "tfb_ex_0197",
+   "tfb_ex_0203",
+   "tfb_ex_0204",
+   "tfb_ex_0206",
+   "tfb_ex_0211",
+   "tfb_ex_0212",
+   "tfb_ex_0217",
+   "tfb_ex_0219",
+   "tfb_ex_0220",
+   "tfb_ex_0221",
+   "tfb_ex_0224",
+   "tfb_ex_0228",
+   "tfb_ex_0230",
+   "tfb_ex_0231",
+   "tfb_ex_0232",
+   "tfb_ex_0234",
+   "tfb_ex_0235",
+   "tfb_ex_0239",
+   "tfb_ex_0240",
+   "tfb_ex_0241",
+   "tfb_ex_0243",
+   "tfb_ex_0244",
+   "tfb_ex_0247",
+   "tfb_ex_0251",
+   "tfb_ex_0255",
+   "tfb_ex_0256",
+   "tfb_ex_0260",
+   "tfb_ex_0263",
+   "tfb_ex_0265",
+   "tfb_ex_0266",
+   "tfb_ex_0267",
+   "tfb_ex_0272",
+   "tfb_ex_0274",
+   "tfb_ex_0280",
+   "tfb_ex_0281",
+   "tfb_ex_0283",
+   "tfb_ex_0284",
+   "tfb_ex_0285",
+   "tfb_ex_0287",
+   "tfb_ex_0288",
+   "tfb_ex_0290",
+   "tfb_ex_0291",
+   "tfb_ex_0295",
+   "tfb_ex_0298",
+   "tfb_ex_0300",
+   "tfb_ex_0305",
+   "tfb_ex_0308",
+   "tfb_ex_0309",
+   "tfb_ex_0311",
+   "tfb_ex_0312",
+   "tfb_ex_0314",
+   "tfb_ex_0315",
+   "tfb_ex_0316",
+   "tfb_ex_0320",
+   "tfb_ex_0323",
+   "tfb_ex_0324",
+   "tfb_ex_0325",
+   "tfb_ex_0327",
+   "tfb_ex_0336",
+   "tfb_ex_0338",
+   "tfb_ex_0339",
+   "tfb_ex_0340",
+   "tfb_ex_0343",
+   "tfb_ex_0344",
+   "tfb_ex_0348",
+   "tfb_ex_0350",
+   "tfb_ex_0351",
+   "tfb_ex_0352",
+   "tfb_ex_0354",
+   "tfb_ex_0355",
+   "tfb_ex_0356",
+   "tfb_ex_0360",
+   "tfb_ex_0363",
+   "tfb_ex_0364",
+   "tfb_ex_0366",
+   "tfb_ex_0368",
+   "tfb_ex_0369",
+   "tfb_ex_0372",
+   "tfb_ex_0375",
+   "tfb_ex_0376",
+   "tfb_ex_0379",
+   "tfb_ex_0380",
+   "tfb_ex_0381",
+   "tfb_ex_0383",
+   "tfb_ex_0388",
+   "tfb_ex_0390",
+   "tfb_ex_0392",
+   "tfb_ex_0397",
+   "tfb_ex_0398",
+   "tfb_ex_0399",
+   "tfb_ex_0400",
+   "tfb_ex_0402",
+   "tfb_ex_0404",
+   "tfb_ex_0406",
+   "tfb_ex_0414",
+   "tfb_ex_0417",
+   "tfb_ex_0418",
+   "tfb_ex_0420",
+   "tfb_ex_0424",
+   "tfb_ex_0425",
+   "tfb_ex_0428",
+   "tfb_ex_0430",
+   "tfb_ex_0432",
+   "tfb_ex_0433",
+   "tfb_ex_0441",
+   "tfb_ex_0442",
+   "tfb_ex_0443",
+   "tfb_ex_0448",
+   "tfb_ex_0450",
+   "tfb_ex_0451",
+   "tfb_ex_0452",
+   "tfb_ex_0453",
+   "tfb_ex_0454",
+   "tfb_ex_0456",
+   "tfb_ex_0457",
+   "tfb_ex_0459",
+   "tfb_ex_0460",
+   "tfb_ex_0461",
+   "tfb_ex_0462",
+   "tfb_ex_0463",
+   "tfb_ex_0464",
+   "tfb_ex_0467",
+   "tfb_ex_0470",
+   "tfb_ex_0472",
+   "tfb_ex_0475",
+   "tfb_ex_0476",
+   "tfb_ex_0477",
+   "tfb_ex_0478"
+  ]
+ },
+ "easy_hard_question_claim": {
+  "definition": "easy = at least 2 of 3 seeds of the partial-input encoder predict the gold label",
+  "n_easy": 284,
+  "n_hard": 196,
+  "easy_by_label": {
+   "supported": 76,
+   "unverifiable": 62,
+   "partially_supported": 94,
+   "contradicted": 52
+  },
+  "systems": {
+   "Encoder": {
+    "easy_macro_f1": 0.906,
+    "hard_macro_f1": 0.705,
+    "easy_acc": 0.908,
+    "hard_acc": 0.719
+   },
+   "GPT-4.1 mini zero-shot": {
+    "easy_macro_f1": 0.737,
+    "hard_macro_f1": 0.777,
+    "easy_acc": 0.736,
+    "hard_acc": 0.867
+   },
+   "GPT-4.1 mini 8-shot": {
+    "easy_macro_f1": 0.903,
+    "hard_macro_f1": 0.901,
+    "easy_acc": 0.901,
+    "hard_acc": 0.923
+   },
+   "Gemma 4 zero-shot": {
+    "easy_macro_f1": 0.932,
+    "hard_macro_f1": 0.847,
+    "easy_acc": 0.933,
+    "hard_acc": 0.862
+   },
+   "Gemma 4 8-shot": {
+    "easy_macro_f1": 0.937,
+    "hard_macro_f1": 0.825,
+    "easy_acc": 0.937,
+    "hard_acc": 0.847
+   },
+   "Llama 3.3 zero-shot": {
+    "easy_macro_f1": 0.706,
+    "hard_macro_f1": 0.679,
+    "easy_acc": 0.701,
+    "hard_acc": 0.74
+   },
+   "Llama 3.3 8-shot": {
+    "easy_macro_f1": 0.928,
+    "hard_macro_f1": 0.86,
+    "easy_acc": 0.926,
+    "hard_acc": 0.883
+   },
+   "Qwen2.5 zero-shot": {
+    "easy_macro_f1": 0.847,
+    "hard_macro_f1": 0.742,
+    "easy_acc": 0.859,
+    "hard_acc": 0.776
+   },
+   "Qwen2.5 8-shot": {
+    "easy_macro_f1": 0.892,
+    "hard_macro_f1": 0.801,
+    "easy_acc": 0.891,
+    "hard_acc": 0.832
+   },
+   "Annotator B": {
+    "easy_macro_f1": 0.89,
+    "hard_macro_f1": 0.898,
+    "easy_acc": 0.887,
+    "hard_acc": 0.918
+   }
+  },
+  "hard_ids": [
+   "tfb_ex_0002",
+   "tfb_ex_0003",
+   "tfb_ex_0007",
+   "tfb_ex_0009",
+   "tfb_ex_0011",
+   "tfb_ex_0014",
+   "tfb_ex_0015",
+   "tfb_ex_0017",
+   "tfb_ex_0018",
+   "tfb_ex_0023",
+   "tfb_ex_0025",
+   "tfb_ex_0027",
+   "tfb_ex_0030",
+   "tfb_ex_0034",
+   "tfb_ex_0035",
+   "tfb_ex_0037",
+   "tfb_ex_0038",
+   "tfb_ex_0039",
+   "tfb_ex_0044",
+   "tfb_ex_0045",
+   "tfb_ex_0055",
+   "tfb_ex_0061",
+   "tfb_ex_0064",
+   "tfb_ex_0065",
+   "tfb_ex_0066",
+   "tfb_ex_0068",
+   "tfb_ex_0070",
+   "tfb_ex_0076",
+   "tfb_ex_0079",
+   "tfb_ex_0080",
+   "tfb_ex_0081",
+   "tfb_ex_0084",
+   "tfb_ex_0085",
+   "tfb_ex_0088",
+   "tfb_ex_0091",
+   "tfb_ex_0093",
+   "tfb_ex_0096",
+   "tfb_ex_0097",
+   "tfb_ex_0100",
+   "tfb_ex_0103",
+   "tfb_ex_0104",
+   "tfb_ex_0107",
+   "tfb_ex_0108",
+   "tfb_ex_0109",
+   "tfb_ex_0111",
+   "tfb_ex_0115",
+   "tfb_ex_0117",
+   "tfb_ex_0119",
+   "tfb_ex_0120",
+   "tfb_ex_0127",
+   "tfb_ex_0129",
+   "tfb_ex_0134",
+   "tfb_ex_0135",
+   "tfb_ex_0137",
+   "tfb_ex_0140",
+   "tfb_ex_0143",
+   "tfb_ex_0144",
+   "tfb_ex_0145",
+   "tfb_ex_0147",
+   "tfb_ex_0148",
+   "tfb_ex_0151",
+   "tfb_ex_0153",
+   "tfb_ex_0155",
+   "tfb_ex_0157",
+   "tfb_ex_0159",
+   "tfb_ex_0163",
+   "tfb_ex_0165",
+   "tfb_ex_0168",
+   "tfb_ex_0175",
+   "tfb_ex_0183",
+   "tfb_ex_0185",
+   "tfb_ex_0187",
+   "tfb_ex_0188",
+   "tfb_ex_0194",
+   "tfb_ex_0195",
+   "tfb_ex_0197",
+   "tfb_ex_0201",
+   "tfb_ex_0204",
+   "tfb_ex_0206",
+   "tfb_ex_0207",
+   "tfb_ex_0211",
+   "tfb_ex_0212",
+   "tfb_ex_0215",
+   "tfb_ex_0216",
+   "tfb_ex_0220",
+   "tfb_ex_0221",
+   "tfb_ex_0224",
+   "tfb_ex_0225",
+   "tfb_ex_0227",
+   "tfb_ex_0228",
+   "tfb_ex_0229",
+   "tfb_ex_0230",
+   "tfb_ex_0232",
+   "tfb_ex_0235",
+   "tfb_ex_0236",
+   "tfb_ex_0240",
+   "tfb_ex_0241",
+   "tfb_ex_0247",
+   "tfb_ex_0248",
+   "tfb_ex_0251",
+   "tfb_ex_0255",
+   "tfb_ex_0259",
+   "tfb_ex_0260",
+   "tfb_ex_0263",
+   "tfb_ex_0266",
+   "tfb_ex_0267",
+   "tfb_ex_0272",
+   "tfb_ex_0275",
+   "tfb_ex_0280",
+   "tfb_ex_0281",
+   "tfb_ex_0283",
+   "tfb_ex_0284",
+   "tfb_ex_0285",
+   "tfb_ex_0287",
+   "tfb_ex_0288",
+   "tfb_ex_0289",
+   "tfb_ex_0291",
+   "tfb_ex_0298",
+   "tfb_ex_0299",
+   "tfb_ex_0300",
+   "tfb_ex_0308",
+   "tfb_ex_0309",
+   "tfb_ex_0311",
+   "tfb_ex_0314",
+   "tfb_ex_0315",
+   "tfb_ex_0319",
+   "tfb_ex_0320",
+   "tfb_ex_0323",
+   "tfb_ex_0324",
+   "tfb_ex_0325",
+   "tfb_ex_0327",
+   "tfb_ex_0330",
+   "tfb_ex_0335",
+   "tfb_ex_0336",
+   "tfb_ex_0340",
+   "tfb_ex_0343",
+   "tfb_ex_0344",
+   "tfb_ex_0348",
+   "tfb_ex_0350",
+   "tfb_ex_0351",
+   "tfb_ex_0352",
+   "tfb_ex_0354",
+   "tfb_ex_0356",
+   "tfb_ex_0357",
+   "tfb_ex_0360",
+   "tfb_ex_0363",
+   "tfb_ex_0364",
+   "tfb_ex_0365",
+   "tfb_ex_0366",
+   "tfb_ex_0367",
+   "tfb_ex_0368",
+   "tfb_ex_0372",
+   "tfb_ex_0375",
+   "tfb_ex_0379",
+   "tfb_ex_0380",
+   "tfb_ex_0381",
+   "tfb_ex_0383",
+   "tfb_ex_0385",
+   "tfb_ex_0387",
+   "tfb_ex_0388",
+   "tfb_ex_0390",
+   "tfb_ex_0392",
+   "tfb_ex_0397",
+   "tfb_ex_0399",
+   "tfb_ex_0400",
+   "tfb_ex_0402",
+   "tfb_ex_0403",
+   "tfb_ex_0406",
+   "tfb_ex_0411",
+   "tfb_ex_0417",
+   "tfb_ex_0418",
+   "tfb_ex_0420",
+   "tfb_ex_0425",
+   "tfb_ex_0433",
+   "tfb_ex_0435",
+   "tfb_ex_0439",
+   "tfb_ex_0442",
+   "tfb_ex_0443",
+   "tfb_ex_0448",
+   "tfb_ex_0449",
+   "tfb_ex_0451",
+   "tfb_ex_0452",
+   "tfb_ex_0453",
+   "tfb_ex_0454",
+   "tfb_ex_0455",
+   "tfb_ex_0457",
+   "tfb_ex_0458",
+   "tfb_ex_0460",
+   "tfb_ex_0461",
+   "tfb_ex_0463",
+   "tfb_ex_0464",
+   "tfb_ex_0472",
+   "tfb_ex_0475",
+   "tfb_ex_0476",
+   "tfb_ex_0477",
+   "tfb_ex_0480"
+  ]
+ },
+ "paired_bootstrap_vs_encoder": {
+  "adjudicated": {
+   "GPT-4.1 mini zero-shot": {
+    "delta": -0.068,
+    "ci": [
+     -0.113,
+     -0.023
+    ],
+    "excludes_0": true
+   },
+   "GPT-4.1 mini 8-shot": {
+    "delta": 0.08,
+    "ci": [
+     0.041,
+     0.118
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 zero-shot": {
+    "delta": 0.072,
+    "ci": [
+     0.034,
+     0.109
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 8-shot": {
+    "delta": 0.069,
+    "ci": [
+     0.036,
+     0.103
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 zero-shot": {
+    "delta": -0.128,
+    "ci": [
+     -0.17,
+     -0.088
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 8-shot": {
+    "delta": 0.078,
+    "ci": [
+     0.043,
+     0.113
+    ],
+    "excludes_0": true
+   },
+   "Qwen2.5 zero-shot": {
+    "delta": -0.014,
+    "ci": [
+     -0.056,
+     0.028
+    ],
+    "excludes_0": false
+   },
+   "Qwen2.5 8-shot": {
+    "delta": 0.035,
+    "ci": [
+     -0.004,
+     0.075
+    ],
+    "excludes_0": false
+   },
+   "Annotator B": {
+    "delta": 0.07,
+    "ci": [
+     0.032,
+     0.109
+    ],
+    "excludes_0": true
+   },
+   "Encoder_macro_f1": 0.83
+  },
+  "majority_ABC": {
+   "GPT-4.1 mini zero-shot": {
+    "delta": -0.068,
+    "ci": [
+     -0.113,
+     -0.024
+    ],
+    "excludes_0": true
+   },
+   "GPT-4.1 mini 8-shot": {
+    "delta": 0.075,
+    "ci": [
+     0.037,
+     0.114
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 zero-shot": {
+    "delta": 0.072,
+    "ci": [
+     0.034,
+     0.109
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 8-shot": {
+    "delta": 0.069,
+    "ci": [
+     0.036,
+     0.103
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 zero-shot": {
+    "delta": -0.129,
+    "ci": [
+     -0.172,
+     -0.088
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 8-shot": {
+    "delta": 0.082,
+    "ci": [
+     0.047,
+     0.117
+    ],
+    "excludes_0": true
+   },
+   "Qwen2.5 zero-shot": {
+    "delta": -0.014,
+    "ci": [
+     -0.055,
+     0.028
+    ],
+    "excludes_0": false
+   },
+   "Qwen2.5 8-shot": {
+    "delta": 0.035,
+    "ci": [
+     -0.004,
+     0.075
+    ],
+    "excludes_0": false
+   },
+   "Annotator B": {
+    "delta": 0.074,
+    "ci": [
+     0.036,
+     0.113
+    ],
+    "excludes_0": true
+   },
+   "Encoder_macro_f1": 0.83
+  },
+  "annotator_B": {
+   "GPT-4.1 mini zero-shot": {
+    "delta": -0.03,
+    "ci": [
+     -0.074,
+     0.016
+    ],
+    "excludes_0": false
+   },
+   "GPT-4.1 mini 8-shot": {
+    "delta": 0.075,
+    "ci": [
+     0.035,
+     0.114
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 zero-shot": {
+    "delta": 0.043,
+    "ci": [
+     0.004,
+     0.082
+    ],
+    "excludes_0": true
+   },
+   "Gemma 4 8-shot": {
+    "delta": 0.059,
+    "ci": [
+     0.026,
+     0.093
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 zero-shot": {
+    "delta": -0.075,
+    "ci": [
+     -0.122,
+     -0.03
+    ],
+    "excludes_0": true
+   },
+   "Llama 3.3 8-shot": {
+    "delta": 0.078,
+    "ci": [
+     0.044,
+     0.113
+    ],
+    "excludes_0": true
+   },
+   "Qwen2.5 zero-shot": {
+    "delta": -0.001,
+    "ci": [
+     -0.041,
+     0.039
+    ],
+    "excludes_0": false
+   },
+   "Qwen2.5 8-shot": {
+    "delta": 0.045,
+    "ci": [
+     0.005,
+     0.085
+    ],
+    "excludes_0": true
+   },
+   "Encoder_macro_f1": 0.784
+  }
+ },
+ "groups_not_one_per_label": {
+  "dev_general": [
+   2,
+   240
+  ],
+  "dev_stress": [
+   3,
+   150
+  ],
+  "heldout": [
+   1,
+   120
+  ],
+  "train": [
+   0,
+   1200
+  ]
+ },
+ "error_overlap": {
+  "encoder_errors": 81,
+  "encoder_errors_by_gold": {
+   "unverifiable": 36,
+   "contradicted": 24,
+   "partially_supported": 16,
+   "supported": 5
+  },
+  "right_by_system_on_encoder_errors": {
+   "GPT-4.1 mini zero-shot": 65,
+   "GPT-4.1 mini 8-shot": 70,
+   "Gemma 4 zero-shot": 62,
+   "Gemma 4 8-shot": 55,
+   "Llama 3.3 zero-shot": 40,
+   "Llama 3.3 8-shot": 64,
+   "Qwen2.5 zero-shot": 47,
+   "Qwen2.5 8-shot": 58
+  },
+  "right_by_system_on_encoder_errors_unverifiable": {
+   "GPT-4.1 mini zero-shot": 31,
+   "GPT-4.1 mini 8-shot": 30,
+   "Gemma 4 zero-shot": 19,
+   "Gemma 4 8-shot": 14,
+   "Llama 3.3 zero-shot": 9,
+   "Llama 3.3 8-shot": 24,
+   "Qwen2.5 zero-shot": 8,
+   "Qwen2.5 8-shot": 19
+  },
+  "wrong_for_encoder_and_all_four_strongest": [
+   "tfb_ex_0183",
+   "tfb_ex_0184",
+   "tfb_ex_0224",
+   "tfb_ex_0368"
+  ],
+  "their_gold": [
+   "contradicted",
+   "unverifiable",
+   "unverifiable",
+   "unverifiable"
+  ],
+  "errors_by_system": {
+   "Encoder": 81,
+   "GPT-4.1 mini zero-shot": 101,
+   "GPT-4.1 mini 8-shot": 43,
+   "Gemma 4 zero-shot": 46,
+   "Gemma 4 8-shot": 48,
+   "Llama 3.3 zero-shot": 136,
+   "Llama 3.3 8-shot": 44,
+   "Qwen2.5 zero-shot": 84,
+   "Qwen2.5 8-shot": 64,
+   "Annotator B": 48
+  }
+ }
+}
