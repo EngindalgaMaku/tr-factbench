@@ -145,6 +145,10 @@ The large performance reductions when context is removed or replaced provide evi
 
 See `data/DATA_LICENSE.md`, `data/NOTICE.md`, and `LICENSE`.
 
+## Content removal (takedown) policy
+
+TR-FactBench redistributes context passages taken or adapted from publicly accessible Turkish sources. If you hold rights in a source text, or represent an organization or person named in the data, and object to its redistribution here, please open an issue at https://github.com/EngindalgaMaku/tr-factbench/issues or e-mail the maintainer (mackaengin@gmail.com), identifying the affected `context_id`, example identifier, or source. We will acknowledge the request, remove the affected passages together with their claims from the next release, and record the removal in the changelog. Where possible, we will also ask the archive to restrict access to earlier versions.
+
 ## Citation
 
 See `CITATION.cff`.

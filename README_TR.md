@@ -461,3 +461,7 @@ Tamamlanan:
 - Bağlam pasajları: kaynağa bağlı haklar (`data/NOTICE.md`, `data/sources_manifest.csv`)
 
 Atıf bilgisi [`CITATION.cff`](CITATION.cff) dosyasındadır.
+
+### İçerik kaldırma politikası
+
+TR-FactBench, kamuya açık Türkçe kaynaklardan alınan veya uyarlanan bağlam pasajlarını yeniden dağıtmaktadır. Bir kaynak metin üzerinde hak sahibiyseniz veya veride adı geçen bir kurumu ya da kişiyi temsil ediyorsanız ve içeriğin burada dağıtılmasına itiraz ediyorsanız, lütfen https://github.com/EngindalgaMaku/tr-factbench/issues adresinde bir kayıt açın veya sorumlu kişiye (mackaengin@gmail.com) e-posta gönderin; ilgili `context_id`, örnek kimliği veya kaynağı belirtin. Talebi aldığımızı bildirir, ilgili pasajları iddialarıyla birlikte bir sonraki sürümden kaldırır ve bunu değişiklik kaydına işleriz. Mümkün olduğunda önceki sürümlere erişimin kısıtlanmasını da arşivden talep ederiz.

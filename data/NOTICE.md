@@ -18,5 +18,4 @@ source terms.
 
 Stress-set contexts include source URLs and retrieval metadata.
 
-Please report provenance or rights concerns through the repository issue
-tracker and identify the affected `context_id`.
+TR-FactBench redistributes context passages taken or adapted from publicly accessible Turkish sources. If you hold rights in a source text, or represent an organization or person named in the data, and object to its redistribution here, please open an issue at https://github.com/EngindalgaMaku/tr-factbench/issues or e-mail the maintainer (mackaengin@gmail.com), identifying the affected `context_id`, example identifier, or source. We will acknowledge the request, remove the affected passages together with their claims from the next release, and record the removal in the changelog. Where possible, we will also ask the archive to restrict access to earlier versions.

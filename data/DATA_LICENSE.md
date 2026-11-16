@@ -23,6 +23,8 @@ entry in `data/sources_manifest.csv` and verify the source's terms. Records with
 materials whose item-level source URLs were not retained. These records are not
 rights-cleared for commercial redistribution without independent rights review.
 
+Rights holders can request the removal of passages; see the content removal policy in `data/NOTICE.md`.
+
 ## Release status
 
 This is a research-preview dataset, frozen as-is. Both evaluation sets include a
