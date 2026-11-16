@@ -486,7 +486,13 @@ Completed:
 * **K1 Direct Verifier:** Sequence-pair ELECTRA-TR + LoRA verifier benchmarked in this repository and accepted for IEEE ISMSIT 2026.
 * **K2 Modular Pipeline:** Fine-grained atomic claim decomposition (Gemma-4 QLoRA) and NLI aggregation framework is available in the companion repository: [tr-factbench-k2-nli](https://github.com/EngindalgaMaku/tr-factbench-k2-nli).
 
-> **v1.2.0 (in preparation):** private company and person names in 47 training context groups are replaced with typed aliases; development and held-out sets are unchanged. See [`CHANGELOG.md`](CHANGELOG.md).
+## Version history
+
+| Version | Change |
+|---|---|
+| v1.0.0 | Citable release: four frozen splits and the Gold-480 held-out set. In the held-out set, identifying names of real institutions, companies, and people were replaced with group-local aliases by design. The training and development splits were not masked. |
+| v1.1.0 | Third-annotator package and sensitivity analysis for the 48 disputed held-out examples. Data files unchanged. |
+| v1.2.0 | A review of the training split found names of private companies, brands, and private persons, some of them in contradicted or unverifiable claims. The masking policy of the held-out set was extended to these names in 47 training context groups (188 instances). Labels, identifiers, and all other text are unchanged; the development and held-out sets are identical to v1.1.0. Public authorities, courts, laws, public systems, and places are kept because the passages cannot be read without them. Earlier versions remain in the repository history and on Zenodo; please use v1.2.0 or later. Details and a control retraining are in [`CHANGELOG.md`](CHANGELOG.md). |
 
 ## Licensing and citation
 

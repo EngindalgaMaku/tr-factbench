@@ -1,0 +1,392 @@
+{
+ "train_file": "data/primary/train.jsonl (v1.2.0, entity-masked)",
+ "collapse_rule": "dominant class share on the general development set > 0.95; replaced by the next seed",
+ "v12_converged": {
+  "n_runs": 5,
+  "dev_general": {
+   "mean": 0.8959,
+   "sd": 0.0162,
+   "min": 0.8673,
+   "max": 0.9063
+  },
+  "dev_stress": {
+   "mean": 0.8664,
+   "sd": 0.026,
+   "min": 0.8317,
+   "max": 0.9
+  },
+  "heldout": {
+   "mean": 0.8508,
+   "sd": 0.0285,
+   "min": 0.8048,
+   "max": 0.8784
+  },
+  "heldout_groups_all_correct": {
+   "mean": 61.2,
+   "min": 47,
+   "max": 72
+  }
+ },
+ "v12_seeds_converged": [
+  44,
+  45,
+  46,
+  47,
+  48
+ ],
+ "v12_seeds_collapsed": [
+  42,
+  43
+ ],
+ "v11_converged": {
+  "n_runs": 5,
+  "dev_general": {
+   "mean": 0.8923,
+   "sd": 0.0118,
+   "min": 0.8747,
+   "max": 0.9056
+  },
+  "dev_stress": {
+   "mean": 0.8543,
+   "sd": 0.009,
+   "min": 0.8391,
+   "max": 0.8617
+  },
+  "heldout": {
+   "mean": 0.8399,
+   "sd": 0.0103,
+   "min": 0.8283,
+   "max": 0.8498
+  },
+  "heldout_groups_all_correct": {
+   "mean": 56.8,
+   "min": 53,
+   "max": 62
+  }
+ },
+ "v11_seeds_collapsed": [],
+ "runs": {
+  "V12_FULL_S42": {
+   "run_id": "V12_FULL_S42",
+   "view": "full_input",
+   "seed": 42,
+   "train_seconds": 932.8,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.0993,
+     "accuracy": 0.2479,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.0,
+      "unverifiable": 0.3973
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.0984,
+     "accuracy": 0.245,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.0,
+      "unverifiable": 0.3936
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.1,
+     "accuracy": 0.25,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.0,
+      "unverifiable": 0.4
+     },
+     "groups_all_correct": 0,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S42\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_42\\best_model"
+   },
+   "dominant_class_share_dev_general": 1.0,
+   "collapsed": true
+  },
+  "V12_FULL_S43": {
+   "run_id": "V12_FULL_S43",
+   "view": "full_input",
+   "seed": 43,
+   "train_seconds": 935.5,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.1007,
+     "accuracy": 0.2521,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.4027,
+      "unverifiable": 0.0
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.1005,
+     "accuracy": 0.2517,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.4021,
+      "unverifiable": 0.0
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.1007,
+     "accuracy": 0.2521,
+     "per_class_f1": {
+      "supported": 0.0,
+      "partially_supported": 0.0,
+      "contradicted": 0.4027,
+      "unverifiable": 0.0
+     },
+     "groups_all_correct": 0,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S43\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_43\\best_model"
+   },
+   "dominant_class_share_dev_general": 1.0,
+   "collapsed": true
+  },
+  "V12_FULL_S44": {
+   "run_id": "V12_FULL_S44",
+   "view": "full_input",
+   "seed": 44,
+   "train_seconds": 746.5,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8994,
+     "accuracy": 0.899,
+     "per_class_f1": {
+      "supported": 0.9142,
+      "partially_supported": 0.8716,
+      "contradicted": 0.8664,
+      "unverifiable": 0.9454
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8513,
+     "accuracy": 0.85,
+     "per_class_f1": {
+      "supported": 0.9252,
+      "partially_supported": 0.7899,
+      "contradicted": 0.7799,
+      "unverifiable": 0.9103
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.851,
+     "accuracy": 0.8521,
+     "per_class_f1": {
+      "supported": 0.9147,
+      "partially_supported": 0.8093,
+      "contradicted": 0.8037,
+      "unverifiable": 0.8761
+     },
+     "groups_all_correct": 61,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S44\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_44\\best_model"
+   },
+   "dominant_class_share_dev_general": 0.285,
+   "collapsed": false
+  },
+  "V12_FULL_S45": {
+   "run_id": "V12_FULL_S45",
+   "view": "full_input",
+   "seed": 45,
+   "train_seconds": 752.0,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8673,
+     "accuracy": 0.8677,
+     "per_class_f1": {
+      "supported": 0.864,
+      "partially_supported": 0.8228,
+      "contradicted": 0.8485,
+      "unverifiable": 0.9339
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8727,
+     "accuracy": 0.8717,
+     "per_class_f1": {
+      "supported": 0.8974,
+      "partially_supported": 0.8101,
+      "contradicted": 0.8702,
+      "unverifiable": 0.9129
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8048,
+     "accuracy": 0.8042,
+     "per_class_f1": {
+      "supported": 0.8699,
+      "partially_supported": 0.7266,
+      "contradicted": 0.8111,
+      "unverifiable": 0.8116
+     },
+     "groups_all_correct": 47,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S45\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_45\\best_model"
+   },
+   "dominant_class_share_dev_general": 0.271,
+   "collapsed": false
+  },
+  "V12_FULL_S46": {
+   "run_id": "V12_FULL_S46",
+   "view": "full_input",
+   "seed": 46,
+   "train_seconds": 765.3,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.9063,
+     "accuracy": 0.9062,
+     "per_class_f1": {
+      "supported": 0.906,
+      "partially_supported": 0.8789,
+      "contradicted": 0.8879,
+      "unverifiable": 0.9526
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8317,
+     "accuracy": 0.8267,
+     "per_class_f1": {
+      "supported": 0.8986,
+      "partially_supported": 0.75,
+      "contradicted": 0.803,
+      "unverifiable": 0.875
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8496,
+     "accuracy": 0.85,
+     "per_class_f1": {
+      "supported": 0.9398,
+      "partially_supported": 0.8,
+      "contradicted": 0.7798,
+      "unverifiable": 0.8789
+     },
+     "groups_all_correct": 58,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S46\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_46\\best_model"
+   },
+   "dominant_class_share_dev_general": 0.283,
+   "collapsed": false
+  },
+  "V12_FULL_S47": {
+   "run_id": "V12_FULL_S47",
+   "view": "full_input",
+   "seed": 47,
+   "train_seconds": 763.0,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.9053,
+     "accuracy": 0.9052,
+     "per_class_f1": {
+      "supported": 0.9121,
+      "partially_supported": 0.8929,
+      "contradicted": 0.8776,
+      "unverifiable": 0.9387
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8765,
+     "accuracy": 0.8767,
+     "per_class_f1": {
+      "supported": 0.9251,
+      "partially_supported": 0.8328,
+      "contradicted": 0.8296,
+      "unverifiable": 0.9184
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8703,
+     "accuracy": 0.8708,
+     "per_class_f1": {
+      "supported": 0.9249,
+      "partially_supported": 0.8438,
+      "contradicted": 0.8246,
+      "unverifiable": 0.8879
+     },
+     "groups_all_correct": 68,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S47\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_47\\best_model"
+   },
+   "dominant_class_share_dev_general": 0.266,
+   "collapsed": false
+  },
+  "V12_FULL_S48": {
+   "run_id": "V12_FULL_S48",
+   "view": "full_input",
+   "seed": 48,
+   "train_seconds": 759.6,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.9011,
+     "accuracy": 0.901,
+     "per_class_f1": {
+      "supported": 0.9032,
+      "partially_supported": 0.8773,
+      "contradicted": 0.8879,
+      "unverifiable": 0.9361
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.9,
+     "accuracy": 0.8983,
+     "per_class_f1": {
+      "supported": 0.9236,
+      "partially_supported": 0.8424,
+      "contradicted": 0.8912,
+      "unverifiable": 0.9428
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8784,
+     "accuracy": 0.8792,
+     "per_class_f1": {
+      "supported": 0.9027,
+      "partially_supported": 0.819,
+      "contradicted": 0.8644,
+      "unverifiable": 0.9277
+     },
+     "groups_all_correct": 72,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review_v12\\V12_FULL_S48\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_48\\best_model"
+   },
+   "dominant_class_share_dev_general": 0.268,
+   "collapsed": false
+  }
+ }
+}

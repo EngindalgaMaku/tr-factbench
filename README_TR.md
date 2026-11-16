@@ -462,6 +462,14 @@ Tamamlanan:
 
 Atıf bilgisi [`CITATION.cff`](CITATION.cff) dosyasındadır.
 
+### Sürüm geçmişi
+
+| Sürüm | Değişiklik |
+|---|---|
+| v1.0.0 | Atıf yapılabilir ilk sürüm: dört dondurulmuş bölüm ve Gold-480 held-out seti. Held-out sette gerçek kurum, şirket ve kişi adları tasarım gereği gruba özel rumuzlarla maskelendi. Eğitim ve geliştirme bölümleri maskelenmedi. |
+| v1.1.0 | Tartışmalı 48 held-out örneği için üçüncü annotatör paketi ve duyarlılık analizi. Veri dosyaları değişmedi. |
+| v1.2.0 | Eğitim bölümünün incelenmesinde, bir kısmı çelişen veya doğrulanamaz iddialarda geçen özel şirket, marka ve kişi adları bulundu. Held-out setin maskeleme politikası bu adlara genişletildi (47 bağlam grubu, 188 örnek). Etiketler, kimlikler ve diğer metinler değişmedi; geliştirme ve held-out setleri v1.1.0 ile aynıdır. Kamu otoriteleri, mahkemeler, kanunlar, kamu sistemleri ve yer adları, pasajları anlamak için gerekli olduğundan korundu. Önceki sürümler depo geçmişinde ve Zenodo'da durmaktadır; lütfen v1.2.0 veya sonrasını kullanın. Ayrıntılar ve kontrol eğitimi [`CHANGELOG.md`](CHANGELOG.md) dosyasındadır. |
+
 ### İçerik kaldırma politikası
 
 TR-FactBench, kamuya açık Türkçe kaynaklardan alınan veya uyarlanan bağlam pasajlarını yeniden dağıtmaktadır. Bir kaynak metin üzerinde hak sahibiyseniz veya veride adı geçen bir kurumu ya da kişiyi temsil ediyorsanız ve içeriğin burada dağıtılmasına itiraz ediyorsanız, lütfen https://github.com/EngindalgaMaku/tr-factbench/issues adresinde bir kayıt açın veya sorumlu kişiye (mackaengin@gmail.com) e-posta gönderin; ilgili `context_id`, örnek kimliği veya kaynağı belirtin. Talebi aldığımızı bildirir, ilgili pasajları iddialarıyla birlikte bir sonraki sürümden kaldırır ve bunu değişiklik kaydına işleriz. Mümkün olduğunda önceki sürümlere erişimin kısıtlanmasını da arşivden talep ederiz.
