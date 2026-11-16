@@ -486,6 +486,8 @@ Completed:
 * **K1 Direct Verifier:** Sequence-pair ELECTRA-TR + LoRA verifier benchmarked in this repository and accepted for IEEE ISMSIT 2026.
 * **K2 Modular Pipeline:** Fine-grained atomic claim decomposition (Gemma-4 QLoRA) and NLI aggregation framework is available in the companion repository: [tr-factbench-k2-nli](https://github.com/EngindalgaMaku/tr-factbench-k2-nli).
 
+> **v1.2.0 (in preparation):** private company and person names in 47 training context groups are replaced with typed aliases; development and held-out sets are unchanged. See [`CHANGELOG.md`](CHANGELOG.md).
+
 ## Licensing and citation
 
 - Code: MIT (`LICENSE`)

@@ -137,6 +137,10 @@ The large performance reductions when context is removed or replaced provide evi
 6. The four claims associated with a context are structurally balanced; this should be considered when designing splits and evaluation protocols.
 7. The current development splits have been used during model selection and are not untouched final test sets.
 
+## Entity masking
+
+Held-out contexts mask identifying names of real institutions, companies, and people with group-local aliases. From v1.2.0, the training split also masks private companies, brands, and private persons (47 context groups); public authorities, laws, public systems, and places are kept because they are needed to read the passages. The alias maps are not released. See `CHANGELOG.md`.
+
 ## Licensing
 
 - Project-created claims, questions, labels, and metadata: CC BY 4.0

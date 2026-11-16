@@ -15,7 +15,7 @@
     "file_name": "train_1600_finance.jsonl",
     "rel_path": "data\\derived\\train_domain\\train_1600_finance.jsonl",
     "num_records": 1600,
-    "sha256": "1d798f1ca11b02db079ee832a0de4785740b1f5dfcacff115ca21d737b4a811b",
+    "sha256": "1d78c8fa1dd963fec1ae96334e4a23473cb8f304329e563b6d4704c965f32e99",
     "label_distribution": {
       "partially_supported": 400,
       "unverifiable": 400,
@@ -27,7 +27,7 @@
     "file_name": "train_1600_legal.jsonl",
     "rel_path": "data\\derived\\train_domain\\train_1600_legal.jsonl",
     "num_records": 1600,
-    "sha256": "a5d08301d08b5c44dbce1b8b37b520c27b2f4497d47d27dd79ac676353ab578d",
+    "sha256": "31c7ae941052614e59c17009685ecf8333824884e09fafc1b540cf39756f0363",
     "label_distribution": {
       "contradicted": 400,
       "supported": 400,
@@ -39,7 +39,7 @@
     "file_name": "train_1600_mixed.jsonl",
     "rel_path": "data\\derived\\mixed\\train_1600_mixed.jsonl",
     "num_records": 1600,
-    "sha256": "7eb366682db69406e99aeffcabb87eb25a82b995225ab9d770a52147fdf7ebe8",
+    "sha256": "6ccb9618bc57a5fce55d416ba15ae94911dfece3b3f69ed886764364276e1895",
     "label_distribution": {
       "unverifiable": 381,
       "partially_supported": 387,
