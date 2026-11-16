@@ -1,0 +1,120 @@
+{
+ "changed_groups": 47,
+ "half1": [
+  "finance_context_0073",
+  "finance_context_0074",
+  "finance_context_0150",
+  "finance_context_0094",
+  "finance_context_0032",
+  "finance_context_0070",
+  "finance_context_0132",
+  "finance_context_0012",
+  "finance_context_0127",
+  "finance_context_0093",
+  "finance_context_0031",
+  "finance_context_0152",
+  "finance_context_0131",
+  "finance_context_0191",
+  "finance_context_0130",
+  "finance_context_0014",
+  "finance_context_0193",
+  "finance_context_0128",
+  "finance_context_0190",
+  "finance_context_0069",
+  "legal_agent_context_0065",
+  "finance_context_0189",
+  "finance_context_0110"
+ ],
+ "half2": [
+  "finance_context_0071",
+  "finance_context_0172",
+  "finance_context_0034",
+  "finance_context_0153",
+  "finance_context_0011",
+  "finance_context_0171",
+  "finance_context_0054",
+  "finance_context_0033",
+  "finance_context_0050",
+  "finance_context_0129",
+  "finance_context_0192",
+  "finance_context_0151",
+  "legal_agent_context_0062",
+  "finance_context_0149",
+  "finance_context_0170",
+  "finance_context_0089",
+  "finance_context_0169",
+  "finance_context_0112",
+  "finance_context_0049",
+  "legal_82346206f6670a3a",
+  "finance_context_0090",
+  "finance_context_0072",
+  "finance_context_0053",
+  "finance_context_0173"
+ ],
+ "runs": {
+  "DIAG_HALF1_S42": {
+   "dev_general_macro_f1": 0.888,
+   "curve": {
+    "loss_every_8_steps": [
+     1.382,
+     1.415,
+     1.408,
+     1.396,
+     1.345,
+     1.046,
+     0.762,
+     0.762,
+     0.634,
+     0.556
+    ],
+    "eval_macro_f1": [
+     0.771,
+     0.859,
+     0.877,
+     0.888
+    ]
+   }
+  },
+  "DIAG_HALF2_S42": {
+   "dev_general_macro_f1": 0.0993,
+   "curve": {
+    "loss_every_8_steps": [
+     1.382,
+     1.415,
+     1.408,
+     1.396,
+     1.556,
+     1.388,
+     1.38,
+     1.413
+    ],
+    "eval_macro_f1": [
+     0.1
+    ]
+   }
+  },
+  "DIAG_V12_S44": {
+   "dev_general_macro_f1": 0.8963,
+   "curve": {
+    "loss_every_8_steps": [
+     1.382,
+     1.4,
+     1.408,
+     1.355,
+     1.097,
+     0.99,
+     0.761,
+     0.645,
+     0.472,
+     0.572
+    ],
+    "eval_macro_f1": [
+     0.781,
+     0.88,
+     0.887,
+     0.898
+    ]
+   }
+  }
+ }
+}
