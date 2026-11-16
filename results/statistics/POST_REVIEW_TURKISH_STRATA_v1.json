@@ -1,0 +1,230 @@
+{
+ "heldout_encoder_error_by_label_and_marker": {
+  "supported": {
+   "any": {
+    "errors": 5,
+    "n": 120,
+    "rate": 0.042
+   },
+   "able": {
+    "errors": 1,
+    "n": 45,
+    "rate": 0.022
+   },
+   "no_able": {
+    "errors": 4,
+    "n": 75,
+    "rate": 0.053
+   },
+   "none_of_three": {
+    "errors": 3,
+    "n": 57,
+    "rate": 0.053
+   },
+   "neg": {
+    "errors": 0,
+    "n": 23,
+    "rate": 0.0
+   }
+  },
+  "partially_supported": {
+   "any": {
+    "errors": 16,
+    "n": 119,
+    "rate": 0.134
+   },
+   "able": {
+    "errors": 2,
+    "n": 46,
+    "rate": 0.043
+   },
+   "no_able": {
+    "errors": 14,
+    "n": 73,
+    "rate": 0.192
+   },
+   "none_of_three": {
+    "errors": 10,
+    "n": 48,
+    "rate": 0.208
+   },
+   "neg": {
+    "errors": 2,
+    "n": 24,
+    "rate": 0.083
+   }
+  },
+  "contradicted": {
+   "any": {
+    "errors": 24,
+    "n": 121,
+    "rate": 0.198
+   },
+   "able": {
+    "errors": 5,
+    "n": 20,
+    "rate": 0.25
+   },
+   "no_able": {
+    "errors": 19,
+    "n": 101,
+    "rate": 0.188
+   },
+   "none_of_three": {
+    "errors": 14,
+    "n": 53,
+    "rate": 0.264
+   },
+   "neg": {
+    "errors": 6,
+    "n": 50,
+    "rate": 0.12
+   }
+  },
+  "unverifiable": {
+   "any": {
+    "errors": 36,
+    "n": 120,
+    "rate": 0.3
+   },
+   "able": {
+    "errors": 3,
+    "n": 10,
+    "rate": 0.3
+   },
+   "no_able": {
+    "errors": 33,
+    "n": 110,
+    "rate": 0.3
+   },
+   "none_of_three": {
+    "errors": 26,
+    "n": 90,
+    "rate": 0.289
+   },
+   "neg": {
+    "errors": 7,
+    "n": 13,
+    "rate": 0.538
+   }
+  }
+ },
+ "evidential_markers": {
+  "train": {
+   "supported": {
+    "n": 1200,
+    "claim_narr": 0.176,
+    "claim_cop": 0.393,
+    "claim_narr_context_without": 0.012
+   },
+   "partially_supported": {
+    "n": 1200,
+    "claim_narr": 0.191,
+    "claim_cop": 0.478,
+    "claim_narr_context_without": 0.013
+   },
+   "contradicted": {
+    "n": 1200,
+    "claim_narr": 0.184,
+    "claim_cop": 0.408,
+    "claim_narr_context_without": 0.015
+   },
+   "unverifiable": {
+    "n": 1200,
+    "claim_narr": 0.175,
+    "claim_cop": 0.365,
+    "claim_narr_context_without": 0.031
+   }
+  },
+  "dev_general_reviewed": {
+   "supported": {
+    "n": 240,
+    "claim_narr": 0.113,
+    "claim_cop": 0.333,
+    "claim_narr_context_without": 0.013
+   },
+   "partially_supported": {
+    "n": 240,
+    "claim_narr": 0.05,
+    "claim_cop": 0.371,
+    "claim_narr_context_without": 0.004
+   },
+   "contradicted": {
+    "n": 242,
+    "claim_narr": 0.066,
+    "claim_cop": 0.463,
+    "claim_narr_context_without": 0.004
+   },
+   "unverifiable": {
+    "n": 238,
+    "claim_narr": 0.038,
+    "claim_cop": 0.235,
+    "claim_narr_context_without": 0.017
+   }
+  },
+  "dev_stress_reviewed": {
+   "supported": {
+    "n": 150,
+    "claim_narr": 0.047,
+    "claim_cop": 0.26,
+    "claim_narr_context_without": 0.007
+   },
+   "partially_supported": {
+    "n": 152,
+    "claim_narr": 0.033,
+    "claim_cop": 0.27,
+    "claim_narr_context_without": 0.007
+   },
+   "contradicted": {
+    "n": 151,
+    "claim_narr": 0.046,
+    "claim_cop": 0.325,
+    "claim_narr_context_without": 0.02
+   },
+   "unverifiable": {
+    "n": 147,
+    "claim_narr": 0.007,
+    "claim_cop": 0.0,
+    "claim_narr_context_without": 0.0
+   }
+  },
+  "gold480": {
+   "supported": {
+    "n": 120,
+    "claim_narr": 0.05,
+    "claim_cop": 0.133,
+    "claim_narr_context_without": 0.017
+   },
+   "partially_supported": {
+    "n": 119,
+    "claim_narr": 0.092,
+    "claim_cop": 0.269,
+    "claim_narr_context_without": 0.034
+   },
+   "contradicted": {
+    "n": 121,
+    "claim_narr": 0.05,
+    "claim_cop": 0.264,
+    "claim_narr_context_without": 0.025
+   },
+   "unverifiable": {
+    "n": 120,
+    "claim_narr": 0.042,
+    "claim_cop": 0.058,
+    "claim_narr_context_without": 0.033
+   }
+  }
+ },
+ "heldout_encoder_error_by_narr": {
+  "no_narr": {
+   "errors": 74,
+   "n": 452,
+   "rate": 0.164
+  },
+  "narr": {
+   "errors": 7,
+   "n": 28,
+   "rate": 0.25
+  }
+ }
+}

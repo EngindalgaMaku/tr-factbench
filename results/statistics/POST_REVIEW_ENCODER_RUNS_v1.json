@@ -1,0 +1,568 @@
+{
+ "runs": {
+  "PR_FULL_S42": {
+   "run_id": "PR_FULL_S42",
+   "view": "full_input",
+   "seed": 42,
+   "train_seconds": 720.4,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.9056,
+     "accuracy": 0.9052,
+     "per_class_f1": {
+      "supported": 0.9,
+      "partially_supported": 0.8872,
+      "contradicted": 0.8879,
+      "unverifiable": 0.9471
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8617,
+     "accuracy": 0.86,
+     "per_class_f1": {
+      "supported": 0.9153,
+      "partially_supported": 0.8198,
+      "contradicted": 0.8483,
+      "unverifiable": 0.8635
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8491,
+     "accuracy": 0.85,
+     "per_class_f1": {
+      "supported": 0.9328,
+      "partially_supported": 0.8095,
+      "contradicted": 0.8167,
+      "unverifiable": 0.8372
+     },
+     "groups_all_correct": 57,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_FULL_S42\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_42\\best_model"
+   }
+  },
+  "PR_FULL_S43": {
+   "run_id": "PR_FULL_S43",
+   "view": "full_input",
+   "seed": 43,
+   "train_seconds": 722.4,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8747,
+     "accuracy": 0.875,
+     "per_class_f1": {
+      "supported": 0.8628,
+      "partially_supported": 0.8598,
+      "contradicted": 0.8366,
+      "unverifiable": 0.9397
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8552,
+     "accuracy": 0.8517,
+     "per_class_f1": {
+      "supported": 0.9123,
+      "partially_supported": 0.7902,
+      "contradicted": 0.8092,
+      "unverifiable": 0.9091
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8498,
+     "accuracy": 0.85,
+     "per_class_f1": {
+      "supported": 0.9127,
+      "partially_supported": 0.816,
+      "contradicted": 0.8017,
+      "unverifiable": 0.8688
+     },
+     "groups_all_correct": 62,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_FULL_S43\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_43\\best_model"
+   }
+  },
+  "PR_FULL_S44": {
+   "run_id": "PR_FULL_S44",
+   "view": "full_input",
+   "seed": 44,
+   "train_seconds": 743.9,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8962,
+     "accuracy": 0.8958,
+     "per_class_f1": {
+      "supported": 0.9045,
+      "partially_supported": 0.8699,
+      "contradicted": 0.8633,
+      "unverifiable": 0.9471
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8605,
+     "accuracy": 0.8583,
+     "per_class_f1": {
+      "supported": 0.9247,
+      "partially_supported": 0.7932,
+      "contradicted": 0.797,
+      "unverifiable": 0.9273
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8425,
+     "accuracy": 0.8438,
+     "per_class_f1": {
+      "supported": 0.9213,
+      "partially_supported": 0.8031,
+      "contradicted": 0.7658,
+      "unverifiable": 0.88
+     },
+     "groups_all_correct": 58,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_FULL_S44\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_44\\best_model"
+   }
+  },
+  "PR_FULL_S45": {
+   "run_id": "PR_FULL_S45",
+   "view": "full_input",
+   "seed": 45,
+   "train_seconds": 744.7,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8976,
+     "accuracy": 0.8979,
+     "per_class_f1": {
+      "supported": 0.8961,
+      "partially_supported": 0.8795,
+      "contradicted": 0.8761,
+      "unverifiable": 0.9385
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.855,
+     "accuracy": 0.8533,
+     "per_class_f1": {
+      "supported": 0.8954,
+      "partially_supported": 0.7866,
+      "contradicted": 0.8429,
+      "unverifiable": 0.8951
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8283,
+     "accuracy": 0.8292,
+     "per_class_f1": {
+      "supported": 0.8889,
+      "partially_supported": 0.7843,
+      "contradicted": 0.7946,
+      "unverifiable": 0.8455
+     },
+     "groups_all_correct": 53,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_FULL_S45\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_45\\best_model"
+   }
+  },
+  "PR_FULL_S46": {
+   "run_id": "PR_FULL_S46",
+   "view": "full_input",
+   "seed": 46,
+   "train_seconds": 752.0,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.8872,
+     "accuracy": 0.8875,
+     "per_class_f1": {
+      "supported": 0.8889,
+      "partially_supported": 0.8726,
+      "contradicted": 0.8414,
+      "unverifiable": 0.9458
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.8391,
+     "accuracy": 0.8367,
+     "per_class_f1": {
+      "supported": 0.9231,
+      "partially_supported": 0.7619,
+      "contradicted": 0.7739,
+      "unverifiable": 0.8975
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.8299,
+     "accuracy": 0.8313,
+     "per_class_f1": {
+      "supported": 0.9255,
+      "partially_supported": 0.7786,
+      "contradicted": 0.7455,
+      "unverifiable": 0.87
+     },
+     "groups_all_correct": 54,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_FULL_S46\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_46\\best_model"
+   }
+  },
+  "PR_CLAIM_S42": {
+   "run_id": "PR_CLAIM_S42",
+   "view": "claim_only",
+   "seed": 42,
+   "train_seconds": 797.1,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.6828,
+     "accuracy": 0.6844,
+     "per_class_f1": {
+      "supported": 0.6789,
+      "partially_supported": 0.7099,
+      "contradicted": 0.6422,
+      "unverifiable": 0.7002
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5546,
+     "accuracy": 0.57,
+     "per_class_f1": {
+      "supported": 0.7443,
+      "partially_supported": 0.5458,
+      "contradicted": 0.5138,
+      "unverifiable": 0.4145
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5117,
+     "accuracy": 0.5188,
+     "per_class_f1": {
+      "supported": 0.5371,
+      "partially_supported": 0.5497,
+      "contradicted": 0.4839,
+      "unverifiable": 0.4762
+     },
+     "groups_all_correct": 8,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_CLAIM_S42\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_42\\best_model"
+   }
+  },
+  "PR_CLAIM_S43": {
+   "run_id": "PR_CLAIM_S43",
+   "view": "claim_only",
+   "seed": 43,
+   "train_seconds": 769.0,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.6788,
+     "accuracy": 0.6792,
+     "per_class_f1": {
+      "supported": 0.6772,
+      "partially_supported": 0.7186,
+      "contradicted": 0.6329,
+      "unverifiable": 0.6864
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5554,
+     "accuracy": 0.5817,
+     "per_class_f1": {
+      "supported": 0.7268,
+      "partially_supported": 0.56,
+      "contradicted": 0.5763,
+      "unverifiable": 0.3587
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5475,
+     "accuracy": 0.5542,
+     "per_class_f1": {
+      "supported": 0.586,
+      "partially_supported": 0.5534,
+      "contradicted": 0.5755,
+      "unverifiable": 0.4751
+     },
+     "groups_all_correct": 10,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_CLAIM_S43\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_43\\best_model"
+   }
+  },
+  "PR_CLAIM_S44": {
+   "run_id": "PR_CLAIM_S44",
+   "view": "claim_only",
+   "seed": 44,
+   "train_seconds": 770.4,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.6844,
+     "accuracy": 0.6833,
+     "per_class_f1": {
+      "supported": 0.6495,
+      "partially_supported": 0.7181,
+      "contradicted": 0.6652,
+      "unverifiable": 0.7048
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5649,
+     "accuracy": 0.5883,
+     "per_class_f1": {
+      "supported": 0.695,
+      "partially_supported": 0.5833,
+      "contradicted": 0.5625,
+      "unverifiable": 0.4188
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5394,
+     "accuracy": 0.5437,
+     "per_class_f1": {
+      "supported": 0.5316,
+      "partially_supported": 0.5906,
+      "contradicted": 0.6117,
+      "unverifiable": 0.4239
+     },
+     "groups_all_correct": 6,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_CLAIM_S44\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_44\\best_model"
+   }
+  },
+  "PR_QCLAIM_S42": {
+   "run_id": "PR_QCLAIM_S42",
+   "view": "question_claim",
+   "seed": 42,
+   "train_seconds": 754.7,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.7524,
+     "accuracy": 0.7552,
+     "per_class_f1": {
+      "supported": 0.695,
+      "partially_supported": 0.778,
+      "contradicted": 0.7391,
+      "unverifiable": 0.7975
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5511,
+     "accuracy": 0.55,
+     "per_class_f1": {
+      "supported": 0.6534,
+      "partially_supported": 0.5349,
+      "contradicted": 0.5112,
+      "unverifiable": 0.5048
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5803,
+     "accuracy": 0.5792,
+     "per_class_f1": {
+      "supported": 0.5726,
+      "partially_supported": 0.5679,
+      "contradicted": 0.5492,
+      "unverifiable": 0.6316
+     },
+     "groups_all_correct": 14,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_QCLAIM_S42\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_42\\best_model"
+   }
+  },
+  "PR_QCLAIM_S43": {
+   "run_id": "PR_QCLAIM_S43",
+   "view": "question_claim",
+   "seed": 43,
+   "train_seconds": 781.0,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.735,
+     "accuracy": 0.7354,
+     "per_class_f1": {
+      "supported": 0.7052,
+      "partially_supported": 0.7575,
+      "contradicted": 0.6951,
+      "unverifiable": 0.7822
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5434,
+     "accuracy": 0.56,
+     "per_class_f1": {
+      "supported": 0.75,
+      "partially_supported": 0.5043,
+      "contradicted": 0.5714,
+      "unverifiable": 0.3478
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5865,
+     "accuracy": 0.5896,
+     "per_class_f1": {
+      "supported": 0.6424,
+      "partially_supported": 0.5461,
+      "contradicted": 0.5803,
+      "unverifiable": 0.5773
+     },
+     "groups_all_correct": 10,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_QCLAIM_S43\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_43\\best_model"
+   }
+  },
+  "PR_QCLAIM_S44": {
+   "run_id": "PR_QCLAIM_S44",
+   "view": "question_claim",
+   "seed": 44,
+   "train_seconds": 739.8,
+   "eval": {
+    "dev_general": {
+     "n": 960,
+     "macro_f1": 0.7341,
+     "accuracy": 0.7365,
+     "per_class_f1": {
+      "supported": 0.6925,
+      "partially_supported": 0.7684,
+      "contradicted": 0.7074,
+      "unverifiable": 0.7682
+     }
+    },
+    "dev_stress": {
+     "n": 600,
+     "macro_f1": 0.5707,
+     "accuracy": 0.5667,
+     "per_class_f1": {
+      "supported": 0.6773,
+      "partially_supported": 0.542,
+      "contradicted": 0.5094,
+      "unverifiable": 0.554
+     }
+    },
+    "heldout": {
+     "n": 480,
+     "macro_f1": 0.5514,
+     "accuracy": 0.5563,
+     "per_class_f1": {
+      "supported": 0.5714,
+      "partially_supported": 0.5706,
+      "contradicted": 0.4862,
+      "unverifiable": 0.5773
+     },
+     "groups_all_correct": 12,
+     "n_groups": 120
+    },
+    "adapter": "runs\\post_review\\PR_QCLAIM_S44\\ckpt\\electra-base-turkish-cased-discriminator\\multidomain\\seed_44\\best_model"
+   }
+  }
+ },
+ "aggregate": {
+  "PR_FULL": {
+   "n_runs": 5,
+   "dev_general": {
+    "mean": 0.8923,
+    "sd": 0.0118,
+    "min": 0.8747,
+    "max": 0.9056
+   },
+   "dev_stress": {
+    "mean": 0.8543,
+    "sd": 0.009,
+    "min": 0.8391,
+    "max": 0.8617
+   },
+   "heldout": {
+    "mean": 0.8399,
+    "sd": 0.0103,
+    "min": 0.8283,
+    "max": 0.8498
+   },
+   "heldout_groups_all_correct": {
+    "mean": 56.8,
+    "min": 53,
+    "max": 62
+   }
+  },
+  "PR_CLAIM": {
+   "n_runs": 3,
+   "dev_general": {
+    "mean": 0.682,
+    "sd": 0.0029,
+    "min": 0.6788,
+    "max": 0.6844
+   },
+   "dev_stress": {
+    "mean": 0.5583,
+    "sd": 0.0057,
+    "min": 0.5546,
+    "max": 0.5649
+   },
+   "heldout": {
+    "mean": 0.5329,
+    "sd": 0.0188,
+    "min": 0.5117,
+    "max": 0.5475
+   },
+   "heldout_groups_all_correct": {
+    "mean": 8,
+    "min": 6,
+    "max": 10
+   }
+  },
+  "PR_QCLAIM": {
+   "n_runs": 3,
+   "dev_general": {
+    "mean": 0.7405,
+    "sd": 0.0103,
+    "min": 0.7341,
+    "max": 0.7524
+   },
+   "dev_stress": {
+    "mean": 0.5551,
+    "sd": 0.0141,
+    "min": 0.5434,
+    "max": 0.5707
+   },
+   "heldout": {
+    "mean": 0.5727,
+    "sd": 0.0187,
+    "min": 0.5514,
+    "max": 0.5865
+   },
+   "heldout_groups_all_correct": {
+    "mean": 12,
+    "min": 10,
+    "max": 14
+   }
+  }
+ }
+}

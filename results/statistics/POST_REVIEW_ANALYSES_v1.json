@@ -1,0 +1,999 @@
+{
+ "lemma_overlap": {
+  "by_split": {
+   "train": {
+    "supported": [
+     0.667,
+     0.834,
+     0.167
+    ],
+    "partially_supported": [
+     0.519,
+     0.699,
+     0.18
+    ],
+    "contradicted": [
+     0.526,
+     0.706,
+     0.18
+    ],
+    "unverifiable": [
+     0.328,
+     0.491,
+     0.163
+    ]
+   },
+   "dev_general": {
+    "supported": [
+     0.768,
+     0.899,
+     0.131
+    ],
+    "partially_supported": [
+     0.526,
+     0.705,
+     0.178
+    ],
+    "contradicted": [
+     0.518,
+     0.715,
+     0.197
+    ],
+    "unverifiable": [
+     0.262,
+     0.412,
+     0.15
+    ]
+   },
+   "dev_stress": {
+    "supported": [
+     0.685,
+     0.859,
+     0.173
+    ],
+    "partially_supported": [
+     0.553,
+     0.745,
+     0.193
+    ],
+    "contradicted": [
+     0.456,
+     0.66,
+     0.205
+    ],
+    "unverifiable": [
+     0.272,
+     0.424,
+     0.151
+    ]
+   },
+   "heldout": {
+    "supported": [
+     0.758,
+     0.88,
+     0.123
+    ],
+    "partially_supported": [
+     0.618,
+     0.749,
+     0.131
+    ],
+    "contradicted": [
+     0.547,
+     0.729,
+     0.183
+    ],
+    "unverifiable": [
+     0.333,
+     0.488,
+     0.154
+    ]
+   }
+  },
+  "diff_min": 0.123,
+  "diff_max": 0.205
+ },
+ "fisher_disputed_vs_agreed": {
+  "disputed": [
+   14,
+   48
+  ],
+  "agreed": [
+   67,
+   432
+  ],
+  "odds_ratio": 2.24,
+  "p_two_sided": 0.0242
+ },
+ "char_ngram_scan": {
+  "heldout_vs_train": {
+   "n": 120,
+   "max": 0.652,
+   "p95": 0.279,
+   "n_ge_0.45": 1,
+   "n_ge_0.60": 1,
+   "n_ge_0.80": 0
+  },
+  "heldout_vs_dev_general": {
+   "n": 120,
+   "max": 0.412,
+   "p95": 0.31,
+   "n_ge_0.45": 0,
+   "n_ge_0.60": 0,
+   "n_ge_0.80": 0
+  },
+  "heldout_vs_dev_stress": {
+   "n": 120,
+   "max": 0.402,
+   "p95": 0.312,
+   "n_ge_0.45": 0,
+   "n_ge_0.60": 0,
+   "n_ge_0.80": 0
+  },
+  "dev_general_vs_train": {
+   "n": 240,
+   "max": 0.611,
+   "p95": 0.41,
+   "n_ge_0.45": 10,
+   "n_ge_0.60": 1,
+   "n_ge_0.80": 0
+  },
+  "dev_stress_vs_train": {
+   "n": 150,
+   "max": 0.597,
+   "p95": 0.52,
+   "n_ge_0.45": 23,
+   "n_ge_0.60": 0,
+   "n_ge_0.80": 0
+  },
+  "dev_stress_vs_dev_general": {
+   "n": 150,
+   "max": 0.594,
+   "p95": 0.527,
+   "n_ge_0.45": 22,
+   "n_ge_0.60": 0,
+   "n_ge_0.80": 0
+  },
+  "examples_dev_general_train_ge_0.80": []
+ },
+ "claim_cues": {
+  "train": [
+   [
+    "ve",
+    0.388,
+    0.372,
+    "partially_supported",
+    1862
+   ],
+   [
+    ";",
+    0.118,
+    0.647,
+    "partially_supported",
+    566
+   ],
+   [
+    "de",
+    0.051,
+    0.583,
+    "partially_supported",
+    247
+   ],
+   [
+    "bu",
+    0.048,
+    0.58,
+    "partially_supported",
+    231
+   ],
+   [
+    "veya",
+    0.04,
+    0.526,
+    "supported",
+    192
+   ],
+   [
+    "her",
+    0.045,
+    0.488,
+    "partially_supported",
+    217
+   ],
+   [
+    "bütün",
+    0.025,
+    0.672,
+    "partially_supported",
+    122
+   ],
+   [
+    "aynı",
+    0.034,
+    0.54,
+    "partially_supported",
+    161
+   ],
+   [
+    "da",
+    0.055,
+    0.398,
+    "partially_supported",
+    266
+   ],
+   [
+    "olarak",
+    0.065,
+    0.375,
+    "partially_supported",
+    312
+   ],
+   [
+    "yalnız",
+    0.036,
+    0.434,
+    "contradicted",
+    173
+   ],
+   [
+    "ile",
+    0.052,
+    0.352,
+    "supported",
+    250
+   ]
+  ],
+  "train_selected": {
+   "ve": [
+    0.388,
+    0.372,
+    "partially_supported"
+   ],
+   "değil": null,
+   "yok": null,
+   ";": [
+    0.118,
+    0.647,
+    "partially_supported"
+   ],
+   "zorunlu": null,
+   "sadece": null,
+   "yalnızca": null,
+   "her": [
+    0.045,
+    0.488,
+    "partially_supported"
+   ],
+   "tüm": null
+  },
+  "train_table": {
+   "ve": [
+    0.388,
+    0.372,
+    "partially_supported",
+    1862
+   ],
+   ";": [
+    0.118,
+    0.647,
+    "partially_supported",
+    566
+   ],
+   "veya": [
+    0.04,
+    0.526,
+    "supported",
+    192
+   ],
+   "yalnız": [
+    0.036,
+    0.434,
+    "contradicted",
+    173
+   ],
+   "ancak": [
+    0.009,
+    0.78,
+    "partially_supported",
+    41
+   ],
+   "bütün": [
+    0.025,
+    0.672,
+    "partially_supported",
+    122
+   ],
+   "aynı": [
+    0.034,
+    0.54,
+    "partially_supported",
+    161
+   ]
+  },
+  "dev_general": [
+   [
+    "ve",
+    0.481,
+    0.34,
+    "supported",
+    462
+   ],
+   [
+    "veya",
+    0.059,
+    0.614,
+    "supported",
+    57
+   ],
+   [
+    "da",
+    0.052,
+    0.56,
+    "partially_supported",
+    50
+   ],
+   [
+    "otomatik",
+    0.035,
+    0.706,
+    "unverifiable",
+    34
+   ],
+   [
+    "yalnız",
+    0.058,
+    0.5,
+    "contradicted",
+    56
+   ],
+   [
+    "her",
+    0.057,
+    0.473,
+    "unverifiable",
+    55
+   ],
+   [
+    "aynı",
+    0.05,
+    0.5,
+    "partially_supported",
+    48
+   ],
+   [
+    "olarak",
+    0.082,
+    0.392,
+    "unverifiable",
+    79
+   ],
+   [
+    "ile",
+    0.051,
+    0.469,
+    "supported",
+    49
+   ],
+   [
+    "de",
+    0.041,
+    0.487,
+    "partially_supported",
+    39
+   ],
+   [
+    "içinde",
+    0.04,
+    0.474,
+    "unverifiable",
+    38
+   ],
+   [
+    "bütün",
+    0.04,
+    0.474,
+    "unverifiable",
+    38
+   ]
+  ],
+  "dev_general_selected": {
+   "ve": [
+    0.481,
+    0.34,
+    "supported"
+   ],
+   "değil": null,
+   "yok": null,
+   ";": null,
+   "zorunlu": null,
+   "sadece": null,
+   "yalnızca": null,
+   "her": [
+    0.057,
+    0.473,
+    "unverifiable"
+   ],
+   "tüm": null
+  },
+  "dev_general_table": {
+   "ve": [
+    0.481,
+    0.34,
+    "supported",
+    462
+   ],
+   ";": [
+    0.0,
+    null,
+    null,
+    0
+   ],
+   "veya": [
+    0.059,
+    0.614,
+    "supported",
+    57
+   ],
+   "yalnız": [
+    0.058,
+    0.5,
+    "contradicted",
+    56
+   ],
+   "ancak": [
+    0.013,
+    0.75,
+    "partially_supported",
+    12
+   ],
+   "bütün": [
+    0.04,
+    0.474,
+    "unverifiable",
+    38
+   ],
+   "aynı": [
+    0.05,
+    0.5,
+    "partially_supported",
+    48
+   ]
+  },
+  "dev_stress": [
+   [
+    "ve",
+    0.375,
+    0.404,
+    "supported",
+    225
+   ],
+   [
+    "veya",
+    0.06,
+    0.667,
+    "supported",
+    36
+   ],
+   [
+    "bütün",
+    0.035,
+    0.667,
+    "partially_supported",
+    21
+   ],
+   [
+    "için",
+    0.11,
+    0.364,
+    "partially_supported",
+    66
+   ],
+   [
+    "bir",
+    0.153,
+    0.326,
+    "contradicted",
+    92
+   ],
+   [
+    "edilir",
+    0.03,
+    0.611,
+    "contradicted",
+    18
+   ],
+   [
+    "sağlık",
+    0.042,
+    0.48,
+    "supported",
+    25
+   ],
+   [
+    "ayrı",
+    0.023,
+    0.643,
+    "unverifiable",
+    14
+   ],
+   [
+    "uygun",
+    0.025,
+    0.6,
+    "supported",
+    15
+   ],
+   [
+    "en",
+    0.02,
+    0.667,
+    "supported",
+    12
+   ],
+   [
+    "yerine",
+    0.04,
+    0.458,
+    "contradicted",
+    24
+   ],
+   [
+    "kabul",
+    0.037,
+    0.455,
+    "contradicted",
+    22
+   ]
+  ],
+  "dev_stress_selected": {
+   "ve": [
+    0.375,
+    0.404,
+    "supported"
+   ],
+   "değil": null,
+   "yok": null,
+   ";": null,
+   "zorunlu": [
+    0.025,
+    0.333,
+    "supported"
+   ],
+   "sadece": null,
+   "yalnızca": null,
+   "her": null,
+   "tüm": null
+  },
+  "dev_stress_table": {
+   "ve": [
+    0.375,
+    0.404,
+    "supported",
+    225
+   ],
+   ";": [
+    0.003,
+    0.5,
+    "contradicted",
+    2
+   ],
+   "veya": [
+    0.06,
+    0.667,
+    "supported",
+    36
+   ],
+   "yalnız": [
+    0.037,
+    0.455,
+    "partially_supported",
+    22
+   ],
+   "ancak": [
+    0.0,
+    null,
+    null,
+    0
+   ],
+   "bütün": [
+    0.035,
+    0.667,
+    "partially_supported",
+    21
+   ],
+   "aynı": [
+    0.025,
+    0.333,
+    "contradicted",
+    15
+   ]
+  },
+  "heldout": [
+   [
+    "bir",
+    0.125,
+    0.5,
+    "unverifiable",
+    60
+   ],
+   [
+    "veya",
+    0.069,
+    0.606,
+    "supported",
+    33
+   ],
+   [
+    "için",
+    0.154,
+    0.405,
+    "unverifiable",
+    74
+   ],
+   [
+    "ve",
+    0.431,
+    0.304,
+    "contradicted",
+    207
+   ],
+   [
+    "bu",
+    0.09,
+    0.488,
+    "unverifiable",
+    43
+   ],
+   [
+    "ayrı",
+    0.042,
+    0.7,
+    "unverifiable",
+    20
+   ],
+   [
+    "aynı",
+    0.071,
+    0.5,
+    "unverifiable",
+    34
+   ],
+   [
+    "a",
+    0.198,
+    0.326,
+    "supported",
+    95
+   ],
+   [
+    "yalnız",
+    0.087,
+    0.405,
+    "contradicted",
+    42
+   ],
+   [
+    "göre",
+    0.037,
+    0.611,
+    "unverifiable",
+    18
+   ],
+   [
+    "ancak",
+    0.023,
+    0.818,
+    "partially_supported",
+    11
+   ],
+   [
+    ";",
+    0.131,
+    0.349,
+    "partially_supported",
+    63
+   ]
+  ],
+  "heldout_selected": {
+   "ve": [
+    0.431,
+    0.304,
+    "contradicted"
+   ],
+   "değil": null,
+   "yok": null,
+   ";": [
+    0.131,
+    0.349,
+    "partially_supported"
+   ],
+   "zorunlu": null,
+   "sadece": null,
+   "yalnızca": null,
+   "her": [
+    0.023,
+    0.636,
+    "unverifiable"
+   ],
+   "tüm": null
+  },
+  "heldout_table": {
+   "ve": [
+    0.431,
+    0.304,
+    "contradicted",
+    207
+   ],
+   ";": [
+    0.131,
+    0.349,
+    "partially_supported",
+    63
+   ],
+   "veya": [
+    0.069,
+    0.606,
+    "supported",
+    33
+   ],
+   "yalnız": [
+    0.087,
+    0.405,
+    "contradicted",
+    42
+   ],
+   "ancak": [
+    0.023,
+    0.818,
+    "partially_supported",
+    11
+   ],
+   "bütün": [
+    0.006,
+    0.667,
+    "partially_supported",
+    3
+   ],
+   "aynı": [
+    0.071,
+    0.5,
+    "unverifiable",
+    34
+   ]
+  }
+ },
+ "hard_subset_circular_do_not_use_for_strong_models": {
+  "disputed": 48,
+  "wrong_for_>=2_of_4_strongest": 50,
+  "medical_unverifiable": 40,
+  "union": 107,
+  "acc_on_hard": {
+   "gpt8": 0.729,
+   "gemma0": 0.692,
+   "gemma8": 0.598,
+   "llama8": 0.664,
+   "encoder": 0.654
+  },
+  "ids": [
+   "tfb_ex_0006",
+   "tfb_ex_0010",
+   "tfb_ex_0030",
+   "tfb_ex_0036",
+   "tfb_ex_0042",
+   "tfb_ex_0043",
+   "tfb_ex_0058",
+   "tfb_ex_0068",
+   "tfb_ex_0074",
+   "tfb_ex_0078",
+   "tfb_ex_0084",
+   "tfb_ex_0104",
+   "tfb_ex_0108",
+   "tfb_ex_0114",
+   "tfb_ex_0118",
+   "tfb_ex_0121",
+   "tfb_ex_0126",
+   "tfb_ex_0134",
+   "tfb_ex_0148",
+   "tfb_ex_0154",
+   "tfb_ex_0174",
+   "tfb_ex_0178",
+   "tfb_ex_0181",
+   "tfb_ex_0182",
+   "tfb_ex_0183",
+   "tfb_ex_0184",
+   "tfb_ex_0185",
+   "tfb_ex_0189",
+   "tfb_ex_0200",
+   "tfb_ex_0204",
+   "tfb_ex_0212",
+   "tfb_ex_0216",
+   "tfb_ex_0222",
+   "tfb_ex_0224",
+   "tfb_ex_0226",
+   "tfb_ex_0240",
+   "tfb_ex_0244",
+   "tfb_ex_0250",
+   "tfb_ex_0251",
+   "tfb_ex_0262",
+   "tfb_ex_0276",
+   "tfb_ex_0278",
+   "tfb_ex_0281",
+   "tfb_ex_0286",
+   "tfb_ex_0294",
+   "tfb_ex_0296",
+   "tfb_ex_0307",
+   "tfb_ex_0308",
+   "tfb_ex_0310",
+   "tfb_ex_0316",
+   "tfb_ex_0317",
+   "tfb_ex_0324",
+   "tfb_ex_0326",
+   "tfb_ex_0328",
+   "tfb_ex_0332",
+   "tfb_ex_0336",
+   "tfb_ex_0340",
+   "tfb_ex_0344",
+   "tfb_ex_0348",
+   "tfb_ex_0352",
+   "tfb_ex_0356",
+   "tfb_ex_0360",
+   "tfb_ex_0364",
+   "tfb_ex_0368",
+   "tfb_ex_0370",
+   "tfb_ex_0372",
+   "tfb_ex_0376",
+   "tfb_ex_0380",
+   "tfb_ex_0384",
+   "tfb_ex_0388",
+   "tfb_ex_0390",
+   "tfb_ex_0392",
+   "tfb_ex_0396",
+   "tfb_ex_0400",
+   "tfb_ex_0402",
+   "tfb_ex_0404",
+   "tfb_ex_0405",
+   "tfb_ex_0408",
+   "tfb_ex_0411",
+   "tfb_ex_0412",
+   "tfb_ex_0414",
+   "tfb_ex_0416",
+   "tfb_ex_0420",
+   "tfb_ex_0424",
+   "tfb_ex_0428",
+   "tfb_ex_0432",
+   "tfb_ex_0434",
+   "tfb_ex_0436",
+   "tfb_ex_0438",
+   "tfb_ex_0440",
+   "tfb_ex_0442",
+   "tfb_ex_0444",
+   "tfb_ex_0446",
+   "tfb_ex_0448",
+   "tfb_ex_0450",
+   "tfb_ex_0452",
+   "tfb_ex_0456",
+   "tfb_ex_0458",
+   "tfb_ex_0460",
+   "tfb_ex_0462",
+   "tfb_ex_0464",
+   "tfb_ex_0468",
+   "tfb_ex_0472",
+   "tfb_ex_0474",
+   "tfb_ex_0476",
+   "tfb_ex_0478",
+   "tfb_ex_0480"
+  ]
+ },
+ "hard_subset_model_independent": {
+  "definition": "48 annotator-disputed examples plus 40 medical unverifiable examples (union, 83)",
+  "n": 83,
+  "accuracy_hard_vs_rest": {
+   "encoder": [
+    0.639,
+    0.872
+   ],
+   "gpt-4.1-mini 8-shot": [
+    0.819,
+    0.929
+   ],
+   "gemma zero-shot": [
+    0.771,
+    0.932
+   ],
+   "gemma 8-shot": [
+    0.675,
+    0.947
+   ],
+   "llama 8-shot": [
+    0.747,
+    0.942
+   ]
+  },
+  "note": "hard_subset (union with model-error criterion) is circular for the four strongest models; use the model-independent subset for comparisons.",
+  "ids": [
+   "tfb_ex_0006",
+   "tfb_ex_0010",
+   "tfb_ex_0042",
+   "tfb_ex_0043",
+   "tfb_ex_0058",
+   "tfb_ex_0068",
+   "tfb_ex_0074",
+   "tfb_ex_0078",
+   "tfb_ex_0104",
+   "tfb_ex_0118",
+   "tfb_ex_0154",
+   "tfb_ex_0174",
+   "tfb_ex_0181",
+   "tfb_ex_0185",
+   "tfb_ex_0189",
+   "tfb_ex_0216",
+   "tfb_ex_0224",
+   "tfb_ex_0226",
+   "tfb_ex_0244",
+   "tfb_ex_0251",
+   "tfb_ex_0262",
+   "tfb_ex_0278",
+   "tfb_ex_0281",
+   "tfb_ex_0286",
+   "tfb_ex_0294",
+   "tfb_ex_0307",
+   "tfb_ex_0310",
+   "tfb_ex_0316",
+   "tfb_ex_0317",
+   "tfb_ex_0324",
+   "tfb_ex_0326",
+   "tfb_ex_0328",
+   "tfb_ex_0332",
+   "tfb_ex_0336",
+   "tfb_ex_0340",
+   "tfb_ex_0344",
+   "tfb_ex_0348",
+   "tfb_ex_0352",
+   "tfb_ex_0356",
+   "tfb_ex_0360",
+   "tfb_ex_0364",
+   "tfb_ex_0368",
+   "tfb_ex_0370",
+   "tfb_ex_0372",
+   "tfb_ex_0376",
+   "tfb_ex_0380",
+   "tfb_ex_0384",
+   "tfb_ex_0388",
+   "tfb_ex_0390",
+   "tfb_ex_0392",
+   "tfb_ex_0396",
+   "tfb_ex_0400",
+   "tfb_ex_0402",
+   "tfb_ex_0404",
+   "tfb_ex_0408",
+   "tfb_ex_0411",
+   "tfb_ex_0412",
+   "tfb_ex_0416",
+   "tfb_ex_0420",
+   "tfb_ex_0424",
+   "tfb_ex_0428",
+   "tfb_ex_0432",
+   "tfb_ex_0434",
+   "tfb_ex_0436",
+   "tfb_ex_0438",
+   "tfb_ex_0440",
+   "tfb_ex_0442",
+   "tfb_ex_0444",
+   "tfb_ex_0446",
+   "tfb_ex_0448",
+   "tfb_ex_0450",
+   "tfb_ex_0452",
+   "tfb_ex_0456",
+   "tfb_ex_0458",
+   "tfb_ex_0460",
+   "tfb_ex_0462",
+   "tfb_ex_0464",
+   "tfb_ex_0468",
+   "tfb_ex_0472",
+   "tfb_ex_0474",
+   "tfb_ex_0476",
+   "tfb_ex_0478",
+   "tfb_ex_0480"
+  ]
+ }
+}
