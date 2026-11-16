@@ -1,0 +1,33 @@
+{
+  "description": "Training files changed in v1.2.0 by entity masking (see CHANGELOG.md). Archived runs in runs/completed/ were trained on the v1.1.0 files and record the v1.1.0 hashes; scripts/14_validate_runs.py accepts a recorded hash listed here as v1.1.0 provenance. Labels, identifiers and row order are unchanged; only names in 188 primary-train instances (and the rows that repeat them) differ.",
+  "files": {
+    "data/primary/train.jsonl": {
+      "v1.1.0_sha256": "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17",
+      "v1.2.0_sha256": "74c2ff0f45130aac0738c0bd3488bed8c3528ea0ba95b171ffb6655bdcb01653"
+    },
+    "data/derived/train_domain/train_1600_legal.jsonl": {
+      "v1.1.0_sha256": "a5d08301d08b5c44dbce1b8b37b520c27b2f4497d47d27dd79ac676353ab578d",
+      "v1.2.0_sha256": "31c7ae941052614e59c17009685ecf8333824884e09fafc1b540cf39756f0363"
+    },
+    "data/derived/train_domain/train_1600_finance.jsonl": {
+      "v1.1.0_sha256": "1d798f1ca11b02db079ee832a0de4785740b1f5dfcacff115ca21d737b4a811b",
+      "v1.2.0_sha256": "1d78c8fa1dd963fec1ae96334e4a23473cb8f304329e563b6d4704c965f32e99"
+    },
+    "data/derived/mixed/train_1600_mixed.jsonl": {
+      "v1.1.0_sha256": "7eb366682db69406e99aeffcabb87eb25a82b995225ab9d770a52147fdf7ebe8",
+      "v1.2.0_sha256": "6ccb9618bc57a5fce55d416ba15ae94911dfece3b3f69ed886764364276e1895"
+    },
+    "data/derived/leave_one_domain_out/train_3200_lodo_no_finance.jsonl": {
+      "v1.1.0_sha256": "af6002f5e53cdca08ba331385d4b5a1b1ad1864db5d5c0d65865d66d7101f733",
+      "v1.2.0_sha256": "dd66045ca54b7e1993d0e3c9dc7c28c56b829256a77de6cf9d900984e7977154"
+    },
+    "data/derived/leave_one_domain_out/train_3200_lodo_no_medical.jsonl": {
+      "v1.1.0_sha256": "20895f8b6f4e2f3b2a0a0ff842ad1bd09157b27a3d80778b346b64cc1217cce9",
+      "v1.2.0_sha256": "98b33080133e168b0906bfd1d2bdea40e2c6341cf4d3c2020f959067cabbcd1d"
+    },
+    "data/derived/leave_one_domain_out/train_3200_lodo_no_legal.jsonl": {
+      "v1.1.0_sha256": "225ef57d4ae1a937e401e33377177a438be005d4c77d246636d4c56eb8ee692e",
+      "v1.2.0_sha256": "94f90657dec11df84082bc16c40d1f06f9063d42441e7919da88c38dbea2954a"
+    }
+  }
+}

@@ -35,6 +35,13 @@ LABEL_NAMES = ["supported", "partially_supported", "contradicted", "unverifiable
 LABEL2ID    = {ln: i for i, ln in enumerate(LABEL_NAMES)}
 TOL         = 0.002  # tolerans: ±0.002 yuvarlama farkı kabul edilir
 
+# Training files masked in v1.2.0; archived runs record the v1.1.0 hashes.
+_HISTORY_FILE = Q1_DIR / "data/manifests/training_split_history.json"
+SUPERSEDED_TRAIN_HASHES = {}
+if _HISTORY_FILE.exists():
+    for _path, _entry in json.loads(_HISTORY_FILE.read_text(encoding="utf-8")).get("files", {}).items():
+        SUPERSEDED_TRAIN_HASHES[_path] = {_entry["v1.1.0_sha256"]: "v1.1.0"}
+
 EXPECTED_FILES = [
     "config.json",
     "dataset_manifest.json",
@@ -152,7 +159,11 @@ def validate_run(run_path: Path, fix: bool = False):
                 continue
             expected_hash = dm.get(hash_fields[field])
             actual_hash = _sha256(resolved)
-            if expected_hash != actual_hash:
+            superseded = SUPERSEDED_TRAIN_HASHES.get(recorded, {})
+            if field == "train_file" and expected_hash != actual_hash and expected_hash in superseded:
+                result.setdefault("notes", []).append(
+                    f"TRAINED_ON_{superseded[expected_hash].upper()}: {recorded} (superseded by masked v1.2.0 file)")
+            elif expected_hash != actual_hash:
                 result["issues"].append(f"DATASET_HASH_MISMATCH: {field} expected={expected_hash}, actual={actual_hash}")
                 result["status"] = "FAIL"
         # Relocation history is only required for runs that used legacy experiment paths.

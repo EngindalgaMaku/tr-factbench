@@ -117,7 +117,7 @@ datasets:
   train:
     file: "data/primary/train.jsonl"
     records: 4800
-    sha256: "06068bedfef32f66be10ffe61487c591d6189882f6e38665dd8bcc1281b94b17"
+    sha256: "74c2ff0f45130aac0738c0bd3488bed8c3528ea0ba95b171ffb6655bdcb01653"
   dev_general:
     file: "data/evaluation/legacy_experiment_version/dev_general.jsonl"
     records: 960

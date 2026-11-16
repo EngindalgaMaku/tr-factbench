@@ -82,6 +82,14 @@ def validate_run_archive() -> tuple[int, int]:
         fail("Table C run IDs are not canonical")
 
     legacy_prefix = "data/evaluation/legacy_experiment_version/"
+    # Training files masked in v1.2.0; archived runs record the v1.1.0 hashes.
+    history_path = ROOT / "data/manifests/training_split_history.json"
+    superseded = {}
+    if history_path.exists():
+        for rel, entry in load_json(history_path).get("files", {}).items():
+            if sha256(ROOT / rel) != entry["v1.2.0_sha256"]:
+                fail(f"training_split_history.json: {rel} does not match its v1.2.0 hash")
+            superseded[rel] = entry["v1.1.0_sha256"]
     for run_dir in sorted((ROOT / "runs/completed").iterdir()):
         if not run_dir.is_dir():
             continue
@@ -102,7 +110,10 @@ def validate_run_archive() -> tuple[int, int]:
             path = ROOT / relative
             if not path.exists():
                 fail(f"{run_dir.name}: relocated dataset file does not exist: {relative}")
-            if manifest.get(hash_field) != sha256(path):
+            recorded_hash = manifest.get(hash_field)
+            if field == "train_file" and recorded_hash == superseded.get(relative):
+                continue  # trained on the v1.1.0 file, superseded by the masked v1.2.0 file
+            if recorded_hash != sha256(path):
                 fail(f"{run_dir.name}: {hash_field} does not match relocated file")
         # Relocation history is only required for runs that used legacy experiment paths.
         is_legacy_dev = any(
