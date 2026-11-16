@@ -136,6 +136,8 @@ def run_baseline(adapted_file: Path, args: argparse.Namespace) -> int:
         cmd += ["--limit", str(args.limit)]
     if args.api_key_env != "OPENROUTER_API_KEY":
         cmd += ["--api-key-env", args.api_key_env]
+    if getattr(args, "endpoint", None):
+        cmd += ["--endpoint", args.endpoint]
 
     print(f"\n[run_baseline.py] Komut:")
     print("  " + " ".join(str(c) for c in cmd))
@@ -341,6 +343,11 @@ def parse_args() -> argparse.Namespace:
         "--free-tier",
         action="store_true",
         help="OpenRouter :free model rotası için provider routing bloğunu atla",
+    )
+    parser.add_argument(
+        "--endpoint",
+        default=None,
+        help="OpenAI-compatible chat/completions URL (default: OpenRouter). Ollama: http://localhost:11434/v1/chat/completions",
     )
     parser.add_argument(
         "--zdr",

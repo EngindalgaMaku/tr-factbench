@@ -60,6 +60,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fewshot-file", type=Path, default=DEFAULT_FEWSHOT_FILE)
     parser.add_argument("--output-root", type=Path, default=REPO_ROOT / "results" / "llm_baselines")
     parser.add_argument("--api-key-env", default="OPENROUTER_API_KEY")
+    parser.add_argument("--endpoint", default=ENDPOINT,
+                        help="OpenAI-compatible chat/completions URL (default: OpenRouter; e.g. http://localhost:11434/v1/chat/completions for Ollama)")
     parser.add_argument("--http-referer", default="https://github.com/EngindalgaMaku/tr-factbench")
     parser.add_argument("--app-title", default="TR-FactBench LLM Baselines")
     parser.add_argument("--temperature", type=float, default=0.0)
@@ -211,7 +213,7 @@ def request_json(payload: dict[str, Any], api_key: str, args: argparse.Namespace
         "X-OpenRouter-Title": args.app_title,
     }
     try:
-        response = requests.post(ENDPOINT, headers=headers, json=payload, timeout=args.timeout)
+        response = requests.post(args.endpoint, headers=headers, json=payload, timeout=args.timeout)
     except requests.RequestException as exc:
         raise RuntimeError(f"Network error: {exc}") from exc
     if not response.ok:
@@ -355,7 +357,7 @@ def main() -> None:
         "pending_examples": len(pending),
         "requested_model": args.model,
         "model_alias": model_alias,
-        "endpoint": ENDPOINT,
+        "endpoint": args.endpoint,
         "prompt_mode": args.prompt_mode,
         "prompt_version": PROMPT_VERSION,
         "system_prompt_file": repo_relative(args.system_prompt),
